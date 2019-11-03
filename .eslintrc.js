@@ -15,11 +15,13 @@ module.exports = {
   plugins: ["vue"],
   rules: {
     semi: [2, "never"],
+    "indent": "off",
     "no-console": "off",
     "space-before-function-paren": ["error", "never"],
     "vue/max-attributes-per-line": "off",
     "vue/html-self-closing": "off",
     "vue/html-closing-bracket-spacing": "off",
+    "vue/singleline-html-element-content-newline": "off",
     "prettier/prettier": ["error", { semi: false, singleQuote: true }]
   }
 };

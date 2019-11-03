@@ -1,45 +1,102 @@
 <template>
-  <section class="section">
-    <div class="columns is-mobile">
-      <card title="Free" icon="github-circle">
-        Open source on
-        <a href="https://github.com/buefy/buefy">
-          GitHub
-        </a>
-      </card>
-
-      <card title="Responsive" icon="cellphone-link">
-        <b class="has-text-grey">
-          Every
-        </b>
-        component is responsive
-      </card>
-
-      <card title="Modern" icon="alert-decagram">
-        Built with
-        <a href="https://vuejs.org/">
-          Vue.js
-        </a>
-        and
-        <a href="http://bulma.io/">
-          Bulma
-        </a>
-      </card>
-
-      <card title="Lightweight" icon="arrange-bring-to-front">
-        No other internal dependency
-      </card>
-    </div>
-  </section>
+  <div>
+    <section class="hero is-right">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title is-2">
+            DDRadar
+          </h1>
+          <p class="subtitle">
+            DDR Score Tracker
+          </p>
+        </div>
+      </div>
+    </section>
+    <section
+      v-for="(card, index) in cards"
+      :key="index"
+      class="container is-fluid"
+    >
+      <b-collapse class="card" aria-id="content">
+        <div
+          slot="trigger"
+          slot-scope="props"
+          class="card-header"
+          role="button"
+          aria-controls="content"
+        >
+          <h3 class="card-header-title">
+            {{ card.title }}
+          </h3>
+          <a class="card-header-icon">
+            <b-icon :icon="props.open ? 'menu-down' : 'menu-up'"> </b-icon>
+          </a>
+        </div>
+        <div class="card-content">
+          <div class="content buttons">
+            <b-button
+              v-for="(link, i) in card.links"
+              :key="i"
+              class="is-medium"
+              tag="nuxt-link"
+              :to="link.href"
+            >
+              {{ link.label }}
+            </b-button>
+          </div>
+        </div>
+      </b-collapse>
+    </section>
+  </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'nuxt-property-decorator'
+import { SongNameIndex } from '@/types/song'
+import { SeriesList } from '@/types/series'
 
-@Component({
-  components: {
-    Card: () => import('~/components/Card.vue')
+interface Card {
+  title: string
+  links: { label: string; href: string }[]
+}
+
+@Component
+export default class Index extends Vue {
+  get cards(): Card[] {
+    const cards: Card[] = []
+    cards.push({
+      title: 'シリーズから探す',
+      links: SeriesList.map((d, i) => ({
+        label: d,
+        href: `/series/${i}`
+      }))
+    })
+    cards.push({
+      title: '曲名から探す',
+      links: SongNameIndex.map(d => ({
+        label: d.name,
+        href: `/name/${d.id}`
+      }))
+    })
+    cards.push({
+      title: 'SINGLE',
+      links: Array<Card | null>(19)
+        .fill(null)
+        .map((_, i) => ({
+          label: (i + 1).toString(),
+          href: `/single/${i + 1}`
+        }))
+    })
+    cards.push({
+      title: 'DOUBLE',
+      links: Array<Card | null>(19)
+        .fill(null)
+        .map((_, i) => ({
+          label: (i + 1).toString(),
+          href: `/double/${i + 1}`
+        }))
+    })
+    return cards
   }
-})
-export default class Index extends Vue {}
+}
 </script>
