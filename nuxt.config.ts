@@ -21,7 +21,7 @@ const config: Configuration = {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~/assets/css/styles.scss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -35,7 +35,7 @@ const config: Configuration = {
    */
   modules: [
     // Doc: https://buefy.github.io/#/documentation
-    'nuxt-buefy',
+    ['nuxt-buefy', { css: false }],
     '@nuxtjs/pwa'
   ],
   /*

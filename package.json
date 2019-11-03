@@ -1,6 +1,6 @@
 {
   "name": "ddradar",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "DDR Score Tracker",
   "author": "nogic",
   "private": true,
@@ -29,6 +29,9 @@
       ".*\\.(vue)$": "vue-jest",
       "^.+\\.ts$": "ts-jest"
     },
+    "setupFiles": [
+      "jest-canvas-mock"
+    ],
     "globals": {
       "ts-jest": {
         "tsConfig": "tsconfig.json"
@@ -47,8 +50,8 @@
     "firebase": "^7.2.3",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.2",
-    "vue-chartjs": "^3.5.0",
-    "vue-property-decorator": "^8.3.0"
+    "nuxt-property-decorator": "^2.5.0",
+    "vue-chartjs": "^3.5.0"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.3.2",
@@ -64,6 +67,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^5.2.3",
     "jest": "^24.1.0",
+    "jest-canvas-mock": "^2.1.2",
     "node-sass": "^4.13.0",
     "prettier": "^1.18.2",
     "sass-loader": "^8.0.0",
