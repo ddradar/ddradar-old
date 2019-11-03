@@ -40,14 +40,13 @@
   </section>
 </template>
 
-<script>
-import Card from '~/components/Card'
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
 
-export default {
-  name: 'HomePage',
-
+@Component({
   components: {
-    Card
+    Card: () => import('~/components/Card.vue')
   }
-}
+})
+export default class Index extends Vue {}
 </script>
