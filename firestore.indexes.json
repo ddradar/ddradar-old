@@ -1,0 +1,73 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "charts",
+      "queryScope": "COLLECTION_GROUP",
+      "fields": [
+        {
+          "fieldPath": "level",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "playStyle",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "songName",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "difficulty",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "charts",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "playStyle",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "difficulty",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "songs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "nameIndex",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "nameKana",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "songs",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "series",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "nameIndex",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "nameKana",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

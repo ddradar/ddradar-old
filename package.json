@@ -34,7 +34,7 @@
         "tsConfig": "tsconfig.json"
       }
     },
-      "collectCoverage": true,
+    "collectCoverage": true,
     "collectCoverageFrom": [
       "<rootDir>/components/**/*.vue",
       "<rootDir>/pages/**/*.vue"
@@ -43,6 +43,7 @@
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.2.2",
     "@nuxtjs/pwa": "^3.0.0-0",
+    "firebase": "^7.2.3",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.2",
     "vue-property-decorator": "^8.3.0"
