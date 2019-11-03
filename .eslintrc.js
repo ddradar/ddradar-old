@@ -5,21 +5,21 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
   },
   extends: [
-    'eslint:recommended',
-    'plugin:vue/recommended',
-    'plugin:prettier/recommended',
-    '@nuxtjs/eslint-config-typescript'
+    "eslint:recommended",
+    "plugin:vue/recommended",
+    "plugin:prettier/recommended",
+    "@nuxtjs/eslint-config-typescript"
   ],
-  plugins: [
-    'vue'
-  ],
+  plugins: ["vue"],
   rules: {
-    'semi': [2, 'never'],
-    'no-console': 'off',
-    'vue/max-attributes-per-line': 'off',
-    'prettier/prettier': ['error', { 'semi': false, "singleQuote": true }]
+    semi: [2, "never"],
+    "no-console": "off",
+    "space-before-function-paren": ["error", "never"],
+    "vue/max-attributes-per-line": "off",
+    "vue/html-self-closing": "off",
+    "vue/html-closing-bracket-spacing": "off",
+    "prettier/prettier": ["error", { semi: false, singleQuote: true }]
   }
-}
+};
