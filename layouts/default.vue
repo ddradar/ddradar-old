@@ -7,6 +7,26 @@
         </b-navbar-item>
       </template>
       <template slot="start">
+        <!-- Search from Series -->
+        <b-navbar-item tag="div">
+          <b-dropdown hoverable aria-role="list">
+            <button slot="trigger" class="button is-primary">
+              <span>シリーズから探す</span>
+              <b-icon icon="menu-down" />
+            </button>
+            <b-dropdown-item
+              v-for="(series, index) in seriesList"
+              :key="series"
+              has-link
+              aria-role="listitem"
+            >
+              <nuxt-link :to="`/series/${index}`">
+                {{ series }}
+              </nuxt-link>
+            </b-dropdown-item>
+          </b-dropdown>
+        </b-navbar-item>
+
         <!-- Search from Song Name -->
         <b-navbar-item tag="div">
           <b-dropdown hoverable aria-role="list">
@@ -29,31 +49,11 @@
           </b-dropdown>
         </b-navbar-item>
 
-        <!-- Search from Series -->
-        <b-navbar-item tag="div">
-          <b-dropdown hoverable aria-role="list">
-            <button slot="trigger" class="button is-primary">
-              <span>シリーズから探す</span>
-              <b-icon icon="menu-down" />
-            </button>
-            <b-dropdown-item
-              v-for="(series, index) in seriesList"
-              :key="series"
-              has-link
-              aria-role="listitem"
-            >
-              <nuxt-link :to="`/series/${index}`">
-                {{ series }}
-              </nuxt-link>
-            </b-dropdown-item>
-          </b-dropdown>
-        </b-navbar-item>
-
         <!-- Search from Single Level -->
         <b-navbar-item tag="div">
           <b-dropdown hoverable aria-role="list">
             <button slot="trigger" class="button is-primary">
-              <span>SINGLE</span>
+              <span>SINGLEのレベルから探す</span>
               <b-icon icon="menu-down" />
             </button>
 
@@ -74,7 +74,7 @@
         <b-navbar-item tag="div">
           <b-dropdown hoverable aria-role="list">
             <button slot="trigger" class="button is-primary">
-              <span>DOUBLE</span>
+              <span>DOUBLEのレベルから探す</span>
               <b-icon icon="menu-down" />
             </button>
 
