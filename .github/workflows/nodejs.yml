@@ -35,12 +35,12 @@ jobs:
     - name: Test with Jest
       run: npm test -- --ci
     - name: Archive Production Artifact
-      if: contains(github.ref, 'tags/v') # works only version tagged
+      if: contains(github.ref, 'tags/v') && matrix.node-version == 10.x # works only version tagged
       uses: actions/upload-artifact@v1.0.0
       with:
         name: dist
         path: dist
-  
+
   deploy:
     name: Deploy
     needs: [build]
@@ -55,6 +55,11 @@ jobs:
       uses: actions/download-artifact@v1.0.0
       with:
         name: dist
+    - name: Use Node.js 10.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+    - name: Install Firebase CLI
+      run: npm i -g firebase-tools
     - name: Deploy to Firebase
-      run: |
-        ./node_modules/.bin/firebase deploy --token=${{ secrets.FIREBASE_TOKEN }}
+      run: firebase deploy --token=${{ secrets.FIREBASE_TOKEN }}
