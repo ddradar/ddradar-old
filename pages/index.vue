@@ -62,7 +62,7 @@ interface Card {
 
 @Component
 export default class Index extends Vue {
-  get cards(): Card[] {
+  get cards() {
     const cards: Card[] = []
     cards.push({
       title: 'シリーズから探す',
@@ -79,7 +79,7 @@ export default class Index extends Vue {
       }))
     })
     cards.push({
-      title: 'SINGLE',
+      title: 'SINGLEのレベルから探す',
       links: Array<Card | null>(19)
         .fill(null)
         .map((_, i) => ({
@@ -88,7 +88,7 @@ export default class Index extends Vue {
         }))
     })
     cards.push({
-      title: 'DOUBLE',
+      title: 'DOUBLEのレベルから探す',
       links: Array<Card | null>(19)
         .fill(null)
         .map((_, i) => ({

@@ -1,15 +1,33 @@
 <template>
-  <div>
-    <section class="section">
-      <h1 class="title">
-        {{ indexName }}
-      </h1>
-      <p class="subtitle">
-        {{ songs.length == 0 ? 'not found' : `found ${songs.length} songs` }}
-      </p>
-      <SongList :loading="isLoading" :songs="songs" />
-    </section>
-  </div>
+  <section class="section">
+    <h1 class="title">
+      {{ selectedIndexName == null ? '曲名から探す' : selectedIndexName }}
+    </h1>
+    <div class="buttons">
+      <b-button
+        v-for="d in songNameIndex"
+        :key="d.id"
+        :to="`/name/${d.id}`"
+        type="is-info"
+        tag="nuxt-link"
+        :disabled="d.name == selectedIndexName"
+        :outlined="d.name == selectedIndexName"
+      >
+        {{ d.name }}
+      </b-button>
+    </div>
+    <p v-if="selectedIndexName != null" class="subtitle">
+      {{ songs.length == 0 ? 'not found' : `found ${songs.length} songs` }}
+    </p>
+    <p v-else class="subtitle">
+      曲名を選択してください
+    </p>
+    <SongList
+      v-if="selectedIndexName != null"
+      :loading="isLoading"
+      :songs="songs"
+    />
+  </section>
 </template>
 
 <script lang="ts">
@@ -25,32 +43,47 @@ const songsRef = db.collection('version/1/songs')
 @Component({
   components: {
     SongList: () => import('~/components/SongList.vue')
-  }
-})
-export default class SongIndexPage extends Vue {
-  indexName: string | null = null
-  songs: Song[] = []
-  isLoading = true
+  },
   async asyncData({ params }: Context) {
-    const index = params.id.toUpperCase()
-    const indexName = SongNameIndex.filter(d => d.id === index)[0].name
-    const songs: Song[] = []
+    console.log('called')
+    const index = params.id
+    if (!index) {
+      return {
+        selectedIndexName: null,
+        isLoading: false
+      }
+    }
+    const filtered = SongNameIndex.filter(d => d.id === index.toUpperCase())
+    if (filtered.length === 0) {
+      return {
+        selectedIndexName: null,
+        isLoading: false
+      }
+    }
+    const selectedIndexName = filtered[0].name
     try {
       const snapShot = await songsRef
-        .where('nameIndex', '==', index)
+        .where('nameIndex', '==', index.toUpperCase())
         .orderBy('nameKana')
         .get()
-      snapShot.forEach(doc => songs.push(doc.data() as Song))
+      const songs = snapShot.docs.map(d => d.data() as Song)
       return {
-        indexName,
+        selectedIndexName,
         songs,
         isLoading: false
       }
     } catch {
       return {
+        selectedIndexName,
         isLoading: false
       }
     }
   }
+})
+export default class SongIndexPage extends Vue {
+  selectedIndexName: string | null = null
+  songs: Song[] = []
+  isLoading = true
+  songNameIndex = SongNameIndex
 }
 </script>
