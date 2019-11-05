@@ -3,6 +3,7 @@ name: Node CI
 on:
   push:
     paths:
+      - '**.*'
       - '!**.md' # Exclude Markdown
 jobs:
   build:
