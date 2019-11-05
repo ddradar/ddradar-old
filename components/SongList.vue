@@ -5,7 +5,7 @@
     hoverable
     :loading="loading"
     focusable
-    mobile-cards
+    :mobile-cards="false"
   >
     <template slot-scope="props">
       <b-table-column field="series" label="Series">

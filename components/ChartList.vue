@@ -5,7 +5,7 @@
     hoverable
     :loading="loading"
     focusable
-    mobile-cards
+    :mobile-cards="false"
   >
     <template slot-scope="props">
       <b-table-column field="songName" label="Name">
@@ -17,11 +17,13 @@
           {{ props.row.songName }}
         </nuxt-link>
       </b-table-column>
-      <b-table-column field="playStyle" label="SP/DP">
-        {{ props.row.playStyle }}
+      <b-table-column field="playStyle" label="SP/DP" centered>
+        {{ getPlayStyleName(props.row.playStyle) }}
       </b-table-column>
-      <b-table-column field="difficulty" label="Dif">
-        {{ props.row.difficulty }}
+      <b-table-column field="difficulty" label="Dif" centered>
+        <span class="tag" :class="getDifficutyClassName(props.row.difficulty)">
+          {{ getDifficutyName(props.row.difficulty) }}
+        </span>
       </b-table-column>
       <b-table-column field="level" label="Lv" numeric>
         {{ props.row.level }}
@@ -34,21 +36,6 @@
       </b-table-column>
       <b-table-column field="shockArrow" label="SA" numeric>
         {{ props.row.shockArrow }}
-      </b-table-column>
-      <b-table-column field="stream" label="Str" numeric>
-        {{ props.row.stream }}
-      </b-table-column>
-      <b-table-column field="voltage" label="Vol" numeric>
-        {{ props.row.voltage }}
-      </b-table-column>
-      <b-table-column field="air" label="Air" numeric>
-        {{ props.row.air }}
-      </b-table-column>
-      <b-table-column field="freeze" label="Fre" numeric>
-        {{ props.row.freeze }}
-      </b-table-column>
-      <b-table-column field="chaos" label="Cha" numeric>
-        {{ props.row.chaos }}
       </b-table-column>
     </template>
 
@@ -64,11 +51,23 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'nuxt-property-decorator'
-import { StepChart } from '~/types/step-chart'
+import { GetDifficultyName } from '@/types/difficulty.enum'
+import { GetPlayStyleName } from '@/types/play-style.enum'
+import { StepChart } from '@/types/step-chart'
 
 @Component
 export default class ChartList extends Vue {
   @Prop() charts!: StepChart[]
   @Prop(Boolean) loading!: boolean
+
+  getPlayStyleName(playStyle: number) {
+    return GetPlayStyleName(playStyle)
+  }
+  getDifficutyName(difficulty: number) {
+    return GetDifficultyName(difficulty)
+  }
+  getDifficutyClassName(difficulty: number) {
+    return 'is-' + GetDifficultyName(difficulty).toLowerCase()
+  }
 }
 </script>
