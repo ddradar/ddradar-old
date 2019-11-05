@@ -24,4 +24,6 @@ export const DifficultyList = [
 ]
 
 export const GetDifficultyName = (difficulty: number) =>
-  Difficulty.Beginner <= difficulty && difficulty <= Difficulty.Challenge ? Difficulty[difficulty].toUpperCase() : "Unknown"
+  Difficulty.Beginner <= difficulty && difficulty <= Difficulty.Challenge
+    ? Difficulty[difficulty].toUpperCase()
+    : 'Unknown'
