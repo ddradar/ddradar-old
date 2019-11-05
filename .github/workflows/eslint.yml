@@ -18,7 +18,14 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
-    - name: Install ESLint
-      run: npm i -g eslint
+    - name: Use Cache # for optimize Install Dependencies
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-eslint-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
+        restore-keys: |
+          ${{ runner.os }}-eslint-
+    - name: Install Dependencies
+      run: npm ci # Do not use "npm install" to update package-lock.json.
     - name: Lint
-      run: eslint --ext .ts,.js,.vue --ignore-path .gitignore .
+      run: npm run lint
