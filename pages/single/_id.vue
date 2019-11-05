@@ -1,18 +1,40 @@
 <template>
   <section class="section">
-    <h1 class="title">SINGLE {{ level }}</h1>
-    <p class="subtitle">
+    <h1 class="title">
+      SINGLE {{ selectedLevel == null ? '' : selectedLevel }}
+    </h1>
+    <div class="buttons">
+      <b-button
+        v-for="level in 19"
+        :key="level"
+        :to="`/single/${level}`"
+        type="is-info"
+        tag="nuxt-link"
+        :disabled="level == selectedLevel"
+        :outlined="level == selectedLevel"
+      >
+        {{ level }}
+      </b-button>
+    </div>
+    <p v-if="selectedLevel != null" class="subtitle">
       {{ charts.length == 0 ? 'not found' : `found ${charts.length} charts` }}
     </p>
-    <ChartList :loading="isLoading" :charts="charts" />
+    <p v-else class="subtitle">
+      レベルを選択してください
+    </p>
+    <ChartList
+      v-if="selectedLevel != null"
+      :loading="isLoading"
+      :charts="charts"
+    />
   </section>
 </template>
 
 <script lang="ts">
 import { Context } from '@nuxt/types'
 import { Vue, Component } from 'nuxt-property-decorator'
-import { StepChart } from '~/types/step-chart'
-import firebase from '~/plugins/firebase'
+import { StepChart } from '@/types/step-chart'
+import firebase from '@/plugins/firebase'
 import 'firebase/firestore'
 
 const db = firebase.firestore()
@@ -23,30 +45,36 @@ const chartsRef = db.collectionGroup('charts')
     ChartList: () => import('~/components/ChartList.vue')
   }
 })
-export default class DoubleLevelPage extends Vue {
-  level: number | null = null
+export default class SingleLevelPage extends Vue {
+  selectedLevel: number | null = null
   charts: StepChart[] = []
   isLoading = true
+
   async asyncData({ params }: Context) {
-    const level = Number.parseInt(params.id)
-    const charts: StepChart[] = []
+    const selectedLevel = Number.parseInt(params.id)
+    if (isNaN(selectedLevel)) {
+      return {
+        selectedLevel: null,
+        isLoading: false
+      }
+    }
     try {
       const snapShot = await chartsRef
         .where('playStyle', '==', 1)
-        .where('level', '==', level)
+        .where('level', '==', selectedLevel)
         .orderBy('songName')
         .orderBy('difficulty')
         .get()
-      snapShot.forEach(doc => charts.push(doc.data() as StepChart))
+      const charts = snapShot.docs.map(d => d.data() as StepChart)
       return {
-        level,
+        selectedLevel,
         charts,
         isLoading: false
       }
     } catch (e) {
       console.error(e)
       return {
-        level,
+        selectedLevel,
         isLoading: false
       }
     }
