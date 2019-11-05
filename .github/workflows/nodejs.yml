@@ -1,10 +1,13 @@
 name: Node CI
 
-on: [push]
-
+on:
+  push:
+    paths:
+      - '**.*'
+      - '!**.md' # Exclude Markdown
 jobs:
   build:
-    name: Lint & Build & Test
+    name: Build & Test
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -18,7 +21,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Use Cache
+    - name: Use Cache # for optimize Install Dependencies
       uses: actions/cache@v1
       with:
         path: ~/.npm
@@ -26,10 +29,32 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-node-${{ matrix.node-version }}-
     - name: Install Dependencies
-      run: npm ci
-    - name: Lint
-      run: npm run lint
-    - name: Build
+      run: npm ci # Do not use "npm install" to update package-lock.json.
+    - name: Build with Nuxt
       run: npm run build
-    - name: Test
+    - name: Test with Jest
       run: npm test -- --ci
+    - name: Archive Production Artifact
+      if: contains(github.ref, 'tags/v') # works only version tagged
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: dist
+        path: dist
+  
+  deploy:
+    name: Deploy
+    needs: [build]
+    if: contains(github.ref, 'tags/v') # works only version tagged
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Download Production Artifact
+      uses: actions/download-artifact@v1.0.0
+      with:
+        name: dist
+    - name: Deploy to Firebase
+      run: |
+        ./node_modules/.bin/firebase deploy --token=${{ secrets.FIREBASE_TOKEN }}
