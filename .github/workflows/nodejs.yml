@@ -5,6 +5,11 @@ on:
     paths:
       - '**.*'
       - '!**.md' # Exclude Markdown
+  pull_request:
+    paths:
+      - '**.*'
+      - '!**.md' # Exclude Markdown
+
 jobs:
   build:
     name: Build & Test
@@ -33,7 +38,9 @@ jobs:
     - name: Build with Nuxt
       run: npm run build
     - name: Test with Jest
-      run: npm test -- --ci
+      run: |
+        npm test -- --ci
+        npx codecov
     - name: Archive Production Artifact
       if: contains(github.ref, 'tags/v') && matrix.node-version == 10 # works only version tagged
       uses: actions/upload-artifact@v1.0.0
@@ -59,7 +66,5 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10
-    - name: Install Firebase CLI
-      run: npm i -g firebase-tools
     - name: Deploy to Firebase
-      run: firebase deploy --token=${{ secrets.FIREBASE_TOKEN }}
+      run: npx firebase deploy --token=${{ secrets.FIREBASE_TOKEN }}
