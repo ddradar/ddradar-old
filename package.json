@@ -37,10 +37,13 @@
         "tsConfig": "tsconfig.json"
       }
     },
+    "coverageDirectory": "./coverage/",
     "collectCoverage": true,
     "collectCoverageFrom": [
       "<rootDir>/components/**/*.vue",
-      "<rootDir>/pages/**/*.vue"
+      "<rootDir>/pages/**/*.vue",
+      "<rootDir>/plugins/**/*.ts",
+      "<rootDir>/types/**/*.ts"
     ]
   },
   "dependencies": {
@@ -61,6 +64,7 @@
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.1.0",
+    "codecov": "^3.6.1",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-loader": "^3.0.2",
