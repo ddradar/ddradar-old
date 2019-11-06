@@ -37,10 +37,13 @@
         "tsConfig": "tsconfig.json"
       }
     },
+    "coverageDirectory": "./coverage/",
     "collectCoverage": true,
     "collectCoverageFrom": [
       "<rootDir>/components/**/*.vue",
-      "<rootDir>/pages/**/*.vue"
+      "<rootDir>/pages/**/*.vue",
+      "<rootDir>/plugins/**/*.ts",
+      "<rootDir>/types/**/*.ts"
     ]
   },
   "dependencies": {
