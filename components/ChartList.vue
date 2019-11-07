@@ -51,8 +51,8 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'nuxt-property-decorator'
-import { GetDifficultyName } from '@/types/difficulty.enum'
-import { GetPlayStyleName } from '@/types/play-style.enum'
+import { getDifficultyName, Difficulty } from '@/types/difficulty'
+import { getPlayStyleName, PlayStyle } from '@/types/play-style'
 import { StepChart } from '@/types/step-chart'
 
 @Component
@@ -60,14 +60,14 @@ export default class ChartList extends Vue {
   @Prop() charts!: StepChart[]
   @Prop(Boolean) loading!: boolean
 
-  getPlayStyleName(playStyle: number) {
-    return GetPlayStyleName(playStyle)
+  getPlayStyleName(playStyle: PlayStyle) {
+    return getPlayStyleName(playStyle)
   }
-  getDifficutyName(difficulty: number) {
-    return GetDifficultyName(difficulty)
+  getDifficutyName(difficulty: Difficulty) {
+    return getDifficultyName(difficulty)
   }
-  getDifficutyClassName(difficulty: number) {
-    return 'is-' + GetDifficultyName(difficulty).toLowerCase()
+  getDifficutyClassName(difficulty: Difficulty) {
+    return 'is-' + getDifficultyName(difficulty).toLowerCase()
   }
 }
 </script>

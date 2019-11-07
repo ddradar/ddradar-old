@@ -33,6 +33,7 @@
 <script lang="ts">
 import { Context } from '@nuxt/types'
 import { Vue, Component } from 'nuxt-property-decorator'
+import { isLevel, Level } from '@/types/level'
 import { StepChart } from '@/types/step-chart'
 import firebase from '@/plugins/firebase'
 import 'firebase/firestore'
@@ -46,13 +47,13 @@ const chartsRef = db.collectionGroup('charts')
   }
 })
 export default class SingleLevelPage extends Vue {
-  selectedLevel: number | null = null
+  selectedLevel: Level | null = null
   charts: StepChart[] = []
   isLoading = true
 
   async asyncData({ params }: Context) {
     const selectedLevel = Number.parseInt(params.id)
-    if (isNaN(selectedLevel)) {
+    if (!isLevel(selectedLevel)) {
       return {
         selectedLevel: null,
         isLoading: false

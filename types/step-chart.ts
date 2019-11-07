@@ -1,17 +1,18 @@
-import { Difficulty } from './difficulty.enum'
-import { PlayStyle } from './play-style.enum'
+import { Difficulty } from './difficulty'
+import { Level } from './level'
+import { PlayStyle } from './play-style'
 
 export interface StepChart {
   /** Song's id. */
   songId: string
   /** Song's Name. */
   songName: string
-  /** Single or Double */
+  /** Single:1 or Double:2 */
   playStyle: PlayStyle
-  /** Chart's Difficulty (Beginner - Challenge). */
+  /** Chart's Difficulty (Beginner:0 - Challenge:4). */
   difficulty: Difficulty
   /** Chart's Level (1-20). */
-  level: number
+  level: Level
   /** Step Note's count (Jump = 1 count). */
   notes: number
   /** Freeze Arrow's count. */

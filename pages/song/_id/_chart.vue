@@ -78,8 +78,8 @@
 <script lang="ts">
 import { Context } from '@nuxt/types'
 import { Vue, Component } from 'nuxt-property-decorator'
-import { Difficulty, GetDifficultyName } from '@/types/difficulty.enum'
-import { PlayStyle, GetPlayStyleName } from '@/types/play-style.enum'
+import { getDifficultyName } from '@/types/difficulty'
+import { PlayStyleList, getPlayStyleName } from '@/types/play-style'
 import { Song } from '@/types/song'
 import { GetSeriesName } from '@/types/series'
 import { StepChart } from '@/types/step-chart'
@@ -113,14 +113,14 @@ export default class SongPage extends Vue {
    * @return {String} Chart type.(ex. SP-BASIC)
    */
   public getChartType({ playStyle, difficulty }: StepChart) {
-    return `${GetPlayStyleName(playStyle)}-${GetDifficultyName(difficulty)}`
+    return `${getPlayStyleName(playStyle)}-${getDifficultyName(difficulty)}`
   }
   /**
    * @param {number} difficulty Chart's Difficulty (Beginner - Challenge).
    * @return {String} css class name.(ex. is-basic)
    */
   public getClassName({ difficulty }: StepChart) {
-    return `is-${GetDifficultyName(difficulty).toLowerCase()}`
+    return `is-${getDifficultyName(difficulty).toLowerCase()}`
   }
   /**
    * Get Song's series title.
@@ -139,7 +139,7 @@ export default class SongPage extends Vue {
       return ''
     }
     const { playStyle, difficulty } = this.selected
-    return `${PlayStyle[playStyle]}/${Difficulty[difficulty]}`.toUpperCase()
+    return `${PlayStyleList[playStyle]}/${getDifficultyName(difficulty)}`
   }
   /**
    * Get selected chart.
