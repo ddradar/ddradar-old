@@ -1,13 +1,13 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Buefy from 'buefy'
-import Index from '@/pages/index.vue'
+import SongList from '@/components/SongList.vue'
 
 const localVue = createLocalVue()
 localVue.use(Buefy)
 
-describe('Card', () => {
+describe('SongList', () => {
   test('is a Vue instance', () => {
-    const wrapper = shallowMount(Index, { localVue })
+    const wrapper = shallowMount(SongList, { localVue })
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
 })

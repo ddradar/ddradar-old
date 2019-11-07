@@ -16,10 +16,10 @@
         {{ title }}
       </b-button>
     </div>
-    <p class="subtitle">
+    <p v-if="seriesName != null" class="subtitle">
       {{ songs.length == 0 ? 'not found' : `found ${songs.length} songs` }}
     </p>
-    <SongList :loading="isLoading" :songs="songs" />
+    <SongList v-if="seriesName != null" :loading="isLoading" :songs="songs" />
   </section>
 </template>
 
@@ -76,7 +76,7 @@ export default class SeriesPage extends Vue {
   seriesList = SeriesList
   public get seriesNameWithPrefix() {
     if (this.seriesName == null) {
-      return ''
+      return 'シリーズから探す'
     }
     return GetSeriesName(this.seriesName)
   }

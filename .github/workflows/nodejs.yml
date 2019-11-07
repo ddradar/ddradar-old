@@ -38,9 +38,12 @@ jobs:
     - name: Build with Nuxt
       run: npm run build
     - name: Test with Jest
-      run: |
-        npm test -- --ci
-        npx codecov
+      run: npm test -- --ci
+    - name: Report Code Coverage to codecov
+      if: matrix.node-version == 10
+      run: npx codecov
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
     - name: Archive Production Artifact
       if: contains(github.ref, 'tags/v') && matrix.node-version == 10 # works only version tagged
       uses: actions/upload-artifact@v1.0.0
