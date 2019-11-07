@@ -83,6 +83,7 @@ import { PlayStyleList, getPlayStyleName } from '@/types/play-style'
 import { Song } from '@/types/song'
 import { GetSeriesName } from '@/types/series'
 import { StepChart } from '@/types/step-chart'
+import { fetchSongCharts } from '@/plugins/chart-repository'
 import firebase from '@/plugins/firebase'
 import 'firebase/firestore'
 
@@ -163,13 +164,7 @@ export default class SongPage extends Vue {
     const chartId = parseInt(params.chart) - 10
     try {
       const d = await db.doc(`version/1/songs/${songId}`).get()
-      const c = await db
-        .collection(`version/1/songs/${songId}/charts`)
-        .orderBy('playStyle')
-        .orderBy('difficulty')
-        .get()
-      const charts: StepChart[] = []
-      c.forEach(r => charts.push(r.data() as StepChart))
+      const charts = await fetchSongCharts(songId)
       const chartIndex =
         isNaN(chartId) || charts.length === 1 // Not select chart or Only 1 chart(Lesson by DJ)
           ? 0

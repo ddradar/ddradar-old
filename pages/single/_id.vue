@@ -35,11 +35,7 @@ import { Context } from '@nuxt/types'
 import { Vue, Component } from 'nuxt-property-decorator'
 import { isLevel, Level } from '@/types/level'
 import { StepChart } from '@/types/step-chart'
-import firebase from '@/plugins/firebase'
-import 'firebase/firestore'
-
-const db = firebase.firestore()
-const chartsRef = db.collectionGroup('charts')
+import { fetchChartsByLevel } from '@/plugins/chart-repository'
 
 @Component({
   components: {
@@ -60,13 +56,7 @@ export default class SingleLevelPage extends Vue {
       }
     }
     try {
-      const snapShot = await chartsRef
-        .where('playStyle', '==', 1)
-        .where('level', '==', selectedLevel)
-        .orderBy('songName')
-        .orderBy('difficulty')
-        .get()
-      const charts = snapShot.docs.map(d => d.data() as StepChart)
+      const charts = await fetchChartsByLevel(2, selectedLevel)
       return {
         selectedLevel,
         charts,
