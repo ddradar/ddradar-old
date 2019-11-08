@@ -84,10 +84,7 @@ import { Song } from '@/types/song'
 import { GetSeriesName } from '@/types/series'
 import { StepChart } from '@/types/step-chart'
 import { fetchSongCharts } from '@/plugins/chart-repository'
-import firebase from '@/plugins/firebase'
-import 'firebase/firestore'
-
-const db = firebase.firestore()
+import { fetchSongById } from '@/plugins/song-repository'
 
 @Component({
   components: {
@@ -100,8 +97,8 @@ export default class SongPage extends Vue {
     nameKana: 'きょくめい',
     nameIndex: '1',
     artist: 'アーティスト',
-    minBPM: 100,
-    maxBPM: 400,
+    minBPM: null,
+    maxBPM: null,
     series: 'A20'
   }
   charts: StepChart[] = []
@@ -163,7 +160,7 @@ export default class SongPage extends Vue {
     const songId = params.id
     const chartId = parseInt(params.chart) - 10
     try {
-      const d = await db.doc(`version/1/songs/${songId}`).get()
+      const song = await fetchSongById(songId)
       const charts = await fetchSongCharts(songId)
       const chartIndex =
         isNaN(chartId) || charts.length === 1 // Not select chart or Only 1 chart(Lesson by DJ)
@@ -175,9 +172,8 @@ export default class SongPage extends Vue {
           : charts.length === 9 // Charts include Challenge
           ? (chartId % 10) + Math.floor(chartId / 10) * 4
           : 0
-
       return {
-        song: d.data(),
+        song,
         charts,
         isLoading: false,
         selectedIndex: chartIndex
