@@ -6,6 +6,11 @@ on:
       - '**.js'
       - '**.ts'
       - '**.vue'
+  pull_request:
+    paths:
+      - '**.js'
+      - '**.ts'
+      - '**.vue'
 jobs:
   build:
     runs-on: ubuntu-latest
