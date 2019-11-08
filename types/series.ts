@@ -37,5 +37,5 @@ export const SeriesList: Series[] = [
   'A20'
 ]
 
-export const GetSeriesName = (series: Series) =>
+export const getSeriesName = (series: Series) =>
   series === 'DDRMAX' || series === 'DDRMAX2' ? series : `DDR ${series}`

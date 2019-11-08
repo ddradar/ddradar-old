@@ -81,7 +81,7 @@ import { Vue, Component } from 'nuxt-property-decorator'
 import { getDifficultyName } from '@/types/difficulty'
 import { PlayStyleList, getPlayStyleName } from '@/types/play-style'
 import { Song } from '@/types/song'
-import { GetSeriesName } from '@/types/series'
+import { getSeriesName } from '@/types/series'
 import { StepChart } from '@/types/step-chart'
 import { fetchSongCharts } from '@/plugins/chart-repository'
 import { fetchSongById } from '@/plugins/song-repository'
@@ -126,7 +126,7 @@ export default class SongPage extends Vue {
    * 1st -> DDR 1st
    */
   public get seriesName() {
-    return GetSeriesName(this.song.series)
+    return getSeriesName(this.song.series)
   }
   /**
    * Get selected chart name.
