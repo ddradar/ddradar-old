@@ -3,6 +3,7 @@
 [![Node CI Status](https://github.com/ddradar/ddradar/workflows/Node%20CI/badge.svg "Node CI Status")](https://github.com/ddradar/ddradar/actions?query=workflow%3A%22Node+CI%22)
 [![ESLint Status](https://github.com/ddradar/ddradar/workflows/ESLint/badge.svg "ESLint Status")](https://github.com/ddradar/ddradar/actions?query=workflow%3AESLint)
 [![codecov](https://codecov.io/gh/ddradar/ddradar/branch/master/graph/badge.svg)](https://codecov.io/gh/ddradar/ddradar)
+[![License](https://img.shields.io/github/license/ddradar/ddradar)](LICENSE)
 
 DDR Score Tracker
 
