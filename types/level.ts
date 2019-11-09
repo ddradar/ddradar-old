@@ -20,7 +20,7 @@ export type Level =
   | 19
   | 20
 
-export function isLevel(object: {}): object is Level {
+export function isLevel(object: unknown): object is Level {
   return (
     typeof object === 'number' &&
     (object === 1 ||

@@ -1,4 +1,5 @@
-import { Series } from './series'
+import { hasProperty } from '@/test/util'
+import { Series, isSeries } from './series'
 
 export interface Song {
   id?: string
@@ -91,3 +92,25 @@ export const SongNameIndex: { id: SongIndex; name: string }[] = [
   { id: 'Z', name: 'Z' },
   { id: '_', name: '数字・記号' }
 ]
+
+export function isSong(object: unknown): object is Song {
+  return (
+    typeof object === 'object' &&
+    object !== null &&
+    !(hasProperty(object, 'id') && typeof object.id !== 'string') &&
+    hasProperty(object, 'name') &&
+    typeof object.name === 'string' &&
+    hasProperty(object, 'nameKana') &&
+    typeof object.nameKana === 'string' &&
+    hasProperty(object, 'nameIndex') &&
+    typeof object.nameIndex === 'string' &&
+    hasProperty(object, 'artist') &&
+    typeof object.artist === 'string' &&
+    hasProperty(object, 'series') &&
+    isSeries(object.series) &&
+    hasProperty(object, 'minBPM') &&
+    (typeof object.minBPM === 'number' || object.minBPM === null) &&
+    hasProperty(object, 'maxBPM') &&
+    (typeof object.maxBPM === 'number' || object.maxBPM === null)
+  )
+}

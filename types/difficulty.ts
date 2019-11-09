@@ -15,7 +15,7 @@ export function getDifficultyName(difficulty: number) {
   return 'Unknown'
 }
 
-export function isDifficulty(object: {}): object is Difficulty {
+export function isDifficulty(object: unknown): object is Difficulty {
   return (
     typeof object === 'number' &&
     (object === 0 ||

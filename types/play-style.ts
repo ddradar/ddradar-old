@@ -8,3 +8,7 @@ export const PlayStyleList: { [key in PlayStyle]: string } = {
 
 export const getPlayStyleName = (playStyle: number) =>
   playStyle === 1 ? 'SP' : playStyle === 2 ? 'DP' : '?'
+
+export function isPlayStyle(object: unknown): object is PlayStyle {
+  return object === 1 || object === 2
+}
