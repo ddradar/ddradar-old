@@ -27,12 +27,8 @@
 import { Context } from '@nuxt/types'
 import { Vue, Component } from 'vue-property-decorator'
 import { Song } from '@/types/song'
-import { SeriesList, Series, GetSeriesName } from '@/types/series'
-import firebase from '@/plugins/firebase'
-import 'firebase/firestore'
-
-const db = firebase.firestore()
-const songsRef = db.collection('version/1/songs')
+import { SeriesList, Series, getSeriesName } from '@/types/series'
+import { fetchSongs } from '@/plugins/song-repository'
 
 @Component({
   components: {
@@ -47,14 +43,8 @@ const songsRef = db.collection('version/1/songs')
       }
     }
     const seriesName = SeriesList[index]
-    const songs: Song[] = []
     try {
-      const snapShot = await songsRef
-        .where('series', '==', seriesName)
-        .orderBy('nameIndex')
-        .orderBy('nameKana')
-        .get()
-      snapShot.forEach(doc => songs.push(doc.data() as Song))
+      const songs = await fetchSongs('series', seriesName)
       return {
         seriesName,
         songs,
@@ -78,7 +68,7 @@ export default class SeriesPage extends Vue {
     if (this.seriesName == null) {
       return 'シリーズから探す'
     }
-    return GetSeriesName(this.seriesName)
+    return getSeriesName(this.seriesName)
   }
 }
 </script>

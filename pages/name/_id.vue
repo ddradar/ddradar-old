@@ -34,18 +34,13 @@
 import { Context } from '@nuxt/types'
 import { Vue, Component } from 'vue-property-decorator'
 import { Song, SongNameIndex } from '@/types/song'
-import firebase from '@/plugins/firebase'
-import 'firebase/firestore'
-
-const db = firebase.firestore()
-const songsRef = db.collection('version/1/songs')
+import { fetchSongs } from '@/plugins/song-repository'
 
 @Component({
   components: {
     SongList: () => import('~/components/SongList.vue')
   },
   async asyncData({ params }: Context) {
-    console.log('called')
     const index = params.id
     if (!index) {
       return {
@@ -62,11 +57,7 @@ const songsRef = db.collection('version/1/songs')
     }
     const selectedIndexName = filtered[0].name
     try {
-      const snapShot = await songsRef
-        .where('nameIndex', '==', index.toUpperCase())
-        .orderBy('nameKana')
-        .get()
-      const songs = snapShot.docs.map(d => d.data() as Song)
+      const songs = await fetchSongs('nameIndex', index.toUpperCase())
       return {
         selectedIndexName,
         songs,

@@ -33,12 +33,9 @@
 <script lang="ts">
 import { Context } from '@nuxt/types'
 import { Vue, Component } from 'nuxt-property-decorator'
+import { isLevel, Level } from '@/types/level'
 import { StepChart } from '@/types/step-chart'
-import firebase from '@/plugins/firebase'
-import 'firebase/firestore'
-
-const db = firebase.firestore()
-const chartsRef = db.collectionGroup('charts')
+import { fetchChartsByLevel } from '@/plugins/chart-repository'
 
 @Component({
   components: {
@@ -46,26 +43,20 @@ const chartsRef = db.collectionGroup('charts')
   }
 })
 export default class DoubleLevelPage extends Vue {
-  selectedLevel: number | null = null
+  selectedLevel: Level | null = null
   charts: StepChart[] = []
   isLoading = true
 
   async asyncData({ params }: Context) {
     const selectedLevel = Number.parseInt(params.id)
-    if (isNaN(selectedLevel)) {
+    if (!isLevel(selectedLevel)) {
       return {
         selectedLevel: null,
         isLoading: false
       }
     }
     try {
-      const snapShot = await chartsRef
-        .where('playStyle', '==', 2)
-        .where('level', '==', selectedLevel)
-        .orderBy('songName')
-        .orderBy('difficulty')
-        .get()
-      const charts = snapShot.docs.map(d => d.data() as StepChart)
+      const charts = await fetchChartsByLevel(2, selectedLevel)
       return {
         selectedLevel,
         charts,

@@ -78,15 +78,13 @@
 <script lang="ts">
 import { Context } from '@nuxt/types'
 import { Vue, Component } from 'nuxt-property-decorator'
-import { Difficulty, GetDifficultyName } from '@/types/difficulty.enum'
-import { PlayStyle, GetPlayStyleName } from '@/types/play-style.enum'
+import { getDifficultyName } from '@/types/difficulty'
+import { PlayStyleList, getPlayStyleName } from '@/types/play-style'
 import { Song } from '@/types/song'
-import { GetSeriesName } from '@/types/series'
+import { getSeriesName } from '@/types/series'
 import { StepChart } from '@/types/step-chart'
-import firebase from '@/plugins/firebase'
-import 'firebase/firestore'
-
-const db = firebase.firestore()
+import { fetchSongCharts } from '@/plugins/chart-repository'
+import { fetchSongById } from '@/plugins/song-repository'
 
 @Component({
   components: {
@@ -99,8 +97,8 @@ export default class SongPage extends Vue {
     nameKana: 'きょくめい',
     nameIndex: '1',
     artist: 'アーティスト',
-    minBPM: 100,
-    maxBPM: 400,
+    minBPM: null,
+    maxBPM: null,
     series: 'A20'
   }
   charts: StepChart[] = []
@@ -113,14 +111,14 @@ export default class SongPage extends Vue {
    * @return {String} Chart type.(ex. SP-BASIC)
    */
   public getChartType({ playStyle, difficulty }: StepChart) {
-    return `${GetPlayStyleName(playStyle)}-${GetDifficultyName(difficulty)}`
+    return `${getPlayStyleName(playStyle)}-${getDifficultyName(difficulty)}`
   }
   /**
    * @param {number} difficulty Chart's Difficulty (Beginner - Challenge).
    * @return {String} css class name.(ex. is-basic)
    */
   public getClassName({ difficulty }: StepChart) {
-    return `is-${GetDifficultyName(difficulty).toLowerCase()}`
+    return `is-${getDifficultyName(difficulty).toLowerCase()}`
   }
   /**
    * Get Song's series title.
@@ -128,7 +126,7 @@ export default class SongPage extends Vue {
    * 1st -> DDR 1st
    */
   public get seriesName() {
-    return GetSeriesName(this.song.series)
+    return getSeriesName(this.song.series)
   }
   /**
    * Get selected chart name.
@@ -139,7 +137,7 @@ export default class SongPage extends Vue {
       return ''
     }
     const { playStyle, difficulty } = this.selected
-    return `${PlayStyle[playStyle]}/${Difficulty[difficulty]}`.toUpperCase()
+    return `${PlayStyleList[playStyle]}/${getDifficultyName(difficulty)}`
   }
   /**
    * Get selected chart.
@@ -162,14 +160,8 @@ export default class SongPage extends Vue {
     const songId = params.id
     const chartId = parseInt(params.chart) - 10
     try {
-      const d = await db.doc(`version/1/songs/${songId}`).get()
-      const c = await db
-        .collection(`version/1/songs/${songId}/charts`)
-        .orderBy('playStyle')
-        .orderBy('difficulty')
-        .get()
-      const charts: StepChart[] = []
-      c.forEach(r => charts.push(r.data() as StepChart))
+      const song = await fetchSongById(songId)
+      const charts = await fetchSongCharts(songId)
       const chartIndex =
         isNaN(chartId) || charts.length === 1 // Not select chart or Only 1 chart(Lesson by DJ)
           ? 0
@@ -180,9 +172,8 @@ export default class SongPage extends Vue {
           : charts.length === 9 // Charts include Challenge
           ? (chartId % 10) + Math.floor(chartId / 10) * 4
           : 0
-
       return {
-        song: d.data(),
+        song,
         charts,
         isLoading: false,
         selectedIndex: chartIndex
