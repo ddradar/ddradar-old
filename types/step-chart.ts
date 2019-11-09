@@ -1,7 +1,7 @@
-import { hasProperty } from '@/test/util'
 import { Difficulty, isDifficulty } from './difficulty'
 import { Level, isLevel } from './level'
 import { PlayStyle, isPlayStyle } from './play-style'
+import { hasProperty } from '@/test/util'
 
 export interface StepChart {
   /** Song's id. */

@@ -1,5 +1,5 @@
-import { hasProperty } from '@/test/util'
 import { Series, isSeries } from './series'
+import { hasProperty } from '@/test/util'
 
 export interface Song {
   id?: string
