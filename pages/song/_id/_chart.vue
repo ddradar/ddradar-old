@@ -10,6 +10,7 @@
         v-for="(chart, index) in charts"
         :key="index"
         :disabled="index == selectedIndex"
+        :outlined="index == selectedIndex"
         :type="getClassName(chart)"
         @click="changeSelected(index)"
       >
@@ -95,7 +96,7 @@ export default class SongPage extends Vue {
   song: Song = {
     name: '曲名',
     nameKana: 'きょくめい',
-    nameIndex: '1',
+    nameIndex: 1,
     artist: 'アーティスト',
     minBPM: null,
     maxBPM: null,
