@@ -69,5 +69,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10
+    - name: Install Firebase tool
+      run: npm install -g firebase-tools
     - name: Deploy to Firebase
       run: npx firebase deploy --token=${{ secrets.FIREBASE_TOKEN }}
