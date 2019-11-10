@@ -1,13 +1,13 @@
 <template>
   <section class="section">
     <h1 class="title">
-      SINGLE {{ selectedLevel == null ? '' : selectedLevel }}
+      DOUBLE {{ selectedLevel == null ? '' : selectedLevel }}
     </h1>
     <div class="buttons">
       <b-button
         v-for="level in 19"
         :key="level"
-        :to="`/single/${level}`"
+        :to="`/double/${level}`"
         type="is-info"
         tag="nuxt-link"
         :disabled="level == selectedLevel"
@@ -42,13 +42,13 @@ import { fetchChartsByLevel } from '@/plugins/chart-repository'
     ChartList: () => import('~/components/ChartList.vue')
   }
 })
-export default class SingleLevelPage extends Vue {
+export default class DoubleLevelPage extends Vue {
   selectedLevel: Level | null = null
   charts: StepChart[] = []
   isLoading = true
 
   async asyncData({ params }: Context) {
-    const selectedLevel = Number.parseInt(params.id)
+    const selectedLevel = Number.parseInt(params.level)
     if (!isLevel(selectedLevel)) {
       return {
         selectedLevel: null,

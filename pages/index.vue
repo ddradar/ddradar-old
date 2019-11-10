@@ -62,23 +62,22 @@ interface Card {
 
 @Component
 export default class Index extends Vue {
-  get cards() {
-    const cards: Card[] = []
-    cards.push({
+  cards: Card[] = [
+    {
       title: 'シリーズから探す',
       links: SeriesList.map((d, i) => ({
         label: d,
         href: `/series/${i}`
       }))
-    })
-    cards.push({
+    },
+    {
       title: '曲名から探す',
-      links: SongNameIndex.map(d => ({
-        label: d.name,
-        href: `/name/${d.id}`
+      links: SongNameIndex.map((d, i) => ({
+        label: d,
+        href: `/name/${i}`
       }))
-    })
-    cards.push({
+    },
+    {
       title: 'SINGLEのレベルから探す',
       links: Array<Card | null>(19)
         .fill(null)
@@ -86,8 +85,8 @@ export default class Index extends Vue {
           label: (i + 1).toString(),
           href: `/single/${i + 1}`
         }))
-    })
-    cards.push({
+    },
+    {
       title: 'DOUBLEのレベルから探す',
       links: Array<Card | null>(19)
         .fill(null)
@@ -95,8 +94,7 @@ export default class Index extends Vue {
           label: (i + 1).toString(),
           href: `/double/${i + 1}`
         }))
-    })
-    return cards
-  }
+    }
+  ]
 }
 </script>
