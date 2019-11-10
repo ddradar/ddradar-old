@@ -1,8 +1,6 @@
 <template>
   <section class="section">
-    <h1 class="title">
-      {{ title }}
-    </h1>
+    <h1 class="title">{{ pageTitle }}</h1>
     <div class="buttons">
       <b-button
         v-for="(name, index) in songNameIndex"
@@ -10,23 +8,14 @@
         :to="`/name/${index}`"
         type="is-info"
         tag="nuxt-link"
-        :disabled="index == selectedIndex"
-        :outlined="index == selectedIndex"
+        :disabled="index == selected"
+        :outlined="index == selected"
       >
         {{ name }}
       </b-button>
     </div>
-    <p v-if="selectedIndex != null" class="subtitle">
-      {{ songs.length == 0 ? 'not found' : `found ${songs.length} songs` }}
-    </p>
-    <p v-else class="subtitle">
-      曲名を選択してください
-    </p>
-    <SongList
-      v-if="selectedIndex != null"
-      :loading="isLoading"
-      :songs="songs"
-    />
+    <p class="subtitle">{{ message }}</p>
+    <SongList v-if="selected != null" :loading="isLoading" :songs="songs" />
   </section>
 </template>
 
@@ -45,35 +34,43 @@ import { fetchSongs } from '@/plugins/song-repository'
 
     if (!isSongIndex(index)) {
       return {
-        selectedIndex: null,
+        selected: null,
         isLoading: false
       }
     }
     try {
       const songs = await fetchSongs('nameIndex', index)
       return {
-        selectedIndex: index,
+        selected: index,
         songs,
         isLoading: false
       }
     } catch {
       return {
-        selectedIndex: index,
+        selected: index,
         isLoading: false
       }
     }
   }
 })
 export default class NameIndexPage extends Vue {
-  selectedIndex: SongIndex | null = null
+  selected: SongIndex | null = null
   songs: Song[] = []
   isLoading = true
   songNameIndex = SongNameIndex
 
-  get title() {
-    return this.selectedIndex === null
+  get pageTitle() {
+    return this.selected === null
       ? '曲名から探す'
-      : SongNameIndex[this.selectedIndex]
+      : SongNameIndex[this.selected]
+  }
+
+  get message() {
+    return this.selected === null
+      ? '曲名を選択してください'
+      : this.songs.length === 0
+      ? 'Not Found'
+      : `Found ${this.songs.length} songs`
   }
 }
 </script>

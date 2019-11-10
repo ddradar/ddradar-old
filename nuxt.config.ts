@@ -38,6 +38,17 @@ const config: Configuration = {
     ['nuxt-buefy', { css: false }],
     '@nuxtjs/pwa'
   ],
+  pwa: {
+    manifest: {
+      name: 'DDRadar',
+      description: 'DDR Score Tracker',
+      theme_color: '#8c67ef',
+      lang: 'ja',
+      display: 'standalone',
+      scope: '/',
+      start_url: '/'
+    }
+  },
   /*
    ** Build configuration
    */
