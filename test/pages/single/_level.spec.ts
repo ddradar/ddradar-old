@@ -1,13 +1,13 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Buefy from 'buefy'
-import DoubleLevelPage from '@/pages/double/_id.vue'
+import SingleLevelPage from '@/pages/single/_level.vue'
 
 const localVue = createLocalVue()
 localVue.use(Buefy)
 
-describe('double/:id', () => {
+describe('single/:level', () => {
   test('is a Vue instance', () => {
-    const wrapper = shallowMount(DoubleLevelPage, { localVue })
+    const wrapper = shallowMount(SingleLevelPage, { localVue })
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
 })
