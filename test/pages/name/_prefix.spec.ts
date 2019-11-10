@@ -1,13 +1,13 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Buefy from 'buefy'
-import SongIndexPage from '@/pages/name/_id.vue'
+import NameIndexPage from '@/pages/name/_prefix.vue'
 
 const localVue = createLocalVue()
 localVue.use(Buefy)
 
-describe('/single/:id', () => {
+describe('/name/:prefix', () => {
   test('is a Vue instance', () => {
-    const wrapper = shallowMount(SongIndexPage, { localVue })
+    const wrapper = shallowMount(NameIndexPage, { localVue })
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
 })

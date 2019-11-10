@@ -5,12 +5,15 @@ import { Song } from '@/types/song'
 const db = firebase.firestore()
 
 export async function fetchSongs(fieldName: string, condition: any) {
-  const snapShot = await db
+  const query = db
     .collection('version/1/songs')
     .where(fieldName, '==', condition)
-    .orderBy('nameIndex')
-    .orderBy('nameKana')
-    .get()
+
+  const querySorted =
+    fieldName === 'nameIndex'
+      ? query.orderBy('nameKana')
+      : query.orderBy('nameIndex').orderBy('nameKana')
+  const snapShot = await querySorted.get()
   return snapShot.docs.map(d => d.data() as Song)
 }
 
