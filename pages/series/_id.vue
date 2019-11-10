@@ -1,25 +1,21 @@
 <template>
   <section class="section">
-    <h1 class="title">
-      {{ seriesNameWithPrefix }}
-    </h1>
+    <h1 class="title">{{ pageTitle }}</h1>
     <div class="buttons">
       <b-button
-        v-for="(title, index) in seriesList"
+        v-for="(series, index) in seriesList"
         :key="index"
         :to="`/series/${index}`"
         type="is-info"
         tag="nuxt-link"
-        :disabled="title == seriesName"
-        :outlined="title == seriesName"
+        :disabled="index == selected"
+        :outlined="index == selected"
       >
-        {{ title }}
+        {{ series }}
       </b-button>
     </div>
-    <p v-if="seriesName != null" class="subtitle">
-      {{ songs.length == 0 ? 'not found' : `found ${songs.length} songs` }}
-    </p>
-    <SongList v-if="seriesName != null" :loading="isLoading" :songs="songs" />
+    <p class="subtitle">{{ message }}</p>
+    <SongList v-if="selected != null" :loading="isLoading" :songs="songs" />
   </section>
 </template>
 
@@ -27,7 +23,7 @@
 import { Context } from '@nuxt/types'
 import { Vue, Component } from 'vue-property-decorator'
 import { Song } from '@/types/song'
-import { SeriesList, Series, getSeriesName } from '@/types/series'
+import { SeriesList, getSeriesName } from '@/types/series'
 import { fetchSongs } from '@/plugins/song-repository'
 
 @Component({
@@ -38,20 +34,18 @@ import { fetchSongs } from '@/plugins/song-repository'
     const index = Number.parseInt(params.id)
     if (isNaN(index)) {
       return {
-        seriesName: null,
         isLoading: false
       }
     }
-    const seriesName = SeriesList[index]
+    const selectedSeries = SeriesList[index]
     try {
-      const songs = await fetchSongs('series', seriesName)
+      const songs = await fetchSongs('series', selectedSeries)
       return {
-        seriesName,
+        selected: index,
         songs,
         isLoading: false
       }
     } catch (e) {
-      console.error(e)
       return {
         isLoading: false
       }
@@ -59,16 +53,24 @@ import { fetchSongs } from '@/plugins/song-repository'
   }
 })
 export default class SeriesPage extends Vue {
-  seriesName: Series | null = null
+  selected: number | null = null
   songs: Song[] = []
   isLoading = true
-  watchQuery = true
   seriesList = SeriesList
-  public get seriesNameWithPrefix() {
-    if (this.seriesName == null) {
+
+  public get pageTitle() {
+    if (this.selected == null) {
       return 'シリーズから探す'
     }
-    return getSeriesName(this.seriesName)
+    return getSeriesName(SeriesList[this.selected])
+  }
+
+  public get message() {
+    return this.selected === null
+      ? 'シリーズを選択してください'
+      : this.songs.length === 0
+      ? 'Not Found'
+      : `Found ${this.songs.length} songs`
   }
 }
 </script>
