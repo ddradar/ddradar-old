@@ -4,8 +4,7 @@ module.exports = {
     browser: true,
     node: true
   },
-  parserOptions: {
-  },
+  parserOptions: {},
   extends: [
     "eslint:recommended",
     "plugin:vue/recommended",
@@ -15,9 +14,16 @@ module.exports = {
   plugins: ["vue"],
   rules: {
     semi: [2, "never"],
-    "indent": "off",
+    indent: "off",
     "no-console": "off",
-    "space-before-function-paren": ["error", "never"],
+    "space-before-function-paren": [
+      "error",
+      {
+        anonymous: "always",
+        named: "never",
+        asyncArrow: "always"
+      }
+    ],
     "vue/max-attributes-per-line": "off",
     "vue/html-self-closing": "off",
     "vue/html-closing-bracket-spacing": "off",

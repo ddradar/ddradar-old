@@ -21,7 +21,9 @@ describe(testName, () => {
     describe('read', () => {
       test('anyone can list songs', async () => {
         const db = createAnonymousDb()
-        const songRef = db.collection('version/1/songs').where('nameIndex', '==', 2)
+        const songRef = db
+          .collection('version/1/songs')
+          .where('nameIndex', '==', 2)
         await firebase.assertSucceeds(songRef.get())
       })
       test('anyone can read song data', async () => {
@@ -50,5 +52,5 @@ function createAnonymousDb(): firebase.firestore.Firestore {
 }
 
 function createAuthedDb(auth: object): firebase.firestore.Firestore {
-  return firebase.initializeTestApp({ projectId: testName, auth:auth }).firestore()
+  return firebase.initializeTestApp({ projectId: testName, auth }).firestore()
 }
