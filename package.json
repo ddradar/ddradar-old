@@ -24,6 +24,10 @@
       "json",
       "ts"
     ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/test/firebase/"
+    ],
     "transform": {
       "^.+\\.js$": "babel-jest",
       ".*\\.(vue)$": "vue-jest",
