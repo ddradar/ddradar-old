@@ -54,8 +54,9 @@ describe('single/:level', () => {
         return Promise.reject(new Error('Mock test error'))
       })
     })
-    test('selected is null if param is not 1-19', async () => {
-      for (const param of ['', 'hoge', '37', '-1', 'NaN']) {
+    test.each(['', 'hoge', '37', '-1', 'NaN'])(
+      'selected is null if param is not 1-19',
+      async param => {
         const data = await vm.$options.asyncData({
           params: { level: param }
         })
@@ -63,29 +64,13 @@ describe('single/:level', () => {
         expect(vm.selected).toBeNull()
         expect(vm.isLoading).toBe(false)
       }
-    })
-    test('selected equals param if param is 1-19', async () => {
+    )
+    test.each([hasDataLevel, noDataLevel, throwErrorLevel])('selected equals param if param is 1-19', async level => {
       const data = await vm.$options.asyncData({
-        params: { level: hasDataLevel.toString() }
+        params: { level }
       })
       wrapper.setData(data)
-      expect(vm.selected).toBe(hasDataLevel)
-      expect(vm.isLoading).toBe(false)
-    })
-    test('selected equals param if param is 1-19', async () => {
-      const data = await vm.$options.asyncData({
-        params: { level: noDataLevel.toString() }
-      })
-      wrapper.setData(data)
-      expect(vm.selected).toBe(noDataLevel)
-      expect(vm.isLoading).toBe(false)
-    })
-    test('selected equals param if param is 1-19', async () => {
-      const data = await vm.$options.asyncData({
-        params: { level: throwErrorLevel.toString() }
-      })
-      wrapper.setData(data)
-      expect(vm.selected).toBe(throwErrorLevel)
+      expect(vm.selected).toBe(level)
       expect(vm.isLoading).toBe(false)
     })
   })
@@ -93,11 +78,11 @@ describe('single/:level', () => {
     test('returns "SINGLEのレベルから探す" if series not selected', () => {
       expect(vm.pageTitle).toBe('SINGLEのレベルから探す')
     })
-    test('returns level if selected', () => {
-      for (let i = 1; i <= 19; i++) {
-        wrapper.setData({ selected: i })
-        expect(vm.pageTitle).toBe(`SINGLE ${i}`)
-      }
+    // [...Array(19).keys()] returns [0, 1, ..., 18]
+    test.each([...Array(19).keys()])('returns level if selected', i => {
+      const level = i + 1
+      wrapper.setData({ selected: level })
+      expect(vm.pageTitle).toBe(`DOUBLE ${level}`)
     })
   })
   describe('message getter', () => {
