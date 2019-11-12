@@ -1,8 +1,6 @@
 <template>
   <section class="section">
-    <h1 class="title">
-      SINGLE {{ selectedLevel == null ? '' : selectedLevel }}
-    </h1>
+    <h1 class="title">{{ pageTitle }}</h1>
     <div class="buttons">
       <b-button
         v-for="level in 19"
@@ -10,23 +8,14 @@
         :to="`/single/${level}`"
         type="is-info"
         tag="nuxt-link"
-        :disabled="level == selectedLevel"
-        :outlined="level == selectedLevel"
+        :disabled="level == selected"
+        :outlined="level == selected"
       >
         {{ level }}
       </b-button>
     </div>
-    <p v-if="selectedLevel != null" class="subtitle">
-      {{ charts.length == 0 ? 'not found' : `found ${charts.length} charts` }}
-    </p>
-    <p v-else class="subtitle">
-      レベルを選択してください
-    </p>
-    <ChartList
-      v-if="selectedLevel != null"
-      :loading="isLoading"
-      :charts="charts"
-    />
+    <p class="subtitle">{{ message }}</p>
+    <chart-list v-if="selected != null" :loading="isLoading" :charts="charts" />
   </section>
 </template>
 
@@ -43,32 +32,45 @@ import { fetchChartsByLevel } from '@/plugins/chart-repository'
   }
 })
 export default class SingleLevelPage extends Vue {
-  selectedLevel: Level | null = null
+  selected: Level | null = null
   charts: StepChart[] = []
   isLoading = true
 
   async asyncData({ params }: Context) {
-    const selectedLevel = Number.parseInt(params.level)
-    if (!isLevel(selectedLevel)) {
+    const selected = Number.parseInt(params.level)
+    if (!isLevel(selected)) {
       return {
-        selectedLevel: null,
+        selected: null,
         isLoading: false
       }
     }
     try {
-      const charts = await fetchChartsByLevel(2, selectedLevel)
+      const charts = await fetchChartsByLevel(2, selected)
       return {
-        selectedLevel,
+        selected,
         charts,
         isLoading: false
       }
     } catch (e) {
-      console.error(e)
       return {
-        selectedLevel,
+        selected,
         isLoading: false
       }
     }
+  }
+
+  get pageTitle() {
+    return this.selected === null
+      ? 'SINGLEのレベルから探す'
+      : `SINGLE ${this.selected}`
+  }
+
+  get message() {
+    return this.selected === null
+      ? 'レベルを選択してください'
+      : this.charts.length === 0
+      ? 'Not Found'
+      : `Found ${this.charts.length} charts`
   }
 }
 </script>
