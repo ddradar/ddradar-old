@@ -37,29 +37,9 @@ export default class SeriesPage extends Vue {
   isLoading = true
   seriesList = SeriesList
 
-  public get pageTitle() {
-    if (
-      this.selected === null ||
-      !Number.isInteger(this.selected) ||
-      this.selected < 0 ||
-      this.selected >= SeriesList.length
-    ) {
-      return 'シリーズから探す'
-    }
-    return getSeriesName(SeriesList[this.selected])
-  }
-
-  public get message() {
-    return this.selected === null
-      ? 'シリーズを選択してください'
-      : this.songs.length === 0
-      ? 'Not Found'
-      : `Found ${this.songs.length} songs`
-  }
-
   async asyncData({ params }: Context) {
     const index = Number.parseInt(params.id)
-    if (isNaN(index) || index >= SeriesList.length) {
+    if (isNaN(index) || index < 0 || index >= SeriesList.length) {
       return {
         isLoading: false
       }
@@ -74,9 +54,30 @@ export default class SeriesPage extends Vue {
       }
     } catch (e) {
       return {
+        selected: index,
         isLoading: false
       }
     }
+  }
+
+  get pageTitle() {
+    if (
+      this.selected === null ||
+      !Number.isInteger(this.selected) ||
+      this.selected < 0 ||
+      this.selected >= SeriesList.length
+    ) {
+      return 'シリーズから探す'
+    }
+    return getSeriesName(SeriesList[this.selected])
+  }
+
+  get message() {
+    return this.selected === null
+      ? 'シリーズを選択してください'
+      : this.songs.length === 0
+      ? 'Not Found'
+      : `Found ${this.songs.length} songs`
   }
 }
 </script>
