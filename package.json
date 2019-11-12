@@ -10,7 +10,8 @@
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
     "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore .",
-    "test": "jest"
+    "test": "jest",
+    "test:all": "jest --config jest.config.all.json"
   },
   "jest": {
     "moduleNameMapper": {
@@ -26,7 +27,7 @@
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "/test/firebase/"
+      "/test/__firebase__/"
     ],
     "transform": {
       "^.+\\.js$": "babel-jest",
