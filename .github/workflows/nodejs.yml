@@ -47,7 +47,7 @@ jobs:
     - name: Build with Nuxt
       run: npm run build
     - name: Run firestore Emulator & Test with Jest
-      run: npx firebase emulators:exec --only firestore "npm test -- --ci"
+      run: npx firebase emulators:exec --only firestore "npm run test:all -- --ci"
     - name: Report Code Coverage to codecov
       if: matrix.node-version == 10
       run: npx codecov
