@@ -1,8 +1,9 @@
 import firebase from '@/plugins/firebase'
 import 'firebase/firestore'
-import { StepChart } from '~/types/step-chart'
-import { PlayStyle } from '~/types/play-style'
+import { StepChart, isStepChart } from '~/types/step-chart'
+import { PlayStyle, PlayStyleList } from '~/types/play-style'
 import { Level } from '~/types/level'
+import { DifficultyList } from '~/types/difficulty'
 
 const db = firebase.firestore()
 
@@ -12,7 +13,7 @@ export async function fetchSongCharts(songId: string) {
     .orderBy('playStyle')
     .orderBy('difficulty')
     .get()
-  return c.docs.map(d => d.data() as StepChart)
+  return c.docs.map(d => d.data()).filter(d => isStepChart(d)) as StepChart[]
 }
 
 export async function fetchChartsByLevel(playStyle: PlayStyle, level: Level) {
@@ -23,5 +24,14 @@ export async function fetchChartsByLevel(playStyle: PlayStyle, level: Level) {
     .orderBy('songName')
     .orderBy('difficulty')
     .get()
-  return snapShot.docs.map(d => d.data() as StepChart)
+  return snapShot.docs
+    .map(d => d.data())
+    .filter(d => isStepChart(d)) as StepChart[]
+}
+
+export function getChartDocumentId({
+  playStyle,
+  difficulty
+}: Pick<StepChart, 'playStyle' | 'difficulty'>) {
+  return `${PlayStyleList[playStyle]}-${DifficultyList[difficulty]}`.toLowerCase()
 }
