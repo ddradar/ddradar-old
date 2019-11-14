@@ -19,7 +19,7 @@ export default class GrooveRadarComponent extends Vue {
     air: number
     freeze: number
   }
-  public get chartOptions() {
+  get chartOptions() {
     return {
       legend: {
         display: false
@@ -36,27 +36,14 @@ export default class GrooveRadarComponent extends Vue {
       tooltips: {
         enabled: true,
         callbacks: {
-          label(tooltipItem: Chart.ChartTooltipItem, data: Chart.ChartData) {
-            if (
-              data.datasets === undefined ||
-              tooltipItem.datasetIndex === undefined ||
-              tooltipItem.index === undefined ||
-              data.labels === undefined
-            ) {
-              return ''
-            }
-            const dataSet = data.labels[tooltipItem.index]
-
-            if (typeof dataSet === 'string') {
-              return dataSet
-            }
-            return dataSet[0]
+          label: (item: Chart.ChartTooltipItem, data: Chart.ChartData) => {
+            this.renderLabel(item, data)
           }
         }
       }
     }
   }
-  public get chartData(): Chart.ChartData {
+  get chartData(): Chart.ChartData {
     return {
       labels: ['STREAM', 'CHAOS', 'FREEZE', 'AIR', 'VOLTAGE'],
       datasets: [
@@ -76,6 +63,20 @@ export default class GrooveRadarComponent extends Vue {
         }
       ]
     }
+  }
+  renderLabel(
+    { index }: Pick<Chart.ChartTooltipItem, 'index'>,
+    { labels }: Pick<Chart.ChartData, 'labels'>
+  ) {
+    if (index === undefined || labels === undefined) {
+      return ''
+    }
+    const dataSet = labels[index]
+
+    if (typeof dataSet === 'string') {
+      return dataSet
+    }
+    return dataSet[0]
   }
 }
 </script>

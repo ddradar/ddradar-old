@@ -12,14 +12,20 @@ DDR Score Tracker
 ``` bash
 # install dependencies
 $ npm run install
+# (optional) if you develop and test with firestore, install firebase tool.
+# firestore emulator needs Java.
+$ npm install -g firebase-tools
+$ firebase setup:emulators:firestore
 
 # Lint all .js, .ts, .vue files
 $ npm run lint
 # Lint and fix files
 $ npm run lint -- --fix
 
-# unit test with jest
+# unit test with jest (exclude /__firebase__/ folder)
 $ npm test
+# run firestore emulator and unit test with jest
+$ firebase emulators:exec --only firestore "npm run test:all"
 
 # serve with hot reload at localhost:3000
 $ npm run dev

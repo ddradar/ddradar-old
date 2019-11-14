@@ -15,6 +15,7 @@ module.exports = {
   rules: {
     semi: [2, "never"],
     indent: "off",
+    "arrow-parens": ["error", "as-needed"],
     "no-console": "off",
     "space-before-function-paren": [
       "error",
