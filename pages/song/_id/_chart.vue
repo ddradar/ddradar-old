@@ -180,7 +180,6 @@ export default class SongPage extends Vue {
         selectedIndex: chartIndex
       }
     } catch (e) {
-      console.error(e)
       return {
         isLoading: false
       }

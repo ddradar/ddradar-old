@@ -65,14 +65,17 @@ describe('single/:level', () => {
         expect(vm.isLoading).toBe(false)
       }
     )
-    test.each([hasDataLevel, noDataLevel, throwErrorLevel])('selected equals param if param is 1-19', async level => {
-      const data = await vm.$options.asyncData({
-        params: { level }
-      })
-      wrapper.setData(data)
-      expect(vm.selected).toBe(level)
-      expect(vm.isLoading).toBe(false)
-    })
+    test.each([hasDataLevel, noDataLevel, throwErrorLevel])(
+      'selected equals param if param is 1-19',
+      async level => {
+        const data = await vm.$options.asyncData({
+          params: { level }
+        })
+        wrapper.setData(data)
+        expect(vm.selected).toBe(level)
+        expect(vm.isLoading).toBe(false)
+      }
+    )
   })
   describe('pageTitle getter', () => {
     test('returns "SINGLEのレベルから探す" if series not selected', () => {
@@ -82,7 +85,7 @@ describe('single/:level', () => {
     test.each([...Array(19).keys()])('returns level if selected', i => {
       const level = i + 1
       wrapper.setData({ selected: level })
-      expect(vm.pageTitle).toBe(`DOUBLE ${level}`)
+      expect(vm.pageTitle).toBe(`SINGLE ${level}`)
     })
   })
   describe('message getter', () => {
