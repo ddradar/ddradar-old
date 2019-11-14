@@ -1,23 +1,32 @@
-import { mount } from '@vue/test-utils'
+import { mount, Wrapper } from '@vue/test-utils'
 import GrooveRadarComponent from '@/components/GrooveRadar.vue'
 
 describe('GrooveRadar', () => {
-  test('is a Vue instance', () => {
-    const wrapper = mount(GrooveRadarComponent)
-    expect(wrapper.isVueInstance()).toBeTruthy()
+  let wrapper: Wrapper<GrooveRadarComponent>
+  let vm: any
+  beforeEach(() => {
+    wrapper = mount(GrooveRadarComponent)
+    vm = wrapper.vm
   })
   test('is a Vue instance', () => {
-    const wrapper = mount(GrooveRadarComponent, {
-      propsData: {
-        chart: {
-          voltage: 100,
-          stream: 220,
-          chaos: 120,
-          air: 20,
-          freeze: 0
-        }
-      }
-    })
     expect(wrapper.isVueInstance()).toBeTruthy()
+  })
+  describe('renderLabel', () => {
+    test('returns label name if exists', () => {
+      expect(vm.renderLabel({ index: 0 }, { labels: ['foo'] })).toBe('foo')
+      expect(vm.renderLabel({ index: 0 }, { labels: [['foo']] })).toBe('foo')
+      expect(vm.renderLabel({ index: 1 }, { labels: ['foo', 'bar'] })).toBe(
+        'bar'
+      )
+      expect(
+        vm.renderLabel({ index: 1 }, { labels: [['foo', 'bar'], ['baz']] })
+      ).toBe('baz')
+    })
+    test('returns empty if not exists', () => {
+      expect(vm.renderLabel({}, {})).toBe('')
+      expect(vm.renderLabel({ index: 0 }, {})).toBe('')
+      expect(vm.renderLabel({}, { labels: ['foo'] })).toBe('')
+      expect(vm.renderLabel({}, { labels: [['foo']] })).toBe('')
+    })
   })
 })

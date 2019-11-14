@@ -21,8 +21,8 @@
         {{ getPlayStyleName(props.row.playStyle) }}
       </b-table-column>
       <b-table-column field="difficulty" label="Dif" centered>
-        <span class="tag" :class="getDifficutyClassName(props.row.difficulty)">
-          {{ getDifficutyName(props.row.difficulty) }}
+        <span class="tag" :class="getDifficultyClassName(props.row.difficulty)">
+          {{ getDifficultyName(props.row.difficulty) }}
         </span>
       </b-table-column>
       <b-table-column field="level" label="Lv" numeric>
@@ -63,10 +63,10 @@ export default class ChartList extends Vue {
   getPlayStyleName(playStyle: PlayStyle) {
     return getPlayStyleName(playStyle)
   }
-  getDifficutyName(difficulty: Difficulty) {
+  getDifficultyName(difficulty: Difficulty) {
     return getDifficultyName(difficulty)
   }
-  getDifficutyClassName(difficulty: Difficulty) {
+  getDifficultyClassName(difficulty: Difficulty) {
     return 'is-' + getDifficultyName(difficulty).toLowerCase()
   }
 }
