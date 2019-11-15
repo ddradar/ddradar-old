@@ -36,8 +36,11 @@ describe('SongRepository', () => {
       const song = await repo.fetchSongById(songs[0].id)
       expect(song).toStrictEqual(songs[0])
     })
+    test('throw error if data is not Song', () => {
+      expect(repo.fetchSongById(invalidData.id)).rejects.toThrowError()
+    })
     test('throw error if not exists', () => {
-      expect(repo.fetchSongById('foo')).rejects.toThrowError()
+      expect(repo.fetchSongById('bar')).rejects.toThrowError()
     })
   })
   afterAll(async () => {
@@ -78,4 +81,4 @@ const songs: (Song & { id: string })[] = [
   }
 ]
 
-const invalidData = { nameIndex: 25, series: '1st' }
+const invalidData = { id: 'foo', nameIndex: 25, series: '1st' }
