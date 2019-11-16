@@ -79,8 +79,8 @@
 <script lang="ts">
 import { Context } from '@nuxt/types'
 import { Vue, Component } from 'nuxt-property-decorator'
-import { getDifficultyName } from '@/types/difficulty'
-import { PlayStyleList, getPlayStyleName } from '@/types/play-style'
+import { getDifficultyName, Difficulty } from '@/types/difficulty'
+import { PlayStyleList, getPlayStyleName, PlayStyle } from '@/types/play-style'
 import { Song } from '@/types/song'
 import { getSeriesName } from '@/types/series'
 import { StepChart } from '@/types/step-chart'
@@ -105,35 +105,19 @@ export default class SongPage extends Vue {
   charts: StepChart[] = []
   isLoading = true
   selectedIndex: number = 0
-
-  /**
-   * @param {number} playStyle Single or Double
-   * @param {number} difficulty Chart's Difficulty (Beginner - Challenge).
-   * @return {String} Chart type.(ex. SP-BASIC)
-   */
-  public getChartType({ playStyle, difficulty }: StepChart) {
-    return `${getPlayStyleName(playStyle)}-${getDifficultyName(difficulty)}`
-  }
-  /**
-   * @param {number} difficulty Chart's Difficulty (Beginner - Challenge).
-   * @return {String} css class name.(ex. is-basic)
-   */
-  public getClassName({ difficulty }: StepChart) {
-    return `is-${getDifficultyName(difficulty).toLowerCase()}`
-  }
   /**
    * Get Song's series title.
-   * @return {String} DDR series (ex. DDR 1st, DDRMAX)
-   * 1st -> DDR 1st
+   * @return {String} DDR series title
+   * @example DDR 1st, DDRMAX
    */
-  public get seriesName() {
+  get seriesName() {
     return getSeriesName(this.song.series)
   }
   /**
    * Get selected chart name.
    * @return {String} playStyle/difficulty (ex. SINGLE/BASIC)
    */
-  public get chartName() {
+  get chartName() {
     if (this.selected === null) {
       return ''
     }
@@ -143,36 +127,21 @@ export default class SongPage extends Vue {
   /**
    * Get selected chart.
    */
-  public get selected() {
+  get selected() {
     return this.charts.length < this.selectedIndex + 1
       ? null
       : this.charts[this.selectedIndex]
   }
   /**
-   * Change selected chart.
-   */
-  public changeSelected(index: number) {
-    this.selectedIndex = index
-  }
-  /**
    * fetch data asynchronous.
    */
-  async asyncData({ params }: Context) {
+  async asyncData({ params }: Pick<Context, 'params'>) {
     const songId = params.id
-    const chartId = parseInt(params.chart) - 10
+    const chartId = parseInt(params.chart)
     try {
       const song = await fetchSongById(songId)
       const charts = await fetchSongCharts(songId)
-      const chartIndex =
-        isNaN(chartId) || charts.length === 1 // Not select chart or Only 1 chart(Lesson by DJ)
-          ? 0
-          : charts.length === 2 // Only Challenge chart(ex. X-Special)
-          ? Math.floor(chartId / 10)
-          : charts.length === 7 // Charts except Challenge
-          ? (chartId % 10) + Math.floor(chartId / 10) * 3
-          : charts.length === 9 // Charts include Challenge
-          ? (chartId % 10) + Math.floor(chartId / 10) * 4
-          : 0
+      const chartIndex = SongPage.calcSelectedIndex(chartId, charts.length)
       return {
         song,
         charts,
@@ -184,6 +153,50 @@ export default class SongPage extends Vue {
         isLoading: false
       }
     }
+  }
+  /**
+   * @return {String} Chart type.(ex. SP-BASIC)
+   */
+  getChartType({
+    playStyle,
+    difficulty
+  }: Pick<StepChart, 'playStyle' | 'difficulty'>) {
+    return `${getPlayStyleName(playStyle)}-${getDifficultyName(difficulty)}`
+  }
+  /**
+   * @return {String} css class name.(ex. is-basic)
+   */
+  getClassName({ difficulty }: Pick<StepChart, 'difficulty'>) {
+    return `is-${getDifficultyName(difficulty).toLowerCase()}`
+  }
+  /**
+   * Change selected chart.
+   */
+  changeSelected(index: number) {
+    this.selectedIndex = index
+  }
+  /**
+   * Calcurate selectedIndex from URL Path and charts length.
+   * @param {number} chartId URL Path (2nd digit means playStyle, and 1st digit means difficulty)
+   * @param {number} length charts length
+   * @returns {number} The index of chart specified by chartId
+   */
+  static calcSelectedIndex(chartId: number, length: number) {
+    if ([10, 11, 12, 13, 14, 21, 22, 23, 24].includes(chartId)) {
+      chartId -= 10
+      const playStyle = Math.floor(chartId / 10) as PlayStyle
+      const difficulty = (chartId % 10) as Difficulty
+      return length === 1 // Only 1 chart(Lesson by DJ)
+        ? 0
+        : length === 2 // Only Challenge chart(ex. X-Special)
+        ? playStyle
+        : length === 7 && difficulty !== 4 // Charts except Challenge
+        ? difficulty + playStyle * 3
+        : length === 9 // Charts include Challenge
+        ? difficulty + playStyle * 4
+        : 0
+    }
+    return 0
   }
 }
 </script>
