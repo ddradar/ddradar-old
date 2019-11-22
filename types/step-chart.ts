@@ -1,7 +1,7 @@
 import { Difficulty, isDifficulty } from './difficulty'
 import { Level, isLevel } from './level'
 import { PlayStyle, isPlayStyle } from './play-style'
-import { hasProperty } from '@/test/util'
+import { hasProperty, hasStringProperty, hasNumberProperty } from '@/test/util'
 
 export interface StepChart {
   /** Song's id. */
@@ -36,31 +36,21 @@ export function isStepChart(object: unknown): object is StepChart {
   return (
     typeof object === 'object' &&
     object !== null &&
-    hasProperty(object, 'songId') &&
-    typeof object.songId === 'string' &&
-    hasProperty(object, 'songName') &&
-    typeof object.songName === 'string' &&
+    hasStringProperty(object, 'songId') &&
+    hasStringProperty(object, 'songName') &&
     hasProperty(object, 'playStyle') &&
     isPlayStyle(object.playStyle) &&
     hasProperty(object, 'difficulty') &&
     isDifficulty(object.difficulty) &&
     hasProperty(object, 'level') &&
     isLevel(object.level) &&
-    hasProperty(object, 'notes') &&
-    typeof object.notes === 'number' &&
-    hasProperty(object, 'freezeArrow') &&
-    typeof object.freezeArrow === 'number' &&
-    hasProperty(object, 'shockArrow') &&
-    typeof object.shockArrow === 'number' &&
-    hasProperty(object, 'stream') &&
-    typeof object.stream === 'number' &&
-    hasProperty(object, 'voltage') &&
-    typeof object.voltage === 'number' &&
-    hasProperty(object, 'air') &&
-    typeof object.air === 'number' &&
-    hasProperty(object, 'freeze') &&
-    typeof object.freeze === 'number' &&
-    hasProperty(object, 'chaos') &&
-    typeof object.chaos === 'number'
+    hasNumberProperty(object, 'notes') &&
+    hasNumberProperty(object, 'freezeArrow') &&
+    hasNumberProperty(object, 'shockArrow') &&
+    hasNumberProperty(object, 'stream') &&
+    hasNumberProperty(object, 'voltage') &&
+    hasNumberProperty(object, 'air') &&
+    hasNumberProperty(object, 'freeze') &&
+    hasNumberProperty(object, 'chaos')
   )
 }
