@@ -1,0 +1,104 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ddradar.app/song-schema.json",
+  "type": "array",
+  "title": "The Root Schema",
+  "items": {
+    "$id": "#/items",
+    "type": "object",
+    "title": "Song Info",
+    "required": [
+      "id",
+      "name",
+      "nameKana",
+      "nameIndex",
+      "artist",
+      "series",
+      "minBPM",
+      "maxBPM",
+      "version"
+    ],
+    "properties": {
+      "id": {
+        "$id": "#/items/properties/id",
+        "type": "string",
+        "title": "Song's Id",
+        "minLength": 32,
+        "maxLength": 32,
+        "examples": ["b1do8OI6qDDlQO0PI16868ql6bdbI886"],
+        "pattern": "^(.*)$"
+      },
+      "name": {
+        "$id": "#/items/properties/name",
+        "type": "string",
+        "title": "Song Name",
+        "examples": ["Splash Gold"],
+        "pattern": "^(.*)$"
+      },
+      "nameKana": {
+        "$id": "#/items/properties/nameKana",
+        "type": "string",
+        "title": "Name Furigana",
+        "examples": ["SPLASH GOLD"],
+        "pattern": "^([A-Z0-9 .ぁ-んー]*)$"
+      },
+      "nameIndex": {
+        "$id": "#/items/properties/nameIndex",
+        "type": "integer",
+        "title": "Use for Sort by Name (あ:0, か:1, ..., わ:9, A:10, B:11, ..., Z:35, other:36)",
+        "minimum": 0,
+        "maximum": 36
+      },
+      "artist": {
+        "$id": "#/items/properties/artist",
+        "type": "string",
+        "title": "Artist Name",
+        "pattern": "^(.*)$"
+      },
+      "series": {
+        "$id": "#/items/properties/series",
+        "type": "string",
+        "title": "Series title",
+        "enum": [
+          "1st",
+          "2ndMIX",
+          "3rdMIX",
+          "4thMIX",
+          "5thMIX",
+          "DDRMAX",
+          "DDRMAX2",
+          "EXTREME",
+          "SuperNOVA",
+          "SuperNOVA2",
+          "X",
+          "X2",
+          "X3 VS 2ndMIX",
+          "2013",
+          "2014",
+          "A",
+          "A20"
+        ],
+        "default": "A20",
+        "pattern": "^(.*)$"
+      },
+      "minBPM": {
+        "$id": "#/items/properties/minBPM",
+        "type": ["integer", "null"],
+        "title": "Min BPM (if ???-???, set null)",
+        "examples": [100, null]
+      },
+      "maxBPM": {
+        "$id": "#/items/properties/maxBPM",
+        "type": ["integer", "null"],
+        "title": "Max BPM  (if ???-???, set null)",
+        "examples": [400, null]
+      },
+      "version": {
+        "$id": "#/items/properties/version",
+        "type": "integer",
+        "title": "Use for diff update. if you change or create data, increase its version."
+      }
+    }
+  }
+}
