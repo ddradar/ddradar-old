@@ -429,6 +429,17 @@
     "version": 20191109
   },
   {
+    "id": "lq9iPP06O8qiP1iooiboPO910b86di19",
+    "name": "IRON HEART",
+    "nameKana": "IRON HEART",
+    "nameIndex": 18,
+    "artist": "BUNNY",
+    "series": "A20",
+    "minBPM": 155,
+    "maxBPM": 155,
+    "version": 20191121
+  },
+  {
     "id": "D9ooldO1009Pq1dP6P88lD80P0Oi060P",
     "name": "LEVEL UP",
     "nameKana": "LEVEL UP",
@@ -669,6 +680,17 @@
     "minBPM": 150,
     "maxBPM": 150,
     "version": 20191109
+  },
+  {
+    "id": "olDoq69qD008Q9bb8d9OOlPO160Qd0dq",
+    "name": "Stay 4 Ever",
+    "nameKana": "STAY 4 EVER",
+    "nameIndex": 28,
+    "artist": "CHEAP CREAM",
+    "series": "A20",
+    "minBPM": 140,
+    "maxBPM": 140,
+    "version": 20191121
   },
   {
     "id": "obd0PDIDq8qqd9q9qdbDdqD98bd61I8D",
