@@ -1,6 +1,6 @@
-import { matchersWithOptions } from 'jest-json-schema'
 import * as fs from 'fs'
 import * as path from 'path'
+import { matchersWithOptions } from 'jest-json-schema'
 
 import songSchema from '../../../static/song-schema.json'
 
@@ -17,7 +17,15 @@ describe('song-schema.json', () => {
 })
 
 describe('/data/songs/*.json', () => {
-  const songsDirPath = path.join(__dirname, '..', '..', '..', 'song-info', 'data', 'songs')
+  const songsDirPath = path.join(
+    __dirname,
+    '..',
+    '..',
+    '..',
+    'song-info',
+    'data',
+    'songs'
+  )
   const jsonFilesPath = fs
     .readdirSync(songsDirPath)
     .filter(p => path.extname(p) === '.json')
