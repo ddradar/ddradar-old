@@ -17,11 +17,6 @@ export function getDifficultyName(difficulty: number) {
 
 export function isDifficulty(object: unknown): object is Difficulty {
   return (
-    typeof object === 'number' &&
-    (object === 0 ||
-      object === 1 ||
-      object === 2 ||
-      object === 3 ||
-      object === 4)
+    object === 0 || object === 1 || object === 2 || object === 3 || object === 4
   )
 }

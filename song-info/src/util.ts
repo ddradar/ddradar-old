@@ -1,3 +1,4 @@
+// Port from /test/util.ts
 export function hasProperty<K extends string>(
   x: unknown,
   name: K

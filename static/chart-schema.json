@@ -1,0 +1,120 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://ddradar.app/chart-schema.json",
+  "type": "array",
+  "title": "The Root Schema",
+  "items": {
+    "$id": "#/items",
+    "type": "object",
+    "title": "Step Chart Info",
+    "required": [
+      "songId",
+      "songName",
+      "playStyle",
+      "difficulty",
+      "level",
+      "notes",
+      "freezeArrow",
+      "shockArrow",
+      "stream",
+      "voltage",
+      "air",
+      "freeze",
+      "chaos",
+      "version"
+    ],
+    "properties": {
+      "songId": {
+        "$id": "#/items/properties/songId",
+        "type": "string",
+        "minLength": 32,
+        "maxLength": 32,
+        "title": "Song's Id",
+        "examples": ["lqI8DD9Plq6IO8P8P6Pl8Di98DlI9oP8"],
+        "pattern": "^(.*)$"
+      },
+      "songName": {
+        "$id": "#/items/properties/songName",
+        "type": "string",
+        "title": "Song Name",
+        "pattern": "^(.*)$"
+      },
+      "playStyle": {
+        "$id": "#/items/properties/playStyle",
+        "type": "integer",
+        "title": "Play Style (SP:1 DP:2)",
+        "enum": [1, 2]
+      },
+      "difficulty": {
+        "$id": "#/items/properties/difficulty",
+        "type": "integer",
+        "title": "Difficulty (BEGINNER:0, BASIC:1, ..., CHALLENGE:4)",
+        "enum": [0, 1, 2, 3, 4]
+      },
+      "level": {
+        "$id": "#/items/properties/level",
+        "type": "integer",
+        "title": "Chart Level",
+        "exclusiveMinimum": 0,
+        "maximum": 19
+      },
+      "notes": {
+        "$id": "#/items/properties/notes",
+        "type": "integer",
+        "title": "Normal Arrow's count (Jump = 1 count)",
+        "exclusiveMinimum": 0
+      },
+      "freezeArrow": {
+        "$id": "#/items/properties/freezeArrow",
+        "type": "integer",
+        "title": "Freeze Arrow's count",
+        "minimum": 0
+      },
+      "shockArrow": {
+        "$id": "#/items/properties/shockArrow",
+        "type": "integer",
+        "title": "Shock Arrow's count",
+        "minimum": 0,
+        "default": 0
+      },
+      "stream": {
+        "$id": "#/items/properties/stream",
+        "type": "integer",
+        "title": "Groove Radar STREAM",
+        "exclusiveMinimum": 0
+      },
+      "voltage": {
+        "$id": "#/items/properties/voltage",
+        "type": "integer",
+        "title": "Groove Radar VOLTAGE",
+        "exclusiveMinimum": 0
+      },
+      "air": {
+        "$id": "#/items/properties/air",
+        "type": "integer",
+        "title": "Groove Radar AIR",
+        "minimum": 0
+      },
+      "freeze": {
+        "$id": "#/items/properties/freeze",
+        "type": "integer",
+        "title": "Groove Radar FREEZE",
+        "minimum": 0,
+        "default": 0
+      },
+      "chaos": {
+        "$id": "#/items/properties/chaos",
+        "type": "integer",
+        "title": "Groove Radar CHAOS",
+        "minimum": 0,
+        "default": 0
+      },
+      "version": {
+        "$id": "#/items/properties/version",
+        "type": "integer",
+        "title": "Use for diff update. if you change or create data, increase its version."
+      }
+    }
+  }
+}

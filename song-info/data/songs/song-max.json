@@ -1,0 +1,68 @@
+[
+  {
+    "id": "OPbqldiq0dQIo1011086IOl1qbOloOl9",
+    "name": "CANDY☆",
+    "nameKana": "CANDY",
+    "nameIndex": 12,
+    "artist": "Luv UNLIMITED",
+    "series": "DDRMAX",
+    "minBPM": 192,
+    "maxBPM": 192,
+    "version": 20191109
+  },
+  {
+    "id": "iOPbIi1b99819b9QiD8QbdPbq0DqO0DO",
+    "name": "exotic ethnic",
+    "nameKana": "EXOTIC ETHNIC",
+    "nameIndex": 14,
+    "artist": "RevenG",
+    "series": "DDRMAX",
+    "minBPM": 190,
+    "maxBPM": 190,
+    "version": 20191109
+  },
+  {
+    "id": "olQQ8QPPqqObDD9ooodOl9i9od8b06I9",
+    "name": "Healing Vision ～Angelic mix～",
+    "nameKana": "HEALING VISION ANGELIC MIX",
+    "nameIndex": 17,
+    "artist": "2MB",
+    "series": "DDRMAX",
+    "minBPM": 46,
+    "maxBPM": 196,
+    "version": 20191109
+  },
+  {
+    "id": "bP69QdDQ0QQ9dP0dDio0dO61i9Dbdl00",
+    "name": "Let the beat hit em!(CLASSIC R&B STYLE)",
+    "nameKana": "LET THE BEAT HIT EM CLASSIC R AND B STYLE",
+    "nameIndex": 21,
+    "artist": "Stone Bros.",
+    "series": "DDRMAX",
+    "minBPM": 102,
+    "maxBPM": 102,
+    "version": 20191109
+  },
+  {
+    "id": "6P18lOliIQqIO6Di0PP8iDlDQ01b0o0q",
+    "name": "MAX 300",
+    "nameKana": "MAX 300",
+    "nameIndex": 22,
+    "artist": "Ω",
+    "series": "DDRMAX",
+    "minBPM": 300,
+    "maxBPM": 300,
+    "version": 20191109
+  },
+  {
+    "id": "61ido0DPl8q0dI1i011Do1b6669dPIlo",
+    "name": "ORION.78～civilization mix～",
+    "nameKana": "ORION78 CIVILIZATION MIX",
+    "nameIndex": 24,
+    "artist": "2MB",
+    "series": "DDRMAX",
+    "minBPM": 200,
+    "maxBPM": 200,
+    "version": 20191109
+  }
+]

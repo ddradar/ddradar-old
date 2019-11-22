@@ -1,8 +1,9 @@
+// Port from /types/song.ts
 import { Series, isSeries } from './series'
-import { hasProperty, hasStringProperty } from '@/test/util'
+import { hasProperty, hasNumberProperty, hasStringProperty } from './util'
 
 export interface Song {
-  id?: string
+  id: string
   name: string
   /** name furigana ^([A-Z0-9 .ぁ-んー]*)$ */
   nameKana: string
@@ -13,6 +14,7 @@ export interface Song {
   minBPM: number | null
   /** Displayed max BPM (Beet Per Minutes). */
   maxBPM: number | null
+  version: number
 }
 
 export type SongIndex =
@@ -54,51 +56,11 @@ export type SongIndex =
   | 35
   | 36
 
-export const SongNameIndex: string[] = [
-  'あ',
-  'か',
-  'さ',
-  'た',
-  'な',
-  'は',
-  'ま',
-  'や',
-  'ら',
-  'わ',
-  'A',
-  'B',
-  'C',
-  'D',
-  'E',
-  'F',
-  'G',
-  'H',
-  'I',
-  'J',
-  'K',
-  'L',
-  'M',
-  'N',
-  'O',
-  'P',
-  'Q',
-  'R',
-  'S',
-  'T',
-  'U',
-  'V',
-  'W',
-  'X',
-  'Y',
-  'Z',
-  '数字・記号'
-]
-
 export function isSong(object: unknown): object is Song {
   return (
     typeof object === 'object' &&
     object !== null &&
-    !(hasProperty(object, 'id') && typeof object.id !== 'string') &&
+    hasStringProperty(object, 'id') &&
     hasStringProperty(object, 'name') &&
     hasStringProperty(object, 'nameKana') &&
     /^([A-Z0-9 .ぁ-んー]*)$/.test(object.nameKana) &&
@@ -110,7 +72,8 @@ export function isSong(object: unknown): object is Song {
     hasProperty(object, 'minBPM') &&
     (typeof object.minBPM === 'number' || object.minBPM === null) &&
     hasProperty(object, 'maxBPM') &&
-    (typeof object.maxBPM === 'number' || object.maxBPM === null)
+    (typeof object.maxBPM === 'number' || object.maxBPM === null) &&
+    hasNumberProperty(object, 'version')
   )
 }
 

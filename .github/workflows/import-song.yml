@@ -1,0 +1,43 @@
+name: Import Song
+
+on:
+  push:
+    branches: 
+      - 'master'
+    paths:
+      - '**/song-info/data/**/*.json'
+
+jobs:
+  build:
+    env:
+      CI: true
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js 12
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+    - name: Use Cache # for optimize Install Dependencies
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-12-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
+        restore-keys: |
+          ${{ runner.os }}-node-12-
+    - name: npm install
+      run: npm ci
+    - name: Unit Test with Jest
+      run: npm test
+    - name: Import Data to Firebase
+      run: npm start
+      env:
+        FIREBASE_CLIENT_EMAIL: ${{secrets.FIREBASE_CLIENT_EMAIL}} 
+        FIREBASE_PRIVATE_KEY: ${{secrets.FIREBASE_PRIVATE_KEY}}
+    - name: Push Created Json Files
+      run: |
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/ddradar/ddradar.git
+        git checkout master
+        git add -A
+        git commit -m "Update Song & Chart Json (Automated)"
+        git push

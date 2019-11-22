@@ -1,0 +1,134 @@
+[
+  {
+    "id": "dq190Il9iO1bD698ll6ddObIlqdIQ1O9",
+    "name": "AM-3P",
+    "nameKana": "AM 3P",
+    "nameIndex": 10,
+    "artist": "KTz",
+    "series": "2ndMIX",
+    "minBPM": 130,
+    "maxBPM": 130,
+    "version": 20191109
+  },
+  {
+    "id": "DblIbDd6lQQQoO9bloOI9iIqO1IiQoID",
+    "name": "BRILLIANT 2U",
+    "nameKana": "BRILLIANT 2U",
+    "nameIndex": 11,
+    "artist": "NAOKI",
+    "series": "2ndMIX",
+    "minBPM": 150,
+    "maxBPM": 150,
+    "version": 20191109
+  },
+  {
+    "id": "DbPodlqiOQdD88bo8lPO9D6iql1DO8P0",
+    "name": "BRILLIANT 2U(Orchestra Groove)",
+    "nameKana": "BRILLIANT 2U ORCHESTRA GROOVE",
+    "nameIndex": 11,
+    "artist": "NAOKI",
+    "series": "2ndMIX",
+    "minBPM": 150,
+    "maxBPM": 150,
+    "version": 20191109
+  },
+  {
+    "id": "8liDbidQoI6Q01lO9iibIdboIiDl66Qo",
+    "name": "e-motion",
+    "nameKana": "E MOTION",
+    "nameIndex": 14,
+    "artist": "e.o.s",
+    "series": "2ndMIX",
+    "minBPM": 145,
+    "maxBPM": 145,
+    "version": 20191109
+  },
+  {
+    "id": "Dq0Iio09Pb9iD0lbb0I0qd8Q8i10II09",
+    "name": "GENOM SCREAMS",
+    "nameKana": "GENOM SCREAMS",
+    "nameIndex": 16,
+    "artist": "L.E.D.LIGHT",
+    "series": "2ndMIX",
+    "minBPM": 150,
+    "maxBPM": 150,
+    "version": 20191109
+  },
+  {
+    "id": "0lDDIlQ91lq6O16q9QQ681d6Db1l0oOb",
+    "name": "KEEP ON MOVIN'",
+    "nameKana": "KEEP ON MOVIN",
+    "nameIndex": 20,
+    "artist": "N.M.R",
+    "series": "2ndMIX",
+    "minBPM": 132,
+    "maxBPM": 132,
+    "version": 20191109
+  },
+  {
+    "id": "9qP16D6l11i9P1lQ0b1DIqoOqqiIQDl9",
+    "name": "MAKE IT BETTER (So-REAL Mix)",
+    "nameKana": "MAKE IT BETTER SO REAL MIX",
+    "nameIndex": 22,
+    "artist": "mitsu-O!SUMMER",
+    "series": "2ndMIX",
+    "minBPM": 118,
+    "maxBPM": 118,
+    "version": 20191109
+  },
+  {
+    "id": "9doPbId8qid9I9l6ooloPQD1lq1Plb6I",
+    "name": "PARANOiA KCET ～clean mix～",
+    "nameKana": "PARANOIA KCET CLEAN MIX",
+    "nameIndex": 25,
+    "artist": "2MB",
+    "series": "2ndMIX",
+    "minBPM": 180,
+    "maxBPM": 180,
+    "version": 20191109
+  },
+  {
+    "id": "Pl0dPid9lQDo6PDQDqPboPqO6iIDIqoo",
+    "name": "PARANOiA MAX～DIRTY MIX～",
+    "nameKana": "PARANOIA MAX DIRTY MIX",
+    "nameIndex": 25,
+    "artist": "190",
+    "series": "2ndMIX",
+    "minBPM": 190,
+    "maxBPM": 190,
+    "version": 20191109
+  },
+  {
+    "id": "DQlQ1DlPbq900oqdOo8l0d6I1lIOl99l",
+    "name": "PUT YOUR FAITH IN ME",
+    "nameKana": "PUT YOUR FAITH IN ME",
+    "nameIndex": 25,
+    "artist": "UZI-LAY",
+    "series": "2ndMIX",
+    "minBPM": 120,
+    "maxBPM": 120,
+    "version": 20191109
+  },
+  {
+    "id": "IQqOIb6ob8bIbOII66ID0oIQDPl6bdbb",
+    "name": "PUT YOUR FAITH IN ME (Jazzy Groove)",
+    "nameKana": "PUT YOUR FAITH IN ME JAZZY GROOVE",
+    "nameIndex": 25,
+    "artist": "UZI-LAY",
+    "series": "2ndMIX",
+    "minBPM": 120,
+    "maxBPM": 120,
+    "version": 20191109
+  },
+  {
+    "id": "1P9qQdiiodODqQPl0OO88iiiqdoDIPO6",
+    "name": "SP-TRIP MACHINE～JUNGLE MIX～",
+    "nameKana": "SP TRIP MACHINE JUNGLE MIX",
+    "nameIndex": 28,
+    "artist": "DE-SIRE",
+    "series": "2ndMIX",
+    "minBPM": 160,
+    "maxBPM": 160,
+    "version": 20191109
+  }
+]
