@@ -1,0 +1,156 @@
+[
+  {
+    "id": "Pd99DQo0bD9D9oIbPIId18P6l8qlDQO6",
+    "name": "AFRONOVA",
+    "nameKana": "AFRONOVA",
+    "nameIndex": 10,
+    "artist": "RE-VENGE",
+    "series": "3rdMIX",
+    "minBPM": 200,
+    "maxBPM": 200,
+    "version": 20191109
+  },
+  {
+    "id": "Qo9P1oOoDQIoOb8Dd0PdOdoD1D1Pbd8D",
+    "name": "AFTER THE GAME OF LOVE",
+    "nameKana": "AFTER THE GAME OF LOVE",
+    "nameIndex": 10,
+    "artist": "NPD3",
+    "series": "3rdMIX",
+    "minBPM": 105,
+    "maxBPM": 105,
+    "version": 20191109
+  },
+  {
+    "id": "di9ddbd1lb80q98ODdod0ODQ0q6PdQP1",
+    "name": "CUTIE CHASER",
+    "nameKana": "CUTIE CHASER",
+    "nameIndex": 12,
+    "artist": "CLUB SPICE",
+    "series": "3rdMIX",
+    "minBPM": 126,
+    "maxBPM": 126,
+    "version": 20191109
+  },
+  {
+    "id": "P98dl8qdoilqbPqIO86ood601o1696D8",
+    "name": "DEAD END",
+    "nameKana": "DEAD END",
+    "nameIndex": 13,
+    "artist": "N & S",
+    "series": "3rdMIX",
+    "minBPM": 190,
+    "maxBPM": 190,
+    "version": 20191109
+  },
+  {
+    "id": "8O0D9P6l9P9ooQdODioDIdQPq6DiDlbl",
+    "name": "DROP THE BOMB",
+    "nameKana": "DROP THE BOMB",
+    "nameIndex": 13,
+    "artist": "Scotty D.",
+    "series": "3rdMIX",
+    "minBPM": 150,
+    "maxBPM": 150,
+    "version": 20191109
+  },
+  {
+    "id": "1QIPID18qib8D9Oo9lOo8I6DPi9qiod6",
+    "name": "DYNAMITE RAVE",
+    "nameKana": "DYNAMITE RAVE",
+    "nameIndex": 13,
+    "artist": "NAOKI",
+    "series": "3rdMIX",
+    "minBPM": 150,
+    "maxBPM": 150,
+    "version": 20191109
+  },
+  {
+    "id": "q6qI6llb69D1IQq0OiP8OD06Qioob91Q",
+    "name": "GRADIUSIC CYBER ～AMD G5 MIX～",
+    "nameKana": "GRADIUSIC CYBER AMD G5 MIX",
+    "nameIndex": 16,
+    "artist": "BIG-O feat. TAKA",
+    "series": "3rdMIX",
+    "minBPM": 160,
+    "maxBPM": 160,
+    "version": 20191109
+  },
+  {
+    "id": "901q61iP6lPiDqIQoQod9PDqlOPq1bb9",
+    "name": "La Señorita",
+    "nameKana": "LA SENORITA",
+    "nameIndex": 21,
+    "artist": "CAPTAIN.T",
+    "series": "3rdMIX",
+    "minBPM": 182,
+    "maxBPM": 182,
+    "version": 20191109
+  },
+  {
+    "id": "boP0i08bqQ9d9OoP8Ol6I0l9Po01DiQb",
+    "name": "La Señorita Virtual",
+    "nameKana": "LA SENORITA VIRTUAL",
+    "nameIndex": 21,
+    "artist": "2MB",
+    "series": "3rdMIX",
+    "minBPM": 182,
+    "maxBPM": 182,
+    "version": 20191109
+  },
+  {
+    "id": "i8II16blIIbQQd196b616OPbPO910oi9",
+    "name": "LOVE THIS FEELIN'",
+    "nameKana": "LOVE THIS FEELIN",
+    "nameIndex": 21,
+    "artist": "Chang ma",
+    "series": "3rdMIX",
+    "minBPM": 190,
+    "maxBPM": 190,
+    "version": 20191109
+  },
+  {
+    "id": "0lDP0P06PIPl1iiIDOb919iqo1oPdlP8",
+    "name": "PARANOiA Rebirth",
+    "nameKana": "PARANOIA REBIRTH",
+    "nameIndex": 25,
+    "artist": "190'",
+    "series": "3rdMIX",
+    "minBPM": 190,
+    "maxBPM": 190,
+    "version": 20191109
+  },
+  {
+    "id": "80bQi8IQ8o1iidqd6oQiDPQoPi909olq",
+    "name": "Silent Hill",
+    "nameKana": "SILENT HILL",
+    "nameIndex": 28,
+    "artist": "THOMAS HOWARD",
+    "series": "3rdMIX",
+    "minBPM": 125,
+    "maxBPM": 125,
+    "version": 20191109
+  },
+  {
+    "id": "9lob1d1QPd9qiPlQOQ6l0dbodOoDPq1d",
+    "name": "think ya better D",
+    "nameKana": "THINK YA BETTER D",
+    "nameIndex": 29,
+    "artist": "sAmi",
+    "series": "3rdMIX",
+    "minBPM": 136,
+    "maxBPM": 136,
+    "version": 20191109
+  },
+  {
+    "id": "qQ9Oo611P0dObD8q6O0Q968bbl8I91OO",
+    "name": "TRIP MACHINE～luv mix～",
+    "nameKana": "TRIP MACHINE LUV MIX",
+    "nameIndex": 29,
+    "artist": "2MB",
+    "series": "3rdMIX",
+    "minBPM": 160,
+    "maxBPM": 160,
+    "version": 20191109
+  }
+]

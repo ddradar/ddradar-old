@@ -1,0 +1,145 @@
+[
+  {
+    "id": "doIiQl6oDPP6i9qobqoobblPQqPiI9bD",
+    "name": "サナ・モレッテ・ネ・エンテ",
+    "nameKana": "さな もれって ね えんて",
+    "nameIndex": 2,
+    "artist": "Togo Project feat. Sana",
+    "series": "5thMIX",
+    "minBPM": 90,
+    "maxBPM": 90,
+    "version": 20191109
+  },
+  {
+    "id": "qdi88l6bo1Iqi9Qiqli8lIQQIPO1doQ9",
+    "name": "ABSOLUTE",
+    "nameKana": "ABSOLUTE",
+    "nameIndex": 10,
+    "artist": "dj TAKA",
+    "series": "5thMIX",
+    "minBPM": 144,
+    "maxBPM": 144,
+    "version": 20191109
+  },
+  {
+    "id": "Q0qQO0P8818lIoo0boO66O0qd09dIlO8",
+    "name": "Abyss",
+    "nameKana": "ABYSS",
+    "nameIndex": 10,
+    "artist": "dj TAKA",
+    "series": "5thMIX",
+    "minBPM": 142,
+    "maxBPM": 142,
+    "version": 20191109
+  },
+  {
+    "id": "18911Q6o6do9Dd1blIo6IliPd0PPb99i",
+    "name": "AFRONOVA PRIMEVAL",
+    "nameKana": "AFRONOVA PRIMEVAL",
+    "nameIndex": 10,
+    "artist": "8 bit",
+    "series": "5thMIX",
+    "minBPM": 200,
+    "maxBPM": 200,
+    "version": 20191109
+  },
+  {
+    "id": "iIP09bOq1l1b9b1l011IDIQ6Iill90Io",
+    "name": "BROKEN MY HEART",
+    "nameKana": "BROKEN MY HEART",
+    "nameIndex": 11,
+    "artist": "NAOKI feat. PAULA TERRY",
+    "series": "5thMIX",
+    "minBPM": 160,
+    "maxBPM": 160,
+    "version": 20191109
+  },
+  {
+    "id": "DOqPd1Iid6oObd8i96I9oo8obbODb96o",
+    "name": "CAN'T STOP FALLIN' IN LOVE ～SPEED MIX～",
+    "nameKana": "CANT STOP FALLIN IN LOVE SPEED MIX",
+    "nameIndex": 12,
+    "artist": "NAOKI",
+    "series": "5thMIX",
+    "minBPM": 170,
+    "maxBPM": 170,
+    "version": 20191109
+  },
+  {
+    "id": "QDP0i688bQi1Idqil1dOqDdPdoIPP6Q0",
+    "name": "DXY!",
+    "nameKana": "DXY",
+    "nameIndex": 13,
+    "artist": "TaQ",
+    "series": "5thMIX",
+    "minBPM": 148,
+    "maxBPM": 148,
+    "version": 20191109
+  },
+  {
+    "id": "bPD6ObloQPOOiQb1DbQDdilodiddlIlb",
+    "name": "ECSTASY",
+    "nameKana": "ECSTASY",
+    "nameIndex": 14,
+    "artist": "d-complex",
+    "series": "5thMIX",
+    "minBPM": 145,
+    "maxBPM": 145,
+    "version": 20191109
+  },
+  {
+    "id": "IPi69l86oqdDd8qoll61166D8969869I",
+    "name": "Electro Tuned ( the SubS Mix )",
+    "nameKana": "ELECTRO TUNED THE SUBS MIX",
+    "nameIndex": 14,
+    "artist": "TaQ",
+    "series": "5thMIX",
+    "minBPM": 125,
+    "maxBPM": 125,
+    "version": 20191109
+  },
+  {
+    "id": "qIDI69oIo8OlQqdqqDilI1do6IbP16Q6",
+    "name": "Healing Vision",
+    "nameKana": "HEALING VISION",
+    "nameIndex": 17,
+    "artist": "DE-SIRE",
+    "series": "5thMIX",
+    "minBPM": 49,
+    "maxBPM": 196,
+    "version": 20191109
+  },
+  {
+    "id": "6oldqOoilo1OoP6P9OoO8bdD9lI86qdQ",
+    "name": "INSERTiON",
+    "nameKana": "INSERTION",
+    "nameIndex": 18,
+    "artist": "NAOKI underground",
+    "series": "5thMIX",
+    "minBPM": 110,
+    "maxBPM": 225,
+    "version": 20191109
+  },
+  {
+    "id": "PP1q0iii1D6Dq9QOd0qqDOQD0160QoPD",
+    "name": "PARANOiA ETERNAL",
+    "nameKana": "PARANOIA ETERNAL",
+    "nameIndex": 25,
+    "artist": "STM 200",
+    "series": "5thMIX",
+    "minBPM": 200,
+    "maxBPM": 200,
+    "version": 20191109
+  },
+  {
+    "id": "Qb90bo6I0Pd9181iIoOPoqPOOOQq6dQ1",
+    "name": "STILL IN MY HEART",
+    "nameKana": "STILL IN MY HEART",
+    "nameIndex": 28,
+    "artist": "NAOKI",
+    "series": "5thMIX",
+    "minBPM": 150,
+    "maxBPM": 150,
+    "version": 20191109
+  }
+]
