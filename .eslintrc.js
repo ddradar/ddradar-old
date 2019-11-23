@@ -17,6 +17,7 @@ module.exports = {
     indent: "off",
     "arrow-parens": ["error", "as-needed"],
     "no-console": "off",
+    "no-useless-constructor" : "off",
     "space-before-function-paren": [
       "error",
       {
