@@ -16,6 +16,7 @@ module.exports = {
     semi: [2, "never"],
     indent: "off",
     "arrow-parens": ["error", "as-needed"],
+    "import/no-mutable-exports": "off",
     "no-console": "off",
     "no-useless-constructor" : "off",
     "space-before-function-paren": [
