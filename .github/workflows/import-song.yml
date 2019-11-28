@@ -36,6 +36,8 @@ jobs:
         FIREBASE_PRIVATE_KEY: ${{secrets.FIREBASE_PRIVATE_KEY}}
     - name: Push Created Json Files
       run: |
+        git config --global user.email "github_actions@example.com"
+        git config --global user.name "Github Actions"
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/ddradar/ddradar.git
         git checkout master
         git add -A
