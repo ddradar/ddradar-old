@@ -31,7 +31,7 @@ export default class UserModule extends VuexModule {
             iconUrl: user.photoURL!
           })
         }
-          resolve(!!user)
+        resolve(!!user)
       })
     })
   }
