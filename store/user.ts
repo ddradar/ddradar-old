@@ -10,10 +10,6 @@ const db = firebase.firestore()
 export default class UserModule extends VuexModule {
   userInfo: UserInfo | null = null
 
-  get isAuthenticated() {
-    return this.userInfo !== null
-  }
-
   @Mutation
   setUser(payload: UserInfo) {
     this.userInfo = { ...payload }
@@ -22,6 +18,22 @@ export default class UserModule extends VuexModule {
   @Mutation
   clearUser() {
     this.userInfo = null
+  }
+
+  @Action
+  isAuthenticated() {
+    return new Promise<boolean>(resolve => {
+      const unsubscribe = firebase.auth().onAuthStateChanged(async user => {
+        unsubscribe()
+        if (user) {
+          await this.fetchUserDb({
+            uid: user.uid,
+            iconUrl: user.photoURL!
+          })
+        }
+          resolve(!!user)
+      })
+    })
   }
 
   @Action
