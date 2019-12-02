@@ -21,7 +21,6 @@ service cloud.firestore {
 
       // user score
       match /scores/{document=**} {
-        allow read: if get(/databases/$(database)/documents/version/1/users/$(user)).data.isPublic == true;
         allow read, write: if isAuthor(user);
       }
     }
