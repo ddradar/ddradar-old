@@ -6,6 +6,11 @@ service cloud.firestore {
   }
 
   match /databases/{database}/documents {
+    // version
+    match /version/1 {
+      allow read;
+    }
+
     // song/chart info
     match /version/1/songs/{document=**} {
       allow read;

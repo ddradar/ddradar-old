@@ -15,6 +15,33 @@ describe(testName, () => {
   afterAll(async () => {
     await provider.cleanupAll()
   })
+  describe('version/1 document', () => {
+    describe('read', () => {
+      test('anyone can read document', async () => {
+        const db = provider.getAnonymousDb()
+        const docRef = db.doc('version/1')
+        await firebase.assertSucceeds(docRef.get())
+      })
+      test('anyone can read document', async () => {
+        const db = provider.getAnonymousDb()
+        const docRef = db.doc('version/1')
+        await firebase.assertSucceeds(docRef.get())
+      })
+    })
+    describe('write', () => {
+      const testData = { songVersion: 20190101, chartVersion: 20190101 }
+      test('anyone cannot write document (anonymous)', async () => {
+        const db = provider.getAnonymousDb()
+        const docRef = db.doc('version/1')
+        await firebase.assertFails(docRef.set(testData))
+      })
+      test('anyone cannot write document (authed user)', async () => {
+        const db = provider.getAuthedDb({ uid: 'rinon' })
+        const docRef = db.doc('version/1')
+        await firebase.assertFails(docRef.set(testData))
+      })
+    })
+  })
   describe('version/1/song collection', () => {
     describe('read', () => {
       test('anyone can list songs', async () => {
