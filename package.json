@@ -13,6 +13,21 @@
     "test": "jest",
     "test:all": "jest --config jest.config.all.json"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,vue}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "jest": {
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/$1",
@@ -80,9 +95,11 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^5.2.3",
     "fs": "0.0.1-security",
+    "husky": "^3.1.0",
     "jest": "~24.8.0",
     "jest-canvas-mock": "^2.1.2",
     "jest-json-schema": "^2.1.0",
+    "lint-staged": "^9.5.0",
     "node-sass": "^4.13.0",
     "prettier": "^1.18.2",
     "sass-loader": "^8.0.0",
