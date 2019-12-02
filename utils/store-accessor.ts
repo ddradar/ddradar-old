@@ -1,11 +1,11 @@
 import { Store } from 'vuex'
 import { getModule } from 'vuex-module-decorators'
-import User from '@/store/user'
+import UserModule from '@/store/user'
 
-let userStore: User
+let userStore: UserModule
 
-function initialiseStores(store: Store<any>): void {
-  userStore = getModule(User, store)
+function initializeStores(store: Store<any>): void {
+  userStore = getModule(UserModule, store)
 }
 
-export { initialiseStores, userStore }
+export { initializeStores, userStore }
