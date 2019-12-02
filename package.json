@@ -13,6 +13,21 @@
     "test": "jest",
     "test:all": "jest --config jest.config.all.json"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js,vue}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "jest": {
     "moduleNameMapper": {
       "^@/(.*)$": "<rootDir>/$1",
