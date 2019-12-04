@@ -67,11 +67,11 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
 import { userStore } from '@/store'
-import * as pkg from '@/package.json'
+import { version } from '@/package.json'
 
 @Component
 export default class DefaultLayout extends Vue {
-  appVersion = pkg.version
+  appVersion = version
   get user() {
     return userStore.userInfo
   }
