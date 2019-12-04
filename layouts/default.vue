@@ -44,15 +44,34 @@
     </b-navbar>
 
     <nuxt />
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          不具合を発見した、または新機能の要望がある場合には、
+          <a href="https://twitter.com/nogic1008" target="_blank">
+            作者のTwitter
+          </a>
+          または
+          <a href="https://github.com/ddradar/ddradar/issues" target="_blank">
+            Githubのissue
+          </a>
+          にてご報告ください。
+        </p>
+        <p>version: {{ appVersion }}</p>
+      </div>
+    </footer>
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
 import { userStore } from '@/store'
+import { version } from '@/package.json'
 
 @Component
 export default class DefaultLayout extends Vue {
+  appVersion = version
   get user() {
     return userStore.userInfo
   }
