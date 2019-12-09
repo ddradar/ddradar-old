@@ -69,7 +69,7 @@
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.2.10",
     "@nuxtjs/pwa": "^3.0.0-0",
-    "chart.js": "^2.9.2",
+    "chart.js": "^2.9.3",
     "firebase": "^7.5.2",
     "firebase-admin": "^8.8.0",
     "nuxt": "^2.0.0",
