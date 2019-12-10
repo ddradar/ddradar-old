@@ -73,7 +73,7 @@
     "firebase": "^7.5.2",
     "firebase-admin": "^8.8.0",
     "nuxt": "^2.0.0",
-    "nuxt-buefy": "^0.3.2",
+    "nuxt-buefy": "^0.3.19",
     "nuxt-property-decorator": "^2.5.0",
     "vue-chartjs": "^3.5.0",
     "vuex-module-decorators": "^0.11.0"
