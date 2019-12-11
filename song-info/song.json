@@ -4477,6 +4477,17 @@
     "version": 20191109
   },
   {
+    "id": "D08lqQOPdOO6D6ll690Qd6PdbO111011",
+    "name": "ランカーキラーガール",
+    "nameKana": "らんかーきらーがーる",
+    "nameIndex": 8,
+    "artist": "中島由貴 × いちか",
+    "series": "A20",
+    "minBPM": 200,
+    "maxBPM": 200,
+    "version": 20191127
+  },
+  {
     "id": "l61ldlPo1DQ081860O86D0Qo0qdOd0qP",
     "name": "Ace out",
     "nameKana": "ACE OUT",
@@ -4959,6 +4970,17 @@
     "minBPM": null,
     "maxBPM": null,
     "version": 20191109
+  },
+  {
+    "id": "bbiPqbo0lQq9P19i06q690blI91dbbq6",
+    "name": "Starlight in the Snow",
+    "nameKana": "STARLIGHT IN THE SNOW",
+    "nameIndex": 28,
+    "artist": "BEMANI Sound Team \"劇団レコード\" ft.Lisa - paint with stars",
+    "series": "A20",
+    "minBPM": 150,
+    "maxBPM": 150,
+    "version": 20191211
   },
   {
     "id": "80OqPo1D6lD616lIDI1IPq0oPllld6b1",
