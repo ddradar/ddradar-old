@@ -101,7 +101,7 @@
     "jest-json-schema": "^2.1.0",
     "lint-staged": "^9.5.0",
     "node-sass": "^4.13.0",
-    "prettier": "^1.18.2",
+    "prettier": "^1.19.1",
     "sass-loader": "^8.0.0",
     "ts-jest": "~24.2.0",
     "vue-jest": "^4.0.0-0"
