@@ -128,14 +128,13 @@ describe('song/:id/:chart', () => {
     })
   })
   describe('getChartType method', () => {
-    test.each([[0, -1], [NaN, -Infinity], [1.5, Infinity]])(
-      'returns "?-Unknown"',
-      (i, j) => {
-        expect(vm.getChartType({ playStyle: i, difficulty: j })).toBe(
-          '?-Unknown'
-        )
-      }
-    )
+    test.each([
+      [0, -1],
+      [NaN, -Infinity],
+      [1.5, Infinity]
+    ])('returns "?-Unknown"', (i, j) => {
+      expect(vm.getChartType({ playStyle: i, difficulty: j })).toBe('?-Unknown')
+    })
     test('returns "SP-DIFFICULTY"', () => {
       expect(vm.getChartType({ playStyle: 1, difficulty: 0 })).toBe(
         'SP-BEGINNER'

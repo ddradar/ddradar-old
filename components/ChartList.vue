@@ -63,9 +63,11 @@ export default class ChartList extends Vue {
   getPlayStyleName(playStyle: PlayStyle) {
     return getPlayStyleName(playStyle)
   }
+
   getDifficultyName(difficulty: Difficulty) {
     return getDifficultyName(difficulty)
   }
+
   getDifficultyClassName(difficulty: Difficulty) {
     return 'is-' + getDifficultyName(difficulty).toLowerCase()
   }
