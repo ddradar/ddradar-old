@@ -19,6 +19,7 @@ export default class GrooveRadarComponent extends Vue {
     air: number
     freeze: number
   }
+
   get chartOptions() {
     return {
       legend: {
@@ -43,6 +44,7 @@ export default class GrooveRadarComponent extends Vue {
       }
     }
   }
+
   get chartData(): Chart.ChartData {
     return {
       labels: ['STREAM', 'CHAOS', 'FREEZE', 'AIR', 'VOLTAGE'],
@@ -64,6 +66,7 @@ export default class GrooveRadarComponent extends Vue {
       ]
     }
   }
+
   renderLabel(
     { index }: Pick<Chart.ChartTooltipItem, 'index'>,
     { labels }: Pick<Chart.ChartData, 'labels'>

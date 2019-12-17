@@ -21,15 +21,16 @@ describe('SongRepository', () => {
     await batch.commit()
   })
   describe('fetchSongs', () => {
-    test.each([['series', '2ndMIX'], ['nameIndex', 25], ['nameIndex', 1]])(
-      'returns exist data',
-      async (field, cond) => {
-        const fetchedSongs = await repo.fetchSongs(field as string, cond)
-        expect(fetchedSongs).toHaveLength(
-          songs.filter(d => d[field as 'series' | 'nameIndex'] === cond).length
-        )
-      }
-    )
+    test.each([
+      ['series', '2ndMIX'],
+      ['nameIndex', 25],
+      ['nameIndex', 1]
+    ])('returns exist data', async (field, cond) => {
+      const fetchedSongs = await repo.fetchSongs(field as string, cond)
+      expect(fetchedSongs).toHaveLength(
+        songs.filter(d => d[field as 'series' | 'nameIndex'] === cond).length
+      )
+    })
   })
   describe('fetchSongById', () => {
     test('returns Song if exists', async () => {

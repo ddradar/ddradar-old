@@ -102,6 +102,7 @@ export default class SongPage extends Vue {
     maxBPM: null,
     series: 'A20'
   }
+
   charts: StepChart[] = []
   isLoading = true
   selectedIndex: number = 0
@@ -113,6 +114,7 @@ export default class SongPage extends Vue {
   get seriesName() {
     return getSeriesName(this.song.series)
   }
+
   /**
    * Get selected chart name.
    * @return {String} playStyle/difficulty (ex. SINGLE/BASIC)
@@ -124,6 +126,7 @@ export default class SongPage extends Vue {
     const { playStyle, difficulty } = this.selected
     return `${PlayStyleList[playStyle]}/${getDifficultyName(difficulty)}`
   }
+
   /**
    * Get selected chart.
    */
@@ -132,6 +135,7 @@ export default class SongPage extends Vue {
       ? null
       : this.charts[this.selectedIndex]
   }
+
   /**
    * fetch data asynchronous.
    */
@@ -154,6 +158,7 @@ export default class SongPage extends Vue {
       }
     }
   }
+
   /**
    * @return {String} Chart type.(ex. SP-BASIC)
    */
@@ -163,18 +168,21 @@ export default class SongPage extends Vue {
   }: Pick<StepChart, 'playStyle' | 'difficulty'>) {
     return `${getPlayStyleName(playStyle)}-${getDifficultyName(difficulty)}`
   }
+
   /**
    * @return {String} css class name.(ex. is-basic)
    */
   getClassName({ difficulty }: Pick<StepChart, 'difficulty'>) {
     return `is-${getDifficultyName(difficulty).toLowerCase()}`
   }
+
   /**
    * Change selected chart.
    */
   changeSelected(index: number) {
     this.selectedIndex = index
   }
+
   /**
    * Calcurate selectedIndex from URL Path and charts length.
    * @param {number} chartId URL Path (2nd digit means playStyle, and 1st digit means difficulty)
