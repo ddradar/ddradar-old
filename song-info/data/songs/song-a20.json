@@ -523,9 +523,9 @@
     "nameIndex": 24,
     "artist": "かめりあ",
     "series": "A20",
-    "minBPM": null,
-    "maxBPM": null,
-    "version": 20191109
+    "minBPM": 39,
+    "maxBPM": 310,
+    "version": 20191218
   },
   {
     "id": "QI06q9lPIoo80DlI18Ooi6dbPl89bqi0",
