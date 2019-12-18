@@ -523,9 +523,9 @@
     "nameIndex": 24,
     "artist": "かめりあ",
     "series": "A20",
-    "minBPM": null,
-    "maxBPM": null,
-    "version": 20191109
+    "minBPM": 39,
+    "maxBPM": 310,
+    "version": 20191218
   },
   {
     "id": "QI06q9lPIoo80DlI18Ooi6dbPl89bqi0",
@@ -724,6 +724,17 @@
     "minBPM": 134,
     "maxBPM": 180,
     "version": 20191109
+  },
+  {
+    "id": "Q8bIDb60oPo890oi0l0O9PQd9lOb8o1Q",
+    "name": "The History of the Future",
+    "nameKana": "THE HISTORY OF THE FUTURE",
+    "nameIndex": 29,
+    "artist": "BEMANI Sound Team \"U1×TAG\"",
+    "series": "A20",
+    "minBPM": 100,
+    "maxBPM": 200,
+    "version": 20191218
   },
   {
     "id": "q6661PIbbb1O80OQQ11iD6bP1l6bio0Q",
