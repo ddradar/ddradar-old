@@ -32,7 +32,7 @@
         "maxLength": 32,
         "title": "Song's Id",
         "examples": ["lqI8DD9Plq6IO8P8P6Pl8Di98DlI9oP8"],
-        "pattern": "^(.*)$"
+        "pattern": "^([01689bdiloqDIOPQ]*)$"
       },
       "songName": {
         "$id": "#/items/properties/songName",

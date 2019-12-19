@@ -5026,6 +5026,22 @@
   {
     "songId": "id0QqdbI8oloO9l08IqI9q1D0819OQID",
     "songName": "無頼ック自己ライザー",
+    "playStyle": 1,
+    "difficulty": 4,
+    "level": 15,
+    "notes": 567,
+    "freezeArrow": 11,
+    "shockArrow": 0,
+    "stream": 95,
+    "voltage": 100,
+    "air": 94,
+    "freeze": 19,
+    "chaos": 102,
+    "version": 20191219
+  },
+  {
+    "songId": "id0QqdbI8oloO9l08IqI9q1D0819OQID",
+    "songName": "無頼ック自己ライザー",
     "playStyle": 2,
     "difficulty": 1,
     "level": 5,
@@ -5070,6 +5086,22 @@
     "freeze": 18,
     "chaos": 50,
     "version": 20191109
+  },
+  {
+    "songId": "id0QqdbI8oloO9l08IqI9q1D0819OQID",
+    "songName": "無頼ック自己ライザー",
+    "playStyle": 2,
+    "difficulty": 4,
+    "level": 15,
+    "notes": 553,
+    "freezeArrow": 13,
+    "shockArrow": 0,
+    "stream": 93,
+    "voltage": 93,
+    "air": 78,
+    "freeze": 20,
+    "chaos": 101,
+    "version": 20191219
   },
   {
     "songId": "dDlDPddq08iD8IOb9I1PbODP9696966D",
@@ -14178,6 +14210,22 @@
   {
     "songId": "i916bDibPI9l869o9IIQb8DbO9bPDi6q",
     "songName": "Prey",
+    "playStyle": 1,
+    "difficulty": 4,
+    "level": 18,
+    "notes": 435,
+    "freezeArrow": 46,
+    "shockArrow": 0,
+    "stream": 86,
+    "voltage": 69,
+    "air": 167,
+    "freeze": 49,
+    "chaos": 42,
+    "version": 20191219
+  },
+  {
+    "songId": "i916bDibPI9l869o9IIQb8DbO9bPDi6q",
+    "songName": "Prey",
     "playStyle": 2,
     "difficulty": 1,
     "level": 11,
@@ -14222,6 +14270,22 @@
     "freeze": 32,
     "chaos": 104,
     "version": 20191109
+  },
+  {
+    "songId": "i916bDibPI9l869o9IIQb8DbO9bPDi6q",
+    "songName": "Prey",
+    "playStyle": 2,
+    "difficulty": 4,
+    "level": 18,
+    "notes": 413,
+    "freezeArrow": 19,
+    "shockArrow": 0,
+    "stream": 82,
+    "voltage": 69,
+    "air": 181,
+    "freeze": 25,
+    "chaos": 41,
+    "version": 20191219
   },
   {
     "songId": "99q8i8bPldDbio919ob0DPi0bqdIoobi",

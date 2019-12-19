@@ -27,7 +27,7 @@
         "minLength": 32,
         "maxLength": 32,
         "examples": ["b1do8OI6qDDlQO0PI16868ql6bdbI886"],
-        "pattern": "^(.*)$"
+        "pattern": "^([01689bdiloqDIOPQ]*)$"
       },
       "name": {
         "$id": "#/items/properties/name",
