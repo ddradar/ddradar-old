@@ -198,14 +198,14 @@
     "version": 20191127
   },
   {
-    "id": "00000000000000000000000000000000",
+    "id": "illQ66d0QlbDl18OOb8P0ODD0oDP19PQ",
     "name": "令和",
     "nameKana": "れいわ",
     "nameIndex": 8,
     "artist": "ゴールデンボンバー",
     "series": "A20",
-    "minBPM": 0,
-    "maxBPM": 0,
+    "minBPM": 142,
+    "maxBPM": 142,
     "version": 20191219
   },
   {
@@ -286,14 +286,14 @@
     "version": 20191109
   },
   {
-    "id": "00000000000000000000000000000000",
+    "id": "l81l981iPod0PDIIObIldoQb6Ol9o1Iq",
     "name": "Bounce Trippy",
     "nameKana": "BOUNCE TRIPPY",
     "nameIndex": 11,
     "artist": "Dustvoxx",
     "series": "A20",
-    "minBPM": 0,
-    "maxBPM": 0,
+    "minBPM": 185,
+    "maxBPM": 185,
     "version": 20191219
   },
   {
@@ -396,14 +396,14 @@
     "version": 20191109
   },
   {
-    "id": "00000000000000000000000000000000",
+    "id": "d8oDqIQOoD6DQoQbOIP9I6DPPOl89lo6",
     "name": "ENDLESS",
     "nameKana": "ENDLESS",
     "nameIndex": 14,
     "artist": "FN2(Eurobeat Union)",
     "series": "A20",
-    "minBPM": 0,
-    "maxBPM": 0,
+    "minBPM": 150,
+    "maxBPM": 150,
     "version": 20191219
   },
   {
