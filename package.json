@@ -84,7 +84,7 @@
     "@nuxt/typescript-build": "^0.5.2",
     "@nuxtjs/eslint-config-typescript": "^1.0.0",
     "@types/chart.js": "^2.9.5",
-    "@types/jest": "^24.0.23",
+    "@types/jest": "^24.0.24",
     "@types/jest-json-schema": "^2.1.1",
     "@vue/test-utils": "^1.0.0-beta.30",
     "babel-eslint": "^10.0.3",
