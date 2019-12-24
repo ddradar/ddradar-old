@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ddradar.app/cource-schema.json",
+  "definitions": {
+    "id": {
+      "type": "string",
+      "minLength": 32,
+      "maxLength": 32,
+      "examples": ["b1do8OI6qDDlQO0PI16868ql6bdbI886"],
+      "pattern": "^([01689bdiloqDIOPQ]*)$"
+    },
+    "playStyle": {
+      "type": "integer",
+      "title": "Play Style (SP:1 DP:2)",
+      "enum": [1, 2]
+    },
+    "difficulty": {
+      "type": "integer",
+      "title": "Difficulty (BEGINNER:0, BASIC:1, ..., CHALLENGE:4)",
+      "enum": [0, 1, 2, 3, 4]
+    },
+    "level": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 19
+    }
+  },
+  "type": "array",
+  "title": "The Root Schema",
+  "items": {
+    "type": "object",
+    "title": "Cource Info",
+    "required": [
+      "id",
+      "name",
+      "orders",
+      "version"
+    ],
+    "properties": {
+      "id": {
+        "$ref": "#/definitions/id",
+        "title": "Cource's Id"
+      },
+      "name": {
+        "type": "string",
+        "title": "Cource Name"
+      },
+      "orders": {
+        "type": "array",
+        "title": "Cource Orders",
+        "items": {
+          "type": "object",
+          "title": "Cource Order Info",
+          "required": [
+            "playStyle",
+            "difficulty",
+            "level",
+            "chartOrder"
+          ],
+          "properties": {
+            "playStyle": {
+              "$ref": "#/definitions/playStyle"
+            },
+            "difficulty": {
+              "$ref": "#/definitions/difficulty"
+            },
+            "level": {
+              "$ref": "#/definitions/level",
+              "title": "Cource Level (often the maximum level of chartOrders)"
+            },
+            "chartOrder": {
+              "type": "array",
+              "title": "",
+              "items": {
+                "type": "object",
+                "title": "Step Chart Info",
+                "required": [
+                  "songId",
+                  "songName",
+                  "playStyle",
+                  "difficulty",
+                  "level"
+                ],
+                "properties": {
+                  "songId": {
+                    "$ref": "#/definitions/id",
+                    "title": "Song's Id"
+                  },
+                  "songName": {
+                    "type": "string",
+                    "title": "Song Name"
+                  },
+                  "playStyle": {
+                    "$ref": "#/definitions/playStyle"
+                  },
+                  "difficulty": {
+                    "$ref": "#/definitions/difficulty"
+                  },
+                  "level": {
+                    "$ref": "#/definitions/level",
+                    "title": "Chart Level"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "version": {
+        "type": "integer",
+        "title": "Use for diff update. if you change or create data, increase its version."
+      }
+    }
+  }
+}
