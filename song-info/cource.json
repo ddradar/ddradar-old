@@ -1,0 +1,2648 @@
+[
+  {
+    "id": "qbbOOO1QibO1861bqQII9lqlPiIoqb98",
+    "name": "FIRST",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 1,
+        "difficulty": 0,
+        "level": 4,
+        "chartOrder": [
+          {
+            "songId": "lIlQ8DbPP6Iil1DOlQ6d8IPQblDQ8IiI",
+            "songName": "HAVE YOU NEVER BEEN MELLOW (20th Anniversary Mix)",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 2
+          },
+          {
+            "songId": "b1do8OI6qDDlQO0PI16868ql6bdbI886",
+            "songName": "MAKE IT BETTER",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 3
+          },
+          {
+            "songId": "Pb9II0oiI9ODQ8OP8IqIPQP9P68biqIi",
+            "songName": "TRIP MACHINE",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 3
+          },
+          {
+            "songId": "06loOQ0DQb0DqbOibl6qO81qlIdoP9DI",
+            "songName": "PARANOiA",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 4
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 1,
+        "level": 8,
+        "chartOrder": [
+          {
+            "songId": "lIlQ8DbPP6Iil1DOlQ6d8IPQblDQ8IiI",
+            "songName": "HAVE YOU NEVER BEEN MELLOW (20th Anniversary Mix)",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 4
+          },
+          {
+            "songId": "b1do8OI6qDDlQO0PI16868ql6bdbI886",
+            "songName": "MAKE IT BETTER",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 7
+          },
+          {
+            "songId": "Pb9II0oiI9ODQ8OP8IqIPQP9P68biqIi",
+            "songName": "TRIP MACHINE",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 8
+          },
+          {
+            "songId": "06loOQ0DQb0DqbOibl6qO81qlIdoP9DI",
+            "songName": "PARANOiA",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 8
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 2,
+        "level": 9,
+        "chartOrder": [
+          {
+            "songId": "lIlQ8DbPP6Iil1DOlQ6d8IPQblDQ8IiI",
+            "songName": "HAVE YOU NEVER BEEN MELLOW (20th Anniversary Mix)",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 6
+          },
+          {
+            "songId": "b1do8OI6qDDlQO0PI16868ql6bdbI886",
+            "songName": "MAKE IT BETTER",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 9
+          },
+          {
+            "songId": "Pb9II0oiI9ODQ8OP8IqIPQP9P68biqIi",
+            "songName": "TRIP MACHINE",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 9
+          },
+          {
+            "songId": "06loOQ0DQb0DqbOibl6qO81qlIdoP9DI",
+            "songName": "PARANOiA",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 9
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 3,
+        "level": 12,
+        "chartOrder": [
+          {
+            "songId": "lIlQ8DbPP6Iil1DOlQ6d8IPQblDQ8IiI",
+            "songName": "HAVE YOU NEVER BEEN MELLOW (20th Anniversary Mix)",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 10
+          },
+          {
+            "songId": "b1do8OI6qDDlQO0PI16868ql6bdbI886",
+            "songName": "MAKE IT BETTER",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 12
+          },
+          {
+            "songId": "Pb9II0oiI9ODQ8OP8IqIPQP9P68biqIi",
+            "songName": "TRIP MACHINE",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 10
+          },
+          {
+            "songId": "06loOQ0DQb0DqbOibl6qO81qlIdoP9DI",
+            "songName": "PARANOiA",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 11
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 1,
+        "level": 9,
+        "chartOrder": [
+          {
+            "songId": "lIlQ8DbPP6Iil1DOlQ6d8IPQblDQ8IiI",
+            "songName": "HAVE YOU NEVER BEEN MELLOW (20th Anniversary Mix)",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 4
+          },
+          {
+            "songId": "b1do8OI6qDDlQO0PI16868ql6bdbI886",
+            "songName": "MAKE IT BETTER",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 7
+          },
+          {
+            "songId": "Pb9II0oiI9ODQ8OP8IqIPQP9P68biqIi",
+            "songName": "TRIP MACHINE",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 9
+          },
+          {
+            "songId": "06loOQ0DQb0DqbOibl6qO81qlIdoP9DI",
+            "songName": "PARANOiA",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 8
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 2,
+        "level": 13,
+        "chartOrder": [
+          {
+            "songId": "lIlQ8DbPP6Iil1DOlQ6d8IPQblDQ8IiI",
+            "songName": "HAVE YOU NEVER BEEN MELLOW (20th Anniversary Mix)",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 6
+          },
+          {
+            "songId": "b1do8OI6qDDlQO0PI16868ql6bdbI886",
+            "songName": "MAKE IT BETTER",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 9
+          },
+          {
+            "songId": "Pb9II0oiI9ODQ8OP8IqIPQP9P68biqIi",
+            "songName": "TRIP MACHINE",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 10
+          },
+          {
+            "songId": "06loOQ0DQb0DqbOibl6qO81qlIdoP9DI",
+            "songName": "PARANOiA",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 13
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 3,
+        "level": 11,
+        "chartOrder": [
+          {
+            "songId": "lIlQ8DbPP6Iil1DOlQ6d8IPQblDQ8IiI",
+            "songName": "HAVE YOU NEVER BEEN MELLOW (20th Anniversary Mix)",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 10
+          },
+          {
+            "songId": "b1do8OI6qDDlQO0PI16868ql6bdbI886",
+            "songName": "MAKE IT BETTER",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 11
+          },
+          {
+            "songId": "Pb9II0oiI9ODQ8OP8IqIPQP9P68biqIi",
+            "songName": "TRIP MACHINE",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 10
+          },
+          {
+            "songId": "06loOQ0DQb0DqbOibl6qO81qlIdoP9DI",
+            "songName": "PARANOiA",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 11
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "I90bQ81P1blOPIdd9PPl6I9D8DQ1dIob",
+    "name": "TWENTY",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 1,
+        "difficulty": 0,
+        "level": 4,
+        "chartOrder": [
+          {
+            "songId": "PdPdbdQ1lDI18O90Q0li8QI0bo99bidd",
+            "songName": "This Beat Is.....",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 1
+          },
+          {
+            "songId": "PPQb966D6Ql6Q8iPo68810PdDiI6D0bl",
+            "songName": "Waiting",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 3
+          },
+          {
+            "songId": "6iO8d9ld00I6lDIO6qbOldP99oqloqb9",
+            "songName": "Dead Heat",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 4
+          },
+          {
+            "songId": "1iDPo19Pb9ooi8OqiidbqPb06DDdqiqo",
+            "songName": "Neverland",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 4
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 1,
+        "level": 8,
+        "chartOrder": [
+          {
+            "songId": "PdPdbdQ1lDI18O90Q0li8QI0bo99bidd",
+            "songName": "This Beat Is.....",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 4
+          },
+          {
+            "songId": "PPQb966D6Ql6Q8iPo68810PdDiI6D0bl",
+            "songName": "Waiting",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 6
+          },
+          {
+            "songId": "6iO8d9ld00I6lDIO6qbOldP99oqloqb9",
+            "songName": "Dead Heat",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 6
+          },
+          {
+            "songId": "1iDPo19Pb9ooi8OqiidbqPb06DDdqiqo",
+            "songName": "Neverland",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 8
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 2,
+        "level": 12,
+        "chartOrder": [
+          {
+            "songId": "PdPdbdQ1lDI18O90Q0li8QI0bo99bidd",
+            "songName": "This Beat Is.....",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 7
+          },
+          {
+            "songId": "PPQb966D6Ql6Q8iPo68810PdDiI6D0bl",
+            "songName": "Waiting",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 10
+          },
+          {
+            "songId": "6iO8d9ld00I6lDIO6qbOldP99oqloqb9",
+            "songName": "Dead Heat",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 10
+          },
+          {
+            "songId": "1iDPo19Pb9ooi8OqiidbqPb06DDdqiqo",
+            "songName": "Neverland",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 12
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 3,
+        "level": 15,
+        "chartOrder": [
+          {
+            "songId": "PdPdbdQ1lDI18O90Q0li8QI0bo99bidd",
+            "songName": "This Beat Is.....",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 11
+          },
+          {
+            "songId": "PPQb966D6Ql6Q8iPo68810PdDiI6D0bl",
+            "songName": "Waiting",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "6iO8d9ld00I6lDIO6qbOldP99oqloqb9",
+            "songName": "Dead Heat",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 14
+          },
+          {
+            "songId": "1iDPo19Pb9ooi8OqiidbqPb06DDdqiqo",
+            "songName": "Neverland",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 15
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 1,
+        "level": 8,
+        "chartOrder": [
+          {
+            "songId": "PdPdbdQ1lDI18O90Q0li8QI0bo99bidd",
+            "songName": "This Beat Is.....",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 4
+          },
+          {
+            "songId": "PPQb966D6Ql6Q8iPo68810PdDiI6D0bl",
+            "songName": "Waiting",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 7
+          },
+          {
+            "songId": "6iO8d9ld00I6lDIO6qbOldP99oqloqb9",
+            "songName": "Dead Heat",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 6
+          },
+          {
+            "songId": "1iDPo19Pb9ooi8OqiidbqPb06DDdqiqo",
+            "songName": "Neverland",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 8
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 2,
+        "level": 12,
+        "chartOrder": [
+          {
+            "songId": "PdPdbdQ1lDI18O90Q0li8QI0bo99bidd",
+            "songName": "This Beat Is.....",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 7
+          },
+          {
+            "songId": "PPQb966D6Ql6Q8iPo68810PdDiI6D0bl",
+            "songName": "Waiting",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 10
+          },
+          {
+            "songId": "6iO8d9ld00I6lDIO6qbOldP99oqloqb9",
+            "songName": "Dead Heat",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 10
+          },
+          {
+            "songId": "1iDPo19Pb9ooi8OqiidbqPb06DDdqiqo",
+            "songName": "Neverland",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 12
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 3,
+        "level": 14,
+        "chartOrder": [
+          {
+            "songId": "PdPdbdQ1lDI18O90Q0li8QI0bo99bidd",
+            "songName": "This Beat Is.....",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 10
+          },
+          {
+            "songId": "PPQb966D6Ql6Q8iPo68810PdDiI6D0bl",
+            "songName": "Waiting",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "6iO8d9ld00I6lDIO6qbOldP99oqloqb9",
+            "songName": "Dead Heat",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 14
+          },
+          {
+            "songId": "1iDPo19Pb9ooi8OqiidbqPb06DDdqiqo",
+            "songName": "Neverland",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "88o8Oq69ldilblP10DI0qqb6b8I0DDi9",
+    "name": "BOUNCE",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 1,
+        "difficulty": 0,
+        "level": 3,
+        "chartOrder": [
+          {
+            "songId": "lb1l0DibId6Pb9ddlqlDoP6d6oD0o0IP",
+            "songName": "Slip Out (bounce in beat mix)",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 2
+          },
+          {
+            "songId": "Dq8b8DPD06Q8qob8OOiQIlOdD8QQD0q9",
+            "songName": "Fly far bounce",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 3
+          },
+          {
+            "songId": "OPDQ9Oi8I6D1I1iqi8iOiP0bDI9Pl86P",
+            "songName": "on the bounce",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 3
+          },
+          {
+            "songId": "08PiiDq6b1oQ8OIIbDql0bDbIID0b1iP",
+            "songName": "Drop The Bounce",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 3
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 1,
+        "level": 7,
+        "chartOrder": [
+          {
+            "songId": "lb1l0DibId6Pb9ddlqlDoP6d6oD0o0IP",
+            "songName": "Slip Out (bounce in beat mix)",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 4
+          },
+          {
+            "songId": "Dq8b8DPD06Q8qob8OOiQIlOdD8QQD0q9",
+            "songName": "Fly far bounce",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 6
+          },
+          {
+            "songId": "OPDQ9Oi8I6D1I1iqi8iOiP0bDI9Pl86P",
+            "songName": "on the bounce",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 7
+          },
+          {
+            "songId": "08PiiDq6b1oQ8OIIbDql0bDbIID0b1iP",
+            "songName": "Drop The Bounce",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 7
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 2,
+        "level": 11,
+        "chartOrder": [
+          {
+            "songId": "lb1l0DibId6Pb9ddlqlDoP6d6oD0o0IP",
+            "songName": "Slip Out (bounce in beat mix)",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 6
+          },
+          {
+            "songId": "Dq8b8DPD06Q8qob8OOiQIlOdD8QQD0q9",
+            "songName": "Fly far bounce",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 10
+          },
+          {
+            "songId": "OPDQ9Oi8I6D1I1iqi8iOiP0bDI9Pl86P",
+            "songName": "on the bounce",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 11
+          },
+          {
+            "songId": "08PiiDq6b1oQ8OIIbDql0bDbIID0b1iP",
+            "songName": "Drop The Bounce",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 10
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 3,
+        "level": 14,
+        "chartOrder": [
+          {
+            "songId": "lb1l0DibId6Pb9ddlqlDoP6d6oD0o0IP",
+            "songName": "Slip Out (bounce in beat mix)",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 10
+          },
+          {
+            "songId": "Dq8b8DPD06Q8qob8OOiQIlOdD8QQD0q9",
+            "songName": "Fly far bounce",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "OPDQ9Oi8I6D1I1iqi8iOiP0bDI9Pl86P",
+            "songName": "on the bounce",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 14
+          },
+          {
+            "songId": "08PiiDq6b1oQ8OIIbDql0bDbIID0b1iP",
+            "songName": "Drop The Bounce",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 14
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 4,
+        "level": 3,
+        "chartOrder": [
+          {
+            "songId": "lb1l0DibId6Pb9ddlqlDoP6d6oD0o0IP",
+            "songName": "Slip Out (bounce in beat mix)",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 10
+          },
+          {
+            "songId": "Dq8b8DPD06Q8qob8OOiQIlOdD8QQD0q9",
+            "songName": "Fly far bounce",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "OPDQ9Oi8I6D1I1iqi8iOiP0bDI9Pl86P",
+            "songName": "on the bounce",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 16
+          },
+          {
+            "songId": "08PiiDq6b1oQ8OIIbDql0bDbIID0b1iP",
+            "songName": "Drop The Bounce",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 14
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 1,
+        "level": 8,
+        "chartOrder": [
+          {
+            "songId": "lb1l0DibId6Pb9ddlqlDoP6d6oD0o0IP",
+            "songName": "Slip Out (bounce in beat mix)",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 6
+          },
+          {
+            "songId": "Dq8b8DPD06Q8qob8OOiQIlOdD8QQD0q9",
+            "songName": "Fly far bounce",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 6
+          },
+          {
+            "songId": "OPDQ9Oi8I6D1I1iqi8iOiP0bDI9Pl86P",
+            "songName": "on the bounce",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 6
+          },
+          {
+            "songId": "08PiiDq6b1oQ8OIIbDql0bDbIID0b1iP",
+            "songName": "Drop The Bounce",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 8
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 2,
+        "level": 11,
+        "chartOrder": [
+          {
+            "songId": "lb1l0DibId6Pb9ddlqlDoP6d6oD0o0IP",
+            "songName": "Slip Out (bounce in beat mix)",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 7
+          },
+          {
+            "songId": "Dq8b8DPD06Q8qob8OOiQIlOdD8QQD0q9",
+            "songName": "Fly far bounce",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 10
+          },
+          {
+            "songId": "OPDQ9Oi8I6D1I1iqi8iOiP0bDI9Pl86P",
+            "songName": "on the bounce",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 9
+          },
+          {
+            "songId": "08PiiDq6b1oQ8OIIbDql0bDbIID0b1iP",
+            "songName": "Drop The Bounce",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 11
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 3,
+        "level": 15,
+        "chartOrder": [
+          {
+            "songId": "lb1l0DibId6Pb9ddlqlDoP6d6oD0o0IP",
+            "songName": "Slip Out (bounce in beat mix)",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 9
+          },
+          {
+            "songId": "Dq8b8DPD06Q8qob8OOiQIlOdD8QQD0q9",
+            "songName": "Fly far bounce",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "OPDQ9Oi8I6D1I1iqi8iOiP0bDI9Pl86P",
+            "songName": "on the bounce",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 14
+          },
+          {
+            "songId": "08PiiDq6b1oQ8OIIbDql0bDbIID0b1iP",
+            "songName": "Drop The Bounce",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 15
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 4,
+        "level": 15,
+        "chartOrder": [
+          {
+            "songId": "lb1l0DibId6Pb9ddlqlDoP6d6oD0o0IP",
+            "songName": "Slip Out (bounce in beat mix)",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 9
+          },
+          {
+            "songId": "Dq8b8DPD06Q8qob8OOiQIlOdD8QQD0q9",
+            "songName": "Fly far bounce",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "OPDQ9Oi8I6D1I1iqi8iOiP0bDI9Pl86P",
+            "songName": "on the bounce",
+            "playStyle": 2,
+            "difficulty": 4,
+            "level": 15
+          },
+          {
+            "songId": "08PiiDq6b1oQ8OIIbDql0bDbIID0b1iP",
+            "songName": "Drop The Bounce",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q6oOPqQPlOQoooq888bPI1OPDlqDIQQD",
+    "name": "PASSION",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 1,
+        "difficulty": 0,
+        "level": 4,
+        "chartOrder": [
+          {
+            "songId": "lIPP90Ilqib08Obob9901PiP19OQ18P9",
+            "songName": "Heatstroke",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 2
+          },
+          {
+            "songId": "901q61iP6lPiDqIQoQod9PDqlOPq1bb9",
+            "songName": "La Señorita",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 4
+          },
+          {
+            "songId": "D0Q0oIDDqoQd0IQddi1IiD16dO16O88o",
+            "songName": "Seta Para Cima↑↑",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 3
+          },
+          {
+            "songId": "bo6PqbbPQ6D096OIP6dDPbPPiDi88609",
+            "songName": "Spanish Snowy Dance",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 3
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 1,
+        "level": 7,
+        "chartOrder": [
+          {
+            "songId": "lIPP90Ilqib08Obob9901PiP19OQ18P9",
+            "songName": "Heatstroke",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 6
+          },
+          {
+            "songId": "901q61iP6lPiDqIQoQod9PDqlOPq1bb9",
+            "songName": "La Señorita",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 6
+          },
+          {
+            "songId": "D0Q0oIDDqoQd0IQddi1IiD16dO16O88o",
+            "songName": "Seta Para Cima↑↑",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 5
+          },
+          {
+            "songId": "bo6PqbbPQ6D096OIP6dDPbPPiDi88609",
+            "songName": "Spanish Snowy Dance",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 7
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 2,
+        "level": 11,
+        "chartOrder": [
+          {
+            "songId": "lIPP90Ilqib08Obob9901PiP19OQ18P9",
+            "songName": "Heatstroke",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 8
+          },
+          {
+            "songId": "901q61iP6lPiDqIQoQod9PDqlOPq1bb9",
+            "songName": "La Señorita",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 8
+          },
+          {
+            "songId": "D0Q0oIDDqoQd0IQddi1IiD16dO16O88o",
+            "songName": "Seta Para Cima↑↑",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 10
+          },
+          {
+            "songId": "bo6PqbbPQ6D096OIP6dDPbPPiDi88609",
+            "songName": "Spanish Snowy Dance",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 11
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 3,
+        "level": 15,
+        "chartOrder": [
+          {
+            "songId": "lIPP90Ilqib08Obob9901PiP19OQ18P9",
+            "songName": "Heatstroke",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 10
+          },
+          {
+            "songId": "901q61iP6lPiDqIQoQod9PDqlOPq1bb9",
+            "songName": "La Señorita",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 10
+          },
+          {
+            "songId": "D0Q0oIDDqoQd0IQddi1IiD16dO16O88o",
+            "songName": "Seta Para Cima↑↑",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "bo6PqbbPQ6D096OIP6dDPbPPiDi88609",
+            "songName": "Spanish Snowy Dance",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 15
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 4,
+        "level": 17,
+        "chartOrder": [
+          {
+            "songId": "lIPP90Ilqib08Obob9901PiP19OQ18P9",
+            "songName": "Heatstroke",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 8
+          },
+          {
+            "songId": "901q61iP6lPiDqIQoQod9PDqlOPq1bb9",
+            "songName": "La Señorita",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 10
+          },
+          {
+            "songId": "D0Q0oIDDqoQd0IQddi1IiD16dO16O88o",
+            "songName": "Seta Para Cima↑↑",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "bo6PqbbPQ6D096OIP6dDPbPPiDi88609",
+            "songName": "Spanish Snowy Dance",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 17
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 1,
+        "level": 7,
+        "chartOrder": [
+          {
+            "songId": "lIPP90Ilqib08Obob9901PiP19OQ18P9",
+            "songName": "Heatstroke",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 6
+          },
+          {
+            "songId": "901q61iP6lPiDqIQoQod9PDqlOPq1bb9",
+            "songName": "La Señorita",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 5
+          },
+          {
+            "songId": "D0Q0oIDDqoQd0IQddi1IiD16dO16O88o",
+            "songName": "Seta Para Cima↑↑",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 5
+          },
+          {
+            "songId": "bo6PqbbPQ6D096OIP6dDPbPPiDi88609",
+            "songName": "Spanish Snowy Dance",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 7
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 2,
+        "level": 11,
+        "chartOrder": [
+          {
+            "songId": "lIPP90Ilqib08Obob9901PiP19OQ18P9",
+            "songName": "Heatstroke",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 8
+          },
+          {
+            "songId": "901q61iP6lPiDqIQoQod9PDqlOPq1bb9",
+            "songName": "La Señorita",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 9
+          },
+          {
+            "songId": "D0Q0oIDDqoQd0IQddi1IiD16dO16O88o",
+            "songName": "Seta Para Cima↑↑",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 10
+          },
+          {
+            "songId": "bo6PqbbPQ6D096OIP6dDPbPPiDi88609",
+            "songName": "Spanish Snowy Dance",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 11
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 3,
+        "level": 16,
+        "chartOrder": [
+          {
+            "songId": "lIPP90Ilqib08Obob9901PiP19OQ18P9",
+            "songName": "Heatstroke",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 10
+          },
+          {
+            "songId": "901q61iP6lPiDqIQoQod9PDqlOPq1bb9",
+            "songName": "La Señorita",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "D0Q0oIDDqoQd0IQddi1IiD16dO16O88o",
+            "songName": "Seta Para Cima↑↑",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "bo6PqbbPQ6D096OIP6dDPbPPiDi88609",
+            "songName": "Spanish Snowy Dance",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 16
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 4,
+        "level": 18,
+        "chartOrder": [
+          {
+            "songId": "lIPP90Ilqib08Obob9901PiP19OQ18P9",
+            "songName": "Heatstroke",
+            "playStyle": 2,
+            "difficulty": 4,
+            "level": 8
+          },
+          {
+            "songId": "901q61iP6lPiDqIQoQod9PDqlOPq1bb9",
+            "songName": "La Señorita",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "D0Q0oIDDqoQd0IQddi1IiD16dO16O88o",
+            "songName": "Seta Para Cima↑↑",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "bo6PqbbPQ6D096OIP6dDPbPPiDi88609",
+            "songName": "Spanish Snowy Dance",
+            "playStyle": 2,
+            "difficulty": 4,
+            "level": 18
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "i1DqPb01I6I1dP8qoO1qiIPDlOD9D9oQ",
+    "name": "PLANET",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 1,
+        "difficulty": 0,
+        "level": 3,
+        "chartOrder": [
+          {
+            "songId": "60QoP9DoIo90D616989Q0D0iodOoOd91",
+            "songName": "SEXY PLANET",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 3
+          },
+          {
+            "songId": "80OqPo1D6lD616lIDI1IPq0oPllld6b1",
+            "songName": "Starry Sky",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 2
+          },
+          {
+            "songId": "dDldd8OlbPQDoD80dO0DiDOiIoP1PQoD",
+            "songName": "Saturn",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 3
+          },
+          {
+            "songId": "1DPD60Q8D1qD8i80P160bqDQ81DObDlP",
+            "songName": "Procyon",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 2
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 1,
+        "level": 7,
+        "chartOrder": [
+          {
+            "songId": "60QoP9DoIo90D616989Q0D0iodOoOd91",
+            "songName": "SEXY PLANET",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 7
+          },
+          {
+            "songId": "80OqPo1D6lD616lIDI1IPq0oPllld6b1",
+            "songName": "Starry Sky",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 6
+          },
+          {
+            "songId": "dDldd8OlbPQDoD80dO0DiDOiIoP1PQoD",
+            "songName": "Saturn",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 7
+          },
+          {
+            "songId": "1DPD60Q8D1qD8i80P160bqDQ81DObDlP",
+            "songName": "Procyon",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 6
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 2,
+        "level": 11,
+        "chartOrder": [
+          {
+            "songId": "60QoP9DoIo90D616989Q0D0iodOoOd91",
+            "songName": "SEXY PLANET",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 8
+          },
+          {
+            "songId": "80OqPo1D6lD616lIDI1IPq0oPllld6b1",
+            "songName": "Starry Sky",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 9
+          },
+          {
+            "songId": "dDldd8OlbPQDoD80dO0DiDOiIoP1PQoD",
+            "songName": "Saturn",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 9
+          },
+          {
+            "songId": "1DPD60Q8D1qD8i80P160bqDQ81DObDlP",
+            "songName": "Procyon",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 11
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 3,
+        "level": 15,
+        "chartOrder": [
+          {
+            "songId": "60QoP9DoIo90D616989Q0D0iodOoOd91",
+            "songName": "SEXY PLANET",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 11
+          },
+          {
+            "songId": "80OqPo1D6lD616lIDI1IPq0oPllld6b1",
+            "songName": "Starry Sky",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 12
+          },
+          {
+            "songId": "dDldd8OlbPQDoD80dO0DiDOiIoP1PQoD",
+            "songName": "Saturn",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "1DPD60Q8D1qD8i80P160bqDQ81DObDlP",
+            "songName": "Procyon",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 15
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 1,
+        "level": 6,
+        "chartOrder": [
+          {
+            "songId": "60QoP9DoIo90D616989Q0D0iodOoOd91",
+            "songName": "SEXY PLANET",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 5
+          },
+          {
+            "songId": "80OqPo1D6lD616lIDI1IPq0oPllld6b1",
+            "songName": "Starry Sky",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 6
+          },
+          {
+            "songId": "dDldd8OlbPQDoD80dO0DiDOiIoP1PQoD",
+            "songName": "Saturn",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 5
+          },
+          {
+            "songId": "1DPD60Q8D1qD8i80P160bqDQ81DObDlP",
+            "songName": "Procyon",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 6
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 2,
+        "level": 11,
+        "chartOrder": [
+          {
+            "songId": "60QoP9DoIo90D616989Q0D0iodOoOd91",
+            "songName": "SEXY PLANET",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 7
+          },
+          {
+            "songId": "80OqPo1D6lD616lIDI1IPq0oPllld6b1",
+            "songName": "Starry Sky",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 9
+          },
+          {
+            "songId": "dDldd8OlbPQDoD80dO0DiDOiIoP1PQoD",
+            "songName": "Saturn",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 9
+          },
+          {
+            "songId": "1DPD60Q8D1qD8i80P160bqDQ81DObDlP",
+            "songName": "Procyon",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 11
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 3,
+        "level": 15,
+        "chartOrder": [
+          {
+            "songId": "60QoP9DoIo90D616989Q0D0iodOoOd91",
+            "songName": "SEXY PLANET",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 10
+          },
+          {
+            "songId": "80OqPo1D6lD616lIDI1IPq0oPllld6b1",
+            "songName": "Starry Sky",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 12
+          },
+          {
+            "songId": "dDldd8OlbPQDoD80dO0DiDOiIoP1PQoD",
+            "songName": "Saturn",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "1DPD60Q8D1qD8i80P160bqDQ81DObDlP",
+            "songName": "Procyon",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "DQilQP810dq8D9i11q6Oq0ooDdQQO0lI",
+    "name": "HARD DANCE",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 1,
+        "difficulty": 0,
+        "level": 4,
+        "chartOrder": [
+          {
+            "songId": "i11d86DOOdOb8Pbb1QqIilQI9Idib8PP",
+            "songName": "Music In The Rhythm",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 4
+          },
+          {
+            "songId": "q6661PIbbb1O80OQQ11iD6bP1l6bio0Q",
+            "songName": "The Light",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 2
+          },
+          {
+            "songId": "60P9IPOdi1OIbD61D8i0D9ODoq6QOIPO",
+            "songName": "RISING FIRE HAWK",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 3
+          },
+          {
+            "songId": "0DODq0P9Qi6i6q8QPoPPOiOi6ib0188b",
+            "songName": "District of the Shadows",
+            "playStyle": 1,
+            "difficulty": 0,
+            "level": 3
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 1,
+        "level": 7,
+        "chartOrder": [
+          {
+            "songId": "i11d86DOOdOb8Pbb1QqIilQI9Idib8PP",
+            "songName": "Music In The Rhythm",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 7
+          },
+          {
+            "songId": "q6661PIbbb1O80OQQ11iD6bP1l6bio0Q",
+            "songName": "The Light",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 5
+          },
+          {
+            "songId": "60P9IPOdi1OIbD61D8i0D9ODoq6QOIPO",
+            "songName": "RISING FIRE HAWK",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 6
+          },
+          {
+            "songId": "0DODq0P9Qi6i6q8QPoPPOiOi6ib0188b",
+            "songName": "District of the Shadows",
+            "playStyle": 1,
+            "difficulty": 1,
+            "level": 6
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 2,
+        "level": 12,
+        "chartOrder": [
+          {
+            "songId": "i11d86DOOdOb8Pbb1QqIilQI9Idib8PP",
+            "songName": "Music In The Rhythm",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 8
+          },
+          {
+            "songId": "q6661PIbbb1O80OQQ11iD6bP1l6bio0Q",
+            "songName": "The Light",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 9
+          },
+          {
+            "songId": "60P9IPOdi1OIbD61D8i0D9ODoq6QOIPO",
+            "songName": "RISING FIRE HAWK",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 11
+          },
+          {
+            "songId": "0DODq0P9Qi6i6q8QPoPPOiOi6ib0188b",
+            "songName": "District of the Shadows",
+            "playStyle": 1,
+            "difficulty": 2,
+            "level": 12
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 3,
+        "level": 16,
+        "chartOrder": [
+          {
+            "songId": "i11d86DOOdOb8Pbb1QqIilQI9Idib8PP",
+            "songName": "Music In The Rhythm",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 11
+          },
+          {
+            "songId": "q6661PIbbb1O80OQQ11iD6bP1l6bio0Q",
+            "songName": "The Light",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "60P9IPOdi1OIbD61D8i0D9ODoq6QOIPO",
+            "songName": "RISING FIRE HAWK",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 15
+          },
+          {
+            "songId": "0DODq0P9Qi6i6q8QPoPPOiOi6ib0188b",
+            "songName": "District of the Shadows",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 16
+          }
+        ]
+      },
+      {
+        "playStyle": 1,
+        "difficulty": 4,
+        "level": 17,
+        "chartOrder": [
+          {
+            "songId": "i11d86DOOdOb8Pbb1QqIilQI9Idib8PP",
+            "songName": "Music In The Rhythm",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 11
+          },
+          {
+            "songId": "q6661PIbbb1O80OQQ11iD6bP1l6bio0Q",
+            "songName": "The Light",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "60P9IPOdi1OIbD61D8i0D9ODoq6QOIPO",
+            "songName": "RISING FIRE HAWK",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 17
+          },
+          {
+            "songId": "0DODq0P9Qi6i6q8QPoPPOiOi6ib0188b",
+            "songName": "District of the Shadows",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 16
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 1,
+        "level": 6,
+        "chartOrder": [
+          {
+            "songId": "i11d86DOOdOb8Pbb1QqIilQI9Idib8PP",
+            "songName": "Music In The Rhythm",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 5
+          },
+          {
+            "songId": "q6661PIbbb1O80OQQ11iD6bP1l6bio0Q",
+            "songName": "The Light",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 5
+          },
+          {
+            "songId": "60P9IPOdi1OIbD61D8i0D9ODoq6QOIPO",
+            "songName": "RISING FIRE HAWK",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 6
+          },
+          {
+            "songId": "0DODq0P9Qi6i6q8QPoPPOiOi6ib0188b",
+            "songName": "District of the Shadows",
+            "playStyle": 2,
+            "difficulty": 1,
+            "level": 6
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 2,
+        "level": 12,
+        "chartOrder": [
+          {
+            "songId": "i11d86DOOdOb8Pbb1QqIilQI9Idib8PP",
+            "songName": "Music In The Rhythm",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 8
+          },
+          {
+            "songId": "q6661PIbbb1O80OQQ11iD6bP1l6bio0Q",
+            "songName": "The Light",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 9
+          },
+          {
+            "songId": "60P9IPOdi1OIbD61D8i0D9ODoq6QOIPO",
+            "songName": "RISING FIRE HAWK",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 11
+          },
+          {
+            "songId": "0DODq0P9Qi6i6q8QPoPPOiOi6ib0188b",
+            "songName": "District of the Shadows",
+            "playStyle": 2,
+            "difficulty": 2,
+            "level": 12
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 3,
+        "level": 16,
+        "chartOrder": [
+          {
+            "songId": "i11d86DOOdOb8Pbb1QqIilQI9Idib8PP",
+            "songName": "Music In The Rhythm",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 12
+          },
+          {
+            "songId": "q6661PIbbb1O80OQQ11iD6bP1l6bio0Q",
+            "songName": "The Light",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "60P9IPOdi1OIbD61D8i0D9ODoq6QOIPO",
+            "songName": "RISING FIRE HAWK",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 15
+          },
+          {
+            "songId": "0DODq0P9Qi6i6q8QPoPPOiOi6ib0188b",
+            "songName": "District of the Shadows",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 16
+          }
+        ]
+      },
+      {
+        "playStyle": 2,
+        "difficulty": 4,
+        "level": 17,
+        "chartOrder": [
+          {
+            "songId": "i11d86DOOdOb8Pbb1QqIilQI9Idib8PP",
+            "songName": "Music In The Rhythm",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 12
+          },
+          {
+            "songId": "q6661PIbbb1O80OQQ11iD6bP1l6bio0Q",
+            "songName": "The Light",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "60P9IPOdi1OIbD61D8i0D9ODoq6QOIPO",
+            "songName": "RISING FIRE HAWK",
+            "playStyle": 2,
+            "difficulty": 4,
+            "level": 17
+          },
+          {
+            "songId": "0DODq0P9Qi6i6q8QPoPPOiOi6ib0188b",
+            "songName": "District of the Shadows",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 16
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "19id1DO6q9Pb1681db61D8D8oQi9dlb6",
+    "name": "初段",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 1,
+        "difficulty": 4,
+        "level": 10,
+        "chartOrder": [
+          {
+            "songId": "O1blDPOQ8IQb00o0D89QIDIlo8b06liD",
+            "songName": "HIGHER",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 9
+          },
+          {
+            "songId": "q1o901oPqbbI1Q61qo688bDd0Pqlb08l",
+            "songName": "Shine",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 9
+          },
+          {
+            "songId": "8o6ibb0b1i66Q0D8699boob69b80Qb1i",
+            "songName": "IN THE ZONE",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 9
+          },
+          {
+            "songId": "6Qq1q91q8iIPlI89qDq96bO8QDD0qOql",
+            "songName": "B4U",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "b9OboQl6d9PqQddIdQDobP0d8o6dOqob",
+    "name": "二段",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 1,
+        "difficulty": 4,
+        "level": 11,
+        "chartOrder": [
+          {
+            "songId": "lPDqbq6OIb810i8bqIo1i1olol1OlP9l",
+            "songName": "Do The Evolution",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 10
+          },
+          {
+            "songId": "dQD6lbPO66DllOb1i0IoqDqbii0IOQi9",
+            "songName": "Flourish",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 10
+          },
+          {
+            "songId": "lIPP90Ilqib08Obob9901PiP19OQ18P9",
+            "songName": "Heatstroke",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 10
+          },
+          {
+            "songId": "d6iI8ii9qi0Pi80dDQQlPq6qQo69860P",
+            "songName": "will",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 11
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "P986dlQP0DO0106oq0P81Qi0QQDQ666O",
+    "name": "三段",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 1,
+        "difficulty": 4,
+        "level": 12,
+        "chartOrder": [
+          {
+            "songId": "il0QbI6IOIidllO108olqd8i9Pb1Oq8Q",
+            "songName": "Decade",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 11
+          },
+          {
+            "songId": "l0QP6DiIDIId0oiQiOl8q10DlI96OPiO",
+            "songName": "A Geisha's Dream",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 11
+          },
+          {
+            "songId": "o1dbD61Qi98O60liQQ91d8O16I86dqDd",
+            "songName": "In The Breeze",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 11
+          },
+          {
+            "songId": "Oq9QIlI8l11ddqbbDoQ1ql61OqlIi9lo",
+            "songName": "Theory of Eternity",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 12
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "o0DP6qqql9D1bDbQPOQiP8iIq81qI8O9",
+    "name": "四段",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 1,
+        "difficulty": 4,
+        "level": 13,
+        "chartOrder": [
+          {
+            "songId": "d18DI8bO1lql60Ol1dqQlI8qIobl191P",
+            "songName": "Beautiful Dream",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 12
+          },
+          {
+            "songId": "1QIPID18qib8D9Oo9lOo8I6DPi9qiod6",
+            "songName": "DYNAMITE RAVE",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 12
+          },
+          {
+            "songId": "qdbDo1oP6D9ioODd1dQO0QObObidilbP",
+            "songName": "TECH-NOID",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 12
+          },
+          {
+            "songId": "iObdoO9b1O9o8dP8o0id9b1QioQ0q9q9",
+            "songName": "S・A・G・A",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 13
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "880I00ODqPD1OQQPOP0Pd19Qq1qiloDP",
+    "name": "五段",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 1,
+        "difficulty": 4,
+        "level": 14,
+        "chartOrder": [
+          {
+            "songId": "0qOPDqq0qld66bll9ob9iIqiiQPiQIDQ",
+            "songName": "You are a Star",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 13
+          },
+          {
+            "songId": "lIlold9IQbDb0d6IdP6600DOQIDb9dOP",
+            "songName": "十二星座の聖域",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "ib19PQ61bi0lI8qi98IQ8dOqOoP91olq",
+            "songName": "sakura storm",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 13
+          },
+          {
+            "songId": "QD6b8i08P1IQloIPOPiqlIPoDlPi9DPI",
+            "songName": "Diamond Night",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "PbIq9b1I161P0iD18qQiOO9qIoodbDIP",
+    "name": "六段",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 1,
+        "difficulty": 4,
+        "level": 15,
+        "chartOrder": [
+          {
+            "songId": "OPDQ9Oi8I6D1I1iqi8iOiP0bDI9Pl86P",
+            "songName": "on the bounce",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 14
+          },
+          {
+            "songId": "Oo91QPdQDd1Od1oQI6IIldbQ1lQ88bO0",
+            "songName": "AM-3P (\"CHAOS\" Special)",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 14
+          },
+          {
+            "songId": "DD6olq00PD91odbO9QbldDb0bQ18oqo1",
+            "songName": "Pierce The Sky",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 14
+          },
+          {
+            "songId": "6P18lOliIQqIO6Di0PP8iDlDQ01b0o0q",
+            "songName": "MAX 300",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "666q06q6I01loQOq0qd98IIOObIDOd8q",
+    "name": "七段",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 1,
+        "difficulty": 4,
+        "level": 16,
+        "chartOrder": [
+          {
+            "songId": "iI96000Ib9DlIOPlDQIO00oDiO9DbPI0",
+            "songName": "Nostalgia Is Lost",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 15
+          },
+          {
+            "songId": "dbD8PlibPqqdI99901obObb6odqD8qDl",
+            "songName": "Amalgamation",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 15
+          },
+          {
+            "songId": "li608di8PolqqIP808iddOqi11qDDq0Q",
+            "songName": "The legend of MAX",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 15
+          },
+          {
+            "songId": "D9lq0DioIl9D6ll0d61990DP9qPPb1dP",
+            "songName": "True Blue",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 16
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "l8Q1Od0d0IQOQl61l8lIlPiI80P10OQb",
+    "name": "八段",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 1,
+        "difficulty": 4,
+        "level": 17,
+        "chartOrder": [
+          {
+            "songId": "bD1DbibPIq9IIlQd0OIIl0o91QI1il69",
+            "songName": "Monkey Business",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 16
+          },
+          {
+            "songId": "Pi69o0idP1obO9QDqIDbPdqlb90q8Dq8",
+            "songName": "嘆きの樹",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 16
+          },
+          {
+            "songId": "68iQ9666QIQP1IOQbbd9989DQQ1D0dOl",
+            "songName": "PARANOIA survivor MAX",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 16
+          },
+          {
+            "songId": "q6di1DQbi88i9QlPol1iIPbb8lP1qP1b",
+            "songName": "POSSESSION",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 17
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ol8oiPo8iod9bDPPD1qdlbPd1ddqP6oP",
+    "name": "九段",
+    "version": 20190425,
+    "orders": [
+      {
+        "playStyle": 1,
+        "difficulty": 4,
+        "level": 18,
+        "chartOrder": [
+          {
+            "songId": "D89QP18016o01qoOi60I6Q19dlOQPbdo",
+            "songName": "Anti-Matter",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 17
+          },
+          {
+            "songId": "O6llIdODQD6oDQ6QiPQDOlob9i8l6qib",
+            "songName": "Fascination MAXX",
+            "playStyle": 1,
+            "difficulty": 3,
+            "level": 17
+          },
+          {
+            "songId": "1I9ODbQ81qi1006QoQI6d6dbd9iiPD9O",
+            "songName": "Idola",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 17
+          },
+          {
+            "songId": "6QdIl8odooDQ0oOQ0IObQqo1lO986PP6",
+            "songName": "Astrogazer",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 18
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "OPi8oobIDid6q0P18QdD11D6O1I6Ioqo",
+    "name": "十段",
+    "version": 20190508,
+    "orders": [
+      {
+        "playStyle": 1,
+        "difficulty": 4,
+        "level": 19,
+        "chartOrder": [
+          {
+            "songId": "oIII9lI0q6i9Q0b18ldoI6o0PQ0qqD01",
+            "songName": "Come to Life",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 18
+          },
+          {
+            "songId": "o0l1Qioq1i9iQl6b9q6il0iqi1b1OQ9b",
+            "songName": "New Decade",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 18
+          },
+          {
+            "songId": "OddDoQ6dqi0QdQDDOO6qlO08d8bPbli1",
+            "songName": "Tohoku EVOLVED",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 18
+          },
+          {
+            "songId": "606b9d6OiliId69bO9Odi6qq8o8Qd0dq",
+            "songName": "PARANOiA Revolution",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 19
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "",
+    "name": "皆伝",
+    "version": 20190612,
+    "orders": [
+      {
+        "playStyle": 1,
+        "difficulty": 4,
+        "level": 19,
+        "chartOrder": [
+          {
+            "songId": "9i0q91lPPiO61b9P891O1i86iOP1I08O",
+            "songName": "EGOISM 440",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 19
+          },
+          {
+            "songId": "6bid6d9qPQ80DOqiidQQ891o6Od8801l",
+            "songName": "Over The “Period”",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 19
+          },
+          {
+            "songId": "186dd6DQq891Ib9Ilq8Qbo8lIqb0Qoll",
+            "songName": "Valkyrie dimension",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 19
+          },
+          {
+            "songId": "PO9Pl1q896bDDl89qQb98D80DQoPio1I",
+            "songName": "ENDYMION",
+            "playStyle": 1,
+            "difficulty": 4,
+            "level": 19
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9IliQ1O0dOQPiObPDDDblDO6oliDodlb",
+    "name": "初段",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 2,
+        "difficulty": 4,
+        "level": 10,
+        "chartOrder": [
+          {
+            "songId": "86688l9096PdIqDPl8qoQ10dI8Ioi86l",
+            "songName": "Slip Out",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 9
+          },
+          {
+            "songId": "qOdib0OIO1qOdiQiOi9qIiQiO91idbQq",
+            "songName": "Fever",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 9
+          },
+          {
+            "songId": "Qb90bo6I0Pd9181iIoOPoqPOOOQq6dQ1",
+            "songName": "STILL IN MY HEART",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 9
+          },
+          {
+            "songId": "9lob1d1QPd9qiPlQOQ6l0dbodOoDPq1d",
+            "songName": "think ya better D",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "IlQodD9Dbld8QiOql68bPPQbd6bll6i1",
+    "name": "二段",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 2,
+        "difficulty": 4,
+        "level": 11,
+        "chartOrder": [
+          {
+            "songId": "odQbP0bQqD89PolQ96II0PiqQQIddPi6",
+            "songName": "escape",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 10
+          },
+          {
+            "songId": "i86bPlP6ioldqb1OqPqidboqqQ8dQqdl",
+            "songName": "south",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 10
+          },
+          {
+            "songId": "Oi1DI99DO6i6llQ8DDD6oDqOQqiP118d",
+            "songName": "DANCE ALL NIGHT (DDR EDITION)",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 10
+          },
+          {
+            "songId": "dPdO9OP6616o99l99qiI9DddQdD9D80b",
+            "songName": "INTO YOUR HEART (Ruffage remix)",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 11
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dib16I1b0o9OdOd1O90dO1Q6iIO9PQo9",
+    "name": "三段",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 2,
+        "difficulty": 4,
+        "level": 12,
+        "chartOrder": [
+          {
+            "songId": "9qP16D6l11i9P1lQ0b1DIqoOqqiIQDl9",
+            "songName": "MAKE IT BETTER (So-REAL Mix)",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 11
+          },
+          {
+            "songId": "DbQbDQOl0lII16ib1081d6ddIodD0P9I",
+            "songName": "oarfish",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 11
+          },
+          {
+            "songId": "dqOoPll1qlDdo6Pd6O0DPPO6l16OIdD1",
+            "songName": "ルミナスデイズ",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 11
+          },
+          {
+            "songId": "d18DI8bO1lql60Ol1dqQlI8qIobl191P",
+            "songName": "Beautiful Dream",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 12
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "8OoDQb16lP0i96qiDQqo90Q6bOP1o89D",
+    "name": "四段",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 2,
+        "difficulty": 4,
+        "level": 13,
+        "chartOrder": [
+          {
+            "songId": "PI1DiP0bIi8PodP6O1i8P0P1i8iI1oD8",
+            "songName": "Desert Journey",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 12
+          },
+          {
+            "songId": "OoIPPqIDbQ6qIb69q8dil0iq0l6q6DQD",
+            "songName": "stoic (EXTREME version)",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 12
+          },
+          {
+            "songId": "DibOOIOD1id66O0DqOQ61O6I9bIIQQ0q",
+            "songName": "heron",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 12
+          },
+          {
+            "songId": "DPQo8Q0l9D8IPiDiq11l8OI6i11OOb6O",
+            "songName": "PARANOIA EVOLUTION",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 13
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ddql809Qo8q68918lIDOPDQ6q1liD9b6",
+    "name": "五段",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 2,
+        "difficulty": 4,
+        "level": 14,
+        "chartOrder": [
+          {
+            "songId": "lPDqbq6OIb810i8bqIo1i1olol1OlP9l",
+            "songName": "Do The Evolution",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "Q0OiPQQ8IbIDq08IO9Io0qDdoDPPdd1q",
+            "songName": "DROP OUT",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "ddq1DldlQ990iidO6O99q61bI1966Q0I",
+            "songName": "ALGORITHM",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 13
+          },
+          {
+            "songId": "olQQ8QPPqqObDD9ooodOl9i9od8b06I9",
+            "songName": "Healing Vision ～Angelic mix～",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9D69dQo1dQqPD6l9ObiI0b0i8d9ddool",
+    "name": "六段",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 2,
+        "difficulty": 4,
+        "level": 15,
+        "chartOrder": [
+          {
+            "songId": "qq8qDqqPQdP0loDI6DDO9d6dQ601iOID",
+            "songName": "siberite",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 14
+          },
+          {
+            "songId": "PIdPo9o0qOIiPDIIlbo9l9dObP81lQqi",
+            "songName": "Horatio",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 14
+          },
+          {
+            "songId": "lO68Q0iPIOiOIDDd8dOPoiql9OI81DQ0",
+            "songName": "The Least 100sec",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 14
+          },
+          {
+            "songId": "oQolO9oOO01ll0I8969i8O1IQliloDqP",
+            "songName": "エンドルフィン",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Pbbidbl9l8IqddQOq0069oQ6Oi1DQdP1",
+    "name": "七段",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 2,
+        "difficulty": 4,
+        "level": 16,
+        "chartOrder": [
+          {
+            "songId": "Q6ql0lOOdq90DI1PqO1bd10bP0Oi8Q0Q",
+            "songName": "SILVER☆DREAM",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 15
+          },
+          {
+            "songId": "Q8qb1oQobdqDqi0i19qqb11P1oDoiD8O",
+            "songName": "IMANOGUILTS",
+            "playStyle": 2,
+            "difficulty": 4,
+            "level": 15
+          },
+          {
+            "songId": "68iQ9666QIQP1IOQbbd9989DQQ1D0dOl",
+            "songName": "PARANOIA survivor MAX",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 15
+          },
+          {
+            "songId": "PDODO6Qdb9iqd6q0QoI0PiI0lb8l9I6d",
+            "songName": "SUPER SAMURAI",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 16
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "idiOI1Qb9D0dQI6IOlob8QbOqdDOoObP",
+    "name": "八段",
+    "version": 20190328,
+    "orders": [
+      {
+        "playStyle": 2,
+        "difficulty": 4,
+        "level": 17,
+        "chartOrder": [
+          {
+            "songId": "b0QQ6OPD1dDqQ6D6IDQqlDd180Db609I",
+            "songName": "TRIP MACHINE PhoeniX",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 16
+          },
+          {
+            "songId": "6bdDP91o1II60Qo99D60QI81o6oPlI80",
+            "songName": "Arrabbiata",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 16
+          },
+          {
+            "songId": "bilO9D91P1lo81oIDP6qOoqdDdQdoDlP",
+            "songName": "Truare!",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 16
+          },
+          {
+            "songId": "l6d0ibbliQPQDdb1lP18D9qbPDi1698b",
+            "songName": "ÆTHER",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 17
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ID9Dqo9QQQIP9ObD0lbbi6O6PiD18oD0",
+    "name": "九段",
+    "version": 20190425,
+    "orders": [
+      {
+        "playStyle": 2,
+        "difficulty": 4,
+        "level": 18,
+        "chartOrder": [
+          {
+            "songId": "o068b00O6QD8lo9O1i9PbQlqO6IQOidD",
+            "songName": "New Century",
+            "playStyle": 2,
+            "difficulty": 3,
+            "level": 17
+          },
+          {
+            "songId": "PIP60POo0dDQlIiqO9bIQ1oddQD8P9Il",
+            "songName": "SABER WING (Akira Ishihara Headshot mix)",
+            "playStyle": 2,
+            "difficulty": 4,
+            "level": 17
+          },
+          {
+            "songId": "IPq8dO1lD8qidDlI0ObboI9IIldQO6IQ",
+            "songName": "RЁVOLUTIФN",
+            "playStyle": 2,
+            "difficulty": 4,
+            "level": 17
+          },
+          {
+            "songId": "00obPO6oPIPOoD9qb0dIl6q6D8P6o9bI",
+            "songName": "IX",
+            "playStyle": 2,
+            "difficulty": 4,
+            "level": 18
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bPQDblO8Do0Oo9O0PP0b8PO1PblDioDP",
+    "name": "十段",
+    "version": 20190508,
+    "orders": [
+      {
+        "playStyle": 2,
+        "difficulty": 4,
+        "level": 19,
+        "chartOrder": [
+          {
+            "songId": "109P1iO9i6q1q0bdQobiodQDoD619dqd",
+            "songName": "Healing-D-Vision",
+            "playStyle": 2,
+            "difficulty": 4,
+            "level": 18
+          },
+          {
+            "songId": "io1d1Dq80Di08O1Pb9bQ8DoP9d9Ooi90",
+            "songName": "PARANOiA ～HADES～",
+            "playStyle": 2,
+            "difficulty": 4,
+            "level": 18
+          },
+          {
+            "songId": "id9oObq9P6Q6Pq6lQPqI88OP1DD8D0O1",
+            "songName": "888",
+            "playStyle": 2,
+            "difficulty": 4,
+            "level": 18
+          },
+          {
+            "songId": "606b9d6OiliId69bO9Odi6qq8o8Qd0dq",
+            "songName": "PARANOiA Revolution",
+            "playStyle": 2,
+            "difficulty": 4,
+            "level": 19
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "",
+    "name": "皆伝",
+    "version": 20190612,
+    "orders": [
+      {
+        "playStyle": 2,
+        "difficulty": 4,
+        "level": 19,
+        "chartOrder": [
+          {
+            "songId": "186dd6DQq891Ib9Ilq8Qbo8lIqb0Qoll",
+            "songName": "Valkyrie dimension",
+            "playStyle": 2,
+            "difficulty": 4,
+            "level": 19
+          },
+          {
+            "songId": "q6di1DQbi88i9QlPol1iIPbb8lP1qP1b",
+            "songName": "POSSESSION",
+            "playStyle": 2,
+            "difficulty": 4,
+            "level": 19
+          },
+          {
+            "songId": "6bid6d9qPQ80DOqiidQQ891o6Od8801l",
+            "songName": "Over The “Period”",
+            "playStyle": 2,
+            "difficulty": 4,
+            "level": 19
+          },
+          {
+            "songId": "9i0q91lPPiO61b9P891O1i86iOP1I08O",
+            "songName": "EGOISM 440",
+            "playStyle": 2,
+            "difficulty": 4,
+            "level": 19
+          }
+        ]
+      }
+    ]
+  }
+]
