@@ -440,14 +440,14 @@
     "version": 20191109
   },
   {
-    "id": "00000000000000000000000000000000",
+    "id": "9IdoP1ld9098PI90QQ6bP0Idl1ibo80D",
     "name": "Glitch Angel",
-    "nameKana": "GLITCH ANGELE",
+    "nameKana": "GLITCH ANGEL",
     "nameIndex": 16,
     "artist": "lapix",
     "series": "A20",
-    "minBPM": null,
-    "maxBPM": null,
+    "minBPM": 165,
+    "maxBPM": 165,
     "version": 20200108
   },
   {
