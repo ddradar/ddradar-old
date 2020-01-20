@@ -77,6 +77,17 @@
     "version": 20191109
   },
   {
+    "id": "Dlq6qdP1bOPDObbbQQ6b8iPbd1ODq69P",
+    "name": "どきドキ バレンタイン",
+    "nameKana": "どきどき ばれんたいん",
+    "nameIndex": 3,
+    "artist": "ひまわり＊パンチ",
+    "series": "A20",
+    "minBPM": 169,
+    "maxBPM": 169,
+    "version": 20200120
+  },
+  {
     "id": "oDQqbI86bdlqbiO1dbiDP0PDd91bI6iP",
     "name": "毒占欲",
     "nameKana": "どくせんよく",
@@ -471,6 +482,17 @@
     "minBPM": 182,
     "maxBPM": 182,
     "version": 20191109
+  },
+  {
+    "id": "1900DdoIl00b88q6Qq9ob9D6lQ8IQiPb",
+    "name": "I Love You",
+    "nameKana": "I LOVE YOU",
+    "nameIndex": 18,
+    "artist": "O/iviA",
+    "series": "A20",
+    "minBPM": 170,
+    "maxBPM": 170,
+    "version": 20200120
   },
   {
     "id": "69b01qbo8Qdi6liOPq091bqo01i16oQ9",
