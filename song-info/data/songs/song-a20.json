@@ -484,6 +484,17 @@
     "version": 20191109
   },
   {
+    "id": "00000000000000000000000000000000",
+    "name": "Hunny Bunny",
+    "nameKana": "HUNNY BUNNY",
+    "nameIndex": 17,
+    "artist": "U1 overground",
+    "series": "A20",
+    "minBPM": 160,
+    "maxBPM": 160,
+    "version": 20200127
+  },
+  {
     "id": "1900DdoIl00b88q6Qq9ob9D6lQ8IQiPb",
     "name": "I Love You",
     "nameKana": "I LOVE YOU",
@@ -647,6 +658,17 @@
     "minBPM": 175,
     "maxBPM": 175,
     "version": 20191109
+  },
+  {
+    "id": "00000000000000000000000000000000",
+    "name": "Re:GENERATION",
+    "nameKana": "RE GENERATION",
+    "nameIndex": 17,
+    "artist": "TAG feat. ERi",
+    "series": "A20",
+    "minBPM": 176,
+    "maxBPM": 176,
+    "version": 20200127
   },
   {
     "id": "1qPOO8o9089lI1qQIDIDi0lidob9i6lq",
