@@ -4,20 +4,12 @@
     "^~/(.*)$": "<rootDir>/$1",
     "^vue$": "vue/dist/vue.common.js"
   },
-  "moduleFileExtensions": [
-    "js",
-    "vue",
-    "json",
-    "ts"
-  ],
+  "moduleFileExtensions": ["js", "vue", "json", "ts"],
   "transform": {
-    "^.+\\.js$": "babel-jest",
     ".*\\.(vue)$": "vue-jest",
     "^.+\\.ts$": "ts-jest"
   },
-  "setupFiles": [
-    "jest-canvas-mock"
-  ],
+  "setupFiles": ["jest-canvas-mock"],
   "globals": {
     "ts-jest": {
       "tsConfig": "tsconfig.json"

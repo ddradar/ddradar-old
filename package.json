@@ -45,7 +45,6 @@
       "/test/__firebase__/"
     ],
     "transform": {
-      "^.+\\.js$": "babel-jest",
       ".*\\.(vue)$": "vue-jest",
       "^.+\\.ts$": "ts-jest"
     },
@@ -86,7 +85,6 @@
     "@types/jest": "^24.9.1",
     "@types/jest-json-schema": "^2.1.1",
     "@vue/test-utils": "^1.0.0-beta.31",
-    "babel-jest": "^24.1.0",
     "codecov": "^3.6.1",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
