@@ -12,7 +12,7 @@ describe('SongRepository', () => {
     .firestore()
   beforeAll(async () => {
     const batch = db.batch()
-    songs.forEach(song => {
+    songs.forEach((song) => {
       const ref = db.collection('version/1/songs').doc(song.id)
       batch.set(ref, song)
     })
@@ -28,7 +28,7 @@ describe('SongRepository', () => {
     ])('returns exist data', async (field, cond) => {
       const fetchedSongs = await repo.fetchSongs(field as string, cond)
       expect(fetchedSongs).toHaveLength(
-        songs.filter(d => d[field as 'series' | 'nameIndex'] === cond).length
+        songs.filter((d) => d[field as 'series' | 'nameIndex'] === cond).length
       )
     })
   })
@@ -45,7 +45,7 @@ describe('SongRepository', () => {
     })
   })
   afterAll(async () => {
-    await Promise.all(firebaseTest.apps().map(app => app.delete()))
+    await Promise.all(firebaseTest.apps().map((app) => app.delete()))
   })
 })
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import * as firebase from 'firebase-admin'
 import { Song } from './song'
 import { StepChart, getChartDocumentId } from './step-chart'

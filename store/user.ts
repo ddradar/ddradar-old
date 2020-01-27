@@ -22,8 +22,8 @@ export default class UserModule extends VuexModule {
 
   @Action
   isAuthenticated() {
-    return new Promise<boolean>(resolve => {
-      const unsubscribe = firebase.auth().onAuthStateChanged(async user => {
+    return new Promise<boolean>((resolve) => {
+      const unsubscribe = firebase.auth().onAuthStateChanged(async (user) => {
         unsubscribe()
         if (user) {
           await this.fetchUserDb({

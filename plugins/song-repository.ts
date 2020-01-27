@@ -14,7 +14,9 @@ export async function fetchSongs(fieldName: string, condition: any) {
       ? query.orderBy('nameKana')
       : query.orderBy('nameIndex').orderBy('nameKana')
   const snapShot = await querySorted.get()
-  return snapShot.docs.map(doc => doc.data()).filter(d => isSong(d)) as Song[]
+  return snapShot.docs
+    .map((doc) => doc.data())
+    .filter((d) => isSong(d)) as Song[]
 }
 
 export async function fetchSongById(songId: string) {

@@ -10,7 +10,7 @@ describe('UserInfo', () => {
   }
   test.each([undefined, null, {}, 'foo', 1.5, true])(
     'isUser returns false if obj is not object',
-    obj => {
+    (obj) => {
       expect(isUser(obj)).toBe(false)
     }
   )

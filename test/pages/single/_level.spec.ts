@@ -56,7 +56,7 @@ describe('single/:level', () => {
     })
     test.each(['', 'hoge', '37', '-1', 'NaN'])(
       'selected is null if param is not 1-19',
-      async param => {
+      async (param) => {
         const data = await vm.$options.asyncData({
           params: { level: param }
         })
@@ -67,7 +67,7 @@ describe('single/:level', () => {
     )
     test.each([hasDataLevel, noDataLevel, throwErrorLevel])(
       'selected equals param if param is 1-19',
-      async level => {
+      async (level) => {
         const data = await vm.$options.asyncData({
           params: { level }
         })
@@ -82,7 +82,7 @@ describe('single/:level', () => {
       expect(vm.pageTitle).toBe('SINGLEのレベルから探す')
     })
     // [...Array(19).keys()] returns [0, 1, ..., 18]
-    test.each([...Array(19).keys()])('returns level if selected', i => {
+    test.each([...Array(19).keys()])('returns level if selected', (i) => {
       const level = i + 1
       wrapper.setData({ selected: level })
       expect(vm.pageTitle).toBe(`SINGLE ${level}`)

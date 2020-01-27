@@ -56,7 +56,7 @@ describe('double/:level', () => {
     })
     test.each(['', 'hoge', '37', '-1', 'NaN'])(
       'selected is null if param is not 1-19',
-      async param => {
+      async (param) => {
         const data = await vm.$options.asyncData({
           params: { level: param }
         })
@@ -95,7 +95,7 @@ describe('double/:level', () => {
       expect(vm.pageTitle).toBe('DOUBLEのレベルから探す')
     })
     // [...Array(19).keys()] returns [0, 1, ..., 18]
-    test.each([...Array(19).keys()])('returns level if selected', i => {
+    test.each([...Array(19).keys()])('returns level if selected', (i) => {
       const level = i + 1
       wrapper.setData({ selected: level })
       expect(vm.pageTitle).toBe(`DOUBLE ${level}`)

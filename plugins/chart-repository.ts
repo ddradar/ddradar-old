@@ -13,7 +13,9 @@ export async function fetchSongCharts(songId: string) {
     .orderBy('playStyle')
     .orderBy('difficulty')
     .get()
-  return c.docs.map(d => d.data()).filter(d => isStepChart(d)) as StepChart[]
+  return c.docs
+    .map((d) => d.data())
+    .filter((d) => isStepChart(d)) as StepChart[]
 }
 
 export async function fetchChartsByLevel(playStyle: PlayStyle, level: Level) {
@@ -25,8 +27,8 @@ export async function fetchChartsByLevel(playStyle: PlayStyle, level: Level) {
     .orderBy('difficulty')
     .get()
   return snapShot.docs
-    .map(d => d.data())
-    .filter(d => isStepChart(d)) as StepChart[]
+    .map((d) => d.data())
+    .filter((d) => isStepChart(d)) as StepChart[]
 }
 
 export function getChartDocumentId({
