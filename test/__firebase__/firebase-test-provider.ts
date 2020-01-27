@@ -37,6 +37,6 @@ export default class FirebaseTestProvider {
   }
 
   async cleanupAll() {
-    await Promise.all(firebase.apps().map(app => app.delete()))
+    await Promise.all(firebase.apps().map((app) => app.delete()))
   }
 }

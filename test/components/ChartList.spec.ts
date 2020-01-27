@@ -24,7 +24,7 @@ describe('ChartList', () => {
     })
     test.each([-1, 0, 1.5, NaN, Infinity, -Infinity])(
       'returns "?" if param is other',
-      i => {
+      (i) => {
         expect(vm.getPlayStyleName(i)).toBe('?')
       }
     )
@@ -47,7 +47,7 @@ describe('ChartList', () => {
     })
     test.each([-1, 5, 1.5, NaN, Infinity, -Infinity])(
       'returns "Unknown" if param is other',
-      i => {
+      (i) => {
         expect(vm.getDifficultyName(i)).toBe('Unknown')
       }
     )
@@ -70,7 +70,7 @@ describe('ChartList', () => {
     })
     test.each([-1, 5, 1.5, NaN, Infinity, -Infinity])(
       'returns "is-unknown" if param is other',
-      i => {
+      (i) => {
         expect(vm.getDifficultyClassName(i)).toBe('is-unknown')
       }
     )

@@ -14,7 +14,7 @@ describe('ChartRepository', () => {
     .firestore()
   beforeAll(async () => {
     const batch = db.batch()
-    charts.forEach(chart => {
+    charts.forEach((chart) => {
       const ref = db
         .collection(`version/1/songs/${chart.songId}/charts`)
         .doc(repo.getChartDocumentId(chart))
@@ -52,7 +52,7 @@ describe('ChartRepository', () => {
       const songId = charts[0].songId
       const fetchedCharts = await repo.fetchSongCharts(charts[0].songId)
       expect(fetchedCharts).toHaveLength(
-        charts.filter(c => c.songId === songId).length
+        charts.filter((c) => c.songId === songId).length
       )
     })
     test('returns [] if not exists', async () => {
@@ -66,7 +66,7 @@ describe('ChartRepository', () => {
       const level = 10
       const fetchedCharts = await repo.fetchChartsByLevel(playStyle, level)
       expect(fetchedCharts).toHaveLength(
-        charts.filter(c => c.level === level && c.playStyle === playStyle)
+        charts.filter((c) => c.level === level && c.playStyle === playStyle)
           .length
       )
     })
@@ -78,7 +78,7 @@ describe('ChartRepository', () => {
     })
   })
   afterAll(async () => {
-    await Promise.all(firebaseTest.apps().map(app => app.delete()))
+    await Promise.all(firebaseTest.apps().map((app) => app.delete()))
   })
 })
 

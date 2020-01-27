@@ -47,14 +47,14 @@ describe('song/:id/:chart', () => {
       'A20'
     ])(
       'returns "DDR {series}" if series is not "DDRMAX" or "DDRMAX2"',
-      series => {
+      (series) => {
         wrapper.setData({ song: { ...song, series } })
         expect(vm.seriesName).toBe(`DDR ${series}`)
       }
     )
     test.each(['DDRMAX', 'DDRMAX2'])(
       'returns "DDR {series}" if series is not "DDRMAX" or "DDRMAX2"',
-      series => {
+      (series) => {
         wrapper.setData({ song: { ...song, series } })
         expect(vm.seriesName).toBe(series)
       }
@@ -78,7 +78,7 @@ describe('song/:id/:chart', () => {
       { playStyle: 2, difficulty: 2, expected: 'DOUBLE/DIFFICULT' },
       { playStyle: 2, difficulty: 3, expected: 'DOUBLE/EXPERT' },
       { playStyle: 2, difficulty: 4, expected: 'DOUBLE/CHALLENGE' }
-    ])('returns "PLAYSTYLE/DIFFICULTY" if selected chart', d => {
+    ])('returns "PLAYSTYLE/DIFFICULTY" if selected chart', (d) => {
       wrapper.setData({
         charts: [
           { ...charts[0], playStyle: d.playStyle, difficulty: d.difficulty }
@@ -97,7 +97,7 @@ describe('song/:id/:chart', () => {
       expect(vm.selected).toBeNull()
     })
     // [...Array(9).keys()] returns [0, 1, ..., 8]
-    test.each([...Array(9).keys()])('returns charts[selectedIndex]', i => {
+    test.each([...Array(9).keys()])('returns charts[selectedIndex]', (i) => {
       wrapper.setData({ charts, selectedIndex: i })
       expect(vm.selected).toBe(charts[i])
     })
@@ -166,12 +166,12 @@ describe('song/:id/:chart', () => {
       { param: 2, expected: 'is-difficult' },
       { param: 3, expected: 'is-expert' },
       { param: 4, expected: 'is-challenge' }
-    ])('returns "is-difficulty" if param is Difficulty', d => {
+    ])('returns "is-difficulty" if param is Difficulty', (d) => {
       expect(vm.getClassName({ difficulty: d.param })).toBe(d.expected)
     })
     test.each([-1, 5, 1.5, NaN, Infinity, -Infinity])(
       'returns "is-unknown" if param is other',
-      i => {
+      (i) => {
         expect(vm.getClassName(i)).toBe('is-unknown')
       }
     )
@@ -179,14 +179,14 @@ describe('song/:id/:chart', () => {
   describe('changeSelected method', () => {
     test.each([-1, 5, 1.5, NaN, Infinity, -Infinity])(
       'causes selectedIndex to param value',
-      i => {
+      (i) => {
         vm.changeSelected(i)
         expect(vm.selectedIndex).toBe(i)
       }
     )
     test.each([-1, 5, 1.5, NaN, Infinity, -Infinity])(
       'returns "is-unknown" if param is other',
-      i => {
+      (i) => {
         expect(vm.getClassName(i)).toBe('is-unknown')
       }
     )
@@ -202,7 +202,7 @@ describe('song/:id/:chart', () => {
       { chartId: 22, expected: 6 },
       { chartId: 23, expected: 7 },
       { chartId: 24, expected: 8 }
-    ])('returns 0-8 songIndex if length is 9', d => {
+    ])('returns 0-8 songIndex if length is 9', (d) => {
       expect((SongPage as any).calcSelectedIndex(d.chartId, 9)).toBe(d.expected)
     })
     test.each([
@@ -213,7 +213,7 @@ describe('song/:id/:chart', () => {
       { chartId: 21, expected: 4 },
       { chartId: 22, expected: 5 },
       { chartId: 23, expected: 6 }
-    ])('returns 0-6 songIndex if length is 7', d => {
+    ])('returns 0-6 songIndex if length is 7', (d) => {
       expect((SongPage as any).calcSelectedIndex(d.chartId, 7)).toBe(d.expected)
     })
     test.each([
@@ -226,18 +226,18 @@ describe('song/:id/:chart', () => {
       { chartId: 22, expected: 1 },
       { chartId: 23, expected: 1 },
       { chartId: 24, expected: 1 }
-    ])('returns 0-1 songIndex if length is 2', d => {
+    ])('returns 0-1 songIndex if length is 2', (d) => {
       expect((SongPage as any).calcSelectedIndex(d.chartId, 2)).toBe(d.expected)
     })
     test.each([10, 11, 12, 13, 14, 21, 22, 23, 24])(
       'returns 0 if length is 1',
-      i => {
+      (i) => {
         expect((SongPage as any).calcSelectedIndex(i, 1)).toBe(0)
       }
     )
     test.each([-1, 0, 1, 10.5, NaN, Infinity, -Infinity])(
       'returns 0 if chartId is invalid',
-      i => {
+      (i) => {
         expect((SongPage as any).calcSelectedIndex(i, 9)).toBe(0)
       }
     )

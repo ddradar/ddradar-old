@@ -28,11 +28,11 @@ describe('/data/songs/*.json', () => {
   )
   const jsonFilesPath = fs
     .readdirSync(songsDirPath)
-    .filter(p => path.extname(p) === '.json')
-  const jsonStrings = jsonFilesPath.map(filePath => {
+    .filter((p) => path.extname(p) === '.json')
+  const jsonStrings = jsonFilesPath.map((filePath) => {
     return fs.readFileSync(path.join(songsDirPath, filePath), 'utf8')
   })
-  test.each(jsonStrings)('', s => {
+  test.each(jsonStrings)('', (s) => {
     const jsonObject = JSON.parse(s)
     expect(jsonObject).toMatchSchema(songSchema)
   })

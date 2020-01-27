@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import * as fs from 'fs'
 import * as path from 'path'
 import {
@@ -11,7 +12,7 @@ import { isStepChart, StepChart } from './step-chart'
 
 function readJsonFromDirectory(dirPath: string) {
   const jsonFilePaths = fs.readdirSync(dirPath)
-  return jsonFilePaths.map(fileName => {
+  return jsonFilePaths.map((fileName) => {
     return JSON.parse(fs.readFileSync(path.join(dirPath, fileName), 'utf8'))
   })
 }
@@ -92,6 +93,6 @@ function readJsonFromDirectory(dirPath: string) {
   console.log(
     `SongVersion: ${latestSongVersion} ChartVersion: ${latestChartVersion}`
   )
-})().catch(e => {
+})().catch((e) => {
   throw e
 })
