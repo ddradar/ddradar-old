@@ -48,7 +48,7 @@ function readJsonFromDirectory(dirPath: string) {
     }
   }
   fs.writeFileSync(
-    path.join(__dirname, '..', 'song.json'),
+    path.join(__dirname, '..', '..', 'static', 'song.json'),
     JSON.stringify(allSongJsonData, undefined, '  ')
   )
 
@@ -77,7 +77,7 @@ function readJsonFromDirectory(dirPath: string) {
     }
   }
   fs.writeFileSync(
-    path.join(__dirname, '..', 'chart.json'),
+    path.join(__dirname, '..', '..', 'static', 'chart.json'),
     JSON.stringify(allChartJsonData, undefined, '  ')
   )
 
