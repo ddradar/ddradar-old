@@ -18,3 +18,9 @@ export function hasNumberProperty<K extends string>(
 ): x is { [M in K]: number } {
   return hasProperty(x, name) && typeof x[name] === 'number'
 }
+
+/** Generate [0-9a-z]{length} string. */
+export const generateRandomString = (length: number) =>
+  [...Array(Number.isInteger(length) ? length : 12)]
+    .map(() => (~~(Math.random() * 36)).toString(36))
+    .join('')
