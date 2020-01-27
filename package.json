@@ -68,6 +68,7 @@
     "@nuxtjs/pwa": "^3.0.0-0",
     "buefy": "^0.8.10",
     "chart.js": "^2.9.3",
+    "dotenv": "^8.2.0",
     "firebase": "^7.7.0",
     "firebase-admin": "^8.9.2",
     "nuxt": "^2.11.0",
