@@ -1,4 +1,18 @@
 import { Configuration } from '@nuxt/types'
+import consola from 'consola'
+import pkg from './package.json'
+import { validateEnvironments } from './plugins/environments'
+
+// eslint-disable-next-line no-process-env
+if (!process.env.CI) {
+  const validate = validateEnvironments()
+  if (!validate.valid) {
+    consola.error(
+      `Missing environment variable(s): ${validate.keys.join(', ')}`
+    )
+    process.exit(1)
+  }
+}
 
 const config: Configuration = {
   mode: 'spa',
@@ -10,7 +24,7 @@ const config: Configuration = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'DDR Score Tracker' }
+      { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
@@ -41,7 +55,7 @@ const config: Configuration = {
   pwa: {
     manifest: {
       name: 'DDRadar',
-      description: 'DDR Score Tracker',
+      description: pkg.description,
       theme_color: '#8c67ef',
       lang: 'ja',
       display: 'standalone',
@@ -53,9 +67,11 @@ const config: Configuration = {
    ** Build configuration
    */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
+    extend: (config, _) => {
+      config.node = {
+        fs: 'empty'
+      }
+    }
   }
 }
 export default config
