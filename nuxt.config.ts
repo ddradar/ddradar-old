@@ -29,12 +29,12 @@ const config: Configuration = {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxt/typescript-build'],
+  buildModules: ['@nuxtjs/eslint-module', '@nuxt/typescript-build'],
   /*
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://buefy.github.io/#/documentation
+    // Doc: https://buefy.org/documentation
     ['nuxt-buefy', { css: false }],
     '@nuxtjs/pwa'
   ],
