@@ -1,0 +1,65 @@
+name: Production Deploy
+
+on:
+  push:
+    tags:
+      - 'v*'
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Use Node.js 12
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+    - name: Use Cache
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: Install Dependencies
+      run: npm ci
+    - name: Build (Production)
+      run: npm run build
+      env:
+        FIREBASE_API_KEY: ${{ secrets.FIREBASE_SDK_API_KEY }}
+        FIREBASE_AUTH_DOMAIN:  ${{ secrets.FIREBASE_SDK_AUTH_DOMAIN }}
+        FIREBASE_DATABASE_URL:  ${{ secrets.FIREBASE_SDK_DATABASE_URL }}
+        FIREBASE_PROJECT_ID:  ${{ secrets.FIREBASE_SDK_PROJECT_ID }}
+        FIREBASE_STORAGE_BUCKET:  ${{ secrets.FIREBASE_SDK_STORAGE_BUCKET }}
+        FIREBASE_MESSAGING_SENDER_ID:  ${{ secrets.FIREBASE_SDK_MESSAGING_SENDER_ID }}
+        FIREBASE_APP_ID:  ${{ secrets.FIREBASE_SDK_APP_ID }}
+    - name: Deploy to Firebase (Production)
+      uses: w9jds/firebase-action@v1.2.0
+      with:
+        args: deploy
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        PROJECT_ID: ${{ secrets.FIREBASE_SDK_PROJECT_ID }}
+    - name: Pack Artifact
+      run: zip -r dist ./dist
+    - name: Create Github Release
+      id: create_release
+      uses: actions/create-release@v1.0.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
+    - name: Upload Release Asset
+      id: upload-release-asset 
+      uses: actions/upload-release-asset@v1.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./dist.zip
+        asset_name: dist.zip
+        asset_content_type: application/zip
