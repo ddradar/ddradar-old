@@ -43,7 +43,11 @@ const config: Configuration = {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/eslint-module', '@nuxt/typescript-build'],
+  buildModules: [
+    '@nuxtjs/dotenv',
+    '@nuxtjs/eslint-module',
+    '@nuxt/typescript-build'
+  ],
   /*
    ** Nuxt.js modules
    */
