@@ -5,7 +5,7 @@ import NameIndexPage from '@/pages/name/_prefix.vue'
 import * as repo from '@/plugins/song-repository'
 import { SongNameIndex } from '~/types/song'
 
-jest.mock('firebase/app', () => {
+jest.mock('~/plugins/firebase', () => {
   return {
     firestore: jest.fn()
   }

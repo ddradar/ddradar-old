@@ -1,18 +1,28 @@
-import { Context, Plugin } from '@nuxt/types'
 import firebase from 'firebase/app'
 
-const firebasePlugin: Plugin = ({ env }: Pick<Context, 'env'>, _) => {
-  if (!firebase.apps.length) {
-    firebase.initializeApp({
-      apiKey: env.apiKey,
-      authDomain: env.authDomain,
-      databaseURL: env.databaseURL,
-      projectId: env.projectId,
-      storageBucket: env.storageBucket,
-      messagingSenderId: env.messagingSenderId,
-      appId: env.appId
-    })
+/* eslint-disable no-process-env */
+if (!firebase.apps.length) {
+  const options: FirebaseOptions = {
+    apiKey: process.env.apiKey!,
+    authDomain: process.env.authDomain!,
+    databaseURL: process.env.databaseURL!,
+    projectId: process.env.projectId!,
+    storageBucket: process.env.storageBucket!,
+    messagingSenderId: process.env.messagingSenderId!,
+    appId: process.env.appId!
   }
+  firebase.initializeApp(options)
 }
+/* eslint-enable no-process-env */
 
-export default firebasePlugin
+export default firebase
+
+type FirebaseOptions = {
+  apiKey: string
+  authDomain: string
+  databaseURL: string
+  projectId: string
+  storageBucket: string
+  messagingSenderId: string
+  appId: string
+}

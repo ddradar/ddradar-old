@@ -1,7 +1,7 @@
-import firebase from 'firebase/app'
+import { VuexModule, Module, Mutation, Action } from 'vuex-module-decorators'
+import firebase from '~/plugins/firebase'
 import 'firebase/auth'
 import 'firebase/firestore'
-import { VuexModule, Module, Mutation, Action } from 'vuex-module-decorators'
 import { UserInfo, isUser } from '@/types/user-info'
 
 const db = firebase.firestore()

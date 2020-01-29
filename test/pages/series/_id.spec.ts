@@ -5,7 +5,7 @@ import SeriesPage from '@/pages/series/_id.vue'
 import { SeriesList } from '@/types/series'
 import * as repo from '@/plugins/song-repository'
 
-jest.mock('firebase/app', () => {
+jest.mock('~/plugins/firebase', () => {
   return {
     firestore: jest.fn()
   }

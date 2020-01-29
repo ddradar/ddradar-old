@@ -7,7 +7,7 @@ import * as songRepo from '@/plugins/song-repository'
 import { Song } from '@/types/song'
 import { StepChart } from '@/types/step-chart'
 
-jest.mock('firebase/app', () => {
+jest.mock('~/plugins/firebase', () => {
   return {
     firestore: jest.fn()
   }

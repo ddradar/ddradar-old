@@ -2,7 +2,7 @@ import { shallowMount, createLocalVue, Wrapper } from '@vue/test-utils'
 import Buefy from 'buefy'
 import UserPage from '@/pages/user.vue'
 
-jest.mock('firebase/app', () => {
+jest.mock('~/plugins/firebase', () => {
   return {
     firestore: jest.fn()
   }

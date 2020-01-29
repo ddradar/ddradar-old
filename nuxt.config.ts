@@ -1,5 +1,8 @@
 import { Configuration } from '@nuxt/types'
+import { config } from 'dotenv'
 import pkg from './package.json'
+
+config()
 
 /* eslint-disable no-process-env */
 const {
@@ -11,7 +14,7 @@ const {
 /* eslint-enable no-process-env */
 const projectId = FIREBASE_PROJECT_ID || 'ddradar-staging'
 
-const config: Configuration = {
+const configration: Configuration = {
   mode: 'spa',
   /*
    ** Headers of the page
@@ -84,4 +87,4 @@ const config: Configuration = {
     }
   }
 }
-export default config
+export default configration

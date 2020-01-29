@@ -4,7 +4,7 @@ import { mocked } from 'ts-jest/utils'
 import SingleLevelPage from '@/pages/single/_level.vue'
 import * as repo from '@/plugins/chart-repository'
 
-jest.mock('firebase/app', () => {
+jest.mock('~/plugins/firebase', () => {
   return {
     firestore: jest.fn()
   }
