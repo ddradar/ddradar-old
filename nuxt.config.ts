@@ -10,6 +10,7 @@ const {
 } = process.env
 /* eslint-enable no-process-env */
 const projectId = FIREBASE_PROJECT_ID || 'ddradar-staging'
+const isDevelopment = projectId === 'ddradar-staging'
 
 const configration: Configuration = {
   mode: 'spa',
@@ -23,7 +24,13 @@ const configration: Configuration = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'canonical',
+        href: `http://${isDevelopment ? 'staging.' : ''}ddradar.app/`
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
