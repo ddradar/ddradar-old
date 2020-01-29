@@ -5,6 +5,11 @@ import NameIndexPage from '@/pages/name/_prefix.vue'
 import * as repo from '@/plugins/song-repository'
 import { SongNameIndex } from '~/types/song'
 
+jest.mock('firebase/app', () => {
+  return {
+    firestore: jest.fn()
+  }
+})
 jest.mock('@/plugins/song-repository')
 
 const localVue = createLocalVue()
