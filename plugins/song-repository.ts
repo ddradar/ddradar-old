@@ -1,4 +1,4 @@
-import firebase from '@/plugins/firebase'
+import firebase from 'firebase/app'
 import 'firebase/firestore'
 import { isSong, Song } from '@/types/song'
 
