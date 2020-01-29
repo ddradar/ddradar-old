@@ -1,4 +1,4 @@
-import firebase from '@/plugins/firebase'
+import firebase from '~/plugins/firebase'
 import 'firebase/firestore'
 import { StepChart, isStepChart } from '~/types/step-chart'
 import { PlayStyle, PlayStyleList } from '~/types/play-style'

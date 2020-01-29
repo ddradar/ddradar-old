@@ -4,6 +4,11 @@ import { mocked } from 'ts-jest/utils'
 import DoubleLevelPage from '@/pages/double/_level.vue'
 import * as repo from '@/plugins/chart-repository'
 
+jest.mock('~/plugins/firebase', () => {
+  return {
+    firestore: jest.fn()
+  }
+})
 jest.mock('@/plugins/chart-repository')
 
 const localVue = createLocalVue()

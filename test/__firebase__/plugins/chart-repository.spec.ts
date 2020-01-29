@@ -4,7 +4,7 @@ import { StepChart } from '~/types/step-chart'
 import { PlayStyle } from '~/types/play-style'
 import { Difficulty } from '~/types/difficulty'
 
-jest.mock('@/plugins/firebase', () => {
+jest.mock('~/plugins/firebase', () => {
   return firebaseTest.initializeTestApp({ projectId: 'ddradar-chartrepo-test' })
 })
 

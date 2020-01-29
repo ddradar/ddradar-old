@@ -2,7 +2,7 @@ import * as firebaseTest from '@firebase/testing'
 import * as repo from '@/plugins/song-repository'
 import { Song } from '~/types/song'
 
-jest.mock('@/plugins/firebase', () => {
+jest.mock('~/plugins/firebase', () => {
   return firebaseTest.initializeTestApp({ projectId: 'ddradar-songrepo-test' })
 })
 

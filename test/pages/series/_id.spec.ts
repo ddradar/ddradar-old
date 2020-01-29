@@ -5,6 +5,11 @@ import SeriesPage from '@/pages/series/_id.vue'
 import { SeriesList } from '@/types/series'
 import * as repo from '@/plugins/song-repository'
 
+jest.mock('~/plugins/firebase', () => {
+  return {
+    firestore: jest.fn()
+  }
+})
 jest.mock('@/plugins/song-repository')
 
 const localVue = createLocalVue()
