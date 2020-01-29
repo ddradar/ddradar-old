@@ -1,18 +1,15 @@
 import { Configuration } from '@nuxt/types'
-import consola from 'consola'
 import pkg from './package.json'
-import { validateEnvironments } from './plugins/environments'
 
-// eslint-disable-next-line no-process-env
-if (!process.env.CI) {
-  const validate = validateEnvironments()
-  if (!validate.valid) {
-    consola.error(
-      `Missing environment variable(s): ${validate.keys.join(', ')}`
-    )
-    process.exit(1)
-  }
-}
+/* eslint-disable no-process-env */
+const {
+  FIREBASE_PROJECT_ID,
+  FIREBASE_API_KEY,
+  FIREBASE_MESSAGING_SENDER_ID,
+  FIREBASE_APP_ID
+} = process.env
+/* eslint-enable no-process-env */
+const projectId = FIREBASE_PROJECT_ID || 'ddradar-staging'
 
 const config: Configuration = {
   mode: 'spa',
@@ -39,7 +36,7 @@ const config: Configuration = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/environments.ts'],
+  plugins: ['~/plugins/firebase.ts'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -66,6 +63,15 @@ const config: Configuration = {
       scope: '/',
       start_url: '/'
     }
+  },
+  env: {
+    apiKey: FIREBASE_API_KEY || 'AIzaSyC_z8VvdgZDibPFZYT1W0-xrmkJiU6PmRw',
+    authDomain: `${projectId}.firebaseapp.com`,
+    databaseURL: `https://${projectId}.firebaseio.com`,
+    projectId,
+    storageBucket: `${projectId}.appspot.com`,
+    messagingSenderId: FIREBASE_MESSAGING_SENDER_ID || '922209395211',
+    appId: FIREBASE_APP_ID || '1:922209395211:web:04e36178df0443c6cf9d0e'
   },
   /*
    ** Build configuration
