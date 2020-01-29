@@ -1,8 +1,5 @@
 import { Configuration } from '@nuxt/types'
-import { config } from 'dotenv'
 import pkg from './package.json'
-
-config()
 
 /* eslint-disable no-process-env */
 const {
@@ -43,11 +40,7 @@ const configration: Configuration = {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [
-    '@nuxtjs/dotenv',
-    '@nuxtjs/eslint-module',
-    '@nuxt/typescript-build'
-  ],
+  buildModules: ['@nuxtjs/eslint-module', '@nuxt/typescript-build'],
   /*
    ** Nuxt.js modules
    */
