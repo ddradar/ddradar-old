@@ -77,7 +77,7 @@
     "vuex-module-decorators": "^0.11.0"
   },
   "devDependencies": {
-    "@firebase/testing": "^0.16.6",
+    "@firebase/testing": "^0.16.7",
     "@nuxt/typescript-build": "^0.5.6",
     "@nuxtjs/eslint-config-typescript": "^1.0.0",
     "@nuxtjs/eslint-module": "^1.1.0",
