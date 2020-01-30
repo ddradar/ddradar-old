@@ -2,14 +2,14 @@
 
 ## TOC
 
-- [Send issue]()
-- [Coding]()
-- [Documentation or Translation]()
-- [Pull Request]()
-  - [New Feature]()
-  - [New Song or Charts]()
-  - [Refactor, Bug Fix, Testing etc...]()
-  - [Resolve issue]()
+- [Send issue](#send-issue)
+- [Coding](#coding)
+- [Documentation or Translation](#documentation-or-translation)
+- [Pull Request](#pull-request)
+  - [New Feature](#new-feature)
+  - [New Song or Charts](#new-song-or-charts)
+  - [Refactor, Bug Fix, Testing etc...](#refactor-bug-fix-testing-etc)
+  - [Resolve issue](#resolve-issue)
 
 ## Send issue
 
