@@ -22,9 +22,9 @@ jobs:
       uses: actions/cache@v1
       with:
         path: ~/.npm
-        key: ${{ runner.os }}-node-12-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
+        key: ${{ runner.os }}-node-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
         restore-keys: |
-          ${{ runner.os }}-node-12-
+          ${{ runner.os }}-node-
     - name: npm install
       run: npm ci
     - name: Unit Test with Jest
@@ -36,8 +36,8 @@ jobs:
         FIREBASE_PRIVATE_KEY: ${{secrets.FIREBASE_PRIVATE_KEY}}
     - name: Push Created Json Files
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        git config --local user.name ${GITHUB_ACTOR}
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
         git checkout master
         git add -A
