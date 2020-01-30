@@ -1,7 +1,7 @@
 ---
 name: New Song Info
 about: Template for add Song and Charts. / 追加曲・譜面を報告するためのテンプレートです。
-title: 'Add: [SONG NAME OR EVENT / 曲名またはイベントを入力]'
+title: 'feat(song): [SONG NAME OR EVENT / 曲名またはイベントを入力]'
 labels: enhancement
 assignees: ''
 ---
