@@ -2,7 +2,7 @@ name: Import Song
 
 on:
   push:
-    branches: 
+    branches:
       - 'master'
     paths:
       - 'song-info/data/**/*.json'
@@ -32,7 +32,7 @@ jobs:
     - name: Import Data to Firebase
       run: npm start
       env:
-        FIREBASE_CLIENT_EMAIL: ${{secrets.FIREBASE_CLIENT_EMAIL}} 
+        FIREBASE_CLIENT_EMAIL: ${{secrets.FIREBASE_CLIENT_EMAIL}}
         FIREBASE_PRIVATE_KEY: ${{secrets.FIREBASE_PRIVATE_KEY}}
     - name: Push Created Json Files
       run: |
