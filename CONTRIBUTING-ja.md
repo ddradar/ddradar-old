@@ -32,9 +32,9 @@
 - バグを Issue で報告する場合、バグを再現する為の説明、エラーの情報、環境を書いてください。
 - 本文は明確に記述し、1 行のみの Issue を送ることは避けてください。
 - Issue テンプレートが用意されているので、必要な箇所を切り取って使用してください。
-  - [バグ報告]()
-  - [機能要望]()
-  - [新曲・新譜面の追加要望]()
+  - [バグ報告](https://github.com/ddradar/ddradar/issues/new?assignees=&labels=bug%3Abug%3A&template=bug-report-------.md&title=%5BBUG%5D)
+  - [機能要望](https://github.com/ddradar/ddradar/issues/new?assignees=&labels=enhancement%3Aspeech_balloon%3A&template=feature-request.md&title=)
+  - [新曲・新譜面の追加要望](https://github.com/ddradar/ddradar/issues/new?assignees=&labels=&template=new-song-info.md&title=Add%3A+%5BSONG+NAME+OR+EVENT+%2F+%E6%9B%B2%E5%90%8D%E3%81%BE%E3%81%9F%E3%81%AF%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%82%92%E5%85%A5%E5%8A%9B%5D)
 
 ## Making Changes
 
@@ -52,11 +52,11 @@
   - **test**: テストの追加、または修正
   - **chore**: ビルド構成の変更やライブラリの更新など
 
-````
+```text
 修飾子(サブカテゴリ): コミットの概要
 <ここは空行>
 3行目以降に、このコミットの詳細を記述します。
-````
+```
 
 ### Coding Style
 
