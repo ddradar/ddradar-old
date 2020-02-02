@@ -7,6 +7,8 @@
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ddradar/ddradar)](https://dependabot.com)
 [![License](https://img.shields.io/github/license/ddradar/ddradar)](LICENSE)
 
+日本語版ガイドは[こちら](CONTRIBUTING-ja.md)にあります。
+
 DDR Score Tracker
 
 ## Build Setup
@@ -29,3 +31,7 @@ npm run dev
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+## Contributing
+
+See [this guide](CONTRIBUTING.md).
