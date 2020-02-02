@@ -2,6 +2,8 @@
 
 [日本語版のガイドはこちらです。](CONTRIBUTING-ja.md)
 
+Thank you for your interest in this project. This project is open source, and anyone can contribute to the project. Please follow the instructions below to ensure that you can contribute smoothly.
+
 ## TOC
 
 - [Getting Started](#getting-started)
