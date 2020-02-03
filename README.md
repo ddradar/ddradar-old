@@ -8,7 +8,7 @@
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ddradar/ddradar)](https://dependabot.com)
 [![License](https://img.shields.io/github/license/ddradar/ddradar)](LICENSE)
 
-日本語版ガイドは[こちら](CONTRIBUTING-ja.md)にあります。
+日本語版ガイドは[こちら](README-ja.md)にあります。
 
 DDR Score Tracker
 
