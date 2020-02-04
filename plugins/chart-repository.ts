@@ -1,39 +1,41 @@
-import firebase from '~/plugins/firebase'
-import 'firebase/firestore'
-import { StepChart, isStepChart } from '~/types/step-chart'
-import { PlayStyle, PlayStyleList } from '~/types/play-style'
 import { Level } from '~/types/level'
-import { DifficultyList } from '~/types/difficulty'
+import { PlayStyle } from '~/types/play-style'
+import { isStepChart, StepChart } from '~/types/step-chart'
 
-const db = firebase.firestore()
+export const chartVersion = 20200127
 
-export async function fetchSongCharts(songId: string) {
-  const c = await db
-    .collection(`version/1/songs/${songId}/charts`)
-    .orderBy('playStyle')
-    .orderBy('difficulty')
-    .get()
-  return c.docs
-    .map((d) => d.data())
-    .filter((d) => isStepChart(d)) as StepChart[]
-}
+export const fetchSongCharts = async (
+  songId: string,
+  useMaster: boolean = false
+) =>
+  (await fetchChartJson(useMaster))
+    .filter((c) => c.songId === songId)
+    .sort((l, r) =>
+      l.playStyle !== r.playStyle
+        ? l.playStyle - r.playStyle
+        : l.difficulty - r.difficulty
+    )
 
-export async function fetchChartsByLevel(playStyle: PlayStyle, level: Level) {
-  const snapShot = await db
-    .collectionGroup('charts')
-    .where('playStyle', '==', playStyle)
-    .where('level', '==', level)
-    .orderBy('songName')
-    .orderBy('difficulty')
-    .get()
-  return snapShot.docs
-    .map((d) => d.data())
-    .filter((d) => isStepChart(d)) as StepChart[]
-}
+export const fetchChartsByLevel = async (
+  playStyle: PlayStyle,
+  level: Level,
+  useMaster: boolean = false
+) =>
+  (await fetchChartJson(useMaster))
+    .filter((c) => c.level === level && c.playStyle === playStyle)
+    .sort((l, r) =>
+      l.songName < r.songName
+        ? -1
+        : l.songName > r.songName
+        ? 1
+        : l.difficulty - r.difficulty
+    )
 
-export function getChartDocumentId({
-  playStyle,
-  difficulty
-}: Pick<StepChart, 'playStyle' | 'difficulty'>) {
-  return `${PlayStyleList[playStyle]}-${DifficultyList[difficulty]}`.toLowerCase()
+const masterUrl = 'https://staging.ddradar.app'
+const fetchChartJson = async (useMaster: boolean) => {
+  const jsonUrl = `${useMaster ? masterUrl : ''}/chart.json`
+  const jsonData = await (await fetch(jsonUrl)).json()
+  if (Array.isArray(jsonData) && isStepChart(jsonData[0]))
+    return jsonData as StepChart[]
+  throw new Error('JSON file is not StepChart[]')
 }
