@@ -47,7 +47,8 @@
       "^.+\\.ts$": "ts-jest"
     },
     "setupFiles": [
-      "jest-canvas-mock"
+      "jest-canvas-mock",
+      "./setupJest.js"
     ],
     "globals": {
       "ts-jest": {

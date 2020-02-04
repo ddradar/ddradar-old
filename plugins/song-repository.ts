@@ -22,8 +22,8 @@ export const fetchSongById = async (
   useMaster: boolean = false
 ) => {
   const song = (await fetchSongJson(useMaster)).filter((s) => s.id === songId)
-  if (song.length > 1) throw new Error('Duplicate songId.')
-  else if (song.length === 0) return null
+  if (song.length > 1) throw new Error(`Duplicated songId: ${songId}`)
+  else if (song.length === 0) throw new Error(`Not Found songId: ${songId}`)
   return song[0]
 }
 

@@ -1,51 +1,12 @@
-import * as firebaseTest from '@firebase/testing'
-import * as repo from '@/plugins/chart-repository'
+/* eslint-disable no-undef */
+import 'jest-fetch-mock'
+import * as repo from '~/plugins/chart-repository'
 import { StepChart } from '~/types/step-chart'
-import { PlayStyle } from '~/types/play-style'
-import { Difficulty } from '~/types/difficulty'
-
-jest.mock('~/plugins/firebase', () => {
-  return firebaseTest.initializeTestApp({ projectId: 'ddradar-chartrepo-test' })
-})
 
 describe('ChartRepository', () => {
-  const db = firebaseTest
-    .initializeAdminApp({ projectId: 'ddradar-chartrepo-test' })
-    .firestore()
-  beforeAll(async () => {
-    const batch = db.batch()
-    charts.forEach((chart) => {
-      const ref = db
-        .collection(`version/1/songs/${chart.songId}/charts`)
-        .doc(repo.getChartDocumentId(chart))
-      batch.set(ref, chart)
-    })
-    const invalidDataRef = db.collection('version/1/charts').doc('foo')
-    batch.set(invalidDataRef, invalidData)
-    await batch.commit()
-  })
-  describe('getChartDocumentId', () => {
-    test.each([
-      [1, 0, 'single-beginner'],
-      [1, 1, 'single-basic'],
-      [1, 2, 'single-difficult'],
-      [1, 3, 'single-expert'],
-      [1, 4, 'single-challenge'],
-      [2, 1, 'double-basic'],
-      [2, 2, 'double-difficult'],
-      [2, 3, 'double-expert'],
-      [2, 4, 'double-challenge']
-    ])(
-      'returns lowerCased playstyle-difficulty name',
-      (playStyle, difficulty, expected) => {
-        expect(
-          repo.getChartDocumentId({
-            playStyle: playStyle as PlayStyle,
-            difficulty: difficulty as Difficulty
-          })
-        ).toBe(expected)
-      }
-    )
+  beforeEach(() => {
+    fetchMock.resetMocks()
+    fetchMock.mockResolvedValue({ json: () => charts } as any)
   })
   describe('fetchSongCharts', () => {
     test('returns StepChart[] if exists', async () => {
@@ -58,6 +19,17 @@ describe('ChartRepository', () => {
     test('returns [] if not exists', async () => {
       const fetchedCharts = await repo.fetchSongCharts('foo')
       expect(fetchedCharts).toHaveLength(0)
+    })
+    test('throws error', () => {
+      // Arrange
+      fetchMock.resetMocks()
+      fetchMock.mockResolvedValue({ json: () => invalidData } as any)
+
+      // Act
+      // Assert
+      expect(repo.fetchSongCharts('foo')).rejects.toThrowError(
+        'JSON file is not StepChart[]'
+      )
     })
   })
   describe('fetchChartsByLevel', () => {
@@ -76,9 +48,6 @@ describe('ChartRepository', () => {
       const fetchedCharts = await repo.fetchChartsByLevel(playStyle, level)
       expect(fetchedCharts).toHaveLength(0)
     })
-  })
-  afterAll(async () => {
-    await Promise.all(firebaseTest.apps().map((app) => app.delete()))
   })
 })
 
