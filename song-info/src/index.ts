@@ -1,12 +1,7 @@
 /* eslint-disable no-console */
 import * as fs from 'fs'
 import * as path from 'path'
-import {
-  addSong,
-  addStepChart,
-  fetchDbVersion,
-  setDbVersion
-} from './firebase-admin'
+import { fetchDbVersion, setDbVersion } from './firebase-admin'
 import { isSong, Song } from './song'
 import { isStepChart, StepChart } from './step-chart'
 
@@ -22,8 +17,6 @@ function readJsonFromDirectory(dirPath: string) {
 
   let latestSongVersion = version.songVersion
   let latestChartVersion = version.chartVersion
-  let songUpdateCount = 0
-  let chartUpdateCount = 0
 
   // Read Songs
   const songsData = readJsonFromDirectory(
@@ -39,13 +32,9 @@ function readJsonFromDirectory(dirPath: string) {
         continue
       }
       allSongJsonData.push(song)
-      if (song.version <= version.songVersion) {
-        continue
+      if (latestSongVersion < song.version) {
+        latestSongVersion = song.version
       }
-      await addSong(song)
-      songUpdateCount++
-      latestSongVersion =
-        latestSongVersion >= song.version ? latestSongVersion : song.version
     }
   }
   fs.writeFileSync(
@@ -64,17 +53,12 @@ function readJsonFromDirectory(dirPath: string) {
     }
     for (const chart of charts) {
       if (!isStepChart(chart)) {
-        console.log(chart)
         continue
       }
       allChartJsonData.push(chart)
-      if (chart.version <= version.chartVersion) {
-        continue
+      if (latestChartVersion < chart.version) {
+        latestChartVersion = chart.version
       }
-      await addStepChart(chart)
-      chartUpdateCount++
-      latestChartVersion =
-        latestChartVersion >= chart.version ? latestChartVersion : chart.version
     }
   }
   fs.writeFileSync(
@@ -87,9 +71,6 @@ function readJsonFromDirectory(dirPath: string) {
     chartVersion: latestChartVersion
   })
   console.log('Finished.')
-  console.log(
-    `Added or Updated ${songUpdateCount} Songs, ${chartUpdateCount} Charts.`
-  )
   console.log(
     `SongVersion: ${latestSongVersion} ChartVersion: ${latestChartVersion}`
   )
