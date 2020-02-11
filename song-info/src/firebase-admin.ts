@@ -7,11 +7,11 @@ import { StepChart, getChartDocumentId } from './step-chart'
 if (!firebase.apps.length) {
   firebase.initializeApp({
     credential: firebase.credential.cert({
-      projectId: 'ddradar-7aeea',
+      projectId: process.env.FIREBASE_PROJECT_ID,
       clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
       privateKey: process.env.FIREBASE_PRIVATE_KEY
     }),
-    databaseURL: 'https://ddradar-7aeea.firebaseio.com'
+    databaseURL: `https://${process.env.FIREBASE_PROJECT_ID}.firebaseio.com`
   })
 }
 const db = firebase.firestore()
