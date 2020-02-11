@@ -38,13 +38,15 @@ describe('/name/:prefix', () => {
         if (nameIndex === hasDataIndex) {
           return Promise.resolve([
             {
+              id: '00000000000000000000000000000000',
               name: 'PARANOiA',
               nameKana: 'PARANOIA',
               nameIndex: 25,
               artist: '180',
               series: '1st',
               minBPM: 180,
-              maxBPM: 180
+              maxBPM: 180,
+              version: 20200101
             }
           ])
         }

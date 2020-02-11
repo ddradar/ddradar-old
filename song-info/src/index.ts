@@ -1,14 +1,9 @@
 /* eslint-disable no-console */
 import * as fs from 'fs'
 import * as path from 'path'
-import {
-  addSong,
-  addStepChart,
-  fetchDbVersion,
-  setDbVersion
-} from './firebase-admin'
-import { isSong, Song } from './song'
-import { isStepChart, StepChart } from './step-chart'
+import { isSong, Song } from '../../types/song'
+import { isStepChart, StepChart } from '../../types/step-chart'
+import { setDbVersion } from './firebase-admin'
 
 function readJsonFromDirectory(dirPath: string) {
   const jsonFilePaths = fs.readdirSync(dirPath)
@@ -18,36 +13,17 @@ function readJsonFromDirectory(dirPath: string) {
 }
 
 ;(async () => {
-  const version = await fetchDbVersion()
-
-  let latestSongVersion = version.songVersion
-  let latestChartVersion = version.chartVersion
-  let songUpdateCount = 0
-  let chartUpdateCount = 0
-
   // Read Songs
   const songsData = readJsonFromDirectory(
     path.join(__dirname, '..', 'data', 'songs')
   )
-  const allSongJsonData: Song[] = []
-  for (const songs of songsData) {
-    if (!Array.isArray(songs)) {
-      continue
-    }
-    for (const song of songs) {
-      if (!isSong(song)) {
-        continue
-      }
-      allSongJsonData.push(song)
-      if (song.version <= version.songVersion) {
-        continue
-      }
-      await addSong(song)
-      songUpdateCount++
-      latestSongVersion =
-        latestSongVersion >= song.version ? latestSongVersion : song.version
-    }
-  }
+  const allSongJsonData = songsData
+    .filter((a) => Array.isArray(a) && a.every((s) => isSong(s)))
+    .flat() as Song[]
+  const songVersion = allSongJsonData
+    .map((s) => s.version)
+    .sort((l, r) => r - l)[0]
+
   fs.writeFileSync(
     path.join(__dirname, '..', '..', 'static', 'song.json'),
     JSON.stringify(allSongJsonData, undefined, '  ')
@@ -57,42 +33,21 @@ function readJsonFromDirectory(dirPath: string) {
   const chartsData = readJsonFromDirectory(
     path.join(__dirname, '..', 'data', 'charts')
   )
-  const allChartJsonData: StepChart[] = []
-  for (const charts of chartsData) {
-    if (!Array.isArray(charts)) {
-      continue
-    }
-    for (const chart of charts) {
-      if (!isStepChart(chart)) {
-        console.log(chart)
-        continue
-      }
-      allChartJsonData.push(chart)
-      if (chart.version <= version.chartVersion) {
-        continue
-      }
-      await addStepChart(chart)
-      chartUpdateCount++
-      latestChartVersion =
-        latestChartVersion >= chart.version ? latestChartVersion : chart.version
-    }
-  }
+  const allChartJsonData = chartsData
+    .filter((a) => Array.isArray(a) && a.every((c) => isStepChart(c)))
+    .flat() as StepChart[]
+  const chartVersion = allChartJsonData
+    .map((s) => s.version)
+    .sort((l, r) => r - l)[0]
+
   fs.writeFileSync(
     path.join(__dirname, '..', '..', 'static', 'chart.json'),
     JSON.stringify(allChartJsonData, undefined, '  ')
   )
 
-  await setDbVersion({
-    songVersion: latestSongVersion,
-    chartVersion: latestChartVersion
-  })
+  await setDbVersion({ songVersion, chartVersion })
   console.log('Finished.')
-  console.log(
-    `Added or Updated ${songUpdateCount} Songs, ${chartUpdateCount} Charts.`
-  )
-  console.log(
-    `SongVersion: ${latestSongVersion} ChartVersion: ${latestChartVersion}`
-  )
+  console.log(`SongVersion: ${songVersion} ChartVersion: ${chartVersion}`)
 })().catch((e) => {
   throw e
 })

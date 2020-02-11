@@ -49,7 +49,8 @@ describe('double/:level', () => {
               voltage: 19,
               air: 0,
               freeze: 0,
-              chaos: 0
+              chaos: 0,
+              version: 20200101
             }
           ])
         }
