@@ -257,7 +257,8 @@ const song: Song = {
   artist: '2MB',
   series: '2ndMIX',
   minBPM: 180,
-  maxBPM: 180
+  maxBPM: 180,
+  version: 20200101
 }
 
 const charts: StepChart[] = [
@@ -274,7 +275,8 @@ const charts: StepChart[] = [
     voltage: 30,
     air: 0,
     freeze: 0,
-    chaos: 0
+    chaos: 0,
+    version: 20200101
   },
   {
     songId: '9doPbId8qid9I9l6ooloPQD1lq1Plb6I',
@@ -289,7 +291,8 @@ const charts: StepChart[] = [
     voltage: 44,
     air: 60,
     freeze: 0,
-    chaos: 4
+    chaos: 4,
+    version: 20200101
   },
   {
     songId: '9doPbId8qid9I9l6ooloPQD1lq1Plb6I',
@@ -304,7 +307,8 @@ const charts: StepChart[] = [
     voltage: 44,
     air: 69,
     freeze: 0,
-    chaos: 6
+    chaos: 6,
+    version: 20200101
   },
   {
     songId: '9doPbId8qid9I9l6ooloPQD1lq1Plb6I',
@@ -319,7 +323,8 @@ const charts: StepChart[] = [
     voltage: 52,
     air: 30,
     freeze: 0,
-    chaos: 19
+    chaos: 19,
+    version: 20200101
   },
   {
     songId: '9doPbId8qid9I9l6ooloPQD1lq1Plb6I',
@@ -334,7 +339,8 @@ const charts: StepChart[] = [
     voltage: 82,
     air: 58,
     freeze: 16,
-    chaos: 79
+    chaos: 79,
+    version: 20200101
   },
   {
     songId: '9doPbId8qid9I9l6ooloPQD1lq1Plb6I',
@@ -349,7 +355,8 @@ const charts: StepChart[] = [
     voltage: 44,
     air: 74,
     freeze: 0,
-    chaos: 3
+    chaos: 3,
+    version: 20200101
   },
   {
     songId: '9doPbId8qid9I9l6ooloPQD1lq1Plb6I',
@@ -364,7 +371,8 @@ const charts: StepChart[] = [
     voltage: 52,
     air: 38,
     freeze: 0,
-    chaos: 10
+    chaos: 10,
+    version: 20200101
   },
   {
     songId: '9doPbId8qid9I9l6ooloPQD1lq1Plb6I',
@@ -379,7 +387,8 @@ const charts: StepChart[] = [
     voltage: 52,
     air: 30,
     freeze: 0,
-    chaos: 19
+    chaos: 19,
+    version: 20200101
   },
   {
     songId: '9doPbId8qid9I9l6ooloPQD1lq1Plb6I',
@@ -394,6 +403,7 @@ const charts: StepChart[] = [
     voltage: 75,
     air: 74,
     freeze: 20,
-    chaos: 53
+    chaos: 53,
+    version: 20200101
   }
 ]

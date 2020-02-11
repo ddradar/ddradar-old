@@ -53,7 +53,8 @@ const songs: (Song & { id: string })[] = [
     artist: '180',
     series: '1st',
     minBPM: 180,
-    maxBPM: 180
+    maxBPM: 180,
+    version: 20200101
   },
   {
     id: 'Pb9II0oiI9ODQ8OP8IqIPQP9P68biqIi',
@@ -63,7 +64,8 @@ const songs: (Song & { id: string })[] = [
     artist: 'DE-SIRE',
     series: '1st',
     minBPM: 160,
-    maxBPM: 160
+    maxBPM: 160,
+    version: 20200101
   },
   {
     id: 'Pl0dPid9lQDo6PDQDqPboPqO6iIDIqoo',
@@ -73,7 +75,8 @@ const songs: (Song & { id: string })[] = [
     artist: '190',
     series: '2ndMIX',
     minBPM: 190,
-    maxBPM: 190
+    maxBPM: 190,
+    version: 20200101
   }
 ]
 
@@ -88,7 +91,8 @@ const duplicatedData: (Song & { id: string })[] = [
     artist: '180',
     series: '1st',
     minBPM: 180,
-    maxBPM: 180
+    maxBPM: 180,
+    version: 20200101
   },
   {
     id: '06loOQ0DQb0DqbOibl6qO81qlIdoP9DI',
@@ -98,6 +102,7 @@ const duplicatedData: (Song & { id: string })[] = [
     artist: '180',
     series: '1st',
     minBPM: 180,
-    maxBPM: 180
+    maxBPM: 180,
+    version: 20200101
   }
 ]

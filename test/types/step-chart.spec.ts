@@ -14,23 +14,28 @@ describe('StepChart', () => {
     voltage: 10,
     air: 2,
     freeze: 0,
-    chaos: 2
+    chaos: 2,
+    version: 20200101
   }
-  test('isStepChart returns false if param is not StepChart.', () => {
-    expect(isStepChart(undefined)).toBe(false)
-    expect(isStepChart(null)).toBe(false)
-    expect(isStepChart(1)).toBe(false)
-    expect(isStepChart('string')).toBe(false)
-    expect(isStepChart({})).toBe(false)
-    expect(isStepChart({ ...chart, songId: true })).toBe(false)
-    expect(isStepChart({ ...chart, songName: null })).toBe(false)
-    expect(isStepChart({ ...chart, playStyle: 3 })).toBe(false)
-    expect(isStepChart({ ...chart, difficulty: 2.5 })).toBe(false)
-    expect(isStepChart({ ...chart, level: -1 })).toBe(false)
-    expect(isStepChart({ ...chart, stream: '10' })).toBe(false)
-  })
-  test('isStepChart returns true if param is StepChart.', () => {
-    expect(isStepChart(chart)).toBe(true)
-    expect(isStepChart({ ...chart, stream: 270 })).toBe(true)
-  })
+  test.each([
+    undefined,
+    null,
+    1,
+    'string',
+    {},
+    { ...chart, songId: true },
+    { ...chart, songName: null },
+    { ...chart, playStyle: 3 },
+    { ...chart, difficulty: 2.5 },
+    { ...chart, level: -1 },
+    { ...chart, stream: '10' }
+  ])('isStepChart returns false if param is not StepChart.', (obj) =>
+    expect(isStepChart(obj)).toBe(false)
+  )
+  test.each([
+    chart,
+    { ...chart, stream: 270 }
+  ])('isStepChart returns true if param is StepChart.', (obj) =>
+    expect(isStepChart(obj)).toBe(true)
+  )
 })

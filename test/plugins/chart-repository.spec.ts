@@ -65,7 +65,8 @@ const charts: StepChart[] = [
     voltage: 16,
     air: 3,
     freeze: 0,
-    chaos: 0
+    chaos: 0,
+    version: 20200101
   },
   {
     songId: 'dq190Il9iO1bD698ll6ddObIlqdIQ1O9',
@@ -80,7 +81,8 @@ const charts: StepChart[] = [
     voltage: 32,
     air: 34,
     freeze: 0,
-    chaos: 6
+    chaos: 6,
+    version: 20200101
   },
   {
     songId: 'dq190Il9iO1bD698ll6ddObIlqdIQ1O9',
@@ -95,7 +97,8 @@ const charts: StepChart[] = [
     voltage: 32,
     air: 34,
     freeze: 0,
-    chaos: 14
+    chaos: 14,
+    version: 20200101
   },
   {
     songId: 'dq190Il9iO1bD698ll6ddObIlqdIQ1O9',
@@ -110,7 +113,8 @@ const charts: StepChart[] = [
     voltage: 48,
     air: 41,
     freeze: 0,
-    chaos: 34
+    chaos: 34,
+    version: 20200101
   },
   {
     songId: 'dq190Il9iO1bD698ll6ddObIlqdIQ1O9',
@@ -125,7 +129,8 @@ const charts: StepChart[] = [
     voltage: 32,
     air: 21,
     freeze: 0,
-    chaos: 7
+    chaos: 7,
+    version: 20200101
   },
   {
     songId: 'dq190Il9iO1bD698ll6ddObIlqdIQ1O9',
@@ -140,7 +145,8 @@ const charts: StepChart[] = [
     voltage: 32,
     air: 21,
     freeze: 0,
-    chaos: 14
+    chaos: 14,
+    version: 20200101
   },
   {
     songId: 'dq190Il9iO1bD698ll6ddObIlqdIQ1O9',
@@ -155,7 +161,8 @@ const charts: StepChart[] = [
     voltage: 43,
     air: 27,
     freeze: 0,
-    chaos: 26
+    chaos: 26,
+    version: 20200101
   },
   {
     songId: 'DblIbDd6lQQQoO9bloOI9iIqO1IiQoID',
@@ -170,7 +177,8 @@ const charts: StepChart[] = [
     voltage: 25,
     air: 9,
     freeze: 0,
-    chaos: 0
+    chaos: 0,
+    version: 20200101
   },
   {
     songId: 'DblIbDd6lQQQoO9bloOI9iIqO1IiQoID',
@@ -185,7 +193,8 @@ const charts: StepChart[] = [
     voltage: 43,
     air: 12,
     freeze: 0,
-    chaos: 2
+    chaos: 2,
+    version: 20200101
   },
   {
     songId: 'DblIbDd6lQQQoO9bloOI9iIqO1IiQoID',
@@ -200,7 +209,8 @@ const charts: StepChart[] = [
     voltage: 43,
     air: 63,
     freeze: 0,
-    chaos: 2
+    chaos: 2,
+    version: 20200101
   },
   {
     songId: 'DblIbDd6lQQQoO9bloOI9iIqO1IiQoID',
@@ -215,7 +225,8 @@ const charts: StepChart[] = [
     voltage: 50,
     air: 56,
     freeze: 0,
-    chaos: 20
+    chaos: 20,
+    version: 20200101
   },
   {
     songId: 'DblIbDd6lQQQoO9bloOI9iIqO1IiQoID',
@@ -230,7 +241,8 @@ const charts: StepChart[] = [
     voltage: 50,
     air: 45,
     freeze: 0,
-    chaos: 35
+    chaos: 35,
+    version: 20200101
   },
   {
     songId: 'DblIbDd6lQQQoO9bloOI9iIqO1IiQoID',
@@ -245,7 +257,8 @@ const charts: StepChart[] = [
     voltage: 43,
     air: 12,
     freeze: 0,
-    chaos: 2
+    chaos: 2,
+    version: 20200101
   },
   {
     songId: 'DblIbDd6lQQQoO9bloOI9iIqO1IiQoID',
@@ -260,7 +273,8 @@ const charts: StepChart[] = [
     voltage: 43,
     air: 102,
     freeze: 0,
-    chaos: 2
+    chaos: 2,
+    version: 20200101
   },
   {
     songId: 'DblIbDd6lQQQoO9bloOI9iIqO1IiQoID',
@@ -275,7 +289,8 @@ const charts: StepChart[] = [
     voltage: 50,
     air: 56,
     freeze: 0,
-    chaos: 14
+    chaos: 14,
+    version: 20200101
   },
   {
     songId: 'DblIbDd6lQQQoO9bloOI9iIqO1IiQoID',
@@ -290,7 +305,8 @@ const charts: StepChart[] = [
     voltage: 43,
     air: 27,
     freeze: 35,
-    chaos: 21
+    chaos: 21,
+    version: 20200101
   }
 ]
 const invalidData = {
