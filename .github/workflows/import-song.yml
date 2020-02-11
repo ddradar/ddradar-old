@@ -32,8 +32,9 @@ jobs:
     - name: Import Data to Firebase
       run: npm start
       env:
-        FIREBASE_CLIENT_EMAIL: ${{secrets.FIREBASE_CLIENT_EMAIL}}
-        FIREBASE_PRIVATE_KEY: ${{secrets.FIREBASE_PRIVATE_KEY}}
+        FIREBASE_CLIENT_EMAIL: ${{ secrets.FIREBASE_CLIENT_EMAIL }}
+        FIREBASE_PRIVATE_KEY: ${{ secrets.FIREBASE_PRIVATE_KEY }}
+        FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_SDK_PROJECT_ID }}
     - name: Push Created Json Files
       run: |
         git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
@@ -41,5 +42,5 @@ jobs:
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
         git checkout master
         git add -A
-        git commit -m "Update Song & Chart Json (Automated) ${GITHUB_SHA}"
+        git commit -m "feat(song): update master json from ${GITHUB_SHA}"
         git push
