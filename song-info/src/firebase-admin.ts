@@ -19,10 +19,4 @@ type Version = {
   songVersion: number
 }
 
-export const fetchDbVersion = async () => {
-  const docRef = db.doc(versionDocId)
-  return (await docRef.get()).data() as Version
-}
-
-export const setDbVersion = (doc: Version) =>
-  db.doc(versionDocId).set(doc)
+export const setDbVersion = (doc: Version) => db.doc(versionDocId).set(doc)
