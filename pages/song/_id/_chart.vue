@@ -94,13 +94,15 @@ import { fetchSongById } from '@/plugins/song-repository'
 })
 export default class SongPage extends Vue {
   song: Song = {
+    id: '00000000000000000000000000000000',
     name: '曲名',
     nameKana: 'きょくめい',
     nameIndex: 1,
     artist: 'アーティスト',
     minBPM: null,
     maxBPM: null,
-    series: 'A20'
+    series: 'A20',
+    version: 20200101
   }
 
   charts: StepChart[] = []
