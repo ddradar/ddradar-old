@@ -374,6 +374,17 @@
     "version": 20191109
   },
   {
+    "id": "0dOOOolo0P6180OQDo16DdO6o6D8O8lQ",
+    "name": "DIGITAL LUV",
+    "nameKana": "DIGITAL LUV",
+    "nameIndex": 13,
+    "artist": "ハレトキドキ",
+    "series": "A20",
+    "minBPM": 154,
+    "maxBPM": 154,
+    "version": 20200210
+  },
+  {
     "id": "0DODq0P9Qi6i6q8QPoPPOiOi6ib0188b",
     "name": "District of the Shadows",
     "nameKana": "DISTRICT OF THE SHADOWS",
@@ -548,6 +559,17 @@
     "minBPM": 130,
     "maxBPM": 130,
     "version": 20191109
+  },
+  {
+    "id": "lbD8DodiOiP8D61lidIi88DIiPqi8o6P",
+    "name": "Mythomane",
+    "nameKana": "MYTHOMANE",
+    "nameIndex": 22,
+    "artist": "Hylen",
+    "series": "A20",
+    "minBPM": 140,
+    "maxBPM": 180,
+    "version": 20200210
   },
   {
     "id": "1iDPo19Pb9ooi8OqiidbqPb06DDdqiqo",
