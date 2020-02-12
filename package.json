@@ -18,12 +18,8 @@
     }
   },
   "lint-staged": {
-    "*.{ts,js,vue}": [
-      "eslint --fix"
-    ],
-    "*.{json,yaml,yml}": [
-      "prettier --write"
-    ]
+    "*.{ts,js,vue}": "eslint --fix",
+    "*.{json,yaml,yml}": "prettier --write"
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.3.8",
