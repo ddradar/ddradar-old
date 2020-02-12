@@ -8,10 +8,9 @@
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
     "start": "tsc -p ./song-info/tsconfig.json && node ./song-info/dist/song-info/src/index.js",
-    "generate": "nuxt-ts generate",
     "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore .",
     "test": "jest",
-    "test:all": "jest --config jest.config.all.json"
+    "test:all": "jest --config jest.config.all.js"
   },
   "husky": {
     "hooks": {
@@ -24,44 +23,6 @@
     ],
     "*.{json,yaml,yml}": [
       "prettier --write"
-    ]
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/$1",
-      "^~/(.*)$": "<rootDir>/$1",
-      "^vue$": "vue/dist/vue.common.js"
-    },
-    "moduleFileExtensions": [
-      "js",
-      "vue",
-      "json",
-      "ts"
-    ],
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/test/__firebase__/"
-    ],
-    "transform": {
-      ".*\\.(vue)$": "vue-jest",
-      "^.+\\.ts$": "ts-jest"
-    },
-    "setupFiles": [
-      "jest-canvas-mock",
-      "./setupJest.js"
-    ],
-    "globals": {
-      "ts-jest": {
-        "tsConfig": "tsconfig.json"
-      }
-    },
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "<rootDir>/components/**/*.vue",
-      "<rootDir>/pages/**/*.vue",
-      "<rootDir>/plugins/**/*.ts",
-      "<rootDir>/types/**/*.ts"
     ]
   },
   "dependencies": {
