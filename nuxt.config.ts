@@ -14,9 +14,7 @@ const isDevelopment = projectId === 'ddradar-staging'
 
 const configration: Configuration = {
   mode: 'spa',
-  /*
-   ** Headers of the page
-   */
+  /** Headers of the page */
   head: {
     title: 'DDRadar',
     meta: [
@@ -32,25 +30,15 @@ const configration: Configuration = {
       }
     ]
   },
-  /*
-   ** Customize the progress-bar color
-   */
+  /** Customize the progress-bar color */
   loading: { color: '#fff' },
-  /*
-   ** Global CSS
-   */
+  /** Global CSS */
   css: ['~/assets/css/styles.scss'],
-  /*
-   ** Plugins to load before mounting the App
-   */
+  /** Plugins to load before mounting the App */
   plugins: ['~/plugins/firebase.ts'],
-  /*
-   ** Nuxt.js dev-modules
-   */
+  /** Nuxt.js dev-modules */
   buildModules: ['@nuxtjs/eslint-module', '@nuxt/typescript-build'],
-  /*
-   ** Nuxt.js modules
-   */
+  /** Nuxt.js modules */
   modules: [
     // Doc: https://buefy.org/documentation
     ['nuxt-buefy', { css: false }],
@@ -75,16 +63,6 @@ const configration: Configuration = {
     storageBucket: `${projectId}.appspot.com`,
     messagingSenderId: FIREBASE_MESSAGING_SENDER_ID || '922209395211',
     appId: FIREBASE_APP_ID || '1:922209395211:web:04e36178df0443c6cf9d0e'
-  },
-  /*
-   ** Build configuration
-   */
-  build: {
-    extend: (config, _) => {
-      config.node = {
-        fs: 'empty'
-      }
-    }
   }
 }
 export default configration
