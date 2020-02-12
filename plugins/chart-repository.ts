@@ -2,7 +2,7 @@ import { Level } from '~/types/level'
 import { PlayStyle } from '~/types/play-style'
 import { isStepChart, StepChart } from '~/types/step-chart'
 
-export const chartVersion = 20200127
+export const chartVersion = 20200212
 
 export const fetchSongCharts = async (
   songId: string,

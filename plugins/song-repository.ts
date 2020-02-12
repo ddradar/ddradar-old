@@ -1,5 +1,7 @@
 import { isSong, Song } from '@/types/song'
 
+export const songVersion = 20200212
+
 export const fetchSongs = async (
   fieldName: keyof Song,
   condition: any,
