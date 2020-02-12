@@ -462,14 +462,14 @@
     "version": 20200108
   },
   {
-    "id": "00000000000000000000000000000000",
+    "id": "dIdDQD1Q8oPQ90Q1DPbiQI661qD9oi6I",
     "name": "Golden Arrow",
     "nameKana": "GOLDEN ARROW",
     "nameIndex": 16,
     "artist": "Zekk",
     "series": "A20",
-    "minBPM": null,
-    "maxBPM": null,
+    "minBPM": 170,
+    "maxBPM": 170,
     "version": 20200212
   },
   {
