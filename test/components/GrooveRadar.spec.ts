@@ -1,4 +1,4 @@
-import { mount, Wrapper } from '@vue/test-utils'
+import { shallowMount, Wrapper } from '@vue/test-utils'
 
 import GrooveRadarComponent from '@/components/GrooveRadar.vue'
 
@@ -6,7 +6,7 @@ describe('GrooveRadar', () => {
   let wrapper: Wrapper<GrooveRadarComponent>
   let vm: any
   beforeEach(() => {
-    wrapper = mount(GrooveRadarComponent)
+    wrapper = shallowMount(GrooveRadarComponent)
     vm = wrapper.vm
   })
   test('is a Vue instance', () => {

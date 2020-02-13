@@ -44,7 +44,7 @@ describe('SongRepository', () => {
   })
 })
 
-const songs: (Song & { id: string })[] = [
+const songs: Song[] = [
   {
     id: '06loOQ0DQb0DqbOibl6qO81qlIdoP9DI',
     name: 'PARANOiA',
