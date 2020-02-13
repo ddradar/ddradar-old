@@ -1,19 +1,18 @@
 import { getPlayStyleName } from '@/types/play-style'
 
-describe('PlayStyle', () => {
-  test('getPlayStyleName returns "SP" if param is 1.', () => {
-    expect(getPlayStyleName(1)).toBe('SP')
-  })
-  test('getPlayStyleName returns "DP" if param is 2.', () => {
-    expect(getPlayStyleName(2)).toBe('DP')
-  })
-  test('isLevel returns false if object is not integer or not from 1 to 20.', () => {
-    expect(getPlayStyleName(0)).toBe('?')
-    expect(getPlayStyleName(-1)).toBe('?')
-    expect(getPlayStyleName(3)).toBe('?')
-    expect(getPlayStyleName(1.2)).toBe('?')
-    expect(getPlayStyleName(NaN)).toBe('?')
-    expect(getPlayStyleName(Infinity)).toBe('?')
-    expect(getPlayStyleName(-Infinity)).toBe('?')
+describe('types/play-style.ts', () => {
+  describe('getPlayStyleName()', () => {
+    test.each([
+      ['SP', 1],
+      ['DP', 2]
+    ])('returns "%s" if param is %i', (expected, i) => {
+      expect(getPlayStyleName(i)).toBe(expected)
+    })
+    test.each([0, 3, -1, 1.2, NaN, Infinity, -Infinity])(
+      'returns "?" if param is %d',
+      (num) => {
+        expect(getPlayStyleName(num)).toBe('?')
+      }
+    )
   })
 })

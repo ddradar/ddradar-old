@@ -1,11 +1,19 @@
-import { getSeriesName } from '@/types/series'
+import { getSeriesName, Series } from '@/types/series'
 
-describe('Series', () => {
-  test('getSeriesName returns series name with "DDR".', () => {
-    expect(getSeriesName('1st')).toBe('DDR 1st')
-  })
-  test('getSeriesName returns same string if arg contains "DDR" first.', () => {
-    expect(getSeriesName('DDRMAX')).toBe('DDRMAX')
-    expect(getSeriesName('DDRMAX2')).toBe('DDRMAX2')
+describe('types/series.ts', () => {
+  describe('getSeriesName()', () => {
+    test.each([
+      ['DDR 1st', '1st'],
+      ['DDR 2ndMIX', '2ndMIX'],
+      ['DDR 2014', '2014']
+    ])('returns "%s" if arg is "%s"', (expected, series) => {
+      expect(getSeriesName(series as Series)).toBe(expected)
+    })
+    test.each(['DDRMAX', 'DDRMAX2'])(
+      'returns same string if arg is "%s"',
+      (series) => {
+        expect(getSeriesName(series as Series)).toBe(series)
+      }
+    )
   })
 })
