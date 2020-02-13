@@ -50,8 +50,9 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from 'nuxt-property-decorator'
-import { getDifficultyName, Difficulty } from '@/types/difficulty'
+import { Component, Prop, Vue } from 'nuxt-property-decorator'
+
+import { Difficulty, getDifficultyName } from '@/types/difficulty'
 import { getPlayStyleName, PlayStyle } from '@/types/play-style'
 import { StepChart } from '@/types/step-chart'
 

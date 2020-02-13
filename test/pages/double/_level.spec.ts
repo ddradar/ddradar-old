@@ -1,6 +1,7 @@
-import { shallowMount, createLocalVue, Wrapper } from '@vue/test-utils'
+import { createLocalVue, shallowMount, Wrapper } from '@vue/test-utils'
 import Buefy from 'buefy'
 import { mocked } from 'ts-jest/utils'
+
 import DoubleLevelPage from '@/pages/double/_level.vue'
 import * as repo from '@/plugins/chart-repository'
 

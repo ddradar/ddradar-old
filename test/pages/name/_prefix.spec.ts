@@ -1,6 +1,7 @@
-import { shallowMount, createLocalVue, Wrapper } from '@vue/test-utils'
+import { createLocalVue, shallowMount, Wrapper } from '@vue/test-utils'
 import Buefy from 'buefy'
 import { mocked } from 'ts-jest/utils'
+
 import NameIndexPage from '@/pages/name/_prefix.vue'
 import * as repo from '@/plugins/song-repository'
 import { SongNameIndex } from '~/types/song'

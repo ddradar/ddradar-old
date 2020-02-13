@@ -56,8 +56,9 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'nuxt-property-decorator'
 import { ToastProgrammatic as Toast } from 'buefy'
+import { Component, Vue } from 'nuxt-property-decorator'
+
 import { userStore } from '@/store'
 import { AreaList, UserInfo } from '@/types/user-info'
 

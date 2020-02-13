@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 import 'jest-fetch-mock'
+
 import * as repo from '~/plugins/chart-repository'
 import { StepChart } from '~/types/step-chart'
 

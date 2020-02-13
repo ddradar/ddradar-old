@@ -21,10 +21,11 @@
 
 <script lang="ts">
 import { Context } from '@nuxt/types'
-import { Vue, Component } from 'nuxt-property-decorator'
-import { Song } from '@/types/song'
-import { SeriesList, getSeriesName } from '@/types/series'
+import { Component, Vue } from 'nuxt-property-decorator'
+
 import { fetchSongs } from '@/plugins/song-repository'
+import { getSeriesName, SeriesList } from '@/types/series'
+import { Song } from '@/types/song'
 
 @Component({
   components: {

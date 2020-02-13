@@ -21,10 +21,11 @@
 
 <script lang="ts">
 import { Context } from '@nuxt/types'
-import { Vue, Component } from 'nuxt-property-decorator'
+import { Component, Vue } from 'nuxt-property-decorator'
+
+import { fetchChartsByLevel } from '@/plugins/chart-repository'
 import { isLevel, Level } from '@/types/level'
 import { StepChart } from '@/types/step-chart'
-import { fetchChartsByLevel } from '@/plugins/chart-repository'
 
 @Component({
   components: {

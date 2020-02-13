@@ -1,4 +1,5 @@
 import { mount, Wrapper } from '@vue/test-utils'
+
 import GrooveRadarComponent from '@/components/GrooveRadar.vue'
 
 describe('GrooveRadar', () => {

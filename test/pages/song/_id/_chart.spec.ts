@@ -1,6 +1,7 @@
-import { shallowMount, createLocalVue, Wrapper } from '@vue/test-utils'
+import { createLocalVue, shallowMount, Wrapper } from '@vue/test-utils'
 import Buefy from 'buefy'
 import { mocked } from 'ts-jest/utils'
+
 import SongPage from '@/pages/song/_id/_chart.vue'
 import * as chartRepo from '@/plugins/chart-repository'
 import * as songRepo from '@/plugins/song-repository'

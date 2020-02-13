@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import * as fs from 'fs'
 import * as path from 'path'
+
 import { isSong, Song } from '../../types/song'
 import { isStepChart, StepChart } from '../../types/step-chart'
 import { setDbVersion } from './firebase-admin'

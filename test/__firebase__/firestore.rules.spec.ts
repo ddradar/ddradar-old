@@ -1,4 +1,5 @@
 import * as firebase from '@firebase/testing'
+
 import FirebaseTestProvider from './firebase-test-provider'
 
 const testName = 'ddradar-rule-test'

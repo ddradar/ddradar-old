@@ -1,5 +1,6 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import Buefy from 'buefy'
+
 import SongList from '@/components/SongList.vue'
 
 const localVue = createLocalVue()

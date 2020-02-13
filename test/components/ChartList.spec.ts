@@ -1,5 +1,6 @@
-import { shallowMount, createLocalVue, Wrapper } from '@vue/test-utils'
+import { createLocalVue, shallowMount, Wrapper } from '@vue/test-utils'
 import Buefy from 'buefy'
+
 import ChartList from '@/components/ChartList.vue'
 
 const localVue = createLocalVue()

@@ -1,9 +1,10 @@
-import { shallowMount, createLocalVue, Wrapper } from '@vue/test-utils'
+import { createLocalVue, shallowMount, Wrapper } from '@vue/test-utils'
 import Buefy from 'buefy'
 import { mocked } from 'ts-jest/utils'
+
 import SeriesPage from '@/pages/series/_id.vue'
-import { SeriesList } from '@/types/series'
 import * as repo from '@/plugins/song-repository'
+import { SeriesList } from '@/types/series'
 
 jest.mock('~/plugins/firebase', () => {
   return {

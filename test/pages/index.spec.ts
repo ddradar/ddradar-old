@@ -1,5 +1,6 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils'
+import { createLocalVue, shallowMount } from '@vue/test-utils'
 import Buefy from 'buefy'
+
 import Index from '@/pages/index.vue'
 
 const localVue = createLocalVue()

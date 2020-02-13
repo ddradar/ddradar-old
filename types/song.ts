@@ -1,5 +1,5 @@
-import { hasProperty, hasStringProperty, hasNumberProperty } from '../test/util'
-import { Series, isSeries } from './series'
+import { hasNumberProperty, hasProperty, hasStringProperty } from '../test/util'
+import { isSeries, Series } from './series'
 
 export type Song = {
   /** ^([01689bdiloqDIOPQ]*){32}$ */

@@ -1,4 +1,5 @@
 import { Configuration } from '@nuxt/types'
+
 import pkg from './package.json'
 
 /* eslint-disable no-process-env */

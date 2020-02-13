@@ -1,5 +1,5 @@
-import * as fs from 'fs'
 import * as firebase from '@firebase/testing'
+import * as fs from 'fs'
 
 export default class FirebaseTestProvider {
   constructor(
