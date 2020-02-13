@@ -11,9 +11,12 @@
     "plugin:prettier/recommended",
     "plugin:nuxt/recommended"
   ],
-  "plugins": ["prettier"],
+  "plugins": ["jest", "prettier", "simple-import-sort"],
   "rules": {
+    "import/order": "off",
     "no-process-env": "error",
-    "no-useless-constructor": "off"
+    "no-useless-constructor": "off",
+    "simple-import-sort/sort": "error",
+    "sort-imports": "off"
   }
 }
