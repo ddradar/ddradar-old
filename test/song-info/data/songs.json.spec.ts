@@ -1,6 +1,6 @@
 import * as fs from 'fs'
-import * as path from 'path'
 import { matchersWithOptions } from 'jest-json-schema'
+import * as path from 'path'
 
 import songSchema from '../../../static/song-schema.json'
 

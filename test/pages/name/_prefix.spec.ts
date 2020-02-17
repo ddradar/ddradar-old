@@ -1,6 +1,13 @@
-import { shallowMount, createLocalVue, Wrapper } from '@vue/test-utils'
+import {
+  createLocalVue,
+  mount,
+  RouterLinkStub,
+  shallowMount,
+  Wrapper
+} from '@vue/test-utils'
 import Buefy from 'buefy'
 import { mocked } from 'ts-jest/utils'
+
 import NameIndexPage from '@/pages/name/_prefix.vue'
 import * as repo from '@/plugins/song-repository'
 import { SongNameIndex } from '~/types/song'
@@ -24,6 +31,35 @@ describe('/name/:prefix', () => {
   })
   test('is a Vue instance', () => {
     expect(wrapper.isVueInstance()).toBeTruthy()
+  })
+  describe('renders', () => {
+    test('select SongIndex', () => {
+      const wrapper = mount(NameIndexPage, {
+        localVue,
+        stubs: { SongList: true, NuxtLink: RouterLinkStub }
+      })
+      expect(wrapper.element).toMatchSnapshot()
+    })
+    test('correctly', () => {
+      const wrapper = mount(NameIndexPage, {
+        localVue,
+        data: () => {
+          return { selected: 36, songs: [{}] }
+        },
+        stubs: { SongList: true, NuxtLink: RouterLinkStub }
+      })
+      expect(wrapper.element).toMatchSnapshot()
+    })
+    test('not found', () => {
+      const wrapper = mount(NameIndexPage, {
+        localVue,
+        data: () => {
+          return { selected: 36, songs: [] }
+        },
+        stubs: { SongList: true, NuxtLink: RouterLinkStub }
+      })
+      expect(wrapper.element).toMatchSnapshot()
+    })
   })
   test('selected:null and isLoading:true default', () => {
     expect(vm.selected).toBeNull()

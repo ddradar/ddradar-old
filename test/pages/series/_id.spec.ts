@@ -1,9 +1,16 @@
-import { shallowMount, createLocalVue, Wrapper } from '@vue/test-utils'
+import {
+  createLocalVue,
+  mount,
+  RouterLinkStub,
+  shallowMount,
+  Wrapper
+} from '@vue/test-utils'
 import Buefy from 'buefy'
 import { mocked } from 'ts-jest/utils'
+
 import SeriesPage from '@/pages/series/_id.vue'
-import { SeriesList } from '@/types/series'
 import * as repo from '@/plugins/song-repository'
+import { SeriesList } from '@/types/series'
 
 jest.mock('~/plugins/firebase', () => {
   return {
@@ -24,6 +31,35 @@ describe('/series/:id', () => {
   })
   test('is a Vue instance', () => {
     expect(wrapper.isVueInstance()).toBeTruthy()
+  })
+  describe('renders', () => {
+    test('select SongIndex', () => {
+      const wrapper = mount(SeriesPage, {
+        localVue,
+        stubs: { SongList: true, NuxtLink: RouterLinkStub }
+      })
+      expect(wrapper.element).toMatchSnapshot()
+    })
+    test('correctly', () => {
+      const wrapper = mount(SeriesPage, {
+        localVue,
+        data: () => {
+          return { selected: 10, songs: [{}] }
+        },
+        stubs: { SongList: true, NuxtLink: RouterLinkStub }
+      })
+      expect(wrapper.element).toMatchSnapshot()
+    })
+    test('not found', () => {
+      const wrapper = mount(SeriesPage, {
+        localVue,
+        data: () => {
+          return { selected: 10, songs: [] }
+        },
+        stubs: { SongList: true, NuxtLink: RouterLinkStub }
+      })
+      expect(wrapper.element).toMatchSnapshot()
+    })
   })
   test('selected:null and isLoading:true default', () => {
     expect(vm.selected).toBeNull()

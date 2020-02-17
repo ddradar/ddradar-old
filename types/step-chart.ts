@@ -1,7 +1,7 @@
-import { hasProperty, hasStringProperty, hasNumberProperty } from '../test/util'
+import { hasNumberProperty, hasProperty, hasStringProperty } from '../test/util'
 import { Difficulty, isDifficulty } from './difficulty'
-import { Level, isLevel } from './level'
-import { PlayStyle, isPlayStyle } from './play-style'
+import { isLevel, Level } from './level'
+import { isPlayStyle, PlayStyle } from './play-style'
 
 export type StepChart = {
   /** Song's id. */

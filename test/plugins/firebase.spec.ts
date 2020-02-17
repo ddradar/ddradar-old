@@ -1,6 +1,7 @@
 /* eslint-disable no-process-env */
-import { mocked } from 'ts-jest/utils'
 import firebase from 'firebase/app'
+import { mocked } from 'ts-jest/utils'
+
 import { generateRandomString } from '~/test/util'
 
 jest.mock('firebase/app')

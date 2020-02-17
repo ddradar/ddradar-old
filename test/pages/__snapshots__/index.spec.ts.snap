@@ -1,0 +1,1530 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card renders correctly 1`] = `
+<div>
+  <section
+    class="hero is-right"
+  >
+    <div
+      class="hero-body"
+    >
+      <div
+        class="container"
+      >
+        <h1
+          class="title is-2"
+        >
+          
+          DDRadar
+        
+        </h1>
+         
+        <p
+          class="subtitle"
+        >
+          
+          DDR Score Tracker
+        
+        </p>
+      </div>
+    </div>
+  </section>
+   
+  <section
+    class="container is-fluid"
+  >
+    <div
+      class="collapse card"
+    >
+      <div
+        class="collapse-trigger"
+      >
+        <div
+          aria-controls="content"
+          class="card-header"
+          role="button"
+        >
+          <h3
+            class="card-header-title"
+          >
+            
+          シリーズから探す
+        
+          </h3>
+           
+          <a
+            class="card-header-icon"
+          >
+            <span
+              class="icon"
+            >
+              <i
+                class="mdi mdi-menu-down mdi-24px"
+              />
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        aria-expanded="true"
+        class="collapse-content"
+        id="content"
+      >
+         
+        <div
+          class="card-content"
+        >
+          <div
+            class="content buttons"
+          >
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            1st
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            2ndMIX
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            3rdMIX
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            4thMIX
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            5thMIX
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            DDRMAX
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            DDRMAX2
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            EXTREME
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            SuperNOVA
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            SuperNOVA2
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            X
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            X2
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            X3 VS 2ndMIX
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            2013
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            2014
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            A
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            A20
+          
+              </span>
+               
+              <!---->
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    class="container is-fluid"
+  >
+    <div
+      class="collapse card"
+    >
+      <div
+        class="collapse-trigger"
+      >
+        <div
+          aria-controls="content"
+          class="card-header"
+          role="button"
+        >
+          <h3
+            class="card-header-title"
+          >
+            
+          曲名から探す
+        
+          </h3>
+           
+          <a
+            class="card-header-icon"
+          >
+            <span
+              class="icon"
+            >
+              <i
+                class="mdi mdi-menu-down mdi-24px"
+              />
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        aria-expanded="true"
+        class="collapse-content"
+        id="content"
+      >
+         
+        <div
+          class="card-content"
+        >
+          <div
+            class="content buttons"
+          >
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            あ
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            か
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            さ
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            た
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            な
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            は
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            ま
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            や
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            ら
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            わ
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            A
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            B
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            C
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            D
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            E
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            F
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            G
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            H
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            I
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            J
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            K
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            L
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            M
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            N
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            O
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            P
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            Q
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            R
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            S
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            T
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            U
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            V
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            W
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            X
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            Y
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            Z
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            数字・記号
+          
+              </span>
+               
+              <!---->
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    class="container is-fluid"
+  >
+    <div
+      class="collapse card"
+    >
+      <div
+        class="collapse-trigger"
+      >
+        <div
+          aria-controls="content"
+          class="card-header"
+          role="button"
+        >
+          <h3
+            class="card-header-title"
+          >
+            
+          SINGLEのレベルから探す
+        
+          </h3>
+           
+          <a
+            class="card-header-icon"
+          >
+            <span
+              class="icon"
+            >
+              <i
+                class="mdi mdi-menu-down mdi-24px"
+              />
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        aria-expanded="true"
+        class="collapse-content"
+        id="content"
+      >
+         
+        <div
+          class="card-content"
+        >
+          <div
+            class="content buttons"
+          >
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            1
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            2
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            3
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            4
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            5
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            6
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            7
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            8
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            9
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            10
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            11
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            12
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            13
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            14
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            15
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            16
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            17
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            18
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            19
+          
+              </span>
+               
+              <!---->
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    class="container is-fluid"
+  >
+    <div
+      class="collapse card"
+    >
+      <div
+        class="collapse-trigger"
+      >
+        <div
+          aria-controls="content"
+          class="card-header"
+          role="button"
+        >
+          <h3
+            class="card-header-title"
+          >
+            
+          DOUBLEのレベルから探す
+        
+          </h3>
+           
+          <a
+            class="card-header-icon"
+          >
+            <span
+              class="icon"
+            >
+              <i
+                class="mdi mdi-menu-down mdi-24px"
+              />
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        aria-expanded="true"
+        class="collapse-content"
+        id="content"
+      >
+         
+        <div
+          class="card-content"
+        >
+          <div
+            class="content buttons"
+          >
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            1
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            2
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            3
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            4
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            5
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            6
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            7
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            8
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            9
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            10
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            11
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            12
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            13
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            14
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            15
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            16
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            17
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            18
+          
+              </span>
+               
+              <!---->
+            </a>
+            <a
+              class="button is-medium"
+              type="button"
+            >
+              <!---->
+               
+              <span>
+                
+            19
+          
+              </span>
+               
+              <!---->
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

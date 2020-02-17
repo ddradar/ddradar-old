@@ -6,7 +6,7 @@ codecov:
 coverage:
   precision: 2
   round: down
-  range: "70...100"
+  range: '70...100'
 
   status:
     project:
@@ -24,7 +24,7 @@ parsers:
       macro: no
 
 comment: # See: https://docs.codecov.io/docs/pull-request-comments
-  layout: "reach, diff, flags, files"
+  layout: 'reach, diff, flags, files'
   behavior: default
   require_changes: no
   require_base: yes

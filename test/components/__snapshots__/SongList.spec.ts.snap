@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SongList renders correctly 1`] = `
+<div
+  class="b-table"
+>
+  <!---->
+   
+  <!---->
+   
+  <div
+    class="table-wrapper"
+  >
+    <table
+      class="table is-striped is-hoverable"
+      tabindex="0"
+    >
+      <!---->
+       
+      <tbody>
+        <tr
+          class=""
+          draggable="false"
+        >
+          <!---->
+           
+          <!---->
+           
+          <td
+            class=""
+            data-label="Series"
+          >
+            
+      1st
+    
+          </td>
+           
+          <td
+            class=""
+            data-label="Name"
+          >
+            <a>
+              
+        PARANOiA
+      
+            </a>
+          </td>
+           
+          <td
+            class=""
+            data-label="Artist"
+          >
+            
+      180
+    
+          </td>
+           
+          <td
+            class=""
+            data-label="BPM"
+          >
+            
+      180
+    
+          </td>
+           
+          <!---->
+        </tr>
+         
+        <!---->
+         
+        <!---->
+        <tr
+          class=""
+          draggable="false"
+        >
+          <!---->
+           
+          <!---->
+           
+          <td
+            class=""
+            data-label="Series"
+          >
+            
+      1st
+    
+          </td>
+           
+          <td
+            class=""
+            data-label="Name"
+          >
+            <a>
+              
+        TRIP MACHINE
+      
+            </a>
+          </td>
+           
+          <td
+            class=""
+            data-label="Artist"
+          >
+            
+      DE-SIRE
+    
+          </td>
+           
+          <td
+            class=""
+            data-label="BPM"
+          >
+            
+      160
+    
+          </td>
+           
+          <!---->
+        </tr>
+         
+        <!---->
+         
+        <!---->
+        <tr
+          class=""
+          draggable="false"
+        >
+          <!---->
+           
+          <!---->
+           
+          <td
+            class=""
+            data-label="Series"
+          >
+            
+      2ndMIX
+    
+          </td>
+           
+          <td
+            class=""
+            data-label="Name"
+          >
+            <a>
+              
+        PARANOiA MAX～DIRTY MIX～
+      
+            </a>
+          </td>
+           
+          <td
+            class=""
+            data-label="Artist"
+          >
+            
+      190
+    
+          </td>
+           
+          <td
+            class=""
+            data-label="BPM"
+          >
+            
+      190
+    
+          </td>
+           
+          <!---->
+        </tr>
+         
+        <!---->
+         
+        <!---->
+      </tbody>
+       
+      <!---->
+    </table>
+  </div>
+   
+  <!---->
+</div>
+`;
+
+exports[`SongList renders loading 1`] = `
+<div
+  class="b-table is-loading"
+>
+  <!---->
+   
+  <!---->
+   
+  <div
+    class="table-wrapper"
+  >
+    <table
+      class="table is-striped"
+      tabindex="0"
+    >
+      <!---->
+       
+      <tbody>
+        <tr
+          class="is-empty"
+        >
+          <td
+            colspan="0"
+          >
+            <section
+              class="section"
+            >
+              <div
+                class="content has-text-grey has-text-centered"
+              >
+                <p>
+                  Nothing here.
+                </p>
+              </div>
+            </section>
+          </td>
+        </tr>
+      </tbody>
+       
+      <!---->
+    </table>
+  </div>
+   
+  <!---->
+</div>
+`;

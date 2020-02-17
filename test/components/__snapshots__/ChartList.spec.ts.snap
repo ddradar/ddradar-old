@@ -1,0 +1,325 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartList renders correctly 1`] = `
+<div
+  class="b-table"
+>
+  <!---->
+   
+  <!---->
+   
+  <div
+    class="table-wrapper"
+  >
+    <table
+      class="table is-striped is-hoverable"
+      tabindex="0"
+    >
+      <!---->
+       
+      <tbody>
+        <tr
+          class=""
+          draggable="false"
+        >
+          <!---->
+           
+          <!---->
+           
+          <td
+            class=""
+            data-label="Name"
+          >
+            <a>
+              
+        AM-3P
+      
+            </a>
+          </td>
+           
+          <td
+            class="has-text-centered"
+            data-label="SP/DP"
+          >
+            
+      SP
+    
+          </td>
+           
+          <td
+            class="has-text-centered"
+            data-label="Dif"
+          >
+            <span
+              class="tag is-beginner"
+            >
+              
+        BEGINNER
+      
+            </span>
+          </td>
+           
+          <td
+            class="has-text-right"
+            data-label="Lv"
+          >
+            
+      3
+    
+          </td>
+           
+          <td
+            class="has-text-right"
+            data-label="Notes"
+          >
+            
+      74
+    
+          </td>
+           
+          <td
+            class="has-text-right"
+            data-label="FA"
+          >
+            
+      0
+    
+          </td>
+           
+          <td
+            class="has-text-right"
+            data-label="SA"
+          >
+            
+      0
+    
+          </td>
+           
+          <!---->
+        </tr>
+         
+        <!---->
+         
+        <!---->
+        <tr
+          class=""
+          draggable="false"
+        >
+          <!---->
+           
+          <!---->
+           
+          <td
+            class=""
+            data-label="Name"
+          >
+            <a>
+              
+        AM-3P
+      
+            </a>
+          </td>
+           
+          <td
+            class="has-text-centered"
+            data-label="SP/DP"
+          >
+            
+      SP
+    
+          </td>
+           
+          <td
+            class="has-text-centered"
+            data-label="Dif"
+          >
+            <span
+              class="tag is-basic"
+            >
+              
+        BASIC
+      
+            </span>
+          </td>
+           
+          <td
+            class="has-text-right"
+            data-label="Lv"
+          >
+            
+      7
+    
+          </td>
+           
+          <td
+            class="has-text-right"
+            data-label="Notes"
+          >
+            
+      164
+    
+          </td>
+           
+          <td
+            class="has-text-right"
+            data-label="FA"
+          >
+            
+      0
+    
+          </td>
+           
+          <td
+            class="has-text-right"
+            data-label="SA"
+          >
+            
+      0
+    
+          </td>
+           
+          <!---->
+        </tr>
+         
+        <!---->
+         
+        <!---->
+        <tr
+          class=""
+          draggable="false"
+        >
+          <!---->
+           
+          <!---->
+           
+          <td
+            class=""
+            data-label="Name"
+          >
+            <a>
+              
+        AM-3P
+      
+            </a>
+          </td>
+           
+          <td
+            class="has-text-centered"
+            data-label="SP/DP"
+          >
+            
+      SP
+    
+          </td>
+           
+          <td
+            class="has-text-centered"
+            data-label="Dif"
+          >
+            <span
+              class="tag is-difficult"
+            >
+              
+        DIFFICULT
+      
+            </span>
+          </td>
+           
+          <td
+            class="has-text-right"
+            data-label="Lv"
+          >
+            
+      8
+    
+          </td>
+           
+          <td
+            class="has-text-right"
+            data-label="Notes"
+          >
+            
+      195
+    
+          </td>
+           
+          <td
+            class="has-text-right"
+            data-label="FA"
+          >
+            
+      0
+    
+          </td>
+           
+          <td
+            class="has-text-right"
+            data-label="SA"
+          >
+            
+      0
+    
+          </td>
+           
+          <!---->
+        </tr>
+         
+        <!---->
+         
+        <!---->
+      </tbody>
+       
+      <!---->
+    </table>
+  </div>
+   
+  <!---->
+</div>
+`;
+
+exports[`ChartList renders loading 1`] = `
+<div
+  class="b-table is-loading"
+>
+  <!---->
+   
+  <!---->
+   
+  <div
+    class="table-wrapper"
+  >
+    <table
+      class="table is-striped"
+      tabindex="0"
+    >
+      <!---->
+       
+      <tbody>
+        <tr
+          class="is-empty"
+        >
+          <td
+            colspan="0"
+          >
+            <section
+              class="section"
+            >
+              <div
+                class="content has-text-grey has-text-centered"
+              >
+                <p>
+                  Nothing here.
+                </p>
+              </div>
+            </section>
+          </td>
+        </tr>
+      </tbody>
+       
+      <!---->
+    </table>
+  </div>
+   
+  <!---->
+</div>
+`;
