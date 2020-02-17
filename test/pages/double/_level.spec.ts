@@ -1,4 +1,10 @@
-import { createLocalVue, shallowMount, Wrapper } from '@vue/test-utils'
+import {
+  createLocalVue,
+  mount,
+  RouterLinkStub,
+  shallowMount,
+  Wrapper
+} from '@vue/test-utils'
 import Buefy from 'buefy'
 import { mocked } from 'ts-jest/utils'
 
@@ -24,6 +30,35 @@ describe('double/:level', () => {
   })
   test('is a Vue instance', () => {
     expect(wrapper.isVueInstance()).toBeTruthy()
+  })
+  describe('renders', () => {
+    test('select SongIndex', () => {
+      const wrapper = mount(DoubleLevelPage, {
+        localVue,
+        stubs: { ChartList: true, NuxtLink: RouterLinkStub }
+      })
+      expect(wrapper.element).toMatchSnapshot()
+    })
+    test('correctly', () => {
+      const wrapper = mount(DoubleLevelPage, {
+        localVue,
+        data: () => {
+          return { selected: 10, charts: [{}] }
+        },
+        stubs: { ChartList: true, NuxtLink: RouterLinkStub }
+      })
+      expect(wrapper.element).toMatchSnapshot()
+    })
+    test('not found', () => {
+      const wrapper = mount(DoubleLevelPage, {
+        localVue,
+        data: () => {
+          return { selected: 19, charts: [] }
+        },
+        stubs: { ChartList: true, NuxtLink: RouterLinkStub }
+      })
+      expect(wrapper.element).toMatchSnapshot()
+    })
   })
   test('selected:null and isLoading:true default', () => {
     expect(vm.selected).toBeNull()

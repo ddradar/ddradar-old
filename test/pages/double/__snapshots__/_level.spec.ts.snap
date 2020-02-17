@@ -1,0 +1,884 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`double/:level renders correctly 1`] = `
+<section
+  class="section"
+>
+  <h1
+    class="title"
+  >
+    DOUBLE 10
+  </h1>
+   
+  <div
+    class="buttons"
+  >
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      1
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      2
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      3
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      4
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      5
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      6
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      7
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      8
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      9
+    
+      </span>
+       
+      <!---->
+    </a>
+    <button
+      class="button is-info is-outlined"
+      disabled="disabled"
+      to="/double/10"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      10
+    
+      </span>
+       
+      <!---->
+    </button>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      11
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      12
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      13
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      14
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      15
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      16
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      17
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      18
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      19
+    
+      </span>
+       
+      <!---->
+    </a>
+  </div>
+   
+  <p
+    class="subtitle"
+  >
+    Found 1 charts
+  </p>
+   
+  <chartlist-stub
+    charts="[object Object]"
+    loading="true"
+  />
+</section>
+`;
+
+exports[`double/:level renders not found 1`] = `
+<section
+  class="section"
+>
+  <h1
+    class="title"
+  >
+    DOUBLE 19
+  </h1>
+   
+  <div
+    class="buttons"
+  >
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      1
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      2
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      3
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      4
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      5
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      6
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      7
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      8
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      9
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      10
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      11
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      12
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      13
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      14
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      15
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      16
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      17
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      18
+    
+      </span>
+       
+      <!---->
+    </a>
+    <button
+      class="button is-info is-outlined"
+      disabled="disabled"
+      to="/double/19"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      19
+    
+      </span>
+       
+      <!---->
+    </button>
+  </div>
+   
+  <p
+    class="subtitle"
+  >
+    Not Found
+  </p>
+   
+  <chartlist-stub
+    charts=""
+    loading="true"
+  />
+</section>
+`;
+
+exports[`double/:level renders select SongIndex 1`] = `
+<section
+  class="section"
+>
+  <h1
+    class="title"
+  >
+    DOUBLEのレベルから探す
+  </h1>
+   
+  <div
+    class="buttons"
+  >
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      1
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      2
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      3
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      4
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      5
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      6
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      7
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      8
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      9
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      10
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      11
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      12
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      13
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      14
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      15
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      16
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      17
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      18
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      19
+    
+      </span>
+       
+      <!---->
+    </a>
+  </div>
+   
+  <p
+    class="subtitle"
+  >
+    レベルを選択してください
+  </p>
+   
+  <!---->
+</section>
+`;
