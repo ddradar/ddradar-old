@@ -37,7 +37,7 @@
     "jest-fetch-mock": "^3.0.1",
     "npm-run-all": "^4.1.5",
     "nuxt": "^2.11.0",
-    "nuxt-buefy": "^0.3.21",
+    "nuxt-buefy": "^0.3.22",
     "nuxt-property-decorator": "^2.5.1",
     "vue-chartjs": "^3.5.0",
     "vuex-module-decorators": "^0.16.1"
