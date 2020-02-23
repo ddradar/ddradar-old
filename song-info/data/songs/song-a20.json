@@ -250,7 +250,7 @@
     "series": "A20",
     "minBPM": 142,
     "maxBPM": 142,
-    "version": 20191109
+    "version": 20190724
   },
   {
     "id": "6d8DiDl0i1oldbbo0o60PQ0q96d608Dq",
@@ -338,7 +338,7 @@
     "series": "A20",
     "minBPM": 128,
     "maxBPM": 128,
-    "version": 20191109
+    "version": 20190724
   },
   {
     "id": "OdQqDiIDbD6ioi60ob6lDOlD8oio9l0b",
@@ -536,7 +536,7 @@
     "series": "A20",
     "minBPM": 128,
     "maxBPM": 128,
-    "version": 20191109
+    "version": 20190724
   },
   {
     "id": "lq9iPP06O8qiP1iooiboPO910b86di19",
@@ -613,7 +613,7 @@
     "series": "A20",
     "minBPM": 116,
     "maxBPM": 116,
-    "version": 20191109
+    "version": 20190724
   },
   {
     "id": "Db6odqIqQ90PIDIlD1DIb8l09ol6qIDl",
@@ -624,7 +624,7 @@
     "series": "A20",
     "minBPM": 97,
     "maxBPM": 127,
-    "version": 20191109
+    "version": 20190724
   },
   {
     "id": "99OQb9b0IQ98P6IQdPOiqi8q16o16iqP",
@@ -657,7 +657,7 @@
     "series": "A20",
     "minBPM": 130,
     "maxBPM": 130,
-    "version": 20191109
+    "version": 20190724
   },
   {
     "id": "oi6P9Oq19ooo00bDiPQ809DQQQD8qPlD",
@@ -668,7 +668,7 @@
     "series": "A20",
     "minBPM": 130,
     "maxBPM": 130,
-    "version": 20191109
+    "version": 20190724
   },
   {
     "id": "1DPD60Q8D1qD8i80P160bqDQ81DObDlP",
@@ -789,7 +789,7 @@
     "series": "A20",
     "minBPM": 120,
     "maxBPM": 120,
-    "version": 20191109
+    "version": 20190724
   },
   {
     "id": "b1do8OI6qDDlQO0PI16868ql6bdbI886",
