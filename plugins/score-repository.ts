@@ -1,10 +1,14 @@
 import 'firebase/firestore'
 
 import firebase from '~/plugins/firebase'
-import { hasNumberProperty, hasProperty, hasStringProperty } from '~/test/util'
 import { isDifficulty } from '~/types/difficulty'
 import { isPlayStyle } from '~/types/play-style'
 import { StepChart } from '~/types/step-chart'
+import {
+  hasNumberProperty,
+  hasProperty,
+  hasStringProperty
+} from '~/utils/type-assert'
 
 const db = firebase.firestore()
 
@@ -122,28 +126,20 @@ export const setUserScore = async (
   })
 }
 
-const compareClearLamp = (left: ClearLamp, right: ClearLamp): ClearLamp => {
-  const leftIndex = clearLampList.indexOf(left)
-  const rightIndex = clearLampList.indexOf(right)
-  return leftIndex > rightIndex ? left : right
-}
+const compareClearLamp = (left: ClearLamp, right: ClearLamp): ClearLamp =>
+  clearLampList.indexOf(left) > clearLampList.indexOf(right) ? left : right
 
 export const isScore = (obj: unknown): obj is Score =>
   typeof obj === 'object' &&
   obj !== null &&
-  hasStringProperty(obj, 'songId') &&
-  hasProperty(obj, 'playStyle') &&
+  hasProperty(obj, 'playStyle', 'difficulty', 'isPublic') &&
   isPlayStyle(obj.playStyle) &&
-  hasProperty(obj, 'difficulty') &&
   isDifficulty(obj.difficulty) &&
-  hasNumberProperty(obj, 'score') &&
-  hasNumberProperty(obj, 'exScore') &&
-  hasStringProperty(obj, 'clearLamp') &&
+  typeof obj.isPublic === 'boolean' &&
+  hasNumberProperty(obj, 'score', 'exScore') &&
+  hasStringProperty(obj, 'songId', 'clearLamp', 'rank') &&
   (clearLampList as string[]).includes(obj.clearLamp) &&
-  hasStringProperty(obj, 'rank') &&
-  (rankList as string[]).includes(obj.rank) &&
-  hasProperty(obj, 'isPublic') &&
-  typeof obj.isPublic === 'boolean'
+  (rankList as string[]).includes(obj.rank)
 
 export const getDanceLevel = (score: number): DanceLevel => {
   if (!Number.isInteger(score) || score < 0 || score > 1000000)
@@ -177,4 +173,52 @@ export const getDanceLevel = (score: number): DanceLevel => {
     : score < 990000
     ? 'AA+'
     : 'AAA'
+}
+
+const isPositiveInteger = (num: number) => Number.isInteger(num) && num >= 0
+
+export const calcScore = (
+  {
+    notes,
+    freezeArrow,
+    shockArrow
+  }: Pick<StepChart, 'notes' | 'freezeArrow' | 'shockArrow'>,
+  marvelous: number,
+  perfect: number,
+  great: number,
+  good: number,
+  ok: number
+) => {
+  if (!isPositiveInteger(marvelous))
+    throw new Error(`invalid marvelous: ${marvelous}`)
+  if (!isPositiveInteger(perfect))
+    throw new Error(`invalid perfect: ${perfect}`)
+  if (!isPositiveInteger(great)) throw new Error(`invalid great: ${great}`)
+  if (!isPositiveInteger(good)) throw new Error(`invalid good: ${good}`)
+  if (!isPositiveInteger(ok)) throw new Error(`invalid ok: ${ok}`)
+
+  const noteObjects = notes + freezeArrow + shockArrow
+  const baseScore = 1000000 / noteObjects
+  const rawScore =
+    baseScore * (marvelous + ok) +
+    (baseScore - 10) * perfect +
+    (baseScore * 0.6 - 10) * great +
+    (baseScore * 0.2 - 10) * good
+  return Math.floor(rawScore / 10) * 10
+}
+
+export const calcExScore = (
+  marvelous: number,
+  perfect: number,
+  great: number,
+  ok: number
+) => {
+  if (!isPositiveInteger(marvelous))
+    throw new Error(`invalid marvelous: ${marvelous}`)
+  if (!isPositiveInteger(perfect))
+    throw new Error(`invalid perfect: ${perfect}`)
+  if (!isPositiveInteger(great)) throw new Error(`invalid great: ${great}`)
+  if (!isPositiveInteger(ok)) throw new Error(`invalid ok: ${ok}`)
+
+  return marvelous * 3 + ok * 3 + perfect * 2 + great * 1
 }
