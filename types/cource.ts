@@ -2,11 +2,7 @@ import { Difficulty, isDifficulty } from '~/types/difficulty'
 import { isLevel, Level } from '~/types/level'
 import { isPlayStyle, PlayStyle } from '~/types/play-style'
 import { StepChart } from '~/types/step-chart'
-import {
-  hasNumberProperty,
-  hasProperty,
-  hasStringProperty
-} from '~/utils/type-assert'
+import { hasProperty, hasStringProperty } from '~/utils/type-assert'
 
 export type Cource = {
   /** Cource id. (similar to songId) */
@@ -21,30 +17,20 @@ export type Cource = {
   >[]
 }
 
-export function isCource(obj: unknown): obj is Cource {
-  return (
-    hasStringProperty(obj, 'id') &&
-    hasStringProperty(obj, 'name') &&
-    hasNumberProperty(obj, 'playStyle') &&
-    isPlayStyle(obj.playStyle) &&
-    hasNumberProperty(obj, 'difficulty') &&
-    isDifficulty(obj.difficulty) &&
-    hasNumberProperty(obj, 'level') &&
-    isLevel(obj.level) &&
-    hasProperty(obj, 'chartOrder') &&
-    Array.isArray(obj.chartOrder) &&
-    obj.chartOrder.every(
-      (element) =>
-        typeof element === 'object' &&
-        element !== null &&
-        hasStringProperty(element, 'songId') &&
-        hasStringProperty(element, 'songName') &&
-        hasProperty(element, 'playStyle') &&
-        isPlayStyle(element.playStyle) &&
-        hasProperty(element, 'difficulty') &&
-        isDifficulty(element.difficulty) &&
-        hasProperty(element, 'level') &&
-        isLevel(element.level)
-    )
+export const isCource = (obj: unknown): obj is Cource =>
+  hasStringProperty(obj, 'id', 'name') &&
+  hasProperty(obj, 'chartOrder', 'playStyle', 'difficulty', 'level') &&
+  isPlayStyle(obj.playStyle) &&
+  isDifficulty(obj.difficulty) &&
+  isLevel(obj.level) &&
+  Array.isArray(obj.chartOrder) &&
+  obj.chartOrder.every(
+    (element) =>
+      typeof element === 'object' &&
+      element !== null &&
+      hasStringProperty(element, 'songId', 'songName') &&
+      hasProperty(element, 'playStyle', 'difficulty', 'level') &&
+      isPlayStyle(element.playStyle) &&
+      isDifficulty(element.difficulty) &&
+      isLevel(element.level)
   )
-}

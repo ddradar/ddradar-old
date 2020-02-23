@@ -8,15 +8,8 @@ export const DifficultyList: { [key in Difficulty]: string } = {
   4: 'CHALLENGE'
 }
 
-export function getDifficultyName(difficulty: number) {
-  if (isDifficulty(difficulty)) {
-    return DifficultyList[difficulty]
-  }
-  return 'Unknown'
-}
+export const getDifficultyName = (difficulty: number) =>
+  isDifficulty(difficulty) ? DifficultyList[difficulty] : 'Unknown'
 
-export function isDifficulty(object: unknown): object is Difficulty {
-  return (
-    object === 0 || object === 1 || object === 2 || object === 3 || object === 4
-  )
-}
+export const isDifficulty = (obj: unknown): obj is Difficulty =>
+  obj === 0 || obj === 1 || obj === 2 || obj === 3 || obj === 4

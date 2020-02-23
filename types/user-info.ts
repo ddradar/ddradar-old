@@ -158,18 +158,13 @@ export const AreaList: Area[] = [
   'フィリピン'
 ]
 
-export function isUser(obj: unknown): obj is UserInfo {
-  return (
-    typeof obj === 'object' &&
-    obj !== null &&
-    !(hasProperty(obj, 'uid') && typeof obj.uid !== 'string') &&
-    !(hasProperty(obj, 'iconUrl') && typeof obj.iconUrl !== 'string') &&
-    hasNumberProperty(obj, 'ddrCode') &&
-    hasStringProperty(obj, 'displayName') &&
-    hasStringProperty(obj, 'area') &&
-    (AreaList as string[]).includes(obj.area) &&
-    hasStringProperty(obj, 'description') &&
-    hasProperty(obj, 'isPublic') &&
-    typeof obj.isPublic === 'boolean'
-  )
-}
+export const isUser = (obj: unknown): obj is UserInfo =>
+  typeof obj === 'object' &&
+  obj !== null &&
+  !(hasProperty(obj, 'uid') && typeof obj.uid !== 'string') &&
+  !(hasProperty(obj, 'iconUrl') && typeof obj.iconUrl !== 'string') &&
+  hasNumberProperty(obj, 'ddrCode') &&
+  hasStringProperty(obj, 'displayName', 'area', 'description') &&
+  (AreaList as string[]).includes(obj.area) &&
+  hasProperty(obj, 'isPublic') &&
+  typeof obj.isPublic === 'boolean'

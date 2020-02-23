@@ -102,32 +102,17 @@ export const SongNameIndex: string[] = [
   '数字・記号'
 ]
 
-export function isSong(object: unknown): object is Song {
-  return (
-    typeof object === 'object' &&
-    object !== null &&
-    hasStringProperty(object, 'id') &&
-    hasStringProperty(object, 'name') &&
-    hasStringProperty(object, 'nameKana') &&
-    /^([A-Z0-9 .ぁ-んー]*)$/.test(object.nameKana) &&
-    hasProperty(object, 'nameIndex') &&
-    isSongIndex(object.nameIndex) &&
-    hasStringProperty(object, 'artist') &&
-    hasProperty(object, 'series') &&
-    isSeries(object.series) &&
-    hasProperty(object, 'minBPM') &&
-    (typeof object.minBPM === 'number' || object.minBPM === null) &&
-    hasProperty(object, 'maxBPM') &&
-    (typeof object.maxBPM === 'number' || object.maxBPM === null) &&
-    hasNumberProperty(object, 'version')
-  )
-}
+export const isSong = (obj: unknown): obj is Song =>
+  typeof obj === 'object' &&
+  obj !== null &&
+  hasStringProperty(obj, 'id', 'name', 'nameKana', 'artist') &&
+  /^([A-Z0-9 .ぁ-んー]*)$/.test(obj.nameKana) &&
+  hasProperty(obj, 'nameIndex', 'series', 'minBPM', 'maxBPM') &&
+  isSongIndex(obj.nameIndex) &&
+  isSeries(obj.series) &&
+  (typeof obj.minBPM === 'number' || obj.minBPM === null) &&
+  (typeof obj.maxBPM === 'number' || obj.maxBPM === null) &&
+  hasNumberProperty(obj, 'version')
 
-export function isSongIndex(object: unknown): object is SongIndex {
-  return (
-    typeof object === 'number' &&
-    Number.isInteger(object) &&
-    object >= 0 &&
-    object <= 36
-  )
-}
+export const isSongIndex = (obj: unknown): obj is SongIndex =>
+  typeof obj === 'number' && Number.isInteger(obj) && obj >= 0 && obj <= 36
