@@ -1,0 +1,267 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`song/:id/:chart rendars correctly 1`] = `
+<section
+  class="section"
+>
+  <h1
+    class="title"
+  >
+    
+    MAKE IT BETTER
+  
+  </h1>
+   
+  <h2
+    class="subtitle"
+  >
+    mitsu-O! / DDR 1st
+  </h2>
+   
+  <div
+    class="buttons"
+  >
+    <button
+      class="button is-beginner is-outlined"
+      disabled="disabled"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      SP-BEGINNER
+    
+      </span>
+       
+      <!---->
+    </button>
+    <button
+      class="button is-basic"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      SP-BASIC
+    
+      </span>
+       
+      <!---->
+    </button>
+    <button
+      class="button is-difficult"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      SP-DIFFICULT
+    
+      </span>
+       
+      <!---->
+    </button>
+    <button
+      class="button is-expert"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      SP-EXPERT
+    
+      </span>
+       
+      <!---->
+    </button>
+    <button
+      class="button is-basic"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      DP-BASIC
+    
+      </span>
+       
+      <!---->
+    </button>
+    <button
+      class="button is-difficult"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      DP-DIFFICULT
+    
+      </span>
+       
+      <!---->
+    </button>
+    <button
+      class="button is-expert"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      DP-EXPERT
+    
+      </span>
+       
+      <!---->
+    </button>
+  </div>
+   
+  <div
+    class="content"
+  >
+    <h3
+      class="title"
+    >
+      
+      SINGLE/BEGINNER
+    
+    </h3>
+     
+    <article
+      class="columns"
+    >
+      <div
+        class="column is-6"
+      >
+        <!---->
+      </div>
+       
+      <div
+        class="column is-6"
+      >
+        <div
+          class="content"
+        >
+          <h4
+            class="title"
+          >
+            Chart Objects
+          </h4>
+           
+          <table
+            class="table is-bordered is-narrow"
+          >
+            <thead>
+              <tr>
+                <th>
+                  Level
+                </th>
+                 
+                <th>
+                  Notes
+                </th>
+                 
+                <th>
+                  FreezeArrow
+                </th>
+                 
+                <th>
+                  ShockArrow
+                </th>
+              </tr>
+            </thead>
+             
+            <tbody>
+              <tr>
+                <td>
+                  3
+                </td>
+                 
+                <td>
+                  67
+                </td>
+                 
+                <td>
+                  0
+                </td>
+                 
+                <td>
+                  0
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+         
+        <div
+          class="content"
+        >
+          <h4
+            class="title"
+          >
+            Groove Radar
+          </h4>
+           
+          <table
+            class="table is-bordered is-narrow"
+          >
+            <thead>
+              <tr>
+                <th>
+                  VOLTAGE
+                </th>
+                 
+                <th>
+                  STREAM
+                </th>
+                 
+                <th>
+                  AIR
+                </th>
+                 
+                <th>
+                  FREEZE
+                </th>
+                 
+                <th>
+                  CHAOS
+                </th>
+              </tr>
+            </thead>
+             
+            <tbody>
+              <tr>
+                <td>
+                  14
+                </td>
+                 
+                <td>
+                  14
+                </td>
+                 
+                <td>
+                  9
+                </td>
+                 
+                <td>
+                  0
+                </td>
+                 
+                <td>
+                  0
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+`;

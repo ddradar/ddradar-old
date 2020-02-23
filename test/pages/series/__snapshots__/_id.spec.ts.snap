@@ -1,0 +1,800 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`/series/:id renders correctly 1`] = `
+<section
+  class="section"
+>
+  <h1
+    class="title"
+  >
+    DDR X
+  </h1>
+   
+  <div
+    class="buttons"
+  >
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      1st
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      2ndMIX
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      3rdMIX
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      4thMIX
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      5thMIX
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      DDRMAX
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      DDRMAX2
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      EXTREME
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      SuperNOVA
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      SuperNOVA2
+    
+      </span>
+       
+      <!---->
+    </a>
+    <button
+      class="button is-info is-outlined"
+      disabled="disabled"
+      to="/series/10"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      X
+    
+      </span>
+       
+      <!---->
+    </button>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      X2
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      X3 VS 2ndMIX
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      2013
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      2014
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      A
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      A20
+    
+      </span>
+       
+      <!---->
+    </a>
+  </div>
+   
+  <p
+    class="subtitle"
+  >
+    Found 1 songs
+  </p>
+   
+  <songlist-stub
+    loading="true"
+    songs="[object Object]"
+  />
+</section>
+`;
+
+exports[`/series/:id renders not found 1`] = `
+<section
+  class="section"
+>
+  <h1
+    class="title"
+  >
+    DDR X
+  </h1>
+   
+  <div
+    class="buttons"
+  >
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      1st
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      2ndMIX
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      3rdMIX
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      4thMIX
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      5thMIX
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      DDRMAX
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      DDRMAX2
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      EXTREME
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      SuperNOVA
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      SuperNOVA2
+    
+      </span>
+       
+      <!---->
+    </a>
+    <button
+      class="button is-info is-outlined"
+      disabled="disabled"
+      to="/series/10"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      X
+    
+      </span>
+       
+      <!---->
+    </button>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      X2
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      X3 VS 2ndMIX
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      2013
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      2014
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      A
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      A20
+    
+      </span>
+       
+      <!---->
+    </a>
+  </div>
+   
+  <p
+    class="subtitle"
+  >
+    Not Found
+  </p>
+   
+  <songlist-stub
+    loading="true"
+    songs=""
+  />
+</section>
+`;
+
+exports[`/series/:id renders select SongIndex 1`] = `
+<section
+  class="section"
+>
+  <h1
+    class="title"
+  >
+    シリーズから探す
+  </h1>
+   
+  <div
+    class="buttons"
+  >
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      1st
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      2ndMIX
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      3rdMIX
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      4thMIX
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      5thMIX
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      DDRMAX
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      DDRMAX2
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      EXTREME
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      SuperNOVA
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      SuperNOVA2
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      X
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      X2
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      X3 VS 2ndMIX
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      2013
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      2014
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      A
+    
+      </span>
+       
+      <!---->
+    </a>
+    <a
+      class="button is-info"
+      type="button"
+    >
+      <!---->
+       
+      <span>
+        
+      A20
+    
+      </span>
+       
+      <!---->
+    </a>
+  </div>
+   
+  <p
+    class="subtitle"
+  >
+    シリーズを選択してください
+  </p>
+   
+  <!---->
+</section>
+`;

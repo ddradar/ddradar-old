@@ -77,6 +77,17 @@
     "version": 20191109
   },
   {
+    "id": "Dlq6qdP1bOPDObbbQQ6b8iPbd1ODq69P",
+    "name": "どきドキ バレンタイン",
+    "nameKana": "どきどき ばれんたいん",
+    "nameIndex": 3,
+    "artist": "ひまわり＊パンチ",
+    "series": "A20",
+    "minBPM": 169,
+    "maxBPM": 169,
+    "version": 20200120
+  },
+  {
     "id": "oDQqbI86bdlqbiO1dbiDP0PDd91bI6iP",
     "name": "毒占欲",
     "nameKana": "どくせんよく",
@@ -363,6 +374,17 @@
     "version": 20191109
   },
   {
+    "id": "0dOOOolo0P6180OQDo16DdO6o6D8O8lQ",
+    "name": "DIGITAL LUV",
+    "nameKana": "DIGITAL LUV",
+    "nameIndex": 13,
+    "artist": "ハレトキドキ",
+    "series": "A20",
+    "minBPM": 154,
+    "maxBPM": 154,
+    "version": 20200210
+  },
+  {
     "id": "0DODq0P9Qi6i6q8QPoPPOiOi6ib0188b",
     "name": "District of the Shadows",
     "nameKana": "DISTRICT OF THE SHADOWS",
@@ -440,6 +462,28 @@
     "version": 20191109
   },
   {
+    "id": "9IdoP1ld9098PI90QQ6bP0Idl1ibo80D",
+    "name": "Glitch Angel",
+    "nameKana": "GLITCH ANGEL",
+    "nameIndex": 16,
+    "artist": "lapix",
+    "series": "A20",
+    "minBPM": 165,
+    "maxBPM": 165,
+    "version": 20200108
+  },
+  {
+    "id": "dIdDQD1Q8oPQ90Q1DPbiQI661qD9oi6I",
+    "name": "Golden Arrow",
+    "nameKana": "GOLDEN ARROW",
+    "nameIndex": 16,
+    "artist": "Zekk",
+    "series": "A20",
+    "minBPM": 170,
+    "maxBPM": 170,
+    "version": 20200212
+  },
+  {
     "id": "lIlQ8DbPP6Iil1DOlQ6d8IPQblDQ8IiI",
     "name": "HAVE YOU NEVER BEEN MELLOW (20th Anniversary Mix)",
     "nameKana": "HAVE YOU NEVER BEEN MELLOW 20TH ANNIVERSARY MIX",
@@ -460,6 +504,28 @@
     "minBPM": 182,
     "maxBPM": 182,
     "version": 20191109
+  },
+  {
+    "id": "q8i11qPbo9iq8lQb9d08di81Q88q8P9o",
+    "name": "Hunny Bunny",
+    "nameKana": "HUNNY BUNNY",
+    "nameIndex": 17,
+    "artist": "U1 overground",
+    "series": "A20",
+    "minBPM": 160,
+    "maxBPM": 160,
+    "version": 20200127
+  },
+  {
+    "id": "1900DdoIl00b88q6Qq9ob9D6lQ8IQiPb",
+    "name": "I Love You",
+    "nameKana": "I LOVE YOU",
+    "nameIndex": 18,
+    "artist": "O/iviA",
+    "series": "A20",
+    "minBPM": 170,
+    "maxBPM": 170,
+    "version": 20200120
   },
   {
     "id": "69b01qbo8Qdi6liOPq091bqo01i16oQ9",
@@ -504,6 +570,17 @@
     "minBPM": 130,
     "maxBPM": 130,
     "version": 20191109
+  },
+  {
+    "id": "lbD8DodiOiP8D61lidIi88DIiPqi8o6P",
+    "name": "Mythomane",
+    "nameKana": "MYTHOMANE",
+    "nameIndex": 22,
+    "artist": "Hylen",
+    "series": "A20",
+    "minBPM": 140,
+    "maxBPM": 180,
+    "version": 20200210
   },
   {
     "id": "1iDPo19Pb9ooi8OqiidbqPb06DDdqiqo",
@@ -614,6 +691,17 @@
     "minBPM": 175,
     "maxBPM": 175,
     "version": 20191109
+  },
+  {
+    "id": "ODdoiODodb0ddIP06IqDQdl100q0dIP6",
+    "name": "Re:GENERATION",
+    "nameKana": "RE GENERATION",
+    "nameIndex": 27,
+    "artist": "TAG feat. ERi",
+    "series": "A20",
+    "minBPM": 176,
+    "maxBPM": 176,
+    "version": 20200127
   },
   {
     "id": "1qPOO8o9089lI1qQIDIDi0lidob9i6lq",

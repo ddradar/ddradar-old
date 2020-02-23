@@ -1,8 +1,10 @@
-import { VuexModule, Module, Mutation, Action } from 'vuex-module-decorators'
-import firebase from '@/plugins/firebase'
-import 'firebase/firestore'
-import { UserInfo, isUser } from '@/types/user-info'
 import 'firebase/auth'
+import 'firebase/firestore'
+
+import { Action, Module, Mutation, VuexModule } from 'vuex-module-decorators'
+
+import { isUser, UserInfo } from '@/types/user-info'
+import firebase from '~/plugins/firebase'
 
 const db = firebase.firestore()
 
@@ -22,8 +24,8 @@ export default class UserModule extends VuexModule {
 
   @Action
   isAuthenticated() {
-    return new Promise<boolean>(resolve => {
-      const unsubscribe = firebase.auth().onAuthStateChanged(async user => {
+    return new Promise<boolean>((resolve) => {
+      const unsubscribe = firebase.auth().onAuthStateChanged(async (user) => {
         unsubscribe()
         if (user) {
           await this.fetchUserDb({

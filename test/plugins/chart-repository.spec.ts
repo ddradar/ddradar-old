@@ -1,63 +1,36 @@
-import * as firebaseTest from '@firebase/testing'
-import * as repo from '@/plugins/chart-repository'
-import { StepChart } from '~/types/step-chart'
-import { PlayStyle } from '~/types/play-style'
-import { Difficulty } from '~/types/difficulty'
+/* eslint-disable no-undef */
+import 'jest-fetch-mock'
 
-jest.mock('@/plugins/firebase', () => {
-  return firebaseTest.initializeTestApp({ projectId: 'ddradar-chartrepo-test' })
-})
+import * as repo from '~/plugins/chart-repository'
+import { StepChart } from '~/types/step-chart'
 
 describe('ChartRepository', () => {
-  const db = firebaseTest
-    .initializeAdminApp({ projectId: 'ddradar-chartrepo-test' })
-    .firestore()
-  beforeAll(async () => {
-    const batch = db.batch()
-    charts.forEach(chart => {
-      const ref = db
-        .collection(`version/1/songs/${chart.songId}/charts`)
-        .doc(repo.getChartDocumentId(chart))
-      batch.set(ref, chart)
-    })
-    const invalidDataRef = db.collection('version/1/charts').doc('foo')
-    batch.set(invalidDataRef, invalidData)
-    await batch.commit()
-  })
-  describe('getChartDocumentId', () => {
-    test.each([
-      [1, 0, 'single-beginner'],
-      [1, 1, 'single-basic'],
-      [1, 2, 'single-difficult'],
-      [1, 3, 'single-expert'],
-      [1, 4, 'single-challenge'],
-      [2, 1, 'double-basic'],
-      [2, 2, 'double-difficult'],
-      [2, 3, 'double-expert'],
-      [2, 4, 'double-challenge']
-    ])(
-      'returns lowerCased playstyle-difficulty name',
-      (playStyle, difficulty, expected) => {
-        expect(
-          repo.getChartDocumentId({
-            playStyle: playStyle as PlayStyle,
-            difficulty: difficulty as Difficulty
-          })
-        ).toBe(expected)
-      }
-    )
+  beforeEach(() => {
+    fetchMock.resetMocks()
+    fetchMock.mockResolvedValue({ json: () => charts } as any)
   })
   describe('fetchSongCharts', () => {
     test('returns StepChart[] if exists', async () => {
       const songId = charts[0].songId
       const fetchedCharts = await repo.fetchSongCharts(charts[0].songId)
       expect(fetchedCharts).toHaveLength(
-        charts.filter(c => c.songId === songId).length
+        charts.filter((c) => c.songId === songId).length
       )
     })
     test('returns [] if not exists', async () => {
       const fetchedCharts = await repo.fetchSongCharts('foo')
       expect(fetchedCharts).toHaveLength(0)
+    })
+    test('throws error', () => {
+      // Arrange
+      fetchMock.resetMocks()
+      fetchMock.mockResolvedValue({ json: () => invalidData } as any)
+
+      // Act
+      // Assert
+      expect(repo.fetchSongCharts('foo')).rejects.toThrowError(
+        'JSON file is not StepChart[]'
+      )
     })
   })
   describe('fetchChartsByLevel', () => {
@@ -66,7 +39,7 @@ describe('ChartRepository', () => {
       const level = 10
       const fetchedCharts = await repo.fetchChartsByLevel(playStyle, level)
       expect(fetchedCharts).toHaveLength(
-        charts.filter(c => c.level === level && c.playStyle === playStyle)
+        charts.filter((c) => c.level === level && c.playStyle === playStyle)
           .length
       )
     })
@@ -76,9 +49,6 @@ describe('ChartRepository', () => {
       const fetchedCharts = await repo.fetchChartsByLevel(playStyle, level)
       expect(fetchedCharts).toHaveLength(0)
     })
-  })
-  afterAll(async () => {
-    await Promise.all(firebaseTest.apps().map(app => app.delete()))
   })
 })
 
@@ -96,7 +66,8 @@ const charts: StepChart[] = [
     voltage: 16,
     air: 3,
     freeze: 0,
-    chaos: 0
+    chaos: 0,
+    version: 20200101
   },
   {
     songId: 'dq190Il9iO1bD698ll6ddObIlqdIQ1O9',
@@ -111,7 +82,8 @@ const charts: StepChart[] = [
     voltage: 32,
     air: 34,
     freeze: 0,
-    chaos: 6
+    chaos: 6,
+    version: 20200101
   },
   {
     songId: 'dq190Il9iO1bD698ll6ddObIlqdIQ1O9',
@@ -126,7 +98,8 @@ const charts: StepChart[] = [
     voltage: 32,
     air: 34,
     freeze: 0,
-    chaos: 14
+    chaos: 14,
+    version: 20200101
   },
   {
     songId: 'dq190Il9iO1bD698ll6ddObIlqdIQ1O9',
@@ -141,7 +114,8 @@ const charts: StepChart[] = [
     voltage: 48,
     air: 41,
     freeze: 0,
-    chaos: 34
+    chaos: 34,
+    version: 20200101
   },
   {
     songId: 'dq190Il9iO1bD698ll6ddObIlqdIQ1O9',
@@ -156,7 +130,8 @@ const charts: StepChart[] = [
     voltage: 32,
     air: 21,
     freeze: 0,
-    chaos: 7
+    chaos: 7,
+    version: 20200101
   },
   {
     songId: 'dq190Il9iO1bD698ll6ddObIlqdIQ1O9',
@@ -171,7 +146,8 @@ const charts: StepChart[] = [
     voltage: 32,
     air: 21,
     freeze: 0,
-    chaos: 14
+    chaos: 14,
+    version: 20200101
   },
   {
     songId: 'dq190Il9iO1bD698ll6ddObIlqdIQ1O9',
@@ -186,7 +162,8 @@ const charts: StepChart[] = [
     voltage: 43,
     air: 27,
     freeze: 0,
-    chaos: 26
+    chaos: 26,
+    version: 20200101
   },
   {
     songId: 'DblIbDd6lQQQoO9bloOI9iIqO1IiQoID',
@@ -201,7 +178,8 @@ const charts: StepChart[] = [
     voltage: 25,
     air: 9,
     freeze: 0,
-    chaos: 0
+    chaos: 0,
+    version: 20200101
   },
   {
     songId: 'DblIbDd6lQQQoO9bloOI9iIqO1IiQoID',
@@ -216,7 +194,8 @@ const charts: StepChart[] = [
     voltage: 43,
     air: 12,
     freeze: 0,
-    chaos: 2
+    chaos: 2,
+    version: 20200101
   },
   {
     songId: 'DblIbDd6lQQQoO9bloOI9iIqO1IiQoID',
@@ -231,7 +210,8 @@ const charts: StepChart[] = [
     voltage: 43,
     air: 63,
     freeze: 0,
-    chaos: 2
+    chaos: 2,
+    version: 20200101
   },
   {
     songId: 'DblIbDd6lQQQoO9bloOI9iIqO1IiQoID',
@@ -246,7 +226,8 @@ const charts: StepChart[] = [
     voltage: 50,
     air: 56,
     freeze: 0,
-    chaos: 20
+    chaos: 20,
+    version: 20200101
   },
   {
     songId: 'DblIbDd6lQQQoO9bloOI9iIqO1IiQoID',
@@ -261,7 +242,8 @@ const charts: StepChart[] = [
     voltage: 50,
     air: 45,
     freeze: 0,
-    chaos: 35
+    chaos: 35,
+    version: 20200101
   },
   {
     songId: 'DblIbDd6lQQQoO9bloOI9iIqO1IiQoID',
@@ -276,7 +258,8 @@ const charts: StepChart[] = [
     voltage: 43,
     air: 12,
     freeze: 0,
-    chaos: 2
+    chaos: 2,
+    version: 20200101
   },
   {
     songId: 'DblIbDd6lQQQoO9bloOI9iIqO1IiQoID',
@@ -291,7 +274,8 @@ const charts: StepChart[] = [
     voltage: 43,
     air: 102,
     freeze: 0,
-    chaos: 2
+    chaos: 2,
+    version: 20200101
   },
   {
     songId: 'DblIbDd6lQQQoO9bloOI9iIqO1IiQoID',
@@ -306,7 +290,8 @@ const charts: StepChart[] = [
     voltage: 50,
     air: 56,
     freeze: 0,
-    chaos: 14
+    chaos: 14,
+    version: 20200101
   },
   {
     songId: 'DblIbDd6lQQQoO9bloOI9iIqO1IiQoID',
@@ -321,7 +306,8 @@ const charts: StepChart[] = [
     voltage: 43,
     air: 27,
     freeze: 35,
-    chaos: 21
+    chaos: 21,
+    version: 20200101
   }
 ]
 const invalidData = {

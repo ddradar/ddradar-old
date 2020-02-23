@@ -1,5 +1,12 @@
-import { shallowMount, createLocalVue, Wrapper } from '@vue/test-utils'
+import {
+  createLocalVue,
+  mount,
+  RouterLinkStub,
+  shallowMount,
+  Wrapper
+} from '@vue/test-utils'
 import Buefy from 'buefy'
+
 import ChartList from '@/components/ChartList.vue'
 
 const localVue = createLocalVue()
@@ -15,6 +22,22 @@ describe('ChartList', () => {
   test('is a Vue instance', () => {
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
+  test('renders correctly', () => {
+    const wrapper = mount(ChartList, {
+      localVue,
+      propsData: { charts, loading: false },
+      stubs: { NuxtLink: RouterLinkStub }
+    })
+    expect(wrapper.element).toMatchSnapshot()
+  })
+  test('renders loading', () => {
+    const wrapper = mount(ChartList, {
+      localVue,
+      propsData: { loading: true },
+      stubs: { NuxtLink: RouterLinkStub }
+    })
+    expect(wrapper.element).toMatchSnapshot()
+  })
   describe('getPlayStyleName()', () => {
     test('returns "SP" if param is 1', () => {
       expect(vm.getPlayStyleName(1)).toBe('SP')
@@ -24,7 +47,7 @@ describe('ChartList', () => {
     })
     test.each([-1, 0, 1.5, NaN, Infinity, -Infinity])(
       'returns "?" if param is other',
-      i => {
+      (i) => {
         expect(vm.getPlayStyleName(i)).toBe('?')
       }
     )
@@ -47,7 +70,7 @@ describe('ChartList', () => {
     })
     test.each([-1, 5, 1.5, NaN, Infinity, -Infinity])(
       'returns "Unknown" if param is other',
-      i => {
+      (i) => {
         expect(vm.getDifficultyName(i)).toBe('Unknown')
       }
     )
@@ -70,9 +93,60 @@ describe('ChartList', () => {
     })
     test.each([-1, 5, 1.5, NaN, Infinity, -Infinity])(
       'returns "is-unknown" if param is other',
-      i => {
+      (i) => {
         expect(vm.getDifficultyClassName(i)).toBe('is-unknown')
       }
     )
   })
 })
+
+const charts = [
+  {
+    songId: 'dq190Il9iO1bD698ll6ddObIlqdIQ1O9',
+    songName: 'AM-3P',
+    playStyle: 1,
+    difficulty: 0,
+    level: 3,
+    notes: 74,
+    freezeArrow: 0,
+    shockArrow: 0,
+    stream: 19,
+    voltage: 16,
+    air: 3,
+    freeze: 0,
+    chaos: 0,
+    version: 20200101
+  },
+  {
+    songId: 'dq190Il9iO1bD698ll6ddObIlqdIQ1O9',
+    songName: 'AM-3P',
+    playStyle: 1,
+    difficulty: 1,
+    level: 7,
+    notes: 164,
+    freezeArrow: 0,
+    shockArrow: 0,
+    stream: 43,
+    voltage: 32,
+    air: 34,
+    freeze: 0,
+    chaos: 6,
+    version: 20200101
+  },
+  {
+    songId: 'dq190Il9iO1bD698ll6ddObIlqdIQ1O9',
+    songName: 'AM-3P',
+    playStyle: 1,
+    difficulty: 2,
+    level: 8,
+    notes: 195,
+    freezeArrow: 0,
+    shockArrow: 0,
+    stream: 51,
+    voltage: 32,
+    air: 34,
+    freeze: 0,
+    chaos: 14,
+    version: 20200101
+  }
+]

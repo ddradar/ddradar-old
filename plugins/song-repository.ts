@@ -1,28 +1,38 @@
-import firebase from '@/plugins/firebase'
-import 'firebase/firestore'
 import { isSong, Song } from '@/types/song'
 
-const db = firebase.firestore()
+export const songVersion = 20200212
 
-export async function fetchSongs(fieldName: string, condition: any) {
-  const query = db
-    .collection('version/1/songs')
-    .where(fieldName, '==', condition)
+export const fetchSongs = async (
+  fieldName: keyof Song,
+  condition: any,
+  useMaster: boolean = false
+) =>
+  (await fetchSongJson(useMaster))
+    .filter((s) => s[fieldName] === condition)
+    .sort((l, r) =>
+      l.nameIndex !== r.nameIndex
+        ? l.nameIndex - r.nameIndex
+        : l.nameKana < r.nameKana
+        ? -1
+        : l.nameKana > r.nameKana
+        ? 1
+        : 0
+    )
 
-  const querySorted =
-    fieldName === 'nameIndex'
-      ? query.orderBy('nameKana')
-      : query.orderBy('nameIndex').orderBy('nameKana')
-  const snapShot = await querySorted.get()
-  return snapShot.docs.map(doc => doc.data()).filter(d => isSong(d)) as Song[]
+export const fetchSongById = async (
+  songId: string,
+  useMaster: boolean = false
+) => {
+  const song = (await fetchSongJson(useMaster)).filter((s) => s.id === songId)
+  if (song.length > 1) throw new Error(`Duplicated songId: ${songId}`)
+  else if (song.length === 0) throw new Error(`Not Found songId: ${songId}`)
+  return song[0]
 }
 
-export async function fetchSongById(songId: string) {
-  const doc = await db.doc(`version/1/songs/${songId}`).get()
-  const unknown = doc.data()
-  return isSong(unknown)
-    ? unknown
-    : Promise.reject(
-        new Error(`"version/1/songs/${songId}" is not Song object`)
-      )
+const masterUrl = 'https://staging.ddradar.app'
+const fetchSongJson = async (useMaster: boolean) => {
+  const jsonUrl = `${useMaster ? masterUrl : ''}/song.json`
+  const jsonData = await (await fetch(jsonUrl)).json()
+  if (Array.isArray(jsonData) && isSong(jsonData[0])) return jsonData as Song[]
+  throw new Error('JSON file is not Song[]')
 }

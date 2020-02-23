@@ -1,12 +1,24 @@
-import { shallowMount, createLocalVue, Wrapper } from '@vue/test-utils'
+import {
+  createLocalVue,
+  mount,
+  RouterLinkStub,
+  shallowMount,
+  Wrapper
+} from '@vue/test-utils'
 import Buefy from 'buefy'
 import { mocked } from 'ts-jest/utils'
+
 import SongPage from '@/pages/song/_id/_chart.vue'
 import * as chartRepo from '@/plugins/chart-repository'
 import * as songRepo from '@/plugins/song-repository'
 import { Song } from '@/types/song'
 import { StepChart } from '@/types/step-chart'
 
+jest.mock('~/plugins/firebase', () => {
+  return {
+    firestore: jest.fn()
+  }
+})
 jest.mock('@/plugins/chart-repository')
 jest.mock('@/plugins/song-repository')
 
@@ -22,6 +34,141 @@ describe('song/:id/:chart', () => {
   })
   test('is a Vue instance', () => {
     expect(wrapper.isVueInstance()).toBeTruthy()
+  })
+  test('rendars correctly', () => {
+    const song: Song = {
+      id: '8Il6980di8P89lil1PDIqqIbiq1QO8lQ',
+      name: 'MAKE IT BETTER',
+      nameKana: 'MAKE IT BETTER',
+      nameIndex: 22,
+      artist: 'mitsu-O!',
+      series: '1st',
+      minBPM: 119,
+      maxBPM: 119,
+      version: 20191109
+    }
+    const charts: StepChart[] = [
+      {
+        songId: '8Il6980di8P89lil1PDIqqIbiq1QO8lQ',
+        songName: 'MAKE IT BETTER',
+        playStyle: 1,
+        difficulty: 0,
+        level: 3,
+        notes: 67,
+        freezeArrow: 0,
+        shockArrow: 0,
+        stream: 14,
+        voltage: 14,
+        air: 9,
+        freeze: 0,
+        chaos: 0,
+        version: 20191109
+      },
+      {
+        songId: '8Il6980di8P89lil1PDIqqIbiq1QO8lQ',
+        songName: 'MAKE IT BETTER',
+        playStyle: 1,
+        difficulty: 1,
+        level: 7,
+        notes: 143,
+        freezeArrow: 0,
+        shockArrow: 0,
+        stream: 31,
+        voltage: 29,
+        air: 47,
+        freeze: 0,
+        chaos: 3,
+        version: 20191109
+      },
+      {
+        songId: '8Il6980di8P89lil1PDIqqIbiq1QO8lQ',
+        songName: 'MAKE IT BETTER',
+        playStyle: 1,
+        difficulty: 2,
+        level: 9,
+        notes: 188,
+        freezeArrow: 0,
+        shockArrow: 0,
+        stream: 41,
+        voltage: 39,
+        air: 27,
+        freeze: 0,
+        chaos: 13,
+        version: 20191109
+      },
+      {
+        songId: '8Il6980di8P89lil1PDIqqIbiq1QO8lQ',
+        songName: 'MAKE IT BETTER',
+        playStyle: 1,
+        difficulty: 3,
+        level: 12,
+        notes: 212,
+        freezeArrow: 0,
+        shockArrow: 0,
+        stream: 46,
+        voltage: 39,
+        air: 54,
+        freeze: 0,
+        chaos: 19,
+        version: 20191109
+      },
+      {
+        songId: '8Il6980di8P89lil1PDIqqIbiq1QO8lQ',
+        songName: 'MAKE IT BETTER',
+        playStyle: 2,
+        difficulty: 1,
+        level: 7,
+        notes: 130,
+        freezeArrow: 0,
+        shockArrow: 0,
+        stream: 28,
+        voltage: 29,
+        air: 61,
+        freeze: 0,
+        chaos: 1,
+        version: 20191109
+      },
+      {
+        songId: '8Il6980di8P89lil1PDIqqIbiq1QO8lQ',
+        songName: 'MAKE IT BETTER',
+        playStyle: 2,
+        difficulty: 2,
+        level: 9,
+        notes: 181,
+        freezeArrow: 0,
+        shockArrow: 0,
+        stream: 40,
+        voltage: 39,
+        air: 30,
+        freeze: 0,
+        chaos: 11,
+        version: 20191109
+      },
+      {
+        songId: '8Il6980di8P89lil1PDIqqIbiq1QO8lQ',
+        songName: 'MAKE IT BETTER',
+        playStyle: 2,
+        difficulty: 3,
+        level: 11,
+        notes: 220,
+        freezeArrow: 0,
+        shockArrow: 0,
+        stream: 48,
+        voltage: 54,
+        air: 27,
+        freeze: 0,
+        chaos: 41,
+        version: 20191109
+      }
+    ]
+    const wrapper = mount(SongPage, {
+      localVue,
+      data: () => {
+        return { isLoading: false, song, charts }
+      },
+      stubs: { ChartList: true, NuxtLink: RouterLinkStub }
+    })
+    expect(wrapper.element).toMatchSnapshot()
   })
   test('initialized default', () => {
     expect(vm.charts).toHaveLength(0)
@@ -47,14 +194,14 @@ describe('song/:id/:chart', () => {
       'A20'
     ])(
       'returns "DDR {series}" if series is not "DDRMAX" or "DDRMAX2"',
-      series => {
+      (series) => {
         wrapper.setData({ song: { ...song, series } })
         expect(vm.seriesName).toBe(`DDR ${series}`)
       }
     )
     test.each(['DDRMAX', 'DDRMAX2'])(
       'returns "DDR {series}" if series is not "DDRMAX" or "DDRMAX2"',
-      series => {
+      (series) => {
         wrapper.setData({ song: { ...song, series } })
         expect(vm.seriesName).toBe(series)
       }
@@ -78,7 +225,7 @@ describe('song/:id/:chart', () => {
       { playStyle: 2, difficulty: 2, expected: 'DOUBLE/DIFFICULT' },
       { playStyle: 2, difficulty: 3, expected: 'DOUBLE/EXPERT' },
       { playStyle: 2, difficulty: 4, expected: 'DOUBLE/CHALLENGE' }
-    ])('returns "PLAYSTYLE/DIFFICULTY" if selected chart', d => {
+    ])('returns "PLAYSTYLE/DIFFICULTY" if selected chart', (d) => {
       wrapper.setData({
         charts: [
           { ...charts[0], playStyle: d.playStyle, difficulty: d.difficulty }
@@ -97,7 +244,7 @@ describe('song/:id/:chart', () => {
       expect(vm.selected).toBeNull()
     })
     // [...Array(9).keys()] returns [0, 1, ..., 8]
-    test.each([...Array(9).keys()])('returns charts[selectedIndex]', i => {
+    test.each([...Array(9).keys()])('returns charts[selectedIndex]', (i) => {
       wrapper.setData({ charts, selectedIndex: i })
       expect(vm.selected).toBe(charts[i])
     })
@@ -166,12 +313,12 @@ describe('song/:id/:chart', () => {
       { param: 2, expected: 'is-difficult' },
       { param: 3, expected: 'is-expert' },
       { param: 4, expected: 'is-challenge' }
-    ])('returns "is-difficulty" if param is Difficulty', d => {
+    ])('returns "is-difficulty" if param is Difficulty', (d) => {
       expect(vm.getClassName({ difficulty: d.param })).toBe(d.expected)
     })
     test.each([-1, 5, 1.5, NaN, Infinity, -Infinity])(
       'returns "is-unknown" if param is other',
-      i => {
+      (i) => {
         expect(vm.getClassName(i)).toBe('is-unknown')
       }
     )
@@ -179,14 +326,14 @@ describe('song/:id/:chart', () => {
   describe('changeSelected method', () => {
     test.each([-1, 5, 1.5, NaN, Infinity, -Infinity])(
       'causes selectedIndex to param value',
-      i => {
+      (i) => {
         vm.changeSelected(i)
         expect(vm.selectedIndex).toBe(i)
       }
     )
     test.each([-1, 5, 1.5, NaN, Infinity, -Infinity])(
       'returns "is-unknown" if param is other',
-      i => {
+      (i) => {
         expect(vm.getClassName(i)).toBe('is-unknown')
       }
     )
@@ -202,7 +349,7 @@ describe('song/:id/:chart', () => {
       { chartId: 22, expected: 6 },
       { chartId: 23, expected: 7 },
       { chartId: 24, expected: 8 }
-    ])('returns 0-8 songIndex if length is 9', d => {
+    ])('returns 0-8 songIndex if length is 9', (d) => {
       expect((SongPage as any).calcSelectedIndex(d.chartId, 9)).toBe(d.expected)
     })
     test.each([
@@ -213,7 +360,7 @@ describe('song/:id/:chart', () => {
       { chartId: 21, expected: 4 },
       { chartId: 22, expected: 5 },
       { chartId: 23, expected: 6 }
-    ])('returns 0-6 songIndex if length is 7', d => {
+    ])('returns 0-6 songIndex if length is 7', (d) => {
       expect((SongPage as any).calcSelectedIndex(d.chartId, 7)).toBe(d.expected)
     })
     test.each([
@@ -226,18 +373,18 @@ describe('song/:id/:chart', () => {
       { chartId: 22, expected: 1 },
       { chartId: 23, expected: 1 },
       { chartId: 24, expected: 1 }
-    ])('returns 0-1 songIndex if length is 2', d => {
+    ])('returns 0-1 songIndex if length is 2', (d) => {
       expect((SongPage as any).calcSelectedIndex(d.chartId, 2)).toBe(d.expected)
     })
     test.each([10, 11, 12, 13, 14, 21, 22, 23, 24])(
       'returns 0 if length is 1',
-      i => {
+      (i) => {
         expect((SongPage as any).calcSelectedIndex(i, 1)).toBe(0)
       }
     )
     test.each([-1, 0, 1, 10.5, NaN, Infinity, -Infinity])(
       'returns 0 if chartId is invalid',
-      i => {
+      (i) => {
         expect((SongPage as any).calcSelectedIndex(i, 9)).toBe(0)
       }
     )
@@ -252,7 +399,8 @@ const song: Song = {
   artist: '2MB',
   series: '2ndMIX',
   minBPM: 180,
-  maxBPM: 180
+  maxBPM: 180,
+  version: 20200101
 }
 
 const charts: StepChart[] = [
@@ -269,7 +417,8 @@ const charts: StepChart[] = [
     voltage: 30,
     air: 0,
     freeze: 0,
-    chaos: 0
+    chaos: 0,
+    version: 20200101
   },
   {
     songId: '9doPbId8qid9I9l6ooloPQD1lq1Plb6I',
@@ -284,7 +433,8 @@ const charts: StepChart[] = [
     voltage: 44,
     air: 60,
     freeze: 0,
-    chaos: 4
+    chaos: 4,
+    version: 20200101
   },
   {
     songId: '9doPbId8qid9I9l6ooloPQD1lq1Plb6I',
@@ -299,7 +449,8 @@ const charts: StepChart[] = [
     voltage: 44,
     air: 69,
     freeze: 0,
-    chaos: 6
+    chaos: 6,
+    version: 20200101
   },
   {
     songId: '9doPbId8qid9I9l6ooloPQD1lq1Plb6I',
@@ -314,7 +465,8 @@ const charts: StepChart[] = [
     voltage: 52,
     air: 30,
     freeze: 0,
-    chaos: 19
+    chaos: 19,
+    version: 20200101
   },
   {
     songId: '9doPbId8qid9I9l6ooloPQD1lq1Plb6I',
@@ -329,7 +481,8 @@ const charts: StepChart[] = [
     voltage: 82,
     air: 58,
     freeze: 16,
-    chaos: 79
+    chaos: 79,
+    version: 20200101
   },
   {
     songId: '9doPbId8qid9I9l6ooloPQD1lq1Plb6I',
@@ -344,7 +497,8 @@ const charts: StepChart[] = [
     voltage: 44,
     air: 74,
     freeze: 0,
-    chaos: 3
+    chaos: 3,
+    version: 20200101
   },
   {
     songId: '9doPbId8qid9I9l6ooloPQD1lq1Plb6I',
@@ -359,7 +513,8 @@ const charts: StepChart[] = [
     voltage: 52,
     air: 38,
     freeze: 0,
-    chaos: 10
+    chaos: 10,
+    version: 20200101
   },
   {
     songId: '9doPbId8qid9I9l6ooloPQD1lq1Plb6I',
@@ -374,7 +529,8 @@ const charts: StepChart[] = [
     voltage: 52,
     air: 30,
     freeze: 0,
-    chaos: 19
+    chaos: 19,
+    version: 20200101
   },
   {
     songId: '9doPbId8qid9I9l6ooloPQD1lq1Plb6I',
@@ -389,6 +545,7 @@ const charts: StepChart[] = [
     voltage: 75,
     air: 74,
     freeze: 20,
-    chaos: 53
+    chaos: 53,
+    version: 20200101
   }
 ]

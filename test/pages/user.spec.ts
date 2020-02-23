@@ -1,7 +1,13 @@
-import { shallowMount, createLocalVue, Wrapper } from '@vue/test-utils'
+import { createLocalVue, mount, shallowMount, Wrapper } from '@vue/test-utils'
 import Buefy from 'buefy'
+
 import UserPage from '@/pages/user.vue'
 
+jest.mock('~/plugins/firebase', () => {
+  return {
+    firestore: jest.fn()
+  }
+})
 const localVue = createLocalVue()
 localVue.use(Buefy)
 
@@ -14,6 +20,10 @@ describe('/user/', () => {
   })
   test('is a Vue instance', () => {
     expect(wrapper.isVueInstance()).toBeTruthy()
+  })
+  test('renders correcly', () => {
+    const wrapper = mount(UserPage, { localVue })
+    expect(wrapper.element).toMatchSnapshot()
   })
   test('user is null default', () => {
     expect(vm.user).toBeNull()

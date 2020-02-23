@@ -1,8 +1,8 @@
 <script lang="ts">
-import { Mixins } from 'vue-property-decorator'
-import { Component, Prop } from 'nuxt-property-decorator'
 import Chart from 'chart.js'
-import { Radar, mixins } from 'vue-chartjs'
+import { Component, Prop } from 'nuxt-property-decorator'
+import { mixins, Radar } from 'vue-chartjs'
+import { Mixins } from 'vue-property-decorator'
 
 @Component({})
 export default class ReactiveRadar extends Mixins(Radar, mixins.reactiveProp) {

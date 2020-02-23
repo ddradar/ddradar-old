@@ -78,14 +78,15 @@
 
 <script lang="ts">
 import { Context } from '@nuxt/types'
-import { Vue, Component } from 'nuxt-property-decorator'
-import { getDifficultyName, Difficulty } from '@/types/difficulty'
-import { PlayStyleList, getPlayStyleName, PlayStyle } from '@/types/play-style'
-import { Song } from '@/types/song'
-import { getSeriesName } from '@/types/series'
-import { StepChart } from '@/types/step-chart'
+import { Component, Vue } from 'nuxt-property-decorator'
+
 import { fetchSongCharts } from '@/plugins/chart-repository'
 import { fetchSongById } from '@/plugins/song-repository'
+import { Difficulty, getDifficultyName } from '@/types/difficulty'
+import { getPlayStyleName, PlayStyle, PlayStyleList } from '@/types/play-style'
+import { getSeriesName } from '@/types/series'
+import { Song } from '@/types/song'
+import { StepChart } from '@/types/step-chart'
 
 @Component({
   components: {
@@ -94,13 +95,15 @@ import { fetchSongById } from '@/plugins/song-repository'
 })
 export default class SongPage extends Vue {
   song: Song = {
+    id: '00000000000000000000000000000000',
     name: '曲名',
     nameKana: 'きょくめい',
     nameIndex: 1,
     artist: 'アーティスト',
     minBPM: null,
     maxBPM: null,
-    series: 'A20'
+    series: 'A20',
+    version: 20200101
   }
 
   charts: StepChart[] = []

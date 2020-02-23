@@ -3,8 +3,8 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from 'nuxt-property-decorator'
 import Chart from 'chart.js'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component({
   components: {
@@ -75,11 +75,7 @@ export default class GrooveRadarComponent extends Vue {
       return ''
     }
     const dataSet = labels[index]
-
-    if (typeof dataSet === 'string') {
-      return dataSet
-    }
-    return dataSet[0]
+    return Array.isArray(dataSet) ? dataSet[0] : dataSet
   }
 }
 </script>

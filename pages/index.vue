@@ -52,8 +52,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import { SongNameIndex } from '@/types/song'
+
 import { SeriesList } from '@/types/series'
+import { SongNameIndex } from '@/types/song'
 
 interface Card {
   title: string

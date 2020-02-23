@@ -1,10 +1,22 @@
-import { shallowMount, createLocalVue, Wrapper } from '@vue/test-utils'
+import {
+  createLocalVue,
+  mount,
+  RouterLinkStub,
+  shallowMount,
+  Wrapper
+} from '@vue/test-utils'
 import Buefy from 'buefy'
 import { mocked } from 'ts-jest/utils'
+
 import NameIndexPage from '@/pages/name/_prefix.vue'
 import * as repo from '@/plugins/song-repository'
 import { SongNameIndex } from '~/types/song'
 
+jest.mock('~/plugins/firebase', () => {
+  return {
+    firestore: jest.fn()
+  }
+})
 jest.mock('@/plugins/song-repository')
 
 const localVue = createLocalVue()
@@ -20,6 +32,35 @@ describe('/name/:prefix', () => {
   test('is a Vue instance', () => {
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
+  describe('renders', () => {
+    test('select SongIndex', () => {
+      const wrapper = mount(NameIndexPage, {
+        localVue,
+        stubs: { SongList: true, NuxtLink: RouterLinkStub }
+      })
+      expect(wrapper.element).toMatchSnapshot()
+    })
+    test('correctly', () => {
+      const wrapper = mount(NameIndexPage, {
+        localVue,
+        data: () => {
+          return { selected: 36, songs: [{}] }
+        },
+        stubs: { SongList: true, NuxtLink: RouterLinkStub }
+      })
+      expect(wrapper.element).toMatchSnapshot()
+    })
+    test('not found', () => {
+      const wrapper = mount(NameIndexPage, {
+        localVue,
+        data: () => {
+          return { selected: 36, songs: [] }
+        },
+        stubs: { SongList: true, NuxtLink: RouterLinkStub }
+      })
+      expect(wrapper.element).toMatchSnapshot()
+    })
+  })
   test('selected:null and isLoading:true default', () => {
     expect(vm.selected).toBeNull()
     expect(vm.isLoading).toBe(true)
@@ -33,13 +74,15 @@ describe('/name/:prefix', () => {
         if (nameIndex === hasDataIndex) {
           return Promise.resolve([
             {
+              id: '00000000000000000000000000000000',
               name: 'PARANOiA',
               nameKana: 'PARANOIA',
               nameIndex: 25,
               artist: '180',
               series: '1st',
               minBPM: 180,
-              maxBPM: 180
+              maxBPM: 180,
+              version: 20200101
             }
           ])
         }

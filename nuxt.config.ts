@@ -1,47 +1,54 @@
 import { Configuration } from '@nuxt/types'
 
-const config: Configuration = {
+import pkg from './package.json'
+
+/* eslint-disable no-process-env */
+const {
+  FIREBASE_PROJECT_ID,
+  FIREBASE_API_KEY,
+  FIREBASE_MESSAGING_SENDER_ID,
+  FIREBASE_APP_ID
+} = process.env
+/* eslint-enable no-process-env */
+const projectId = FIREBASE_PROJECT_ID || 'ddradar-staging'
+const isDevelopment = projectId === 'ddradar-staging'
+
+const configration: Configuration = {
   mode: 'spa',
-  /*
-   ** Headers of the page
-   */
+  /** Headers of the page */
   head: {
     title: 'DDRadar',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'DDR Score Tracker' }
+      { hid: 'description', name: 'description', content: pkg.description }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'canonical',
+        href: `http://${isDevelopment ? 'staging.' : ''}ddradar.app/`
+      }
+    ]
   },
-  /*
-   ** Customize the progress-bar color
-   */
+  /** Customize the progress-bar color */
   loading: { color: '#fff' },
-  /*
-   ** Global CSS
-   */
+  /** Global CSS */
   css: ['~/assets/css/styles.scss'],
-  /*
-   ** Plugins to load before mounting the App
-   */
-  plugins: [],
-  /*
-   ** Nuxt.js dev-modules
-   */
-  buildModules: ['@nuxt/typescript-build'],
-  /*
-   ** Nuxt.js modules
-   */
+  /** Plugins to load before mounting the App */
+  plugins: ['~/plugins/firebase.ts'],
+  /** Nuxt.js dev-modules */
+  buildModules: ['@nuxtjs/eslint-module', '@nuxt/typescript-build'],
+  /** Nuxt.js modules */
   modules: [
-    // Doc: https://buefy.github.io/#/documentation
+    // Doc: https://buefy.org/documentation
     ['nuxt-buefy', { css: false }],
     '@nuxtjs/pwa'
   ],
   pwa: {
     manifest: {
       name: 'DDRadar',
-      description: 'DDR Score Tracker',
+      description: pkg.description,
       theme_color: '#8c67ef',
       lang: 'ja',
       display: 'standalone',
@@ -49,13 +56,14 @@ const config: Configuration = {
       start_url: '/'
     }
   },
-  /*
-   ** Build configuration
-   */
-  build: {
-    /*
-     ** You can extend webpack config here
-     */
+  env: {
+    apiKey: FIREBASE_API_KEY || 'AIzaSyC_z8VvdgZDibPFZYT1W0-xrmkJiU6PmRw',
+    authDomain: `${projectId}.firebaseapp.com`,
+    databaseURL: `https://${projectId}.firebaseio.com`,
+    projectId,
+    storageBucket: `${projectId}.appspot.com`,
+    messagingSenderId: FIREBASE_MESSAGING_SENDER_ID || '922209395211',
+    appId: FIREBASE_APP_ID || '1:922209395211:web:04e36178df0443c6cf9d0e'
   }
 }
-export default config
+export default configration

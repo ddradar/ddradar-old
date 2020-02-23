@@ -65,9 +65,10 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'nuxt-property-decorator'
-import { userStore } from '@/store'
+import { Component, Vue } from 'nuxt-property-decorator'
+
 import { version } from '@/package.json'
+import { userStore } from '@/store'
 
 @Component
 export default class DefaultLayout extends Vue {

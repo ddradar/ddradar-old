@@ -1,9 +1,9 @@
+import { hasNumberProperty, hasProperty, hasStringProperty } from '../test/util'
 import { Difficulty, isDifficulty } from './difficulty'
-import { Level, isLevel } from './level'
-import { PlayStyle, isPlayStyle } from './play-style'
-import { hasProperty, hasStringProperty, hasNumberProperty } from '@/test/util'
+import { isLevel, Level } from './level'
+import { isPlayStyle, PlayStyle } from './play-style'
 
-export interface StepChart {
+export type StepChart = {
   /** Song's id. */
   songId: string
   /** Song's Name. */
@@ -30,6 +30,8 @@ export interface StepChart {
   freeze: number
   /** Groove Radar CHAOS */
   chaos: number
+  /** version for diff (yyyymmdd) */
+  version: number
 }
 
 export function isStepChart(object: unknown): object is StepChart {
@@ -51,6 +53,7 @@ export function isStepChart(object: unknown): object is StepChart {
     hasNumberProperty(object, 'voltage') &&
     hasNumberProperty(object, 'air') &&
     hasNumberProperty(object, 'freeze') &&
-    hasNumberProperty(object, 'chaos')
+    hasNumberProperty(object, 'chaos') &&
+    hasNumberProperty(object, 'version')
   )
 }

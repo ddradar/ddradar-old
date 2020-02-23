@@ -1,9 +1,21 @@
-import { shallowMount, createLocalVue, Wrapper } from '@vue/test-utils'
+import {
+  createLocalVue,
+  mount,
+  RouterLinkStub,
+  shallowMount,
+  Wrapper
+} from '@vue/test-utils'
 import Buefy from 'buefy'
 import { mocked } from 'ts-jest/utils'
+
 import DoubleLevelPage from '@/pages/double/_level.vue'
 import * as repo from '@/plugins/chart-repository'
 
+jest.mock('~/plugins/firebase', () => {
+  return {
+    firestore: jest.fn()
+  }
+})
 jest.mock('@/plugins/chart-repository')
 
 const localVue = createLocalVue()
@@ -18,6 +30,35 @@ describe('double/:level', () => {
   })
   test('is a Vue instance', () => {
     expect(wrapper.isVueInstance()).toBeTruthy()
+  })
+  describe('renders', () => {
+    test('select SongIndex', () => {
+      const wrapper = mount(DoubleLevelPage, {
+        localVue,
+        stubs: { ChartList: true, NuxtLink: RouterLinkStub }
+      })
+      expect(wrapper.element).toMatchSnapshot()
+    })
+    test('correctly', () => {
+      const wrapper = mount(DoubleLevelPage, {
+        localVue,
+        data: () => {
+          return { selected: 10, charts: [{}] }
+        },
+        stubs: { ChartList: true, NuxtLink: RouterLinkStub }
+      })
+      expect(wrapper.element).toMatchSnapshot()
+    })
+    test('not found', () => {
+      const wrapper = mount(DoubleLevelPage, {
+        localVue,
+        data: () => {
+          return { selected: 19, charts: [] }
+        },
+        stubs: { ChartList: true, NuxtLink: RouterLinkStub }
+      })
+      expect(wrapper.element).toMatchSnapshot()
+    })
   })
   test('selected:null and isLoading:true default', () => {
     expect(vm.selected).toBeNull()
@@ -44,7 +85,8 @@ describe('double/:level', () => {
               voltage: 19,
               air: 0,
               freeze: 0,
-              chaos: 0
+              chaos: 0,
+              version: 20200101
             }
           ])
         }
@@ -56,7 +98,7 @@ describe('double/:level', () => {
     })
     test.each(['', 'hoge', '37', '-1', 'NaN'])(
       'selected is null if param is not 1-19',
-      async param => {
+      async (param) => {
         const data = await vm.$options.asyncData({
           params: { level: param }
         })
@@ -95,7 +137,7 @@ describe('double/:level', () => {
       expect(vm.pageTitle).toBe('DOUBLEのレベルから探す')
     })
     // [...Array(19).keys()] returns [0, 1, ..., 18]
-    test.each([...Array(19).keys()])('returns level if selected', i => {
+    test.each([...Array(19).keys()])('returns level if selected', (i) => {
       const level = i + 1
       wrapper.setData({ selected: level })
       expect(vm.pageTitle).toBe(`DOUBLE ${level}`)

@@ -1,10 +1,22 @@
-import { shallowMount, createLocalVue, Wrapper } from '@vue/test-utils'
+import {
+  createLocalVue,
+  mount,
+  RouterLinkStub,
+  shallowMount,
+  Wrapper
+} from '@vue/test-utils'
 import Buefy from 'buefy'
 import { mocked } from 'ts-jest/utils'
-import SeriesPage from '@/pages/series/_id.vue'
-import { SeriesList } from '@/types/series'
-import * as repo from '@/plugins/song-repository'
 
+import SeriesPage from '@/pages/series/_id.vue'
+import * as repo from '@/plugins/song-repository'
+import { SeriesList } from '@/types/series'
+
+jest.mock('~/plugins/firebase', () => {
+  return {
+    firestore: jest.fn()
+  }
+})
 jest.mock('@/plugins/song-repository')
 
 const localVue = createLocalVue()
@@ -20,6 +32,35 @@ describe('/series/:id', () => {
   test('is a Vue instance', () => {
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
+  describe('renders', () => {
+    test('select SongIndex', () => {
+      const wrapper = mount(SeriesPage, {
+        localVue,
+        stubs: { SongList: true, NuxtLink: RouterLinkStub }
+      })
+      expect(wrapper.element).toMatchSnapshot()
+    })
+    test('correctly', () => {
+      const wrapper = mount(SeriesPage, {
+        localVue,
+        data: () => {
+          return { selected: 10, songs: [{}] }
+        },
+        stubs: { SongList: true, NuxtLink: RouterLinkStub }
+      })
+      expect(wrapper.element).toMatchSnapshot()
+    })
+    test('not found', () => {
+      const wrapper = mount(SeriesPage, {
+        localVue,
+        data: () => {
+          return { selected: 10, songs: [] }
+        },
+        stubs: { SongList: true, NuxtLink: RouterLinkStub }
+      })
+      expect(wrapper.element).toMatchSnapshot()
+    })
+  })
   test('selected:null and isLoading:true default', () => {
     expect(vm.selected).toBeNull()
     expect(vm.isLoading).toBe(true)
@@ -33,13 +74,15 @@ describe('/series/:id', () => {
         if (series === SeriesList[hasDataIndex]) {
           return Promise.resolve([
             {
+              id: '00000000000000000000000000000000',
               name: 'PARANOiA',
               nameKana: 'PARANOIA',
               nameIndex: 25,
               artist: '180',
               series: '1st',
               minBPM: 180,
-              maxBPM: 180
+              maxBPM: 180,
+              version: 20200101
             }
           ])
         }
