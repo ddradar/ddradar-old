@@ -1,22 +1,32 @@
 /* eslint-disable no-console */
 import * as fs from 'fs'
 import * as path from 'path'
+import { promisify } from 'util'
 
 import { isSong, Song } from '../../types/song'
 import { isStepChart, StepChart } from '../../types/step-chart'
 import { setDbVersion } from './firebase-admin'
 
-function readJsonFromDirectory(dirPath: string) {
-  const jsonFilePaths = fs.readdirSync(dirPath)
-  return jsonFilePaths.map((fileName) => {
-    return JSON.parse(fs.readFileSync(path.join(dirPath, fileName), 'utf8'))
-  })
+const readDirAsync = promisify(fs.readdir)
+const readFileAsync = promisify(fs.readFile)
+const writeFileAsync = promisify(fs.writeFile)
+const readJsonFromDirectory = async (dirPath: string) => {
+  const jsonFilePaths = await readDirAsync(dirPath)
+  return Promise.all(
+    jsonFilePaths.map(async (fileName) => {
+      const jsonString = await readFileAsync(
+        path.join(dirPath, fileName),
+        'utf8'
+      )
+      return JSON.parse(jsonString)
+    })
+  )
 }
-
 ;(async () => {
+  const rootFolder = path.join(__dirname, '..', '..', '..', '..')
   // Read Songs
-  const songsData = readJsonFromDirectory(
-    path.join(__dirname, '..', 'data', 'songs')
+  const songsData = await readJsonFromDirectory(
+    path.join(rootFolder, 'song-info', 'data', 'songs')
   )
   const allSongJsonData = songsData
     .filter((a) => Array.isArray(a) && a.every((s) => isSong(s)))
@@ -25,14 +35,14 @@ function readJsonFromDirectory(dirPath: string) {
     .map((s) => s.version)
     .sort((l, r) => r - l)[0]
 
-  fs.writeFileSync(
-    path.join(__dirname, '..', '..', 'static', 'song.json'),
+  await writeFileAsync(
+    path.join(rootFolder, 'static', 'song.json'),
     JSON.stringify(allSongJsonData, undefined, '  ')
   )
 
   // Read Charts
-  const chartsData = readJsonFromDirectory(
-    path.join(__dirname, '..', 'data', 'charts')
+  const chartsData = await readJsonFromDirectory(
+    path.join(rootFolder, 'song-info', 'data', 'charts')
   )
   const allChartJsonData = chartsData
     .filter((a) => Array.isArray(a) && a.every((c) => isStepChart(c)))
@@ -41,8 +51,8 @@ function readJsonFromDirectory(dirPath: string) {
     .map((s) => s.version)
     .sort((l, r) => r - l)[0]
 
-  fs.writeFileSync(
-    path.join(__dirname, '..', '..', 'static', 'chart.json'),
+  await writeFileAsync(
+    path.join(rootFolder, 'static', 'chart.json'),
     JSON.stringify(allChartJsonData, undefined, '  ')
   )
 
