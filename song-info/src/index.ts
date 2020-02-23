@@ -16,7 +16,7 @@ function readJsonFromDirectory(dirPath: string) {
 ;(async () => {
   // Read Songs
   const songsData = readJsonFromDirectory(
-    path.join(__dirname, '..', 'data', 'songs')
+    path.join(__dirname, '..', '..', '..', 'data', 'songs')
   )
   const allSongJsonData = songsData
     .filter((a) => Array.isArray(a) && a.every((s) => isSong(s)))
@@ -26,13 +26,13 @@ function readJsonFromDirectory(dirPath: string) {
     .sort((l, r) => r - l)[0]
 
   fs.writeFileSync(
-    path.join(__dirname, '..', '..', 'static', 'song.json'),
+    path.join(__dirname, '..', '..', '..', '..', 'static', 'song.json'),
     JSON.stringify(allSongJsonData, undefined, '  ')
   )
 
   // Read Charts
   const chartsData = readJsonFromDirectory(
-    path.join(__dirname, '..', 'data', 'charts')
+    path.join(__dirname, '..', '..', '..', 'data', 'charts')
   )
   const allChartJsonData = chartsData
     .filter((a) => Array.isArray(a) && a.every((c) => isStepChart(c)))
@@ -42,7 +42,7 @@ function readJsonFromDirectory(dirPath: string) {
     .sort((l, r) => r - l)[0]
 
   fs.writeFileSync(
-    path.join(__dirname, '..', '..', 'static', 'chart.json'),
+    path.join(__dirname, '..', '..', '..', '..', 'static', 'chart.json'),
     JSON.stringify(allChartJsonData, undefined, '  ')
   )
 
