@@ -2349,7 +2349,7 @@
     "air": 9,
     "freeze": 8,
     "chaos": 0,
-    "version": 20191109
+    "version": 20190807
   },
   {
     "songId": "l61ldlPo1DQ081860O86D0Qo0qdOd0qP",
@@ -2365,7 +2365,7 @@
     "air": 7,
     "freeze": 15,
     "chaos": 0,
-    "version": 20191109
+    "version": 20190807
   },
   {
     "songId": "l61ldlPo1DQ081860O86D0Qo0qdOd0qP",
@@ -2381,7 +2381,7 @@
     "air": 18,
     "freeze": 19,
     "chaos": 11,
-    "version": 20191109
+    "version": 20190807
   },
   {
     "songId": "l61ldlPo1DQ081860O86D0Qo0qdOd0qP",
@@ -2397,7 +2397,7 @@
     "air": 34,
     "freeze": 18,
     "chaos": 75,
-    "version": 20191109
+    "version": 20190807
   },
   {
     "songId": "l61ldlPo1DQ081860O86D0Qo0qdOd0qP",
@@ -2413,7 +2413,7 @@
     "air": 7,
     "freeze": 12,
     "chaos": 0,
-    "version": 20191109
+    "version": 20190807
   },
   {
     "songId": "l61ldlPo1DQ081860O86D0Qo0qdOd0qP",
@@ -2429,7 +2429,7 @@
     "air": 14,
     "freeze": 22,
     "chaos": 11,
-    "version": 20191109
+    "version": 20190807
   },
   {
     "songId": "l61ldlPo1DQ081860O86D0Qo0qdOd0qP",
@@ -2445,7 +2445,7 @@
     "air": 20,
     "freeze": 23,
     "chaos": 66,
-    "version": 20191109
+    "version": 20190807
   },
   {
     "songId": "blld8o09oQo80PIIoIdbP9688DIqlbdb",
@@ -2797,7 +2797,7 @@
     "air": 1,
     "freeze": 39,
     "chaos": 0,
-    "version": 20191109
+    "version": 20190508
   },
   {
     "songId": "9DoD10OPQ999IlP0doo69olbOQ680q09",
@@ -2813,7 +2813,7 @@
     "air": 16,
     "freeze": 24,
     "chaos": 2,
-    "version": 20191109
+    "version": 20190508
   },
   {
     "songId": "9DoD10OPQ999IlP0doo69olbOQ680q09",
@@ -2829,7 +2829,7 @@
     "air": 49,
     "freeze": 1,
     "chaos": 41,
-    "version": 20191109
+    "version": 20190508
   },
   {
     "songId": "9DoD10OPQ999IlP0doo69olbOQ680q09",
@@ -2845,7 +2845,7 @@
     "air": 36,
     "freeze": 17,
     "chaos": 102,
-    "version": 20191109
+    "version": 20190508
   },
   {
     "songId": "9DoD10OPQ999IlP0doo69olbOQ680q09",
@@ -2861,7 +2861,7 @@
     "air": 23,
     "freeze": 2,
     "chaos": 0,
-    "version": 20191109
+    "version": 20190508
   },
   {
     "songId": "9DoD10OPQ999IlP0doo69olbOQ680q09",
@@ -2877,7 +2877,7 @@
     "air": 32,
     "freeze": 0,
     "chaos": 31,
-    "version": 20191109
+    "version": 20190508
   },
   {
     "songId": "9DoD10OPQ999IlP0doo69olbOQ680q09",
@@ -2893,7 +2893,7 @@
     "air": 50,
     "freeze": 0,
     "chaos": 56,
-    "version": 20191109
+    "version": 20190508
   },
   {
     "songId": "OO1oqdIPP80QdoP11QP61OdDb0lI1qIq",
@@ -4733,7 +4733,7 @@
     "air": 7,
     "freeze": 10,
     "chaos": 0,
-    "version": 20191109
+    "version": 20190710
   },
   {
     "songId": "d9llb88lDI1q0QI10P01lqIqlI6QO0Dl",
@@ -4749,7 +4749,7 @@
     "air": 29,
     "freeze": 36,
     "chaos": 0,
-    "version": 20191109
+    "version": 20190710
   },
   {
     "songId": "d9llb88lDI1q0QI10P01lqIqlI6QO0Dl",
@@ -4765,7 +4765,7 @@
     "air": 54,
     "freeze": 31,
     "chaos": 20,
-    "version": 20191109
+    "version": 20190710
   },
   {
     "songId": "d9llb88lDI1q0QI10P01lqIqlI6QO0Dl",
@@ -4781,7 +4781,7 @@
     "air": 52,
     "freeze": 21,
     "chaos": 101,
-    "version": 20191109
+    "version": 20190710
   },
   {
     "songId": "d9llb88lDI1q0QI10P01lqIqlI6QO0Dl",
@@ -4797,7 +4797,7 @@
     "air": 36,
     "freeze": 35,
     "chaos": 0,
-    "version": 20191109
+    "version": 20190710
   },
   {
     "songId": "d9llb88lDI1q0QI10P01lqIqlI6QO0Dl",
@@ -4813,7 +4813,7 @@
     "air": 50,
     "freeze": 26,
     "chaos": 20,
-    "version": 20191109
+    "version": 20190710
   },
   {
     "songId": "d9llb88lDI1q0QI10P01lqIqlI6QO0Dl",
@@ -4829,7 +4829,7 @@
     "air": 54,
     "freeze": 21,
     "chaos": 101,
-    "version": 20191109
+    "version": 20190710
   },
   {
     "songId": "9IdoP1ld9098PI90QQ6bP0Idl1ibo80D",
@@ -6189,7 +6189,7 @@
     "air": 10,
     "freeze": 11,
     "chaos": 13,
-    "version": 20191109
+    "version": 20190612
   },
   {
     "songId": "DdIo9DQ0ddDld99DQdiiqbPP06OI91I0",
@@ -6205,7 +6205,7 @@
     "air": 16,
     "freeze": 25,
     "chaos": 41,
-    "version": 20191109
+    "version": 20190612
   },
   {
     "songId": "DdIo9DQ0ddDld99DQdiiqbPP06OI91I0",
@@ -6221,7 +6221,7 @@
     "air": 47,
     "freeze": 16,
     "chaos": 103,
-    "version": 20191109
+    "version": 20190612
   },
   {
     "songId": "DdIo9DQ0ddDld99DQdiiqbPP06OI91I0",
@@ -6237,7 +6237,7 @@
     "air": 63,
     "freeze": 27,
     "chaos": 114,
-    "version": 20191109
+    "version": 20190612
   },
   {
     "songId": "DdIo9DQ0ddDld99DQdiiqbPP06OI91I0",
@@ -6253,7 +6253,7 @@
     "air": 16,
     "freeze": 26,
     "chaos": 35,
-    "version": 20191109
+    "version": 20190612
   },
   {
     "songId": "DdIo9DQ0ddDld99DQdiiqbPP06OI91I0",
@@ -6269,7 +6269,7 @@
     "air": 49,
     "freeze": 14,
     "chaos": 104,
-    "version": 20191109
+    "version": 20190612
   },
   {
     "songId": "DdIo9DQ0ddDld99DQdiiqbPP06OI91I0",
@@ -6285,7 +6285,7 @@
     "air": 45,
     "freeze": 13,
     "chaos": 113,
-    "version": 20191109
+    "version": 20190612
   },
   {
     "songId": "Pqb60bq60o9QO0obI1Od9liQo9iIiOD0",
@@ -7117,7 +7117,7 @@
     "air": 1,
     "freeze": 11,
     "chaos": 0,
-    "version": 20191109
+    "version": 20191009
   },
   {
     "songId": "Ol8PPooqO8iOqQ6900o0q0QI9dPo0O0b",
@@ -7133,7 +7133,7 @@
     "air": 47,
     "freeze": 18,
     "chaos": 5,
-    "version": 20191109
+    "version": 20191009
   },
   {
     "songId": "Ol8PPooqO8iOqQ6900o0q0QI9dPo0O0b",
@@ -7149,7 +7149,7 @@
     "air": 21,
     "freeze": 18,
     "chaos": 30,
-    "version": 20191109
+    "version": 20191009
   },
   {
     "songId": "Ol8PPooqO8iOqQ6900o0q0QI9dPo0O0b",
@@ -7165,7 +7165,7 @@
     "air": 36,
     "freeze": 26,
     "chaos": 102,
-    "version": 20191109
+    "version": 20191009
   },
   {
     "songId": "Ol8PPooqO8iOqQ6900o0q0QI9dPo0O0b",
@@ -7181,7 +7181,7 @@
     "air": 45,
     "freeze": 11,
     "chaos": 5,
-    "version": 20191109
+    "version": 20191009
   },
   {
     "songId": "Ol8PPooqO8iOqQ6900o0q0QI9dPo0O0b",
@@ -7197,7 +7197,7 @@
     "air": 21,
     "freeze": 16,
     "chaos": 29,
-    "version": 20191109
+    "version": 20191009
   },
   {
     "songId": "Ol8PPooqO8iOqQ6900o0q0QI9dPo0O0b",
@@ -7213,7 +7213,7 @@
     "air": 38,
     "freeze": 26,
     "chaos": 104,
-    "version": 20191109
+    "version": 20191009
   },
   {
     "songId": "ODdoiODodb0ddIP06IqDQdl100q0dIP6",
@@ -9021,7 +9021,7 @@
     "air": 9,
     "freeze": 12,
     "chaos": 0,
-    "version": 20191109
+    "version": 20190911
   },
   {
     "songId": "b80qOO6l8060990qQPod1bOd8Q9d69qo",
@@ -9037,7 +9037,7 @@
     "air": 40,
     "freeze": 44,
     "chaos": 4,
-    "version": 20191109
+    "version": 20190911
   },
   {
     "songId": "b80qOO6l8060990qQPod1bOd8Q9d69qo",
@@ -9053,7 +9053,7 @@
     "air": 41,
     "freeze": 44,
     "chaos": 28,
-    "version": 20191109
+    "version": 20190911
   },
   {
     "songId": "b80qOO6l8060990qQPod1bOd8Q9d69qo",
@@ -9069,7 +9069,7 @@
     "air": 65,
     "freeze": 43,
     "chaos": 102,
-    "version": 20191109
+    "version": 20190911
   },
   {
     "songId": "b80qOO6l8060990qQPod1bOd8Q9d69qo",
@@ -9085,7 +9085,7 @@
     "air": 32,
     "freeze": 44,
     "chaos": 6,
-    "version": 20191109
+    "version": 20190911
   },
   {
     "songId": "b80qOO6l8060990qQPod1bOd8Q9d69qo",
@@ -9101,7 +9101,7 @@
     "air": 40,
     "freeze": 44,
     "chaos": 28,
-    "version": 20191109
+    "version": 20190911
   },
   {
     "songId": "b80qOO6l8060990qQPod1bOd8Q9d69qo",
@@ -9117,7 +9117,7 @@
     "air": 65,
     "freeze": 43,
     "chaos": 102,
-    "version": 20191109
+    "version": 20190911
   },
   {
     "songId": "PdPdbdQ1lDI18O90Q0li8QI0bo99bidd",
