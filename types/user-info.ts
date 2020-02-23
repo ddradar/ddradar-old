@@ -1,4 +1,8 @@
-import { hasNumberProperty, hasProperty, hasStringProperty } from '~/test/util'
+import {
+  hasNumberProperty,
+  hasProperty,
+  hasStringProperty
+} from '~/utils/type-assert'
 
 export interface UserInfo {
   uid?: string

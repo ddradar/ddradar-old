@@ -1,8 +1,12 @@
-import { Difficulty, isDifficulty } from '@/types/difficulty'
-import { isLevel, Level } from '@/types/level'
-import { isPlayStyle, PlayStyle } from '@/types/play-style'
-import { StepChart } from '@/types/step-chart'
-import { hasNumberProperty, hasProperty, hasStringProperty } from '~/test/util'
+import { Difficulty, isDifficulty } from '~/types/difficulty'
+import { isLevel, Level } from '~/types/level'
+import { isPlayStyle, PlayStyle } from '~/types/play-style'
+import { StepChart } from '~/types/step-chart'
+import {
+  hasNumberProperty,
+  hasProperty,
+  hasStringProperty
+} from '~/utils/type-assert'
 
 export type Cource = {
   /** Cource id. (similar to songId) */

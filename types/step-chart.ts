@@ -1,4 +1,9 @@
-import { hasNumberProperty, hasProperty, hasStringProperty } from '../test/util'
+import {
+  hasNumberProperty,
+  hasProperty,
+  hasStringProperty
+} from '~/utils/type-assert'
+
 import { Difficulty, isDifficulty } from './difficulty'
 import { isLevel, Level } from './level'
 import { isPlayStyle, PlayStyle } from './play-style'

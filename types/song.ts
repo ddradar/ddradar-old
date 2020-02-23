@@ -1,4 +1,9 @@
-import { hasNumberProperty, hasProperty, hasStringProperty } from '../test/util'
+import {
+  hasNumberProperty,
+  hasProperty,
+  hasStringProperty
+} from '~/utils/type-assert'
+
 import { isSeries, Series } from './series'
 
 export type Song = {
