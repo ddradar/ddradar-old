@@ -349,7 +349,7 @@
     "series": "A20",
     "minBPM": 128,
     "maxBPM": 128,
-    "version": 20191109
+    "version": 20190808
   },
   {
     "id": "Q0o8olIPb1iOo0loPPQI0PddI0qlb1Db",
@@ -404,7 +404,7 @@
     "series": "A20",
     "minBPM": 140,
     "maxBPM": 140,
-    "version": 20191109
+    "version": 20190808
   },
   {
     "id": "08PiiDq6b1oQ8OIIbDql0bDbIID0b1iP",
@@ -767,7 +767,7 @@
     "series": "A20",
     "minBPM": 106,
     "maxBPM": 106,
-    "version": 20191109
+    "version": 20190808
   },
   {
     "id": "8qd0DIiiQ6dPl1b6b0OqDob6i0d1dQP1",
