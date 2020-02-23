@@ -2,7 +2,7 @@
 import firebase from 'firebase/app'
 import { mocked } from 'ts-jest/utils'
 
-import { generateRandomString } from '~/test/util'
+import { generateRandomString } from '~/utils/testing'
 
 jest.mock('firebase/app')
 
@@ -30,7 +30,7 @@ describe('plugins/firebase.ts', () => {
   })
 
   describe('default export', () => {
-    test('calls firebase.initializeApp()', () => {
+    test('calls firebase.initializeApp() once', () => {
       // Arrange
       const options: FirebaseOptions = {
         apiKey: random(),
@@ -45,8 +45,10 @@ describe('plugins/firebase.ts', () => {
       const initFunc = mocked(firebase).initializeApp.mock
 
       // Act
-      // eslint-disable-next-line no-unused-expressions
+      /* eslint-disable no-unused-expressions */
       require('~/plugins/firebase').default
+      require('~/plugins/firebase').default
+      /* eslint-enable no-unused-expressions */
 
       // Assert
       expect(initFunc.calls.length).toBe(1)
