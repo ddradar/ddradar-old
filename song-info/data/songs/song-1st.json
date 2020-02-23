@@ -8,7 +8,7 @@
     "series": "1st",
     "minBPM": 119,
     "maxBPM": 119,
-    "version": 20191109
+    "version": 20190320
   },
   {
     "id": "06loOQ0DQb0DqbOibl6qO81qlIdoP9DI",
@@ -19,7 +19,7 @@
     "series": "1st",
     "minBPM": 180,
     "maxBPM": 180,
-    "version": 20191109
+    "version": 20190320
   },
   {
     "id": "Pb9II0oiI9ODQ8OP8IqIPQP9P68biqIi",
@@ -30,6 +30,6 @@
     "series": "1st",
     "minBPM": 160,
     "maxBPM": 160,
-    "version": 20191109
+    "version": 20190320
   }
 ]
