@@ -4,7 +4,7 @@ import { isPlayStyle, PlayStyle } from '@/types/play-style'
 import { StepChart } from '@/types/step-chart'
 import { hasNumberProperty, hasProperty, hasStringProperty } from '~/test/util'
 
-export interface Cource {
+export type Cource = {
   /** Cource id. (similar to songId) */
   id: string
   name: string
