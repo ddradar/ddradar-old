@@ -30,12 +30,7 @@
   "items": {
     "type": "object",
     "title": "Cource Info",
-    "required": [
-      "id",
-      "name",
-      "orders",
-      "version"
-    ],
+    "required": ["id", "name", "orders", "version"],
     "properties": {
       "id": {
         "$ref": "#/definitions/id",
@@ -51,12 +46,7 @@
         "items": {
           "type": "object",
           "title": "Cource Order Info",
-          "required": [
-            "playStyle",
-            "difficulty",
-            "level",
-            "chartOrder"
-          ],
+          "required": ["playStyle", "difficulty", "level", "chartOrder"],
           "properties": {
             "playStyle": {
               "$ref": "#/definitions/playStyle"

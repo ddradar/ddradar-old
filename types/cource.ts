@@ -1,8 +1,8 @@
-import { PlayStyle, isPlayStyle } from '@/types/play-style'
 import { Difficulty, isDifficulty } from '@/types/difficulty'
-import { Level, isLevel } from '@/types/level'
+import { isLevel, Level } from '@/types/level'
+import { isPlayStyle, PlayStyle } from '@/types/play-style'
 import { StepChart } from '@/types/step-chart'
-import { hasStringProperty, hasNumberProperty, hasProperty } from '~/test/util'
+import { hasNumberProperty, hasProperty, hasStringProperty } from '~/test/util'
 
 export interface Cource {
   /** Cource id. (similar to songId) */
@@ -30,7 +30,7 @@ export function isCource(obj: unknown): obj is Cource {
     hasProperty(obj, 'chartOrder') &&
     Array.isArray(obj.chartOrder) &&
     obj.chartOrder.every(
-      element =>
+      (element) =>
         typeof element === 'object' &&
         element !== null &&
         hasStringProperty(element, 'songId') &&

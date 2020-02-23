@@ -55,7 +55,7 @@ describe('Cource', () => {
       Infinity,
       -Infinity,
       {}
-    ])('returns false if not object', obj => {
+    ])('returns false if not object', (obj) => {
       expect(isCource(obj)).toBe(false)
     })
     test('returns false if not Cource', () => {
