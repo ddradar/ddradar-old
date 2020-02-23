@@ -2,38 +2,38 @@ import * as fs from 'fs'
 import { matchersWithOptions } from 'jest-json-schema'
 import * as path from 'path'
 
-import chartSchema from '../../../static/chart-schema.json'
+import songSchema from '~/static/song-schema.json'
 
 expect.extend(
   matchersWithOptions({
-    schemas: [chartSchema]
+    schemas: [songSchema]
   })
 )
 
-describe('chart-schema.json', () => {
+describe('song-schema.json', () => {
   test('should be valid json-schema', () => {
-    expect(chartSchema).toBeValidSchema()
+    expect(songSchema).toBeValidSchema()
   })
 })
 
-describe('song-info/data/charts/*.json', () => {
-  const chartsDirPath = path.join(
+describe('/data/songs/*.json', () => {
+  const songsDirPath = path.join(
     __dirname,
     '..',
     '..',
     '..',
     'song-info',
     'data',
-    'charts'
+    'songs'
   )
   const jsonFilesPath = fs
-    .readdirSync(chartsDirPath)
+    .readdirSync(songsDirPath)
     .filter((p) => path.extname(p) === '.json')
   const jsonStrings = jsonFilesPath.map((filePath) => {
-    return fs.readFileSync(path.join(chartsDirPath, filePath), 'utf8')
+    return fs.readFileSync(path.join(songsDirPath, filePath), 'utf8')
   })
   test.each(jsonStrings)('should be valid json', (s) => {
     const jsonObject = JSON.parse(s)
-    expect(jsonObject).toMatchSchema(chartSchema)
+    expect(jsonObject).toMatchSchema(songSchema)
   })
 })

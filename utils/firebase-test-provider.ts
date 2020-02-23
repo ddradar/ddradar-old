@@ -1,5 +1,8 @@
 import * as firebase from '@firebase/testing'
-import * as fs from 'fs'
+import { readFile } from 'fs'
+import { promisify } from 'util'
+
+const readFileAsync = promisify(readFile)
 
 export default class FirebaseTestProvider {
   constructor(
@@ -8,11 +11,7 @@ export default class FirebaseTestProvider {
   ) {}
 
   async loadRules() {
-    const rules = await new Promise<string>((resolve, reject) =>
-      fs.readFile(this.ruleFilePath, 'utf8', (e, s) => {
-        e ? reject(e) : resolve(s)
-      })
-    )
+    const rules = await readFileAsync(this.ruleFilePath, 'utf8')
     return firebase.loadFirestoreRules({ projectId: this.projectId, rules })
   }
 

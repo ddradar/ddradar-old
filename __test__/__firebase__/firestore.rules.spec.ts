@@ -1,6 +1,6 @@
 import * as firebase from '@firebase/testing'
 
-import FirebaseTestProvider from './firebase-test-provider'
+import FirebaseTestProvider from '~/utils/firebase-test-provider'
 
 const testName = 'ddradar-rule-test'
 const filePath = 'firestore.rules'
