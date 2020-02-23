@@ -8,7 +8,7 @@
     "series": "2ndMIX",
     "minBPM": 130,
     "maxBPM": 130,
-    "version": 20191109
+    "version": 20190320
   },
   {
     "id": "DblIbDd6lQQQoO9bloOI9iIqO1IiQoID",
@@ -19,7 +19,7 @@
     "series": "2ndMIX",
     "minBPM": 150,
     "maxBPM": 150,
-    "version": 20191109
+    "version": 20190320
   },
   {
     "id": "DbPodlqiOQdD88bo8lPO9D6iql1DO8P0",
@@ -30,7 +30,7 @@
     "series": "2ndMIX",
     "minBPM": 150,
     "maxBPM": 150,
-    "version": 20191109
+    "version": 20190320
   },
   {
     "id": "8liDbidQoI6Q01lO9iibIdboIiDl66Qo",
@@ -41,7 +41,7 @@
     "series": "2ndMIX",
     "minBPM": 145,
     "maxBPM": 145,
-    "version": 20191109
+    "version": 20190320
   },
   {
     "id": "Dq0Iio09Pb9iD0lbb0I0qd8Q8i10II09",
@@ -52,7 +52,7 @@
     "series": "2ndMIX",
     "minBPM": 150,
     "maxBPM": 150,
-    "version": 20191109
+    "version": 20190320
   },
   {
     "id": "0lDDIlQ91lq6O16q9QQ681d6Db1l0oOb",
@@ -63,7 +63,7 @@
     "series": "2ndMIX",
     "minBPM": 132,
     "maxBPM": 132,
-    "version": 20191109
+    "version": 20190320
   },
   {
     "id": "9qP16D6l11i9P1lQ0b1DIqoOqqiIQDl9",
@@ -74,7 +74,7 @@
     "series": "2ndMIX",
     "minBPM": 118,
     "maxBPM": 118,
-    "version": 20191109
+    "version": 20190320
   },
   {
     "id": "9doPbId8qid9I9l6ooloPQD1lq1Plb6I",
@@ -85,7 +85,7 @@
     "series": "2ndMIX",
     "minBPM": 180,
     "maxBPM": 180,
-    "version": 20191109
+    "version": 20190320
   },
   {
     "id": "Pl0dPid9lQDo6PDQDqPboPqO6iIDIqoo",
@@ -96,7 +96,7 @@
     "series": "2ndMIX",
     "minBPM": 190,
     "maxBPM": 190,
-    "version": 20191109
+    "version": 20190320
   },
   {
     "id": "DQlQ1DlPbq900oqdOo8l0d6I1lIOl99l",
@@ -107,7 +107,7 @@
     "series": "2ndMIX",
     "minBPM": 120,
     "maxBPM": 120,
-    "version": 20191109
+    "version": 20190320
   },
   {
     "id": "IQqOIb6ob8bIbOII66ID0oIQDPl6bdbb",
@@ -118,7 +118,7 @@
     "series": "2ndMIX",
     "minBPM": 120,
     "maxBPM": 120,
-    "version": 20191109
+    "version": 20190320
   },
   {
     "id": "1P9qQdiiodODqQPl0OO88iiiqdoDIPO6",
@@ -129,6 +129,6 @@
     "series": "2ndMIX",
     "minBPM": 160,
     "maxBPM": 160,
-    "version": 20191109
+    "version": 20190320
   }
 ]

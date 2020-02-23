@@ -1,4 +1,9 @@
-import { hasNumberProperty, hasProperty, hasStringProperty } from '../test/util'
+import {
+  hasNumberProperty,
+  hasProperty,
+  hasStringProperty
+} from '~/utils/type-assert'
+
 import { Difficulty, isDifficulty } from './difficulty'
 import { isLevel, Level } from './level'
 import { isPlayStyle, PlayStyle } from './play-style'
@@ -34,26 +39,23 @@ export type StepChart = {
   version: number
 }
 
-export function isStepChart(object: unknown): object is StepChart {
-  return (
-    typeof object === 'object' &&
-    object !== null &&
-    hasStringProperty(object, 'songId') &&
-    hasStringProperty(object, 'songName') &&
-    hasProperty(object, 'playStyle') &&
-    isPlayStyle(object.playStyle) &&
-    hasProperty(object, 'difficulty') &&
-    isDifficulty(object.difficulty) &&
-    hasProperty(object, 'level') &&
-    isLevel(object.level) &&
-    hasNumberProperty(object, 'notes') &&
-    hasNumberProperty(object, 'freezeArrow') &&
-    hasNumberProperty(object, 'shockArrow') &&
-    hasNumberProperty(object, 'stream') &&
-    hasNumberProperty(object, 'voltage') &&
-    hasNumberProperty(object, 'air') &&
-    hasNumberProperty(object, 'freeze') &&
-    hasNumberProperty(object, 'chaos') &&
-    hasNumberProperty(object, 'version')
+export const isStepChart = (obj: unknown): obj is StepChart =>
+  typeof obj === 'object' &&
+  obj !== null &&
+  hasStringProperty(obj, 'songId', 'songName') &&
+  hasProperty(obj, 'playStyle', 'difficulty', 'level') &&
+  isPlayStyle(obj.playStyle) &&
+  isDifficulty(obj.difficulty) &&
+  isLevel(obj.level) &&
+  hasNumberProperty(
+    obj,
+    'notes',
+    'freezeArrow',
+    'shockArrow',
+    'stream',
+    'voltage',
+    'air',
+    'freeze',
+    'chaos',
+    'version'
   )
-}

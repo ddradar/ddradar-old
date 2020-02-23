@@ -32,7 +32,7 @@ describe('/data/songs/*.json', () => {
   const jsonStrings = jsonFilesPath.map((filePath) => {
     return fs.readFileSync(path.join(songsDirPath, filePath), 'utf8')
   })
-  test.each(jsonStrings)('', (s) => {
+  test.each(jsonStrings)('should be valid json', (s) => {
     const jsonObject = JSON.parse(s)
     expect(jsonObject).toMatchSchema(songSchema)
   })
