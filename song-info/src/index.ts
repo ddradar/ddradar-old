@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import * as fs from 'fs'
+import { readdir, readFile, writeFile } from 'fs'
 import * as path from 'path'
 import { promisify } from 'util'
 
@@ -7,9 +7,9 @@ import { isSong, Song } from '../../types/song'
 import { isStepChart, StepChart } from '../../types/step-chart'
 import { setDbVersion } from './firebase-admin'
 
-const readDirAsync = promisify(fs.readdir)
-const readFileAsync = promisify(fs.readFile)
-const writeFileAsync = promisify(fs.writeFile)
+const readDirAsync = promisify(readdir)
+const readFileAsync = promisify(readFile)
+const writeFileAsync = promisify(writeFile)
 const readJsonFromDirectory = async (dirPath: string) => {
   const jsonFilePaths = await readDirAsync(dirPath)
   return Promise.all(
