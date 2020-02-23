@@ -5,7 +5,7 @@ on:
     branches:
       - 'master'
     paths:
-      - 'song-info/data/**'
+      - 'song-info/**'
 
 jobs:
   build:
