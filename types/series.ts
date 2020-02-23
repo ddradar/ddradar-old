@@ -37,12 +37,8 @@ export const SeriesList: Series[] = [
   'A20'
 ]
 
-export function getSeriesName(series: Series) {
-  return series === 'DDRMAX' || series === 'DDRMAX2' ? series : `DDR ${series}`
-}
+export const getSeriesName = (series: Series) =>
+  series === 'DDRMAX' || series === 'DDRMAX2' ? series : `DDR ${series}`
 
-export function isSeries(object: unknown) {
-  return (
-    typeof object === 'string' && (SeriesList as Array<string>).includes(object)
-  )
-}
+export const isSeries = (obj: unknown): obj is Series =>
+  typeof obj === 'string' && (SeriesList as Array<string>).includes(obj)
