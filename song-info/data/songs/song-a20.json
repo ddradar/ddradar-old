@@ -363,6 +363,17 @@
     "version": 20190627
   },
   {
+    "id": "00000000000000000000000000000000",
+    "name": "CyberConnect",
+    "nameKana": "CYBERCONNECT",
+    "nameIndex": 12,
+    "artist": "Blacklolita",
+    "series": "A20",
+    "minBPM": null,
+    "maxBPM": null,
+    "version": 20200311
+  },
+  {
     "id": "6iO8d9ld00I6lDIO6qbOldP99oqloqb9",
     "name": "Dead Heat",
     "nameKana": "DEAD HEAT",
