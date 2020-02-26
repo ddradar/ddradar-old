@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@firebase/testing": "^0.16.11",
-    "@nuxt/typescript-build": "^0.5.7",
+    "@nuxt/typescript-build": "^0.5.8",
     "@nuxtjs/eslint-config-typescript": "^1.0.2",
     "@nuxtjs/eslint-module": "^1.1.0",
     "@types/chart.js": "^2.9.14",
