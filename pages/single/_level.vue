@@ -46,7 +46,7 @@ export default class SingleLevelPage extends Vue {
       }
     }
     try {
-      const charts = await fetchChartsByLevel(2, selected)
+      const charts = await fetchChartsByLevel(1, selected)
       return {
         selected,
         charts,
