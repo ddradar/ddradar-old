@@ -6,6 +6,7 @@ on:
       - 'master'
     paths:
       - 'song-info/**'
+      - '.github/workflows/import-song.yml'
 
 jobs:
   build:
@@ -29,13 +30,13 @@ jobs:
         run: npm ci
       - name: Unit Test with Jest
         run: npm test
-      - name: Import Data to Firebase
+      - name: Create master JSON Files & Increment Firestore Version
         run: npm start
         env:
           FIREBASE_CLIENT_EMAIL: ${{ secrets.FIREBASE_CLIENT_EMAIL }}
           FIREBASE_PRIVATE_KEY: ${{ secrets.FIREBASE_PRIVATE_KEY }}
           FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_SDK_PROJECT_ID }}
-      - name: Prettier Created Json
+      - name: Prettier Created JSON
         run: npx prettier -l "./static/*.json" --write
       - name: Push Created Json Files
         run: |
