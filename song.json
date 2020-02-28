@@ -4730,6 +4730,17 @@
     "version": 20190530
   },
   {
+    "id": "qqDOddP66Ol1q1IIOb1OPO68DP1ood1i",
+    "name": "Firestorm",
+    "nameKana": "FIRESTORM",
+    "nameIndex": 15,
+    "artist": "ETIA.",
+    "series": "A20",
+    "minBPM": 177,
+    "maxBPM": 177,
+    "version": 20200227
+  },
+  {
     "id": "Pq0Qq0OQqlPDQOld8bddlIDPD89o8bO8",
     "name": "Get On Da Floor",
     "nameKana": "GET ON DA FLOOR",
@@ -4840,6 +4851,17 @@
     "version": 20191121
   },
   {
+    "id": "bIlqP91O9ld1lqlq6qoq9OiPdqIDPP0l",
+    "name": "Lachryma《Re:Queen’M》",
+    "nameKana": "LACHRYMA RE QUEEN M",
+    "nameIndex": 21,
+    "artist": "かねこちはる",
+    "series": "A20",
+    "minBPM": 236,
+    "maxBPM": 236,
+    "version": 20200227
+  },
+  {
     "id": "D9ooldO1009Pq1dP6P88lD80P0Oi060P",
     "name": "LEVEL UP",
     "nameKana": "LEVEL UP",
@@ -4937,6 +4959,17 @@
     "minBPM": 150,
     "maxBPM": 150,
     "version": 20190530
+  },
+  {
+    "id": "P1boP1O60bdI16i6lqqd1Q8ioiPbolqd",
+    "name": "ΩVERSOUL",
+    "nameKana": "OVERSOUL",
+    "nameIndex": 24,
+    "artist": "BlackY",
+    "series": "A20",
+    "minBPM": 155,
+    "maxBPM": 155,
+    "version": 20200227
   },
   {
     "id": "09oIbO1bi8O8Q1o01q610ID0qPOqoQQP",
