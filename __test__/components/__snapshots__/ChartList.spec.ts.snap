@@ -273,7 +273,80 @@ exports[`ChartList renders correctly 1`] = `
     </table>
   </div>
    
-  <!---->
+  <div
+    class="level"
+  >
+    <div
+      class="level-left"
+    />
+     
+    <div
+      class="level-right"
+    >
+      <div
+        class="level-item"
+      >
+        <nav
+          class="pagination"
+        >
+          <a
+            class="pagination-link pagination-previous"
+            disabled="disabled"
+            href="#"
+            role="button"
+          >
+            <span
+              aria-hidden="true"
+              class="icon"
+            >
+              <i
+                class="mdi mdi-chevron-left mdi-24px"
+              />
+            </span>
+          </a>
+           
+          <a
+            class="pagination-link pagination-next"
+            disabled="disabled"
+            href="#"
+            role="button"
+          >
+            <span
+              aria-hidden="true"
+              class="icon"
+            >
+              <i
+                class="mdi mdi-chevron-right mdi-24px"
+              />
+            </span>
+          </a>
+           
+          <ul
+            class="pagination-list"
+          >
+            <!---->
+             
+            <!---->
+             
+            <li>
+              <a
+                aria-current="true"
+                class="pagination-link is-current "
+                href="#"
+                role="button"
+              >
+                1
+              </a>
+            </li>
+             
+            <!---->
+             
+            <!---->
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
@@ -320,6 +393,68 @@ exports[`ChartList renders loading 1`] = `
     </table>
   </div>
    
-  <!---->
+  <div
+    class="level"
+  >
+    <div
+      class="level-left"
+    />
+     
+    <div
+      class="level-right"
+    >
+      <div
+        class="level-item"
+      >
+        <nav
+          class="pagination"
+        >
+          <a
+            class="pagination-link pagination-previous"
+            disabled="disabled"
+            href="#"
+            role="button"
+          >
+            <span
+              aria-hidden="true"
+              class="icon"
+            >
+              <i
+                class="mdi mdi-chevron-left mdi-24px"
+              />
+            </span>
+          </a>
+           
+          <a
+            class="pagination-link pagination-next"
+            disabled="disabled"
+            href="#"
+            role="button"
+          >
+            <span
+              aria-hidden="true"
+              class="icon"
+            >
+              <i
+                class="mdi mdi-chevron-right mdi-24px"
+              />
+            </span>
+          </a>
+           
+          <ul
+            class="pagination-list"
+          >
+            <!---->
+             
+            <!---->
+              
+            <!---->
+             
+            <!---->
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
 </div>
 `;

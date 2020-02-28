@@ -6,6 +6,8 @@
     :loading="loading"
     focusable
     :mobile-cards="false"
+    paginated
+    per-page="50"
   >
     <template slot-scope="props">
       <b-table-column field="series" label="Series">

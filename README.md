@@ -1,7 +1,8 @@
 # DDRadar
 
-[![last commit](https://img.shields.io/github/last-commit/ddradar/ddradar "last commit")](https://staging.ddradar.app/)
-[![release version](https://img.shields.io/github/v/release/ddradar/ddradar "release version")](https://ddradar.app/)
+[![last commit](https://img.shields.io/github/last-commit/ddradar/ddradar "last commit")](https://github.com/ddradar/ddradar/commits/master)
+[![GitHub deployments](https://img.shields.io/github/deployments/ddradar/ddradar/github-pages?label=staging)](http://staging.ddradar.app/)
+[![release version](https://img.shields.io/github/v/release/ddradar/ddradar "release version")](https://github.com/ddradar/ddradar/releases)
 [![Node CI Status](https://github.com/ddradar/ddradar/workflows/Node%20CI/badge.svg "Node CI Status")](https://github.com/ddradar/ddradar/actions?query=workflow%3A%22Node+CI%22)
 [![CodeFactor](https://www.codefactor.io/repository/github/ddradar/ddradar/badge)](https://www.codefactor.io/repository/github/ddradar/ddradar)
 [![codecov](https://codecov.io/gh/ddradar/ddradar/branch/master/graph/badge.svg)](https://codecov.io/gh/ddradar/ddradar)
