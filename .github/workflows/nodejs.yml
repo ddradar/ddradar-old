@@ -72,14 +72,10 @@ jobs:
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         if: matrix.is-main && github.event_name == 'push'
-        run: |
-          echo staging.ddradar.app > ./dist/CNAME
-          wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2/entrypoint.sh
-          bash ./entrypoint.sh
-        env:
-          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ./dist
-          INPUT_COMMITMESSAGE: 'ci: auto deployment from'
-          INPUT_EMPTYCOMMITS: false
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          cname: staging.ddradar.app
+          commit_message: ${{ github.event.head_commit.message }}
