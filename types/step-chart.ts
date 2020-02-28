@@ -1,12 +1,11 @@
+import { Difficulty, isDifficulty } from './difficulty'
+import { isLevel, Level } from './level'
+import { isPlayStyle, PlayStyle } from './play-style'
 import {
   hasNumberProperty,
   hasProperty,
   hasStringProperty
 } from '../utils/type-assert'
-
-import { Difficulty, isDifficulty } from './difficulty'
-import { isLevel, Level } from './level'
-import { isPlayStyle, PlayStyle } from './play-style'
 
 export type StepChart = {
   /** Song's id. */
