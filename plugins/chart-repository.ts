@@ -2,7 +2,7 @@ import { Level } from '~/types/level'
 import { PlayStyle } from '~/types/play-style'
 import { isStepChart, StepChart } from '~/types/step-chart'
 
-export const chartVersion = 20200212
+export const chartVersion = 20200227
 
 export const fetchSongCharts = async (
   songId: string,
@@ -31,7 +31,8 @@ export const fetchChartsByLevel = async (
         : l.difficulty - r.difficulty
     )
 
-const masterUrl = 'https://staging.ddradar.app'
+const masterUrl =
+  'https://raw.githubusercontent.com/ddradar/ddradar/master/static'
 const fetchChartJson = async (useMaster: boolean) => {
   const jsonUrl = `${useMaster ? masterUrl : ''}/chart.json`
   const jsonData = await (await fetch(jsonUrl)).json()

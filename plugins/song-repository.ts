@@ -1,6 +1,6 @@
 import { isSong, Song } from '@/types/song'
 
-export const songVersion = 20200212
+export const songVersion = 20200227
 
 export const fetchSongs = async (
   fieldName: keyof Song,
@@ -29,7 +29,8 @@ export const fetchSongById = async (
   return song[0]
 }
 
-const masterUrl = 'https://staging.ddradar.app'
+const masterUrl =
+  'https://raw.githubusercontent.com/ddradar/ddradar/master/static'
 const fetchSongJson = async (useMaster: boolean) => {
   const jsonUrl = `${useMaster ? masterUrl : ''}/song.json`
   const jsonData = await (await fetch(jsonUrl)).json()
