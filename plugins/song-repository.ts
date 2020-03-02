@@ -29,7 +29,8 @@ export const fetchSongById = async (
   return song[0]
 }
 
-const masterUrl = 'https://raw.githubusercontent.com/ddradar/ddradar/master/static'
+const masterUrl =
+  'https://raw.githubusercontent.com/ddradar/ddradar/master/static'
 const fetchSongJson = async (useMaster: boolean) => {
   const jsonUrl = `${useMaster ? masterUrl : ''}/song.json`
   const jsonData = await (await fetch(jsonUrl)).json()
