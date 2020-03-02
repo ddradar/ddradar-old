@@ -31,7 +31,8 @@ export const fetchChartsByLevel = async (
         : l.difficulty - r.difficulty
     )
 
-const masterUrl = 'https://raw.githubusercontent.com/ddradar/ddradar/master/static'
+const masterUrl =
+  'https://raw.githubusercontent.com/ddradar/ddradar/master/static'
 const fetchChartJson = async (useMaster: boolean) => {
   const jsonUrl = `${useMaster ? masterUrl : ''}/chart.json`
   const jsonData = await (await fetch(jsonUrl)).json()
