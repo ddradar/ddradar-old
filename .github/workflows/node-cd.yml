@@ -3,9 +3,7 @@ name: Production Deploy
 on:
   release:
     types: [published]
-  push:
-    tags:
-      - 'v*'
+
 jobs:
   deploy:
     name: Deploy
@@ -25,7 +23,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Clear Cache
-        run: npm cache clean
+        run: npm cache clean --force
       - name: Install Dependencies
         run: npm ci
       - name: Increment package version
