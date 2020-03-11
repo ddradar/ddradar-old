@@ -5,7 +5,7 @@ import { isDifficulty } from '~/types/difficulty'
 import { isPlayStyle } from '~/types/play-style'
 import { StepChart } from '~/types/step-chart'
 import {
-  hasNumberProperty,
+  hasPositiveIntegerProperty,
   hasProperty,
   hasStringProperty
 } from '~/utils/type-assert'
@@ -77,23 +77,26 @@ export const rankList: DanceLevel[] = [
 export type Score = Pick<StepChart, 'songId' | 'playStyle' | 'difficulty'> & {
   score: number
   exScore: number
-  clearlamp: ClearLamp
+  clearLamp: ClearLamp
   rank: DanceLevel
-  isPublic: boolean
 }
 
 export const getUserScore = async (uid: string, songId: string) => {
   const scores: Score[] = []
-  const data = await db
-    .collection(`version/1/users/${uid}/scores/`)
-    .where('songId', '==', songId)
-    .orderBy('playStyle')
-    .orderBy('difficulty')
-    .get()
-  data.forEach((doc) => {
-    const score = doc.data()
-    if (isScore(score)) scores.push(score)
-  })
+  try {
+    const data = await db
+      .collection(`version/1/users/${uid}/scores/`)
+      .where('songId', '==', songId)
+      .orderBy('playStyle')
+      .orderBy('difficulty')
+      .get()
+    data.forEach((doc) => {
+      const score = doc.data()
+      if (isScore(score)) scores.push(score)
+    })
+  } catch (error) {
+    if (!/FirebaseError/.test(error)) throw error
+  }
   return scores
 }
 
@@ -113,12 +116,7 @@ export const setUserScore = async (
       return
     }
     const newScore = {
-      ...prevScore,
-      score: prevScore.score > score.score ? prevScore.score : score.score,
-      exScore:
-        prevScore.exScore > score.exScore ? prevScore.exScore : score.exScore,
-      clearLamp: compareClearLamp(prevScore.clearlamp, score.clearlamp),
-      rank: score.rank !== 'E' ? getDanceLevel(score.score) : score.rank,
+      ...mergeScore(prevScore, score),
       isPublic,
       updateAt: firebase.firestore.Timestamp.now()
     }
@@ -126,23 +124,35 @@ export const setUserScore = async (
   })
 }
 
+export const mergeScore = (prev: Score, current: Score): Score => ({
+  ...prev,
+  score: prev.score > current.score ? prev.score : current.score,
+  exScore: prev.exScore > current.exScore ? prev.exScore : current.exScore,
+  clearLamp: compareClearLamp(prev.clearLamp, current.clearLamp),
+  rank:
+    prev.score >= current.score
+      ? prev.rank
+      : current.rank !== 'E'
+      ? getDanceLevel(current.score)
+      : current.rank
+})
+
 const compareClearLamp = (left: ClearLamp, right: ClearLamp): ClearLamp =>
   clearLampList.indexOf(left) > clearLampList.indexOf(right) ? left : right
 
 export const isScore = (obj: unknown): obj is Score =>
   typeof obj === 'object' &&
   obj !== null &&
-  hasProperty(obj, 'playStyle', 'difficulty', 'isPublic') &&
+  hasProperty(obj, 'playStyle', 'difficulty') &&
   isPlayStyle(obj.playStyle) &&
   isDifficulty(obj.difficulty) &&
-  typeof obj.isPublic === 'boolean' &&
-  hasNumberProperty(obj, 'score', 'exScore') &&
+  hasPositiveIntegerProperty(obj, 'score', 'exScore') &&
   hasStringProperty(obj, 'songId', 'clearLamp', 'rank') &&
   (clearLampList as string[]).includes(obj.clearLamp) &&
   (rankList as string[]).includes(obj.rank)
 
 export const getDanceLevel = (score: number): DanceLevel => {
-  if (!Number.isInteger(score) || score < 0 || score > 1000000)
+  if (!isPositiveInteger(score) || score > 1000000)
     throw new Error('score is invalid')
   return score < 550000
     ? 'D'
@@ -193,9 +203,20 @@ export const calcScore = (
     throw new Error(`invalid marvelous: ${marvelous}`)
   if (!isPositiveInteger(perfect))
     throw new Error(`invalid perfect: ${perfect}`)
-  if (!isPositiveInteger(great)) throw new Error(`invalid great: ${great}`)
-  if (!isPositiveInteger(good)) throw new Error(`invalid good: ${good}`)
-  if (!isPositiveInteger(ok)) throw new Error(`invalid ok: ${ok}`)
+  if (!isPositiveInteger(great)) throw new RangeError(`invalid great: ${great}`)
+  if (!isPositiveInteger(good)) throw new RangeError(`invalid good: ${good}`)
+  if (!isPositiveInteger(ok)) throw new RangeError(`invalid ok: ${ok}`)
+  if (marvelous + perfect + great + good > notes)
+    throw new RangeError(
+      `judge count(${marvelous +
+        perfect +
+        great +
+        good}) is greater than notes(${notes})`
+    )
+  if (ok > freezeArrow + shockArrow)
+    throw new RangeError(
+      `ok count(${ok}) is greater than FA+SA count(${freezeArrow + shockArrow})`
+    )
 
   const noteObjects = notes + freezeArrow + shockArrow
   const baseScore = 1000000 / noteObjects
