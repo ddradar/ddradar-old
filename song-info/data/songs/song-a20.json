@@ -363,14 +363,14 @@
     "version": 20190627
   },
   {
-    "id": "00000000000000000000000000000000",
+    "id": "1qPIiqqQo0P9dD90I11q90b0ooIidbPO",
     "name": "CyberConnect",
     "nameKana": "CYBERCONNECT",
     "nameIndex": 12,
     "artist": "Blacklolita",
     "series": "A20",
-    "minBPM": null,
-    "maxBPM": null,
+    "minBPM": 150,
+    "maxBPM": 150,
     "version": 20200311
   },
   {
