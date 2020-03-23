@@ -12,9 +12,7 @@
     <template slot-scope="props">
       <b-table-column field="songName" label="Name">
         <nuxt-link
-          :to="
-            `/song/${props.row.songId}/${props.row.playStyle}${props.row.difficulty}`
-          "
+          :to="`/song/${props.row.songId}/${props.row.playStyle}${props.row.difficulty}`"
         >
           {{ props.row.songName }}
         </nuxt-link>
