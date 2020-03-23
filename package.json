@@ -63,7 +63,7 @@
     "jest-json-schema": "^2.1.0",
     "lint-staged": "^10.0.8",
     "node-sass": "^4.13.1",
-    "prettier": "^2.0.1",
+    "prettier": "^2.0.2",
     "sass-loader": "^8.0.2",
     "ts-jest": "~25.2.1",
     "vue-jest": "^4.0.0-0"
