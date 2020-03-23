@@ -84,9 +84,7 @@ export default class UserModule extends VuexModule {
     if (!uid) {
       return
     }
-    const doc = await db
-      .collection('version/1/users')
-      .doc(uid)
+    const doc = await db.collection('version/1/users').doc(uid)
       .get()
     if (!doc.exists) {
       return
