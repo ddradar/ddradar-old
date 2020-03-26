@@ -36,13 +36,21 @@ jobs:
         with:
           java-version: 11
           architecture: x64
-      - name: Use Cache # for optimize Install Dependencies
+
+      # Cache
+      - name: Get npm cache directory
+        id: npm-cache
+        run: echo "::set-output name=dir::$(npm config get cache)"
+      - name: Clean npm cache directory
+        run: npm cache clear --force
+      - name: Cache Dependencies
         uses: actions/cache@v1
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
+          path: ${{ steps.npm-cache.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+
       - name: Install Dependencies
         run: npm ci
       - name: Install firestore Emulator
@@ -64,6 +72,8 @@ jobs:
         uses: release-drafter/release-drafter@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Deploy to staging
       - name: Deploy to Firebase (Staging)
         if: matrix.is-main && github.event_name == 'push'
         run: |
