@@ -40,7 +40,7 @@
     "nuxt-buefy": "^0.3.27",
     "nuxt-property-decorator": "^2.7.2",
     "vue-chartjs": "^3.5.0",
-    "vuex-module-decorators": "^0.16.1"
+    "vuex-module-decorators": "^0.17.0"
   },
   "devDependencies": {
     "@firebase/testing": "^0.19.2",
