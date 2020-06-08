@@ -28,7 +28,7 @@
     "*.{json,yaml,yml}": "prettier --write"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^0.4.8",
+    "@nuxt/typescript-runtime": "^0.4.9",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "buefy": "^0.8.20",
     "chart.js": "^2.9.3",
